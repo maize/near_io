@@ -1,4 +1,12 @@
 NnApi::Application.routes.draw do
+  get "notes/show"
+
+  get "notes/create"
+
+  get "notes/edit"
+
+  get "notes/crawl"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
