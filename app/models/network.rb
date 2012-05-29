@@ -1,3 +1,3 @@
 class Network < ActiveRecord::Base
-  attr_accessible :
+  attr_accessible :name
 end
