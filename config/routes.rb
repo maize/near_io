@@ -1,4 +1,8 @@
 NnApi::Application.routes.draw do
+  get "api/get_notes_by_longitude_latitude"
+
+  get "api/add_notes_by_text"
+
   get "notes/show"
 
   get "notes/create"
