@@ -7,7 +7,6 @@ class ApiController < ApplicationController
     respond_to do |format|
       format.xml  { render :xml => @entities }
       format.json { render :json => @entities }
-      format.js { render_json_with_callback @entities.to_json }
     end
   end
 
