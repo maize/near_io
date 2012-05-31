@@ -2,8 +2,12 @@
 
 one:
   name: MyString
-  description: MyText
+  message: MyText
+  location: 
+  network: 
 
 two:
   name: MyString
-  description: MyText
+  message: MyText
+  location: 
+  network: 

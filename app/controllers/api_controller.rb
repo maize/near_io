@@ -12,4 +12,12 @@ class ApiController < ApplicationController
 
   def add_notes_by_text
   end
+
+  def add_note
+    @note = Note.create(:name => params[:note_name])
+    respond_to do |format|
+      format.xml  { render :xml => @note }
+      format.json { render :json => @note }
+    end
+  end
 end

@@ -2,10 +2,8 @@
 
 one:
   name: MyString
-  longitude: 1
-  latitude: 1
+  latlon: 
 
 two:
   name: MyString
-  longitude: 1
-  latitude: 1
+  latlon: 

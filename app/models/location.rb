@@ -1,5 +1,7 @@
-class Location < ActiveRecord::Base
-  attr_accessible :latitude, :longitude, :name
-  has_many :locations_notes
-  has_many :notes, :through => :locations_notes
+class Location
+  include Mongoid::Document
+  has_and_belongs_to_many :notes
+
+  field :name, :type => String
+  field :latlon, :type => Array
 end

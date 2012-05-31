@@ -1,5 +1,8 @@
-class Note < ActiveRecord::Base
-  attr_accessible :name, :description
-  has_many :locations_notes
-  has_many :locations, :through => :locations_notes
+class Note
+  include Mongoid::Document
+  has_and_belongs_to_many :locations
+  has_and_belongs_to_many :networks
+
+  field :name, :type => String
+  field :message, :type => String
 end

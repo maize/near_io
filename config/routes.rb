@@ -5,6 +5,8 @@ NnApi::Application.routes.draw do
 
   get "api/add_notes_by_text"
 
+  get "api/add_note"
+
   get "notes/show"
 
   get "notes/create"

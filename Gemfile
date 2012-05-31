@@ -1,11 +1,21 @@
-source 'https://rubygems.org'
+require 'rubygems'
+require 'mongo'
+source 'http://gemcutter.org'
 
 gem 'rails', '3.2.3'
+gem 'mongoid'
+gem 'bson_ext', '~> 1.4'
+gem 'mongo_mapper'
+
+# gem 'rails', '3.0.12'
+# gem 'activesupport', '3.0.12'
+# gem 'actionpack', '3.0.12'
+# gem 'activerecord', '3.0.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+# gem 'sqlite3'
 
 gem 'json'
 
@@ -22,10 +32,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-gem 'anemone'
 gem 'mysql2'
-gem 'thinking-sphinx', '2.0.10'
+gem 'activerecord-mysqlspatial-adapter'
+gem 'rgeo'
+gem 'rgeo-activerecord'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
