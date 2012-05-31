@@ -1,12 +1,8 @@
-gem 'mongo'
-
-require 'rubygems'
-require 'mongo'
-source 'http://gemcutter.org'
-
 gem 'rails', '3.2.3'
 gem 'mongoid'
 gem 'bson_ext', '~> 1.4'
+gem 'mongo'
+gem 'mongoid'
 gem 'mongo_mapper'
 
 # gem 'rails', '3.0.12'

@@ -1,5 +1,4 @@
 GEM
-  remote: http://gemcutter.org/
   specs:
     actionmailer (3.2.3)
       actionpack (= 3.2.3)
@@ -132,6 +131,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   json
+  mongo
   mongo_mapper
   mongoid
   mysql2
