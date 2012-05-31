@@ -1,3 +1,5 @@
+gem 'mongo'
+
 require 'rubygems'
 require 'mongo'
 source 'http://gemcutter.org'
