@@ -1,3 +1,5 @@
+source :rubygems
+
 gem 'rails', '3.2.3'
 gem 'mongoid'
 gem 'bson_ext', '~> 1.4'
