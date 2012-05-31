@@ -31,9 +31,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'anemone'
 gem 'jquery-rails'
 gem 'mysql2'
 gem 'activerecord-mysqlspatial-adapter'
+gem 'activerecord-postgresql-adapter'
 gem 'rgeo'
 gem 'rgeo-activerecord'
 
