@@ -38,6 +38,7 @@ gem 'activerecord-mysqlspatial-adapter'
 gem 'activerecord-postgresql-adapter'
 gem 'rgeo'
 gem 'rgeo-activerecord'
+gem 'quimby'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

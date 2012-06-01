@@ -11,6 +11,7 @@ class ApiController < ApplicationController
   end
 
   def add_notes_by_text
+
   end
 
   def add_note
