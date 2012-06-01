@@ -25,6 +25,8 @@ GEM
     activerecord-mysqlspatial-adapter (0.4.1)
       mysql (>= 2.8.1)
       rgeo-activerecord (~> 0.4.3)
+    activerecord-postgresql-adapter (0.0.1)
+      pg
     activeresource (3.2.3)
       activemodel (= 3.2.3)
       activesupport (= 3.2.3)
@@ -35,9 +37,8 @@ GEM
       nokogiri (>= 1.3.0)
       robotex (>= 1.0.0)
     arel (3.0.2)
-    bson (1.6.2)
-    bson_ext (1.6.2)
-      bson (~> 1.6.2)
+    bson (1.3.1)
+    bson_ext (1.3.1)
     builder (3.0.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -61,22 +62,23 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.18)
-    mongo (1.6.2)
-      bson (~> 1.6.2)
+    mongo (1.3.1)
+      bson (>= 1.3.1)
     mongo_mapper (0.11.1)
       activemodel (~> 3.0)
       activesupport (~> 3.0)
       plucky (~> 0.4.0)
-    mongoid (2.4.10)
-      activemodel (~> 3.1)
+    mongoid (2.0.2)
+      activemodel (~> 3.0)
       mongo (~> 1.3)
       tzinfo (~> 0.3.22)
     multi_json (1.3.6)
     mysql (2.8.1)
     mysql2 (0.3.11)
     nokogiri (1.5.2)
-    plucky (0.4.4)
-      mongo (~> 1.5)
+    pg (0.13.2)
+    plucky (0.4.3)
+      mongo (~> 1.3)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -133,14 +135,16 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-mysqlspatial-adapter
+  activerecord-postgresql-adapter
   anemone (= 0.7.1)
-  bson_ext (~> 1.4)
+  bson (= 1.3.1)
+  bson_ext (= 1.3.1)
   coffee-rails (~> 3.2.1)
   jquery-rails
   json
   mongo
   mongo_mapper
-  mongoid
+  mongoid (= 2.0.2)
   mysql2
   rails (= 3.2.3)
   rgeo

@@ -1,11 +1,6 @@
 source :rubygems
 
 gem 'rails', '3.2.3'
-gem 'mongoid'
-gem 'bson_ext', '~> 1.4'
-gem 'mongo'
-gem 'mongoid'
-gem 'mongo_mapper'
 
 # gem 'rails', '3.0.12'
 # gem 'activesupport', '3.0.12'
@@ -31,10 +26,16 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'bson', '1.3.1'
+gem 'bson_ext', '1.3.1'
+gem 'mongoid', '2.0.2'
+gem 'mongo'
+gem 'mongo_mapper'
 gem 'anemone', '0.7.1'
 gem 'jquery-rails'
 gem 'mysql2'
 gem 'activerecord-mysqlspatial-adapter'
+gem 'activerecord-postgresql-adapter'
 gem 'rgeo'
 gem 'rgeo-activerecord'
 
