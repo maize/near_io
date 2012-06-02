@@ -38,7 +38,10 @@ gem 'activerecord-mysqlspatial-adapter'
 gem 'activerecord-postgresql-adapter'
 gem 'rgeo'
 gem 'rgeo-activerecord'
-gem 'quimby'
+gem 'quimby' # Facebook API Wrapper
+gem 'instagram', :git => 'git://github.com/Instagram/instagram-ruby-gem.git'
+gem 'faraday', '0.7.6' # http://merics.blogspot.co.uk/2012/05/instagram-ruby-gem.html
+gem 'SystemTimer', '1.2.3' #http://stackoverflow.com/questions/5546868/could-not-load-systemtimer-v1-2-0-when-launching-rails-3-0-5-application
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -3,6 +3,10 @@ NnApi::Application.routes.draw do
 
   get "api/get_notes_by_note_name"
 
+  get "api/get_media_nearby"
+
+  get "api/get_locations_nearby"
+
   get "api/add_notes_by_text"
 
   get "api/add_note"

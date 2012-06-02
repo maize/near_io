@@ -10,8 +10,17 @@ class ApiController < ApplicationController
     end
   end
 
-  def add_notes_by_text
+  def get_locations_nearby
+    @venues = NnApi::FourSquareApi.new.get_nearby_venues
+    render :json => @venues
+  end
 
+  def get_media_nearby
+    @media = NnApi::InstagramApi.new.get_media_nearby
+    render :json => @media
+  end
+
+  def add_notes_by_text
   end
 
   def add_note
