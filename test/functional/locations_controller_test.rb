@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class LocationsControllerTest < ActionController::TestCase
+class PlacesControllerTest < ActionController::TestCase
   setup do
-    @location = locations(:one)
+    @place = places(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:locations)
+    assert_not_nil assigns(:places)
   end
 
   test "should get new" do
@@ -16,34 +16,34 @@ class LocationsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create location" do
-    assert_difference('Location.count') do
-      post :create, :location => {  }
+  test "should create place" do
+    assert_difference('Place.count') do
+      post :create, :place => {  }
     end
 
-    assert_redirected_to location_path(assigns(:location))
+    assert_redirected_to place_path(assigns(:place))
   end
 
-  test "should show location" do
-    get :show, :id => @location
+  test "should show place" do
+    get :show, :id => @place
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, :id => @location
+    get :edit, :id => @place
     assert_response :success
   end
 
-  test "should update location" do
-    put :update, :id => @location, :location => {  }
-    assert_redirected_to location_path(assigns(:location))
+  test "should update place" do
+    put :update, :id => @place, :place => {  }
+    assert_redirected_to place_path(assigns(:place))
   end
 
-  test "should destroy location" do
-    assert_difference('Location.count', -1) do
-      delete :destroy, :id => @location
+  test "should destroy place" do
+    assert_difference('Place.count', -1) do
+      delete :destroy, :id => @place
     end
 
-    assert_redirected_to locations_path
+    assert_redirected_to places_path
   end
 end

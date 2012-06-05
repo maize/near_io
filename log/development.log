@@ -13611,3 +13611,67 @@ Served asset /notes.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Jun 05 22:51:26 +0100 2012
 Served asset /application.js - 304 Not Modified (1ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/note.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/photo.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/place.rb:2)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from /Users/maize/Projects/nearnote-api/config/environment.rb:7)
+
+
+Started GET "/4de8a29f814d89ee7e7d1b1d" for 127.0.0.1 at Tue Jun 05 23:59:05 +0100 2012
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"4de8a29f814d89ee7e7d1b1d"}
+MONGODB nn_api_development['places'].find({:_id=>BSON::ObjectId('4de8a29f814d89ee7e7d1b1d')})
+[foursquare] GET https://api.foursquare.com/v2/venues/4de8a29f814d89ee7e7d1b1d
+[foursquare] PARAMS: {}
+[foursquare] {"response"=>{"venue"=>{"name"=>"UCLU Gordon's Cafe", "mayor"=>{"count"=>11, "user"=>{"photo"=>"https://is0.4sqi.net/userpix_thumbs/0QB5EQE5V1FVMUU4.jpg", "homeCity"=>"London, Greater London", "lastName"=>"T.", "contact"=>{"facebook"=>"585520704", "twitter"=>"otnomis"}, "tips"=>{"count"=>6}, "gender"=>"male", "id"=>"1799886", "firstName"=>"Simon", "bio"=>""}}, "hereNow"=>{"groups"=>[], "count"=>0, "summary"=>"Nobody here"}, "location"=>{"city"=>"London", "address"=>"25 Gordon Street", "country"=>"United Kingdom", "lng"=>-0.133175038273288, "crossStreet"=>"Gordon Street", "postalCode"=>"WC1H 0AY", "lat"=>51.5255508632917, "state"=>"London"}, "stats"=>{"tipCount"=>0, "checkinsCount"=>100, "usersCount"=>19}, "photos"=>{"groups"=>[{"items"=>[], "name"=>"Friends' check-in photos", "count"=>0, "type"=>"checkin"}], "count"=>0, "summary"=>"No photos"}, "tips"=>{"groups"=>[{"items"=>[], "name"=>"Tips from others", "count"=>0, "type"=>"others"}], "count"=>0}, "specials"=>[], "contact"=>{"formattedPhone"=>"+44 20 7387 3611", "phone"=>"+442073873611", "twitter"=>"uclu"}, "timeZone"=>"Europe/London", "tags"=>[], "id"=>"4de8a29f814d89ee7e7d1b1d", "canonicalUrl"=>"https://foursquare.com/v/uclu-gordons-cafe/4de8a29f814d89ee7e7d1b1d", "createdAt"=>1307091615, "verified"=>true, "categories"=>[{"shortName"=>"Caf\303\251", "name"=>"Caf\303\251", "parents"=>["Food"], "primary"=>true, "icon"=>"https://foursquare.com/img/categories/food/cafe_32.png", "id"=>"4bf58dd8d48988d16d941735", "pluralName"=>"Cafés"}], "listed"=>{"count"=>0}, "shortUrl"=>"http://4sq.com/kJQXng"}}, "meta"=>{"errorDetail"=>"Please provide an API version to avoid future errors.See http://bit.ly/vywCav", "code"=>200, "errorType"=>"deprecated"}}
+[foursquare] Something about this request is using deprecated functionality, or the response format may be about to change.
+MONGODB nn_api_development['places'].insert([{"address"=>"25 Gordon Street", "city"=>"London", "name"=>"UCLU Gordon's Cafe", "country"=>"United Kingdom", "note_ids"=>[], "postal_code"=>"WC1H 0AY", "latlon"=>[51.5255508632917, -0.133175038273288], "contact"=>{"formattedPhone"=>"+44 20 7387 3611", "phone"=>"+442073873611", "twitter"=>"uclu"}, "_id"=>BSON::ObjectId('4fce8f3bf764f8f011000001'), "foursquare_id"=>"4de8a29f814d89ee7e7d1b1d", "state"=>"London"}])
+MONGODB nn_api_development['places'].update({"_id"=>BSON::ObjectId('4fce8f3bf764f8f011000001')}, {"$push"=>{"photos"=>{"name"=>"WICKED!", "low_resolution"=>"http://distilleryimage9.instagram.com/8e812732af5e11e1b2fe1231380205bf_6.jpg", "thumbnail"=>"http://distilleryimage9.instagram.com/8e812732af5e11e1b2fe1231380205bf_5.jpg", "_id"=>BSON::ObjectId('4fce8f3cf764f8f011000002'), "standard_resolution"=>"http://distilleryimage9.instagram.com/8e812732af5e11e1b2fe1231380205bf_7.jpg", "instagram_id"=>"207329675595765045_1609628"}}})
+MONGODB nn_api_development['places'].update({"_id"=>BSON::ObjectId('4fce8f3bf764f8f011000001')}, {"$push"=>{"photos"=>{"name"=>"WICKED!", "low_resolution"=>"http://distilleryimage7.instagram.com/8cbe5bd6af5e11e1b00112313800c5e4_6.jpg", "thumbnail"=>"http://distilleryimage7.instagram.com/8cbe5bd6af5e11e1b00112313800c5e4_5.jpg", "_id"=>BSON::ObjectId('4fce8f3cf764f8f011000003'), "standard_resolution"=>"http://distilleryimage7.instagram.com/8cbe5bd6af5e11e1b00112313800c5e4_7.jpg", "instagram_id"=>"207329650832594227_1609628"}}})
+MONGODB nn_api_development['places'].update({"_id"=>BSON::ObjectId('4fce8f3bf764f8f011000001')}, {"$push"=>{"photos"=>{"_id"=>BSON::ObjectId('4fce8f3cf764f8f011000004')}}})
+MONGODB nn_api_development['places'].update({"_id"=>BSON::ObjectId('4fce8f3bf764f8f011000001')}, {"$push"=>{"photos"=>{"name"=>"The wellcome's brains exhibition", "low_resolution"=>"http://distilleryimage10.instagram.com/8543ac0eaf1c11e180d51231380fcd7e_6.jpg", "thumbnail"=>"http://distilleryimage10.instagram.com/8543ac0eaf1c11e180d51231380fcd7e_5.jpg", "_id"=>BSON::ObjectId('4fce8f3cf764f8f011000005'), "standard_resolution"=>"http://distilleryimage10.instagram.com/8543ac0eaf1c11e180d51231380fcd7e_7.jpg", "instagram_id"=>"207091754857468150_703139"}}})
+MONGODB nn_api_development['places'].update({"_id"=>BSON::ObjectId('4fce8f3bf764f8f011000001')}, {"$push"=>{"photos"=>{"name"=>"Skull saw with crank handle", "low_resolution"=>"http://distilleryimage7.instagram.com/dceaa10caf1611e19894123138140d8c_6.jpg", "thumbnail"=>"http://distilleryimage7.instagram.com/dceaa10caf1611e19894123138140d8c_5.jpg", "_id"=>BSON::ObjectId('4fce8f3cf764f8f011000006'), "standard_resolution"=>"http://distilleryimage7.instagram.com/dceaa10caf1611e19894123138140d8c_7.jpg", "instagram_id"=>"207071370874440235_1962033"}}})
+MONGODB nn_api_development['places'].update({"_id"=>BSON::ObjectId('4fce8f3bf764f8f011000001')}, {"$push"=>{"photos"=>{"name"=>"Gaité, localit\303\251", "low_resolution"=>"http://distilleryimage10.instagram.com/23ce016eaf1611e1bf341231380f8a12_6.jpg", "thumbnail"=>"http://distilleryimage10.instagram.com/23ce016eaf1611e1bf341231380f8a12_5.jpg", "_id"=>BSON::ObjectId('4fce8f3cf764f8f011000007'), "standard_resolution"=>"http://distilleryimage10.instagram.com/23ce016eaf1611e1bf341231380f8a12_7.jpg", "instagram_id"=>"207068766312319510_1962033"}}})
+MONGODB nn_api_development['places'].update({"_id"=>BSON::ObjectId('4fce8f3bf764f8f011000001')}, {"$push"=>{"photos"=>{"_id"=>BSON::ObjectId('4fce8f3cf764f8f011000008')}}})
+MONGODB nn_api_development['places'].update({"_id"=>BSON::ObjectId('4fce8f3bf764f8f011000001')}, {"$push"=>{"photos"=>{"_id"=>BSON::ObjectId('4fce8f3cf764f8f011000009')}}})
+MONGODB nn_api_development['places'].update({"_id"=>BSON::ObjectId('4fce8f3bf764f8f011000001')}, {"$push"=>{"photos"=>{"name"=>"Love the old UCL campus", "low_resolution"=>"http://distilleryimage4.instagram.com/1443f010aecf11e188131231381b5c25_6.jpg", "thumbnail"=>"http://distilleryimage4.instagram.com/1443f010aecf11e188131231381b5c25_5.jpg", "_id"=>BSON::ObjectId('4fce8f3cf764f8f01100000a'), "standard_resolution"=>"http://distilleryimage4.instagram.com/1443f010aecf11e188131231381b5c25_7.jpg", "instagram_id"=>"206812743454062808_14061693"}}})
+MONGODB nn_api_development['places'].update({"_id"=>BSON::ObjectId('4fce8f3bf764f8f011000001')}, {"$push"=>{"photos"=>{"name"=>"#stairs #glass #transparent #spiral #cool #awesome  #tweegram #iphonesia #instagood #iphoneonly #instamood #instagramhub #picoftheday #bestoftheday #photooftheday #insta #all_shots #igdaily #instahub #webstagram #statigram #clubsocial #instagramers #instago #instadaily #iphonephotography #instadiary #iphonepics", "low_resolution"=>"http://distilleryimage6.instagram.com/78c2115aae9a11e1ab011231381052c0_6.jpg", "thumbnail"=>"http://distilleryimage6.instagram.com/78c2115aae9a11e1ab011231381052c0_5.jpg", "_id"=>BSON::ObjectId('4fce8f3cf764f8f01100000b'), "standard_resolution"=>"http://distilleryimage6.instagram.com/78c2115aae9a11e1ab011231381052c0_7.jpg", "instagram_id"=>"206623206088308318_12124028"}}})
+MONGODB nn_api_development['places'].update({"_id"=>BSON::ObjectId('4fce8f3bf764f8f011000001')}, {"$push"=>{"photos"=>{"name"=>"#ceiling #wall #architecture #abstract #art #classic #design  #tweegram #iphonesia #instagood #iphoneonly #instamood #instagramhub #picoftheday #bestoftheday #photooftheday #insta #all_shots #igdaily #instahub #webstagram #statigram #clubsocial #instagramers #instago #instadaily #iphonephotography #instadiary #iphonepics", "low_resolution"=>"http://distilleryimage0.instagram.com/7730f27cae9811e180c9123138016265_6.jpg", "thumbnail"=>"http://distilleryimage0.instagram.com/7730f27cae9811e180c9123138016265_5.jpg", "_id"=>BSON::ObjectId('4fce8f3cf764f8f01100000c'), "standard_resolution"=>"http://distilleryimage0.instagram.com/7730f27cae9811e180c9123138016265_7.jpg", "instagram_id"=>"206615977272473112_12124028"}}})
+  Rendered places/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 3607ms (Views: 905.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Tue Jun 05 23:59:09 +0100 2012
+Served asset /jquery.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/notes.css?body=1" for 127.0.0.1 at Tue Jun 05 23:59:09 +0100 2012
+Served asset /notes.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Tue Jun 05 23:59:09 +0100 2012
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Tue Jun 05 23:59:09 +0100 2012
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/api.css?body=1" for 127.0.0.1 at Tue Jun 05 23:59:09 +0100 2012
+Served asset /api.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/notes.js?body=1" for 127.0.0.1 at Tue Jun 05 23:59:09 +0100 2012
+Served asset /notes.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Tue Jun 05 23:59:09 +0100 2012
+Served asset /application.js - 304 Not Modified (21ms)
+
+
+Started GET "/assets/api.js?body=1" for 127.0.0.1 at Tue Jun 05 23:59:09 +0100 2012
+Served asset /api.js - 304 Not Modified (2ms)
