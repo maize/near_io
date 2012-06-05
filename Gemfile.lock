@@ -147,7 +147,8 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    typhoeus (0.3.3)
+    typhoeus (0.2.4)
+      mime-types
       mime-types
     tzinfo (0.3.33)
     uglifier (1.2.4)
@@ -177,4 +178,5 @@ DEPENDENCIES
   rgeo
   rgeo-activerecord
   sass-rails (~> 3.2.3)
+  typhoeus (= 0.2.4)
   uglifier (>= 1.0.3)
