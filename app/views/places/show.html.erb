@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<p><%= @place.name %></p>
+<p><%= @place.city %></p>
+<p><%= @place.address %></p>
+<p><%= @place.country %></p>
+<p><%= @place.postal_code %></p>
+<p><%= @place.latlon %></p>
+<% @place.photos.each do |photo| %>
+	<img src="<%= photo.standard_resolution %>" />
+<% end %>

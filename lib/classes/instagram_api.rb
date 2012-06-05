@@ -10,8 +10,8 @@ class NnApi::InstagramApi
 		end
 	end
 
-	def get_media_nearby
-		return Instagram.media_search("51.5248","-0.133427", { 
+	def get_media_nearby(lat,lon)
+		return Instagram.media_search(lat,lon, { 
 			:client_id => "f8c5b8d1064043fb8486cd18b9c2c238",
 			:distance => 100 })
 	end

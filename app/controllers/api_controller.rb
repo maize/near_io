@@ -22,8 +22,10 @@ class ApiController < ApplicationController
 
   def get_media_nearby
     @media = NnApi::InstagramApi.new.get_media_nearby
-    p @media
-    #render :json => @media
+    respond_to do |format|
+      format.xml  { render :xml => @media }
+      format.json { render :json => @media }
+    end
   end
 
   def add_notes_by_text

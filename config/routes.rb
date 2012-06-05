@@ -20,16 +20,16 @@ NnApi::Application.routes.draw do
 
   get "notes/crawl"
 
-  get "locations/show"
+  get "places/show"
 
-    match "locations/:id" => "locations#show"
-    match ":id" => "locations#show"
+    match "places/:id" => "places#show"
+    match ":id" => "places#show"
 
-  get "locations/create"
+  get "places/create"
 
-  get "locations/edit"
+  get "places/edit"
 
-  get "locations/crawl"
+  get "places/crawl"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
