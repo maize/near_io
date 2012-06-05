@@ -1,4 +1,5 @@
 NnApi::Application.routes.draw do
+
   get "api/get_notes_by_longitude_latitude"
 
   get "api/get_notes_by_note_name"
@@ -18,6 +19,17 @@ NnApi::Application.routes.draw do
   get "notes/edit"
 
   get "notes/crawl"
+
+  get "locations/show"
+
+    match "locations/:id" => "locations#show"
+    match ":id" => "locations#show"
+
+  get "locations/create"
+
+  get "locations/edit"
+
+  get "locations/crawl"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

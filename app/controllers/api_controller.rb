@@ -1,3 +1,5 @@
+require "json"
+
 class ApiController < ApplicationController
   def get_notes_by_longitude_latitude
   end
@@ -12,12 +14,16 @@ class ApiController < ApplicationController
 
   def get_locations_nearby
     @venues = NnApi::FourSquareApi.new.get_nearby_venues
-    render :json => @venues
+    @venues.each do |venue|
+      p venue.json
+    end
+    #render :json => @venues
   end
 
   def get_media_nearby
     @media = NnApi::InstagramApi.new.get_media_nearby
-    render :json => @media
+    p @media
+    #render :json => @media
   end
 
   def add_notes_by_text
