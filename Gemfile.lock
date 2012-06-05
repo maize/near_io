@@ -11,7 +11,6 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    SystemTimer (1.2.3)
     actionmailer (3.2.3)
       actionpack (= 3.2.3)
       mail (~> 2.4.4)
@@ -159,7 +158,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  SystemTimer (= 1.2.3)
   activerecord-mysqlspatial-adapter
   activerecord-postgresql-adapter
   anemone (= 0.7.1)
