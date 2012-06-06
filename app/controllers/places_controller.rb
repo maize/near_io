@@ -22,6 +22,7 @@ class PlacesController < ApplicationController
 
     @photos = NnApi::InstagramApi.new.get_media_nearby(@place.lat,@place.lon)
     @photos.data.each do |photo|
+      p @photos
       @p = Photo.new
       unless photo.caption.nil?
         @p.instagram_id = photo.id

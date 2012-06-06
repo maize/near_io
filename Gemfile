@@ -36,6 +36,7 @@ gem 'jquery-rails'
 gem 'mysql2'
 gem 'activerecord-mysqlspatial-adapter'
 gem 'activerecord-postgresql-adapter'
+gem 'sqlite3', '1.3.5'
 gem 'rgeo'
 gem 'rgeo-activerecord'
 gem 'quimby' # Facebook API Wrapper

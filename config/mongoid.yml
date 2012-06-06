@@ -9,6 +9,7 @@ test:
 # set these environment variables on your prod server
 production:
   uri: <%= ENV['MONGOLAB_URI'] %>
+  database: app4487356
   # slaves:
   #   - host: slave1.local
   #     port: 27018
