@@ -10,8 +10,8 @@ class NnApi::FourSquareApi
 	  Rails.logger.info("[foursquare] #{message}") # HAX, SORRY BRANDON
 	end
 
-	def get_nearby_venues
-	    return @foursquare.venues.nearby(:ll => "51.5248,-0.133427")
+	def get_nearby_venues(lat,lon)
+	    return @foursquare.venues.nearby(:ll => lat+","+lon)
 	end
 
 	def get_venue_by_id(venue_id)

@@ -13,11 +13,16 @@ class ApiController < ApplicationController
   end
 
   def get_locations_nearby
-    @venues = NnApi::FourSquareApi.new.get_nearby_venues
+    @venues = NnApi::FourSquareApi.new.get_nearby_venues(params[:lat],params[:lon])
+    @places = []
     @venues.each do |venue|
-      p venue.json
+      @place = Place.add_by_foursquare(venue)
+      @places.push(@place)
     end
-    #render :json => @venues
+    respond_to do |format|
+      format.xml  { render :xml => @places }
+      format.json { render :json => @places }
+    end
   end
 
   def get_media_nearby
