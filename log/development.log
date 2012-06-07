@@ -14178,3 +14178,103 @@ MONGODB nn_api_development['places'].insert([{"address"=>nil, "city"=>nil, "name
 MONGODB nn_api_development['places'].insert([{"address"=>nil, "city"=>nil, "name"=>"Southwater Country Park", "country"=>"United Kingdom", "note_ids"=>[], "postal_code"=>nil, "latlon"=>[51.0204809904099, -0.346256433333333], "contact"=>{}, "_id"=>BSON::ObjectId('4fcff6ecf764f830ab00001d'), "foursquare_id"=>"4bc30598f8219c746b79b510", "state"=>nil}])
 MONGODB nn_api_development['places'].insert([{"address"=>"Lintot Square", "city"=>"Horsham", "name"=>"The Lintot", "country"=>"United Kingdom", "note_ids"=>[], "postal_code"=>"RH13 9LA", "latlon"=>[51.024511, -0.351417], "contact"=>{"formattedPhone"=>"+44 1403 738425", "phone"=>"+441403738425"}, "_id"=>BSON::ObjectId('4fcff6ecf764f830ab00001e'), "foursquare_id"=>"4c66ce29aebea593ea2174d0", "state"=>"West Sussex"}])
 Completed 200 OK in 1504ms (Views: 217.7ms)
+
+
+Started GET "/api/get_media_nearby?lat=51&lon=-0.3&format=xml" for 127.0.0.1 at Thu Jun 07 01:38:56 +0100 2012
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/note.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/photo.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/place.rb:2)
+Processing by ApiController#get_media_nearby as XML
+  Parameters: {"lon"=>"-0.3", "lat"=>"51"}
+Completed 200 OK in 4885ms (Views: 0.9ms)
+
+
+Started GET "/api/get_media_nearby?lat=51&lon=-0.3&format=xml" for 127.0.0.1 at Thu Jun 07 01:39:33 +0100 2012
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/note.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/photo.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/place.rb:2)
+Processing by ApiController#get_media_nearby as XML
+  Parameters: {"lon"=>"-0.3", "lat"=>"51"}
+Completed 200 OK in 542ms (Views: 0.9ms)
+
+
+Started GET "/api/get_media_nearby?lat=51&lon=-0.3" for 127.0.0.1 at Thu Jun 07 01:42:13 +0100 2012
+Processing by ApiController#get_media_nearby as HTML
+  Parameters: {"lon"=>"-0.3", "lat"=>"51"}
+Completed 406 Not Acceptable in 1058ms
+
+
+Started GET "/api/get_media_nearby?lat=51&lon=-0.3&format=xml" for 127.0.0.1 at Thu Jun 07 01:42:57 +0100 2012
+Processing by ApiController#get_media_nearby as XML
+  Parameters: {"lon"=>"-0.3", "lat"=>"51"}
+Completed 200 OK in 616ms (Views: 0.8ms)
+
+
+Started GET "/api/get_media_nearby?lat=51&lon=-0.3&format=xml" for 127.0.0.1 at Thu Jun 07 01:43:08 +0100 2012
+Processing by ApiController#get_media_nearby as XML
+  Parameters: {"lon"=>"-0.3", "lat"=>"51"}
+Completed 200 OK in 600ms (Views: 0.8ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/note.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/photo.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/place.rb:2)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from /Users/maize/Projects/nearnote-api/config/environment.rb:7)
+
+
+Started GET "/api/get_media_nearby?lat=51&lon=-0.3&format=xml" for 127.0.0.1 at Thu Jun 07 01:46:26 +0100 2012
+Processing by ApiController#get_media_nearby as XML
+  Parameters: {"lon"=>"-0.3", "lat"=>"51"}
+Completed 200 OK in 4311ms (Views: 319.0ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/note.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/photo.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/place.rb:2)
+DEPRECATION WARNING: ActionDispatch::ShowExceptions.rescue_responses is deprecated. Please configure your exceptions using a railtie or in your application config instead. (called from /Users/maize/Projects/nearnote-api/config/environment.rb:7)
+
+
+Started GET "/api/get_media_nearby?lat=51&lon=-0.3&format=xml" for 127.0.0.1 at Thu Jun 07 01:48:01 +0100 2012
+Processing by ApiController#get_media_nearby as XML
+  Parameters: {"lon"=>"-0.3", "lat"=>"51"}
+Completed 200 OK in 898ms (Views: 22.7ms)
+
+
+Started GET "/api/get_media_nearby?lat=51&lon=-0.3&format=1000&format=xml" for 127.0.0.1 at Thu Jun 07 01:48:30 +0100 2012
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/note.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/photo.rb:2)
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Hierarchy instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/place.rb:2)
+Processing by ApiController#get_media_nearby as XML
+  Parameters: {"lon"=>"-0.3", "lat"=>"51"}
+Completed 200 OK in 2123ms (Views: 248.4ms)
+
+
+Started GET "/api/get_media_nearby?lat=51&lon=-0.3&format=xml" for 127.0.0.1 at Thu Jun 07 01:48:40 +0100 2012
+Processing by ApiController#get_media_nearby as XML
+  Parameters: {"lon"=>"-0.3", "lat"=>"51"}
+Completed 200 OK in 1166ms (Views: 199.3ms)
+
+
+Started GET "/api/get_media_nearby?lat=51&lon=-0.3&format=xml" for 127.0.0.1 at Thu Jun 07 01:48:45 +0100 2012
+Processing by ApiController#get_media_nearby as XML
+  Parameters: {"lon"=>"-0.3", "lat"=>"51"}
+Completed 200 OK in 2020ms (Views: 123.1ms)
+
+
+Started GET "/api/get_media_nearby?lat=51&lon=-0.3&format=xml" for 127.0.0.1 at Thu Jun 07 01:49:19 +0100 2012
+Processing by ApiController#get_media_nearby as XML
+  Parameters: {"lon"=>"-0.3", "lat"=>"51"}
+Completed 200 OK in 2047ms (Views: 219.1ms)
+
+
+Started GET "/api/get_media_nearby?lat=51&lon=-0.3&format=xml" for 127.0.0.1 at Thu Jun 07 01:49:37 +0100 2012
+Processing by ApiController#get_media_nearby as XML
+  Parameters: {"lon"=>"-0.3", "lat"=>"51"}
+Completed 200 OK in 2848ms (Views: 253.0ms)

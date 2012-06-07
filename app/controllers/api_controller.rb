@@ -26,7 +26,7 @@ class ApiController < ApplicationController
   end
 
   def get_media_nearby
-    @media = NnApi::InstagramApi.new.get_media_nearby
+    @media = NnApi::InstagramApi.new.get_media_nearby(params[:lat],params[:lon],params[:distance])
     respond_to do |format|
       format.xml  { render :xml => @media }
       format.json { render :json => @media }
