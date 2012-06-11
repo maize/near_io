@@ -44,6 +44,7 @@ gem 'execjs'
 gem 'therubyracer'
 gem 'faraday', '0.7.6' # http://merics.blogspot.co.uk/2012/05/instagram-ruby-gem.html
 gem "twitter-bootstrap-rails"
+gem "twitter_bootstrap_form_for", "~> 1"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

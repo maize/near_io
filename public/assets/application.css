@@ -5,3 +5,18 @@
 .container h1 {
 	text-align:center;
 }
+
+.container table {
+	margin:0 auto;
+}
+
+ul.grid {
+	list-style:none;
+	margin-left:0;
+}
+
+ul.grid li {
+	display: block;
+	float: left;
+	border:1px solid #000;
+}

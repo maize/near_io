@@ -25,7 +25,11 @@ class Place
 
   # Mongoid does not have the dynamic finders that active record does
   def self.find_by_name(name) 
-    where(:name => name).first 
+    where(:name => name.gsub("-"," ")).first
+  end
+
+  def twitter
+    return self.contact["twitter"]
   end
 
   def lat

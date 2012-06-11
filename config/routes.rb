@@ -2,9 +2,11 @@ NnApi::Application.routes.draw do
   root :to => 'application#home'
 
   resources :api
-  resources :places
 
-  # match ":id" => "places#show"
+  match "places/search", :to => "places#search"
+  match "places/:id" => "places#show"
+
+  resources :places
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
