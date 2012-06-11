@@ -1,35 +1,10 @@
 NnApi::Application.routes.draw do
+  root :to => 'application#home'
 
-  get "api/get_notes_by_longitude_latitude"
+  resources :api
+  resources :places
 
-  get "api/get_notes_by_note_name"
-
-  get "api/get_media_nearby"
-
-  get "api/get_locations_nearby"
-
-  get "api/add_notes_by_text"
-
-  get "api/add_note"
-
-  get "notes/show"
-
-  get "notes/create"
-
-  get "notes/edit"
-
-  get "notes/crawl"
-
-  get "places/show"
-
-    match "places/:id" => "places#show"
-    match ":id" => "places#show"
-
-  get "places/create"
-
-  get "places/edit"
-
-  get "places/crawl"
+  # match ":id" => "places#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -80,7 +55,6 @@ NnApi::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
