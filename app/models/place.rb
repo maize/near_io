@@ -28,6 +28,10 @@ class Place
     where(:name => name.gsub("-"," ")).first
   end
 
+  def self.find_all_by_name(name) 
+    where(:name => name.gsub("-"," "))
+  end
+
   def twitter
     return self.contact["twitter"]
   end

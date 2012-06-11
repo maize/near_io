@@ -9,8 +9,10 @@ class PlacesController < ApplicationController
   end
 
   def search
-    @places = Place.all
-    render
+    unless params.nil?
+      @places = Place.find_all_by_name(params[:place][:name])
+      render "places/search_results"
+    end
   end
 
   def edit
