@@ -28,15 +28,10 @@ end
 
 gem 'bson', '1.3.1'
 gem 'bson_ext', '1.3.1'
-gem 'mongoid', '2.0.2'
 gem 'mongo'
-gem 'mongo_mapper'
+gem 'mongoid'
 gem 'anemone', '0.7.1'
 gem 'jquery-rails'
-gem 'mysql2'
-gem 'activerecord-mysqlspatial-adapter'
-gem 'activerecord-postgresql-adapter'
-gem 'sqlite3', '1.3.5'
 gem 'quimby' # Facebook API Wrapper
 gem 'instagram', :git => 'git://github.com/Instagram/instagram-ruby-gem.git'
 gem 'typhoeus', '0.2.4'
@@ -45,6 +40,7 @@ gem 'therubyracer'
 gem 'faraday', '0.7.6' # http://merics.blogspot.co.uk/2012/05/instagram-ruby-gem.html
 gem "twitter-bootstrap-rails"
 gem "twitter_bootstrap_form_for", "~> 1"
+gem "mongoid_fulltext"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -9,10 +9,13 @@ class PlacesController < ApplicationController
   end
 
   def search
-    unless params.nil?
-      @places = Place.find_all_by_name(params[:place][:name])
-      render "places/search_results"
+    @places = Place.search_by_name(params[:name])
+
+    if @places.nil?
+      flash[:notice] = "Nothing found!"
     end
+
+    render "places/search_results"
   end
 
   def edit

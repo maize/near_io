@@ -1,9 +1,13 @@
 class Place
   include Mongoid::Document
+  include Mongoid::FullTextSearch
+  include Mongoid::Timestamps # adds automagic fields created_at, updated_at
 
   has_and_belongs_to_many :notes
-
   embeds_many :photos
+
+  before_save :update_index
+  before_destroy :remove_from_index
 
   field :name, :type => String
   field :foursquare_id, :type => String
@@ -15,12 +19,27 @@ class Place
   field :state, :type => String
   field :contact, :type => Hash
 
+  fulltext_search_in :name, :index_name => 'mongoid_fulltext.name'
+
   def to_param
     name.gsub(' ', '-')
   end
 
   def to_name
     name.downcase.gsub('-', ' ')
+  end
+
+  def self.update_index
+    update_ngram_index
+  end
+
+  def self.remove_from_index
+    remove_from_ngram_index
+  end
+
+  def self.search_by_name(name)
+    update_index
+    fulltext_search(name, :index => 'mongoid_fulltext.name')
   end
 
   # Mongoid does not have the dynamic finders that active record does
