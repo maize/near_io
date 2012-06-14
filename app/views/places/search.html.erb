@@ -1,6 +1,14 @@
-<h1>Explore the buzz around your favourite places</h1>
-<%= twitter_bootstrap_form_tag("/search", :method => "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
+<%= twitter_bootstrap_form_for @places, :url => { :action => "search", :controller => "places" }, :html => { :class => "form-search" } do |f| %>
+	<%= search_field(:place, :name) %>
+	<%= f.submit "Search" %>
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<% if @places.kind_of? Array %>
+<ul>
+<% @places.each do |place| %>
+	<li><%= place.name %></li>
+<% end %>
+</ul>
 <% end %>

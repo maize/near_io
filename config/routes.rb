@@ -1,5 +1,5 @@
 NnApi::Application.routes.draw do
-  root :to => 'application#home'
+  root :to => 'places#search'
 
   resources :api
 

@@ -8,22 +8,30 @@ class PlacesController < ApplicationController
     end
   end
 
-  def search
-    @places = Place.search_by_name(params[:name])
+  def search    
+    if params.has_key?(:place)
+      search_name = params[:place][:name]
+      @places = Place.search_by_name(search_name)
+      if @places.nil?
+        @places = Place.new
+      end
+    else
+      @places = Place.new
+    end
 
     if @places.nil?
       flash[:notice] = "Nothing found!"
     end
 
-    render "places/search_results"
+    render
   end
 
   def edit
-    @place = Place.find_by_name(params[:id])
+    @place = Place.find_by_slug(params[:id])
   end
 
   def update
-    @place = Place.find_by_name(params[:id])
+    @place = Place.find_by_slug(params[:id])
 
     respond_to do |format|
       if @place.update_attributes(params[:place])
@@ -37,7 +45,7 @@ class PlacesController < ApplicationController
   end
 
   def destroy
-    @place = Place.find_by_name(params[:id])
+    @place = Place.find_by_slug(params[:id])
     @place.destroy
 
     respond_to do |format|
@@ -47,7 +55,7 @@ class PlacesController < ApplicationController
   end
 
   def show
-    @place = Place.find_by_name(params[:id])
+    @place = Place.find_by_slug(params[:id])
 
     if @place.nil?
       begin

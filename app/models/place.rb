@@ -1,6 +1,7 @@
 class Place
   include Mongoid::Document
   include Mongoid::FullTextSearch
+  include Mongoid::Slug
   include Mongoid::Timestamps # adds automagic fields created_at, updated_at
 
   has_and_belongs_to_many :notes
@@ -10,6 +11,7 @@ class Place
   before_destroy :remove_from_index
 
   field :name, :type => String
+
   field :foursquare_id, :type => String
   field :latlon, :type => Array
   field :city, :type => String
@@ -21,20 +23,23 @@ class Place
 
   fulltext_search_in :name, :index_name => 'mongoid_fulltext.name'
 
-  def to_param
-    name.gsub(' ', '-')
-  end
+  slug :name
+
+  # def to_param
+  #   name.gsub(' ', '-')
+  #   slug
+  # end
 
   def to_name
     name.downcase.gsub('-', ' ')
   end
 
-  def self.update_index
-    update_ngram_index
+  def update_index
+    self.update_ngram_index
   end
 
-  def self.remove_from_index
-    remove_from_ngram_index
+  def remove_from_index
+    self.remove_from_ngram_index
   end
 
   def self.search_by_name(name)
