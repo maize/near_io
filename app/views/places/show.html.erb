@@ -6,8 +6,8 @@
 		<% end %>
 	</ul>
 	<ul class="grid">
-		<% @place.photos.each do |photo| %>
-			<li><img src="<%= photo.thumbnail %>" /></li>
+		<% @place.photos.each do |p| %>
+			<li><img src="<%= p.thumbnail %>" /></li>
 		<% end %>
 	</ul>
 </div>

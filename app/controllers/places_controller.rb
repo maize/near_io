@@ -87,17 +87,19 @@ class PlacesController < ApplicationController
 
     # Get Instagram photos
     begin
-      @photos = Apis::InstagramApi.new.get_media_nearby(@place.lat,@place.lon)
-      @photos.data.each do |photo|
+      @photos = []
+      @ext_photos = Apis::InstagramApi.new.get_media_nearby(@place.lat,@place.lon)
+      @ext_photos.data.each do |photo|
         @p = Photo.add_by_instagram(photo)
+        @place.photos.push(@p)
       end
+      @place.save
     rescue
       puts "Error #{$!}"
     end
 
     # Get Tweets relevant to location
     @tweets = Twitter.search(@place.name, :gecode => @place.lat.to_s+","+@place.lon.to_s+",1mi", :result_type => "recent")
-    p @tweets
 
     begin
       respond_to do |format|
