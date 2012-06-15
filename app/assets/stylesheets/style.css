@@ -1,0 +1,10 @@
+ul.grid {
+	list-style:none;
+	margin:0;
+}
+
+ul.grid li {
+	display:block;
+	float:left;
+	border:1px solid #000;
+}

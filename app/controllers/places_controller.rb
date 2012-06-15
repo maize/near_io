@@ -79,17 +79,11 @@ class PlacesController < ApplicationController
       end
     end
 
+    # Get Instagram photos
     begin
       @photos = Apis::InstagramApi.new.get_media_nearby(@place.lat,@place.lon)
       @photos.data.each do |photo|
-        @p = Photo.new
-        unless photo.caption.nil?
-          @p.instagram_id = photo.id
-          @p.name = photo.caption.text
-          @p.low_resolution = photo.images.low_resolution.url
-          @p.standard_resolution = photo.images.standard_resolution.url
-          @p.thumbnail = photo.images.thumbnail.url
-        end
+        @p = Photo.add_by_instagram(photo)
         @place.photos.push(@p)
       end
     rescue
