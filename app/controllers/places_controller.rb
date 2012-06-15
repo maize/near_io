@@ -27,6 +27,12 @@ class PlacesController < ApplicationController
         @place = Place.add_by_foursquare(place)
         @places.push(@place)
       end
+
+      if @foursquare_places.nil? || @foursquare_places.size() == 0
+        @places = Place.new
+        p "Error getting Foursquare Places"  
+      end
+
     else
       @places = Place.new
     end
