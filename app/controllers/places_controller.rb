@@ -84,14 +84,16 @@ class PlacesController < ApplicationController
       @photos = Apis::InstagramApi.new.get_media_nearby(@place.lat,@place.lon)
       @photos.data.each do |photo|
         @p = Photo.add_by_instagram(photo)
-        @place.photos.push(@p)
       end
     rescue
       puts "Error #{$!}"
     end
 
+    # Get Tweets relevant to location
+    @tweets = Twitter.search(@place.name, :gecode => @place.lat.to_s+","+@place.lon.to_s+",1mi", :result_type => "recent")
+    p @tweets
+
     begin
-      @place.save
       respond_to do |format|
         format.html # show.html.erb
         format.json { render :json => @place }

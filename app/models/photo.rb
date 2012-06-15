@@ -13,7 +13,7 @@ class Photo
     where(:instagram_id => instagram_id).first
   end
 
-  def add_by_instagram(photo)
+  def self.add_by_instagram(photo)
   	@p = Photo.find_by_instagram_id(photo.id)
 
   	if @p.nil?
@@ -26,7 +26,7 @@ class Photo
 			@p.thumbnail = photo.images.thumbnail.url
 	    end
   	end
-  	
+
     return @p
   end
 end

@@ -20,6 +20,7 @@ class Place
   field :postal_code, :type => String
   field :state, :type => String
   field :contact, :type => Hash
+  field :featured, :type => Boolean
 
   fulltext_search_in :name, :index_name => 'mongoid_fulltext.name'
 

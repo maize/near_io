@@ -1,11 +1,23 @@
-<h1><%= @place.name %></h1>
-<address>
-	<p><%= @place.address %></p>
-	<p><%= @place.city %></p>
-	<p><%= @place.country %></p>
-</address>
-<ul class="grid">
-	<% @place.photos.each do |photo| %>
-		<li><img src="<%= photo.thumbnail %>" /></li>
-	<% end %>
-</ul>
+<div class="span9">
+	<h1><%= @place.name %></h1>
+	<ul class="tweets">
+		<% @tweets.each do |tweet| %>
+			<li><%= tweet.text %></li>
+		<% end %>
+	</ul>
+	<ul class="grid">
+		<% @place.photos.each do |photo| %>
+			<li><img src="<%= photo.thumbnail %>" /></li>
+		<% end %>
+	</ul>
+</div>
+<div class="span3">
+  <div class="well sidebar-nav">
+	<address>
+		<p><%= @place.address %></p>
+		<p><%= @place.city %></p>
+		<p><%= @place.country %></p>
+		<p><%= @place.twitter %></p>
+	</address>
+  </div><!--/.well -->
+</div><!--/span-->
