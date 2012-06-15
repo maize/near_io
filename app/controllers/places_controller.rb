@@ -20,12 +20,12 @@ class PlacesController < ApplicationController
         latlon = request.location.latitude.to_s+","+request.location.longitude.to_s
       end
 
-      @places = Place.search_by_name(search_name)
-
-      p @places
-
-      if @places.nil?
-        @places = Apis::FoursquareApi.new.get_venue_by_name(search_name, latlon)
+      # Search for places on Foursquare
+      @places = []
+      @foursquare_places = Apis::FoursquareApi.new.get_venue_by_name(search_name, latlon)
+      @foursquare_places["places"].each do |place|
+        @place = Place.add_by_foursquare(place)
+        @places.push(@place)
       end
     else
       @places = Place.new

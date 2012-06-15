@@ -9,7 +9,7 @@ class Apis::FoursquareApi
 
 	Foursquare.verbose = true
 	def Foursquare.log(message)
-	  Rails.logger.info("[foursquare] #{message}") # HAX, SORRY BRANDON
+	  # Rails.logger.info("[foursquare] #{message}")
 	end
 
 	def get_nearby_venues(lat,lon)

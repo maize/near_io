@@ -8,7 +8,7 @@
 <% if @places.kind_of? Array %>
 <ul>
 <% @places.each do |place| %>
-	<li><%= place.name %></li>
+	<td><%= link_to place.name, place.slug %></td>
 <% end %>
 </ul>
 <% end %>

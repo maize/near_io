@@ -7,7 +7,7 @@ class Place
   has_and_belongs_to_many :notes
   embeds_many :photos
 
-  before_save :update_index
+  # before_save :update_index
   before_destroy :remove_from_index
 
   field :name, :type => String
@@ -25,21 +25,16 @@ class Place
 
   slug :name
 
-  # def to_param
-  #   name.gsub(' ', '-')
-  #   slug
-  # end
-
   def to_name
     name.downcase.gsub('-', ' ')
   end
 
-  def self.update_index
-    update_ngram_index
+  def update_index
+    Place.update_ngram_index
   end
 
-  def self.remove_from_index
-    remove_from_ngram_index
+  def remove_from_index
+    Place.remove_from_ngram_index
   end
 
   def self.search_by_name(name)
@@ -50,6 +45,10 @@ class Place
   # Mongoid does not have the dynamic finders that active record does
   def self.find_by_name(name) 
     where(:name => name.gsub("-"," ")).first
+  end
+
+  def self.find_by_foursquare_id(fqs_id) 
+    where(:foursquare_id => fqs_id).first
   end
 
   def self.find_all_by_name(name) 
@@ -77,21 +76,27 @@ class Place
   end
 
   def Place.add_by_foursquare(fsq_venue)
-  	@p = Place.new	
-    @p.name = fsq_venue.name
-    @p.foursquare_id = fsq_venue.id
-    @p.latlon = [fsq_venue.location.lat,fsq_venue.location.lng]
-    @p.city = fsq_venue.location.city
-    @p.address = fsq_venue.location.address
-    @p.country = fsq_venue.location.country
-    @p.postal_code = fsq_venue.location.postal_code
-    @p.state = fsq_venue.location.state
-    
-    unless fsq_venue.contact.nil?
-      @p.contact = fsq_venue.contact
-    end
+    # Check if place already exists in db
+  	@p = Place.find_by_foursquare_id(fsq_venue.id)
 
-    @p.save
+    if @p.nil?
+      @p = Place.new
+      @p.name = fsq_venue.name
+      @p.foursquare_id = fsq_venue.id
+      @p.latlon = [fsq_venue.location.lat,fsq_venue.location.lng]
+      @p.city = fsq_venue.location.city
+      @p.address = fsq_venue.location.address
+      @p.country = fsq_venue.location.country
+      @p.postal_code = fsq_venue.location.postal_code
+      @p.state = fsq_venue.location.state
+      
+      # Check if there is more info like Twitter handle
+      unless fsq_venue.contact.nil?
+        @p.contact = fsq_venue.contact
+      end
+
+      @p.save
+    end
 
     return @p
   end
