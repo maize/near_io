@@ -15,6 +15,7 @@ NnApi::Application.configure do
   config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
+  config.assets.initialize_on_precompile = false
   # config.assets.compile = true
   # config.assets.precompile = [/^[-_a-zA-Z0-9]*\..*/]
 
