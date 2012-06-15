@@ -1,6 +1,9 @@
 NnApi::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  # Enable the asset pipeline
+  config.assets.enabled = true
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -48,7 +51,7 @@ NnApi::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  # config.assets.precompile += %w( search.js )
+  config.assets.precompile += %w( application.js application.js )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
