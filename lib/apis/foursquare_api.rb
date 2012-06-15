@@ -1,3 +1,5 @@
+require "geocoder"
+
 class Apis::FoursquareApi
 	attr_accessor :foursquare
 
@@ -18,7 +20,7 @@ class Apis::FoursquareApi
 		return foursquare.venues.find(venue_id)
 	end
 
-	def get_venue_by_name(venue_name)
-		return foursquare.venues.search(:query => venue_name, :ll => "50,10")
+	def get_venue_by_name(venue_name,ll)
+		return foursquare.venues.search(:query => venue_name, :ll => ll)
 	end
 end

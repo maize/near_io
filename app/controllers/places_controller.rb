@@ -12,7 +12,16 @@ class PlacesController < ApplicationController
     if params.has_key?(:place)
       search_name = params[:place][:name]
 
-      p Apis::FoursquareApi.new.get_venue_by_name(search_name)
+      # Get lat lon by Geocoder
+      if (request.location.latitude == 0 || request.location.longitude == 0)
+        # Take randomg lat lon for development, e.g. London coordinates
+        latlon = "51.5171,0.1062";
+      else
+        latlon = request.location.latitude.to_s+","+request.location.longitude.to_s
+      end
+
+      # TODO: include Foursquare results in search
+      p Apis::FoursquareApi.new.get_venue_by_name(search_name, latlon)
 
       @places = Place.search_by_name(search_name)
       if @places.nil?

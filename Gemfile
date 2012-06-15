@@ -42,6 +42,7 @@ gem "twitter-bootstrap-rails"
 gem "twitter_bootstrap_form_for", "~> 1"
 gem "mongoid_fulltext"
 gem 'mongoid_slug'
+gem 'geocoder'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
