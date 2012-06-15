@@ -11,6 +11,9 @@ class PlacesController < ApplicationController
   def search    
     if params.has_key?(:place)
       search_name = params[:place][:name]
+
+      p Apis::FoursquareApi.new.get_venue_by_name(search_name)
+
       @places = Place.search_by_name(search_name)
       if @places.nil?
         @places = Place.new
@@ -60,7 +63,7 @@ class PlacesController < ApplicationController
     if @place.nil?
       begin
         puts "Getting place by Foursquare.."
-        @fsq_venue = NnApi::FourSquareApi.new.get_venue_by_id(params[:id])
+        @fsq_venue = Apis::FoursquareApi.new.get_venue_by_id(params[:id])
         @place = Place.add_by_foursquare(@fsq_venue)
       rescue
         puts "Error #{$!}"
@@ -68,7 +71,7 @@ class PlacesController < ApplicationController
     end
 
     begin
-      @photos = NnApi::InstagramApi.new.get_media_nearby(@place.lat,@place.lon)
+      @photos = Apis::InstagramApi.new.get_media_nearby(@place.lat,@place.lon)
       @photos.data.each do |photo|
         @p = Photo.new
         unless photo.caption.nil?

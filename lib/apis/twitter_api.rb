@@ -1,4 +1,4 @@
-class NnApi::TwitterApi
+class Apis::TwitterApi
 	attr_accessor :twitter
 
 	def initialize

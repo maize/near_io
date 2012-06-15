@@ -1,6 +1,6 @@
 require "instagram"
 
-class NnApi::InstagramApi
+class Classes::InstagramApi
 	include Instagram
 
 	def initialize

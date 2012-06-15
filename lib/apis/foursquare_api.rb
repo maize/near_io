@@ -1,4 +1,4 @@
-class NnApi::FourSquareApi
+class Apis::FoursquareApi
 	attr_accessor :foursquare
 
 	def initialize
@@ -16,5 +16,9 @@ class NnApi::FourSquareApi
 
 	def get_venue_by_id(venue_id)
 		return foursquare.venues.find(venue_id)
+	end
+
+	def get_venue_by_name(venue_name)
+		return foursquare.venues.search(:query => venue_name, :ll => "50,10")
 	end
 end

@@ -13,7 +13,7 @@ class ApiController < ApplicationController
   end
 
   def get_locations_nearby
-    @venues = NnApi::FourSquareApi.new.get_nearby_venues(params[:lat],params[:lon])
+    @venues = FourSquareApi.new.get_nearby_venues(params[:lat],params[:lon])
     @places = []
     @venues.each do |venue|
       @place = Place.add_by_foursquare(venue)
@@ -26,7 +26,7 @@ class ApiController < ApplicationController
   end
 
   def get_media_nearby
-    @media = NnApi::InstagramApi.new.get_media_nearby(params[:lat],params[:lon],params[:distance])
+    @media = InstagramApi.new.get_media_nearby(params[:lat],params[:lon],params[:distance])
     respond_to do |format|
       format.xml  { render :xml => @media }
       format.json { render :json => @media }

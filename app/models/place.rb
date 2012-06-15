@@ -34,12 +34,12 @@ class Place
     name.downcase.gsub('-', ' ')
   end
 
-  def update_index
-    self.update_ngram_index
+  def self.update_index
+    update_ngram_index
   end
 
-  def remove_from_index
-    self.remove_from_ngram_index
+  def self.remove_from_index
+    remove_from_ngram_index
   end
 
   def self.search_by_name(name)
