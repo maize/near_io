@@ -1,3 +1,7 @@
+.center {
+	text-align:center;
+}
+
 ul.grid {
 	list-style:none;
 	margin:0;
