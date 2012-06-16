@@ -58,9 +58,9 @@ class Place
     where(:name => name.gsub("-"," "))
   end
 
-  def name=(name)
-    write_attribute(:name,"#{name} - test")
-  end
+  # def name=(name)
+  #   write_attribute(:name,"#{name} - test")
+  # end
 
   def lat
   	return self.latlon[0]

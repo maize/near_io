@@ -12,10 +12,11 @@ ul.grid {
 	margin:0;
 }
 
-ul.grid li {
+.row-fluid [class*="span"] .grid li {
 	display:block;
 	float:left;
-	border:1px solid #000;
+	margin-left:0;
+	margin-right:2.5641%;
 }
 
 ul.tweets {

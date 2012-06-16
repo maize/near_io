@@ -5,9 +5,11 @@
 			<li><%= tweet.text %></li>
 		<% end %>
 	</ul>
-	<ul class="grid">
+	<ul class="thumbnails grid">
 		<% @place.photos.each do |p| %>
-			<li><img src="<%= p.thumbnail %>" /></li>
+		<li class="span2">
+			<a href="#" class="thumbnail"><img src="<%= p.thumbnail %>" /></a>
+	  	</li>
 		<% end %>
 	</ul>
 </div>
