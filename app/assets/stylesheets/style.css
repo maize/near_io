@@ -2,6 +2,11 @@
 	text-align:center;
 }
 
+.navbar p {
+	padding: 9px 10px 11px;
+	margin:0;
+}
+
 ul.grid {
 	list-style:none;
 	margin:0;
