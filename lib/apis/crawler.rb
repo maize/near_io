@@ -1,53 +1,26 @@
 require 'anemone'
 require 'system'
 require 'mongo'
+require 'nokogiri'
 
 class Apis::Crawler
 
-site_root = 
 
-# MONGODB
-db = Mongo::Connection.new.db("blogposts")
-posts_collection = db["posts"]
+urls = File.open("newssites.csv")
 
-# SPIDER 
-def spider(url, duration=60)
-   options = 
-   { 
-     :accept_cookies => true,
-     :read_timeout => 20,
-     :retry_limit => 0,
-     :verbose => true,
-     :discard_page_bodies => true,
-     :user_agent => 'Mozilla...'
-   }
-   
-begin
-     # Stop crawl after n seconds
-     SystemTimer.timeout_after(duration) do
-       Anemone.crawl(self, options) do |anemone|
-         anemone.storage = Anemone::Storage.MongoDB()
-         anemone.focus_crawl 
+opts = {discard_page_bodies: true, skip_query_strings: true, depth_limit:2000, read_timeout: 10} 
 
-         
-         anemone.on_every_page do |page|
-           puts page.url
-           doc = page.doc
-           yield doc if doc
-         end
-       end
-     end
-   rescue Timeout::Error
-   end
- end
 
-   check_for_term
-   
-# DISCARD BODY
-Anemone.crawl(url,:discard_page_bodies=> true)
 
-# FOR BLOGS   
-Anemone.crawl(domain, :depth_limit => 1) do |anemone|
+in_domain?(uri) != true 
 
-# FOR NEWS SITES
-Anemone.crawl(domain, :depth_limit => 3) do |anemone|
+
+Anemone.crawl(url, options = opts) do |anemone|
+    anemone.storage = Anemone::Storage.MongoDB
+
+
+
+    anemone.on_every_page
+      if page.title =~ ''
+end
+
