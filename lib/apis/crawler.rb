@@ -43,15 +43,3 @@ def spider_list(list, duration=)
 end
 
 
-### FOR API CONTORLLER
-
-def get_local_blogs
-
-end
-
-
-def get_local_news
-
-
-
-end

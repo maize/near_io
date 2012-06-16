@@ -44,3 +44,14 @@ class ApiController < ApplicationController
     end
   end
 end
+
+def get_blog_posts_nearby(place)
+  spider_list(list,place)
+
+end
+
+
+def get_news_nearby(place)
+
+
+end
