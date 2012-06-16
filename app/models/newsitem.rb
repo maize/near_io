@@ -7,5 +7,5 @@ class Newsitem
 
   field :title, :type => String
   field :url, :type => String
-  field :siteID => String
+  field :source => String
 end

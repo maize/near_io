@@ -5,6 +5,7 @@ class Place
   include Mongoid::Timestamps # adds automagic fields created_at, updated_at
 
   has_and_belongs_to_many :notes
+  has_and_belongs_to_many :newsitems
   embeds_many :photos
 
   # before_save :update_index
@@ -19,6 +20,7 @@ class Place
   field :country, :type => String
   field :postal_code, :type => String
   field :state, :type => String
+  field :twitter, :type => String
   field :contact, :type => Hash
   field :featured, :type => Boolean
 
@@ -56,9 +58,9 @@ class Place
     where(:name => name.gsub("-"," "))
   end
 
-  def twitter
-    return self.contact["twitter"]
-  end
+  # def name=(name)
+  #   write_attribute(:name,"#{name} - test")
+  # end
 
   def lat
   	return self.latlon[0]
@@ -94,6 +96,7 @@ class Place
       # Check if there is more info like Twitter handle
       unless fsq_venue.contact.nil?
         @p.contact = fsq_venue.contact
+        @p.twitter = fsq_venue.contact["twitter"]
       end
 
       @p.save

@@ -12,3 +12,9 @@
 <% end %>
 </ul>
 <% end %>
+
+<ul>
+<% @featured_places.each do |place| %>
+	<li><%= link_to place.name, place.slug %></li>
+<% end %>
+</ul>
