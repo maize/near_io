@@ -4,9 +4,9 @@ NnApi::Application.routes.draw do
   resources :api
 
   match "places/search", :to => "places#search"
-  match "places/:id" => "places#show"
   match "places" => "places#index"
   match ":id" => "places#show"
+  match ":id/edit" => "places#edit"
 
   resources :places
 

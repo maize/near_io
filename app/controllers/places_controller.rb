@@ -41,6 +41,8 @@ class PlacesController < ApplicationController
       flash[:notice] = "Nothing found!"
     end
 
+    @featured_places = Place.where(:featured => true)
+
     render
   end
 
@@ -99,7 +101,7 @@ class PlacesController < ApplicationController
     end
 
     # Get Tweets relevant to location
-    @tweets = Twitter.search(@place.name, :gecode => @place.lat.to_s+","+@place.lon.to_s+",1mi", :result_type => "recent")
+    @tweets = Twitter.search(@place.name+"", :lang => "en", :gecode => @place.lat.to_s+","+@place.lon.to_s+",1mi", :result_type => "recent")
 
     begin
       respond_to do |format|

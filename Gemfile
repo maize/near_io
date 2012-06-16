@@ -44,6 +44,8 @@ gem "mongoid_fulltext"
 gem 'mongoid_slug'
 gem 'geocoder'
 gem 'twitter'
+gem 'devise'
+gem 'thin'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
