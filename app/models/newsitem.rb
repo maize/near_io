@@ -1,8 +1,12 @@
 class Newsitem
   include Mongoid::Document
+  include Mongoid::Timestamps # adds automagic fields created_at, updated_at
 
-  field :name, :type => String
-  field :source, :type => String
-  field :contents, :type => String
+  has_and_belongs_to_many :places
+  has_and_belongs_to_many :networks
+  belongs_to :source
 
+  field :title, :type => String
+  field :url, :type => String
+  field :source => String
 end
