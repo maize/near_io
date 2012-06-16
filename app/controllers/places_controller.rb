@@ -55,7 +55,7 @@ class PlacesController < ApplicationController
 
     respond_to do |format|
       if @place.update_attributes(params[:place])
-        format.html { redirect_to @place, :notice => 'Place was successfully updated.' }
+        format.html { render :action => "edit", :notice => 'Place was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render :action => "edit" }
