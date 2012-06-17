@@ -10,6 +10,15 @@ include Mongoid::Timestamps # adds automagic fields created_at, updated_at
 
 class Apis::Crawler
 
+
+  sitelist = [
+      "http://www.guardian.co.uk/business/2012/jun/16/world-bank-euro-collapse-crisis",
+      ]
+
+  bloglist = [
+
+  ]
+
   def spider(url, place)
 
     options = { 
