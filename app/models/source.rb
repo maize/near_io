@@ -1,8 +1,16 @@
 class Source
-  include Mongoid::Document
+	include Mongoid::Document
 
-  has_many :newsitems
+	has_many :newsitems
 
-  field :title, :type => String
-  field :baseurl, :type => String
+	field :title, :type => String
+	field :baseurl, :type => String
+end
+
+class Blog < Source
+
+end
+
+class NewsSite < Source
+
 end
