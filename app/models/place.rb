@@ -5,7 +5,7 @@ class Place
   include Mongoid::Timestamps # adds automagic fields created_at, updated_at
 
   has_and_belongs_to_many :notes
-  has_and_belongs_to_many :newsitems
+  has_and_belongs_to_many :news_items
   embeds_many :photos
 
   # before_save :update_index

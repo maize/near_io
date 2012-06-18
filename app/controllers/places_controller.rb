@@ -1,6 +1,4 @@
 class PlacesController < ApplicationController
-  before_filter :authenticate_user!
-  
   def index
     @places = Place.all
 
@@ -103,7 +101,28 @@ class PlacesController < ApplicationController
     end
 
     # Get Tweets relevant to location
-    @tweets = Twitter.search(@place.name+"", :lang => "en", :gecode => @place.lat.to_s+","+@place.lon.to_s+",1mi", :result_type => "recent")
+    unless @place.twitter.nil?
+      p "Searching for tweets by handle.."
+      search_tweets = "to "+@place.twitter
+    else
+      p "Searching for tweets by name.."
+      search_tweets = @place.name+""
+    end
+
+    @tweets = Twitter.search(search_tweets, :lang => "en", :gecode => @place.lat.to_s+","+@place.lon.to_s+",1mi", :result_type => "recent")
+    @news_items = []
+
+    p @tweets
+
+    @tweets.each do |tweet|
+      news_item = NewsItem.new
+      news_item.tweet_id = news_item.id
+      news_item.author = tweet.from_user
+      news_item.content = tweet.text
+      news_item.source = tweet.source
+      news_item.save
+      @news_items.push(news_item)
+    end
 
     begin
       respond_to do |format|

@@ -1,10 +1,19 @@
 <div class="span9">
 	<h1><%= @place.name %></h1>
-	<ul class="tweets">
-		<% @tweets.each do |tweet| %>
-			<li><%= tweet.text %></li>
-		<% end %>
-	</ul>
+	<table class="table table-striped">
+	  <tr>
+	    <th>Author</th>
+	    <th>Message</th>
+	    <th>Action</th>
+	  </tr>
+	<% @news_items.each do |news_item| %>
+	  <tr>
+	  	<td><%= news_item.author %></td>
+	    <td><%= news_item.content %></td>
+	    <td><%= link_to "License", news_item, :class => 'btn btn-mini' %></td>
+	  </tr>
+	<% end %>
+	</table>
 	<ul class="thumbnails grid">
 		<% @place.photos.each do |p| %>
 		<li class="span2">
