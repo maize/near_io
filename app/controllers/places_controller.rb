@@ -112,8 +112,6 @@ class PlacesController < ApplicationController
     @tweets = Twitter.search(search_tweets, :lang => "en", :gecode => @place.lat.to_s+","+@place.lon.to_s+",1mi", :result_type => "recent")
     @news_items = []
 
-    p @tweets
-
     @tweets.each do |tweet|
       news_item = NewsItem.new
       news_item.tweet_id = news_item.id
