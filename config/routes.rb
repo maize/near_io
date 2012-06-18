@@ -7,12 +7,13 @@ NnApi::Application.routes.draw do
 
   resources :api
 
+  match "news_items", :to => "news_items#create"
+  resources :places
+
   match "places/search", :to => "places#search"
   match "places" => "places#index"
   match ":id" => "places#show"
   match ":id/edit" => "places#edit"
-
-  resources :places
 
   resources :news_items
 

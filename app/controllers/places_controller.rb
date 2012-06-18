@@ -130,6 +130,8 @@ class PlacesController < ApplicationController
       @news_items.push(news_item)
     end
 
+    @articles = NewsItem.where(:type => "blog")
+
     begin
       respond_to do |format|
         format.html # show.html.erb

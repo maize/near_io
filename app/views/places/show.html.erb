@@ -29,7 +29,11 @@
 		<p><%= @place.city %></p>
 		<p><%= @place.country %></p>
 		<p><%= @place.twitter %></p>
-		<p><%= @place.featured %></p>
 	</address>
+  </div><!--/.well -->
+  <div class="well blog_articles">
+	<% @articles.each do |article| %>
+		<%= article.type %>
+	<% end %>
   </div><!--/.well -->
 </div><!--/span-->
