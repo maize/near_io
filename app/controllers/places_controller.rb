@@ -96,6 +96,10 @@ class PlacesController < ApplicationController
         @place.photos.push(@p)
       end
       @place.save
+
+      # p "Start crawling.."
+      # @sites_list = ["www.ucl.ac.uk"]
+      # @crawler = Apis::Crawler.new.spider_sitelist(@sites_list,@place.name)
     rescue
       puts "Error #{$!}"
     end

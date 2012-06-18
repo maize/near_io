@@ -12,4 +12,5 @@ class NewsItem
   field :content, :type => String
   field :url, :type => String
   field :source, :type => String
+  field :type, :type => String
 end
