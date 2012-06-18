@@ -5,7 +5,6 @@ class NewsItemsController < ApplicationController
 	def show
     	@news_item = NewsItem.find(params[:id])
     	@bid = Bid.new
-    	p @news_item.bids
         respond_to do |format|
         	format.html # show.html.erb
         	format.json { render :json => @news_item }

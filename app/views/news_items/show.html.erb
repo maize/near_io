@@ -4,9 +4,11 @@
 </div>
 <div class="span3">
   <div class="well sidebar-nav">
-  	<p>Bids</p>
-  	<p>Latest bid: £<%= @news_item.bids.last.price %></p>
-	<%= twitter_bootstrap_form_for @bid, :url => { :action => "bid" }, :html => { :class => "horizontal-form" } do |f| %>
+  	<h2>Bids</h2>
+  	<% if @news_item.bids.size > 0 %>
+  		<p>Latest bid: £<%= @news_item.bids.last.price %></p>
+  	<% end %>
+	<%= twitter_bootstrap_form_for @bid, :url => { :action => "bid" }, :html => { :class => "form-vertical" } do |f| %>
 	  <% if @bid.errors.any? %>
 	    <div id="error_explanation">
 	      <h2><%= pluralize(@bid.errors.count, "error") %> prohibited this place from being saved:</h2>
@@ -22,7 +24,7 @@
 	  <%= f.text_field :price %>
 
 	  <div class="actions">
-	    <%= f.submit %>
+	    <%= f.submit :value => "Bid", :class => 'btn' %>
 	  </div>
 	<% end %>
   </div><!--/.well -->
