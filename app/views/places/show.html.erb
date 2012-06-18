@@ -40,7 +40,9 @@
   <div class="well blog_articles">
   	<h2>Live Blogs</h2>
 	<% @articles.each do |article| %>
-		<%= link_to article.name, article %>
+		<p><%= article.author %></p>
+		<p><%= link_to article.url, article.name :class => 'btn btn-mini' %></p>
+		<p><%= link_to "License", :class => 'btn btn-mini' %></p>
 	<% end %>
   </div><!--/.well -->
 </div><!--/span-->
