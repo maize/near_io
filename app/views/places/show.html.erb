@@ -23,7 +23,10 @@
 	</ul>
 </div>
 <div class="span3">
-  <div class="well sidebar-nav">
+  <div class="well map">
+ 	<div id="map_canvas" style="width:100%; height:100%"></div>
+  </div><!--/.well -->
+  <div class="well">
 	<address>
 		<p><%= @place.address %></p>
 		<p><%= @place.city %></p>
@@ -32,8 +35,9 @@
 	</address>
   </div><!--/.well -->
   <div class="well blog_articles">
+  	<h2>Live Blogs</h2>
 	<% @articles.each do |article| %>
-		<%= article.type %>
+		<%= link_to article.name, article %>
 	<% end %>
   </div><!--/.well -->
 </div><!--/span-->

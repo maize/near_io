@@ -18,6 +18,7 @@ NnApi::Application.routes.draw do
   resources :news_items
 
   match "news_items/bid", :to => "news_items#bid"
+  match "news_items/:id/delete", :to => "news_items#destroy"
   resources :bids
 
   # The priority is based upon order of creation:

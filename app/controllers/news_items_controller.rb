@@ -49,4 +49,14 @@ class NewsItemsController < ApplicationController
 		
 		redirect_to @news_item
 	end
+
+	def destroy
+		@news_item = NewsItem.find(params[:id])
+		@news_item.destroy
+
+		respond_to do |format|
+		  format.html { redirect_to root_url }
+		  format.json { head :no_content }
+		end
+	end
 end

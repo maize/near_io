@@ -23,3 +23,7 @@ ul.tweets {
 	list-style: none;
 	margin:10px 0 10px 0;
 }
+
+.map {
+	height:200px;
+}
