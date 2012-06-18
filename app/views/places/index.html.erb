@@ -1,5 +1,7 @@
 <h1>Listing Places</h1>
-<p id="notice"><%= notice %></p>
+<% unless notice.nil? %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
 <table class="table table-striped">
   <tr>

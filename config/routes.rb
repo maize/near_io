@@ -7,15 +7,17 @@ NnApi::Application.routes.draw do
 
   resources :api
 
-  match "newsitems/:id/license", :to => "news_items#license"
-  resources :news_items
-
   match "places/search", :to => "places#search"
   match "places" => "places#index"
   match ":id" => "places#show"
   match ":id/edit" => "places#edit"
 
   resources :places
+
+  resources :news_items
+
+  match "news_items/bid", :to => "news_items#bid"
+  resources :bids
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

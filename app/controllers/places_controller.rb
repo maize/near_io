@@ -118,7 +118,11 @@ class PlacesController < ApplicationController
       news_item.author = tweet.from_user
       news_item.content = tweet.text
       news_item.source = tweet.source
-      news_item.save
+
+      # Check if tweet exists already in db
+      # if NewsItem.where(:twitter_id => news_item.tweet_id).nil?
+        news_item.save
+      # end
       @news_items.push(news_item)
     end
 

@@ -1,0 +1,29 @@
+<div class="span9 well">
+	<p><b><%= @news_item.author %></b></p>
+	<p><%= @news_item.content %></p>
+</div>
+<div class="span3">
+  <div class="well sidebar-nav">
+  	<p>Bids</p>
+  	<p>Latest bid: £<%= @news_item.bids.last.price %></p>
+	<%= twitter_bootstrap_form_for @bid, :url => { :action => "bid" }, :html => { :class => "horizontal-form" } do |f| %>
+	  <% if @bid.errors.any? %>
+	    <div id="error_explanation">
+	      <h2><%= pluralize(@bid.errors.count, "error") %> prohibited this place from being saved:</h2>
+	      <ul>
+	      <% @bid.errors.full_messages.each do |msg| %>
+	        <li><%= msg %></li>
+	      <% end %>
+	      </ul>
+	    </div>
+	  <% end %>
+
+	  <%= hidden_field_tag(:news_item, @news_item.id) %>
+	  <%= f.text_field :price %>
+
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
+  </div><!--/.well -->
+</div><!--/span-->

@@ -4,12 +4,12 @@ class NewsItem
 
   has_and_belongs_to_many :places
   has_and_belongs_to_many :networks
-  belongs_to :source
+  has_many :bids, class_name: 'Bid', inverse_of: :news_item
 
   field :tweet_id, :type => Integer
   field :name, :type => String
   field :author, :type => String
   field :content, :type => String
   field :url, :type => String
-  field :isTwitter, :type => Boolean
+  field :source, :type => String
 end
