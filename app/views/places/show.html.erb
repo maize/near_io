@@ -17,9 +17,11 @@
 	<ul class="thumbnails grid">
 		<% @place.photos.each do |p| %>
 		<li class="span2">
-			<a href="#" class="thumbnail"><img src="<%= p.thumbnail %>" /></a>	
 			<div class="thumbnail">
-				<%= link_to "License", :class => 'btn btn-mini' %>
+				<img src="<%= p.thumbnail %>" />
+				<div class="caption">
+					<%= link_to "License", p.thumbnail, :class => 'btn btn-mini' %>
+	            </div>
 			</div>
 	  	</li>
 		<% end %>
@@ -30,19 +32,18 @@
  	<div id="map_canvas" style="width:100%; height:100%"></div>
   </div><!--/.well -->
   <div class="well">
-	<address>
+	<address class="center">
 		<p><%= @place.address %></p>
 		<p><%= @place.city %></p>
 		<p><%= @place.country %></p>
-		<p><%= @place.twitter %></p>
 	</address>
   </div><!--/.well -->
   <div class="well blog_articles">
   	<h2>Live Blogs</h2>
 	<% @articles.each do |article| %>
 		<p><%= article.author %></p>
-		<p><%= link_to article.url, article.name :class => 'btn btn-mini' %></p>
-		<p><%= link_to "License", :class => 'btn btn-mini' %></p>
+		<p><%= link_to article.url, article.name %></p>
+		<p><%= link_to "License", article, :class => 'btn btn-mini' %></p>
 	<% end %>
   </div><!--/.well -->
 </div><!--/span-->

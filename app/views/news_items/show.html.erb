@@ -1,6 +1,8 @@
-<div class="span9 well">
-	<p><b><%= @news_item.author %></b></p>
-	<p><%= @news_item.content %></p>
+<div class="span9">
+	<div class="well">
+		<p><b><%= @news_item.author %></b></p>
+		<p><%= @news_item.content %></p>
+	</div>
 </div>
 <div class="span3">
   <div class="well sidebar-nav">
@@ -24,7 +26,7 @@
 	  <%= f.text_field :price %>
 
 	  <div class="actions">
-	    <%= f.submit :value => "Bid", :class => 'btn' %>
+	    <%= f.submit :value => "Bid", :class => 'btn btn-primary' %>
 	  </div>
 	<% end %>
   </div><!--/.well -->

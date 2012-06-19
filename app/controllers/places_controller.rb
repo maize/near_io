@@ -43,6 +43,8 @@ class PlacesController < ApplicationController
 
     @featured_places = Place.where(:featured => true)
 
+    @search_place = Place.new
+
     render
   end
 

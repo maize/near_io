@@ -1,20 +1,29 @@
-<%= twitter_bootstrap_form_for @places, :url => { :action => "search", :controller => "places" }, :html => { :class => "form-search" } do |f| %>
-	<%= search_field(:place, :name) %>
-	<%= f.submit "Search" %>
-<% end %>
-
-<p id="notice"><%= notice %></p>
-
-<% if @places.kind_of? Array %>
-<ul>
-<% @places.each do |place| %>
-	<li><%= link_to place.name, place.slug %></li>
-<% end %>
-</ul>
-<% end %>
-
-<ul>
-<% @featured_places.each do |place| %>
-	<li><%= link_to place.name, place.slug %></li>
-<% end %>
-</ul>
+<div class="hero-unit">
+  <h1>Where do you want to be?</h1>
+	<%= twitter_bootstrap_form_for @search_place, :url => { :action => "search", :controller => "places" }, :html => { :class => "form-search" } do |f| %>
+		<%= search_field(:place, :name) %>
+		<%= f.submit "Search", :class => "btn btn-primary" %>
+	<% end %>
+	<h2>..like
+		<% count = 0 %>
+		<% unless @places.kind_of? Array %>
+			<% @featured_places.each do |place| %>
+				<% count += 1 %>
+				<% if count == @featured_places.size %>
+					<%= link_to place.name, place.slug %>
+				<% else %>
+					<%= link_to place.name, place.slug %>,
+				<% end %>
+			<% end %>
+		<% else %>
+			<% @places.each do |place| %>
+				<% count += 1 %>
+					<% if count == @places.size %>
+						<%= link_to place.name, place.slug %>
+					<% else %>
+						<%= link_to place.name, place.slug %>,
+					<% end %>
+			<% end %>
+		<% end %>
+	</h2>
+</div>

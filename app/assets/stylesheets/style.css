@@ -1,3 +1,48 @@
+body {
+	background-image: url(/assets/bg.png);
+	background-color: transparent;
+	padding-top:0;
+}
+
+h1 {
+	margin-bottom:20px;
+	font-family: "Istok";
+}
+
+h2 {
+	font-family: "Istok";
+}
+
+.hero-unit {
+	background:none;
+	text-align: center;
+	padding-bottom:0;
+}
+
+.hero-unit .form-search {
+	margin:50px 0;
+}
+
+.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 1170px !important;
+}
+
+.navbar-inner {
+    background-color: transparent;
+    background-image: none;
+    border-radius: 0 0 0 0;
+    box-shadow: 0 0 0;
+    padding-top:20px;
+}
+
+.hero-unit h1 {
+	margin-bottom:30px;
+}
+
+h2 {
+	margin-bottom:10px;
+}
+
 .center {
 	text-align:center;
 }
@@ -26,4 +71,9 @@ ul.tweets {
 
 .map {
 	height:200px;
+}
+
+.thumbnail {
+	text-align: center;
+	background:#FFF;
 }
