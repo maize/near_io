@@ -42,7 +42,7 @@
   	<h2>Live Blogs</h2>
 	<% @articles.each do |article| %>
 		<p><%= article.author %></p>
-		<p><%= link_to article.url, article.name %></p>
+		<p class="word_wrap"><%= link_to article.url, article.name %></p>
 		<p><%= link_to "License", article, :class => 'btn btn-mini' %></p>
 	<% end %>
   </div><!--/.well -->
