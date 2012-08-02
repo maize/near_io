@@ -37,15 +37,23 @@
   <% else %>
   <body>
   <% end %>
-
     <div class="navbar navbar-top">
       <div class="navbar-inner">
         <div class="container">
-          <a href="<%= root_url %>"><img src="<%= asset_path("logo.png") %>" alt="nearnote" /></a>
+          <a class="brand pull-left" href="<%= root_url %>">near</a>
+          <div class="navbar-text pull-left">
+            <%= request.ip %>
+            <%= request.location.city %>
+            <%= request.location.country %>
+          </div>
+          <ul class="nav pull-right">
+            <li class="active"><a href="#">home</a></li>
+            <li><a href="#">sign-in</a></li>
+            <li><%= link_to "Sign in as User with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+          </ul>
         </div>
       </div>
     </div>
-
     <div class="container">
       <div class="content">
         <div class="row">
@@ -53,11 +61,9 @@
         </div><!--/row-->
       </div><!--/content-->
     </div> <!-- /container -->
-
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "application" %>
-
   </body>
 </html>

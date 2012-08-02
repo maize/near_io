@@ -4,11 +4,13 @@ class User
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   ## Database authenticatable
-  field :email,              :type => String, :default => ""
-  field :encrypted_password, :type => String, :default => ""
+  field :email,               :type => String, :default => ""
+  field :encrypted_password,  :type => String, :default => ""
+  field :provider,            :type => String
+  field :uid,                 :type => String
 
   validates_presence_of :email
   validates_presence_of :encrypted_password
@@ -40,4 +42,25 @@ class User
 
   ## Token authenticatable
   # field :authentication_token, :type => String
+
+  def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
+    user = User.where(:provider => auth.provider, :uid => auth.uid).first
+    unless user
+      user = User.create(name:auth.extra.raw_info.name,
+                          provider:auth.provider,
+                          uid:auth.uid,
+                          email:auth.info.email,
+                          password:Devise.friendly_token[0,20]
+                          )
+    end
+    user
+  end
+
+  def self.new_with_session(params, session)
+    super.tap do |user|
+      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+        user.email = data["email"] if user.email.blank?
+      end
+    end
+  end
 end

@@ -32,6 +32,7 @@ gem 'mongo'
 gem 'mongoid'
 gem 'anemone', '0.7.1'
 gem 'jquery-rails'
+gem 'libv8', '3.3.10.4'
 gem 'quimby' # Facebook API Wrapper
 gem 'instagram', :git => 'git://github.com/Instagram/instagram-ruby-gem.git'
 gem 'typhoeus', '0.2.4'
@@ -44,10 +45,10 @@ gem "mongoid_fulltext"
 gem 'mongoid_slug'
 gem 'geocoder'
 gem 'twitter'
-gem 'devise'
 gem 'thin'
-gem 'omniauth'
-gem 'cancan'
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'httparty'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
