@@ -66,3 +66,7 @@ NnApi::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 end
+
+Devise.setup do |config|
+  config.omniauth :facebook, "187798787990772", "5f932520a31f3d0be11b30d44cc10d04", {:scope => 'email, user_location, user_likes, friends_events, offline_access'}
+end

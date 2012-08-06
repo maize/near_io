@@ -48,8 +48,11 @@
           </div>
           <ul class="nav pull-right">
             <li class="active"><a href="#">home</a></li>
-            <li><a href="#">sign-in</a></li>
-            <li><%= link_to "Sign in as User with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+            <% unless user_signed_in? %>
+            <li><%= link_to "Login with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+            <% else %>
+            <li><%= image_tag "https://graph.facebook.com/"+current_user.uid+"/picture" %><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+            <% end %>
           </ul>
         </div>
       </div>
