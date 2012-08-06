@@ -28,6 +28,7 @@ NnApi::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  config.assets.initialize_on_precompile = true
 
   # Do not compress assets
   config.assets.compress = false
