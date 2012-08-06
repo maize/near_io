@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
-  revision: 908e150800610138e2b48738f842afb85b3a832e
+  revision: ca703a2349e9a0c26dc5a8a5bb8f5d6dee3b0cff
   specs:
     twitter-bootstrap-rails (2.1.1)
       actionpack (>= 3.1)
@@ -57,6 +57,7 @@ GEM
     bson (1.3.1)
     bson_ext (1.3.1)
     builder (3.0.0)
+    cancan (1.6.8)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -211,6 +212,7 @@ DEPENDENCIES
   anemone (= 0.7.1)
   bson (= 1.3.1)
   bson_ext (= 1.3.1)
+  cancan
   coffee-rails (~> 3.2.1)
   devise
   execjs
