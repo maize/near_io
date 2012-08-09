@@ -14,6 +14,7 @@ class Place
   field :name, :type => String
 
   field :foursquare_id, :type => String
+  field :facebook_id, :type => String
   field :latlon, :type => Array
   field :city, :type => String
   field :address, :type => String

@@ -4,9 +4,6 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
 
-    @eventful_events = Apis::EventfulApi.get_events_nearby(102,52,20)
-    puts @eventful_events
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @events }

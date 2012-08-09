@@ -68,5 +68,5 @@ NnApi::Application.configure do
 end
 
 Devise.setup do |config|
-  config.omniauth :facebook, "187798787990772", "5f932520a31f3d0be11b30d44cc10d04", {:scope => 'email, user_location, user_likes, friends_events, offline_access'}
+  config.omniauth :facebook, "187798787990772", "5f932520a31f3d0be11b30d44cc10d04", {:scope => "email, user_likes, user_status, user_location, user_groups, user_interests, user_events, friends_events, user_checkins, friends_checkins"}
 end
