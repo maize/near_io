@@ -37,11 +37,11 @@
   <% else %>
   <body>
   <% end %>
-    <div class="navbar navbar-top">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="brand pull-left" href="<%= root_url %>">near</a>
-          <div class="navbar-text pull-left">
+          <div class="navbar-text pull-left hide">
             <%= request.ip %>
             <%= request.location.city %>
             <%= request.location.country %>
@@ -66,11 +66,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="content">
-        <div class="row">
-          <%= yield %>
-        </div><!--/row-->
-      </div><!--/content-->
+        <%= yield %>
     </div> <!-- /container -->
     <!-- Javascripts
     ================================================== -->
