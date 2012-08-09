@@ -1,6 +1,24 @@
-<h2>Your Facebook places:</h2>
+<h2>Your Facebook likes:</h2>
 
 <% unless @places.nil? %>
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Category</th>
+  </tr>
+  <% @likes.each do |like| %>
+  <tr>
+    <td><%= like.name %></td>
+    <% unless like.facebook_category.nil? %>
+    	<td><%= like.facebook_category.name %></td>
+    <% else %>	
+    	<td><%= like.facebook_category %></td>
+    <% end %>
+  </tr>
+  <% end %>
+</table>
+
+<h2>Your Facebook places:</h2>
 <table class="table table-striped">
   <tr>
     <th>Name</th>

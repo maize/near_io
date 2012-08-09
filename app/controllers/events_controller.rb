@@ -5,7 +5,8 @@ class EventsController < ApplicationController
     @events = Event.all
 
     if user_signed_in?
-      @places = current_user.get_facebook_places
+      @places = current_user.facebook_places
+      @likes = current_user.facebook_likes
     end
 
     respond_to do |format|

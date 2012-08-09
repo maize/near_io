@@ -47,11 +47,19 @@
             <%= request.location.country %>
           </div>
           <ul class="nav pull-right">
-            <li class="active"><a href="#">home</a></li>
             <% unless user_signed_in? %>
             <li><%= link_to "Login with Facebook", user_omniauth_authorize_path(:facebook) %></li>
             <% else %>
-            <li><%= image_tag "https://graph.facebook.com/"+current_user.uid+"/picture" %><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+            <li class="dropdown" id="userMenu">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#userMenu">
+                <%= image_tag("https://graph.facebook.com/"+current_user.uid+"/picture", :size => "20x20", :alt => current_user.name) %>
+                <%= current_user.name %>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+              </ul>
+            </li>
             <% end %>
           </ul>
         </div>
