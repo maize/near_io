@@ -11,6 +11,9 @@ class User
           :validatable,
           :omniauthable
 
+  # Annotations
+  has_and_belongs_to_many :facebook_places, inverse_of: nil
+
   ## Database authenticatable
   field :email,               :type => String, :default => ""
   field :encrypted_password,  :type => String, :default => ""
@@ -80,23 +83,34 @@ class User
     user.token = auth.credentials.token
     user.save
     user.remember_me!
-    user.get_facebook_details
+    user.get_facebook_places
     user
   end
 
-  def get_facebook_details
-    @graph = Koala::Facebook::API.new(self.token)
-    likes = @graph.get_connections("me", "likes")
-    checkins = @graph.get_connections("me", "checkins")
-    checkins.each do |checkin|
-      p checkin["place"]
-      place = Place.where(:facebook_id => checkin["place"]["id"]).first
-      unless place
-        place = Place.create(name:checkin["place"]["name"],
-                            facebook_id:checkin["place"]["id"])
-        place.save
+  def get_facebook_places
+    unless self.facebook_places.exists?
+      @graph = Koala::Facebook::API.new(self.token)
+
+      p "Get Facebook Places via checkins.."
+      # Checkins
+      checkins = @graph.get_connections("me", "checkins")
+      checkins.each do |checkin|
+        fb_place = FacebookPlace.where(:facebook_id => checkin["place"]["id"]).first
+        unless fb_place
+          fb_place = FacebookPlace.create(facebook_id:checkin["place"]["id"],
+                                      name:checkin["place"]["name"],
+                                      location:checkin["place"]["location"])
+        end
+
+        # Add Facebook place to user
+        unless self.facebook_places.include?(fb_place.id)
+          self.facebook_places.push(fb_place)
+        end
       end
+
+      self.save
     end
+    self.facebook_places
   end
 
   def facebook_config

@@ -3,6 +3,8 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
+    
+    @places = current_user.get_facebook_places
 
     respond_to do |format|
       format.html # index.html.erb
