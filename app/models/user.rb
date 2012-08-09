@@ -89,19 +89,20 @@ class User
 
       p "Get Facebook Places via checkins.."
       fb_checkins = @graph.get_connections("me", "checkins")
-      fb_checkins.each do |checkin|
-        fb_place = FacebookPlace.where(:facebook_id => checkin["place"]["id"]).first
-        unless fb_place
-          p "Create Facebook place.."
-          fb_place = FacebookPlace.create(facebook_id:checkin["place"]["id"],
-                                      name:checkin["place"]["name"],
-                                      location:checkin["place"]["location"])
-        end
 
-        # Add Facebook place to user
-        unless self.facebook_places.include?(fb_place.id)
-          self.facebook_places.push(fb_place)
+      loop do
+        fb_checkins.each do |hash|
+          fb_place = FacebookPlace.where(:facebook_id => hash["place"]["id"]).first
+          unless fb_place
+            p "Create Facebook place.."
+            self.facebook_places.create!(
+                :facebook_id        =>hash["place"]["id"],
+                :name               =>hash["place"]["name"],
+                :location           =>hash["place"]["location"])
+          end
         end
+        fb_checkins = fb_checkins.next_page
+        break if fb_checkins.nil?
       end
 
       self.save
@@ -110,44 +111,49 @@ class User
   end
 
   def get_facebook_likes
-    unless self.facebook_likes.exists?
+    #unless self.facebook_likes.exists?
       @graph = Koala::Facebook::API.new(self.token)
 
       p "Get Facebook likes.."
       fb_likes = @graph.get_connections("me", "likes")
-      fb_likes.each do |like|
-        fb_like = FacebookLike.where(:facebook_id => like["id"]).first
-        unless fb_like
-          p "Create Facebook like.."
-          fb_like = FacebookLike.create(facebook_id:like["id"],
-                                      name:like["name"],
-                                      facebook_created_time:like["created_time"])
-          fb_category = FacebookCategory.where(:name => like["category"]).first
-          unless fb_category
-            p "Create Facebook category.."
-            fb_category = FacebookCategory.create(name:like["category"])
-          end
-          fb_like.facebook_category = fb_category
-        else
-          p "Found Facebook like: "+fb_like.name
-          fb_category = FacebookCategory.where(:name => like["category"]).first
-          unless fb_category
-            p "Create Facebook category.."
-            fb_category = FacebookCategory.create(name:like["category"])
-          else
-            p "Found Facebook category: "+fb_category.name
-          end
-          fb_like.facebook_category = fb_category
-        end
 
-        # Add Facebook place to user
-        unless self.facebook_likes.include?(fb_like.id)
-          self.facebook_likes.push(fb_like)
+      loop do
+        fb_likes.each do |hash|
+          fb_like = FacebookLike.where(:facebook_id => hash["id"]).first
+          unless fb_like
+            p "Create Facebook like.."
+            l =  self.facebook_places.create!(
+                :facebook_id            =>hash["id"],
+                :name                   =>hash["name"],
+                :facebook_created_time  =>hash["created_time"])
+            fb_category = FacebookCategory.where(:name => hash["category"]).first
+            unless fb_category
+              p "Create Facebook category.."
+              fb_category = FacebookCategory.create(name:hash["category"])
+            end
+            l.facebook_category = fb_category
+            l.save
+          else
+            p "Found Facebook like: "+fb_like.name
+            # Update with new category (just in case it changed at some point)
+            fb_category = FacebookCategory.where(:name => hash["category"]).first
+            unless fb_category
+              p "Create Facebook category.."
+              fb_category = FacebookCategory.create(name:hash["category"])
+            else
+              p "Found Facebook category: "+fb_category.name
+            end
+            fb_like.facebook_category = fb_category
+            fb_like.save
+          end
         end
+        fb_likes = fb_likes.next_page
+        break if fb_likes.nil?
       end
 
       self.save
-    end
+
+    #end
     self.facebook_likes
   end
 
