@@ -1,13 +1,16 @@
 <h2>Your Facebook places:</h2>
 
+<% unless @places.nil? %>
 <table class="table table-striped">
   <tr>
     <th>Name</th>
   </tr>
-
-<% @places.each do |place| %>
+  <% @places.each do |place| %>
   <tr>
     <td><%= place.name %></td>
   </tr>
-<% end %>
+  <% end %>
 </table>
+<% else %>
+<p>Please log in with Facebook.</p>
+<% end %>

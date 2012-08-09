@@ -12,7 +12,7 @@ class User
           :omniauthable
 
   # Annotations
-  has_and_belongs_to_many :facebook_places, inverse_of: nil
+  has_and_belongs_to_many :facebook_places, inverse_of: nil, autosave: true
 
   ## Database authenticatable
   field :email,               :type => String, :default => ""

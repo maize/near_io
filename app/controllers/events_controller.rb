@@ -3,8 +3,10 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
-    
-    @places = current_user.get_facebook_places
+
+    if user_signed_in?
+      @places = current_user.get_facebook_places
+    end
 
     respond_to do |format|
       format.html # index.html.erb
