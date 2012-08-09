@@ -74,12 +74,6 @@ class User
                         expires_at: auth.credentials.expires_at,
                         token: auth.credentials.token)
     end
-
-    begin
-      user.token = User.facebook_oauth_client.get_access_token(auth.credentials.token)
-    rescue
-      #External api call rescue all!
-    end
     user.expires_at = auth.credentials.expires_at
     user.token = auth.credentials.token
     user.save
@@ -155,16 +149,6 @@ class User
       self.save
     end
     self.facebook_likes
-  end
-
-  def facebook_config
-    YAML.load_file("#{Rails.root}/config/facebook.yml")[Rails.env]
-  end
-
-  def facebook_oauth_client
-    Koala::Facebook::OAuth.new(User.facebook_config['app_id'],
-                               User.facebook_config['secret_key'],
-                               "#{User.facebook_config['callback']}/users/auth/facebook/callback")
   end
 
   def self.new_with_session(params, session)

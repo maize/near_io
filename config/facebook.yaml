@@ -1,9 +1,0 @@
-development:
-  app_id: "192306820899878"
-  secret_key: "a0b928415079431cdb4f7697f72ce4c9"
-  callback: "http://localhost:3000"
-
-production:
-  app_id: "187798787990772"
-  secret_key: "5f932520a31f3d0be11b30d44cc10d04"
-  callback: "http://beta.near.io"

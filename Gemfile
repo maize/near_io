@@ -48,7 +48,6 @@ gem 'thin'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'httparty'
-gem 'cancan'
 gem 'koala'
 
 # To use ActiveModel has_secure_password
