@@ -1,6 +1,6 @@
 development:
-  host: localhost
-  database: nn_api_development
+  uri: mongodb://dev:Nearnote12@ds035997.mongolab.com:35997/near_io_dev
+  database: near_io_dev
 
 test:
   host: localhost
