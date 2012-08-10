@@ -14,6 +14,7 @@ class User
   # Annotations
   has_and_belongs_to_many :facebook_places, inverse_of: nil, autosave: true
   has_and_belongs_to_many :facebook_likes, inverse_of: nil, autosave: true
+  has_and_belongs_to_many :following_places, class_name: "FacebookPlace", inverse_of: :followers
 
   ## Database authenticatable
   field :email,               :type => String, :default => ""

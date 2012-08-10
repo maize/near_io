@@ -4,7 +4,7 @@ class FacebookPlace
   # include Mongoid::Slug
   include Mongoid::Timestamps # adds automagic fields created_at, updated_at
 
-  has_and_belongs_to_many :followers, class_name: "User", inverse_of: nil
+  has_and_belongs_to_many :followers, class_name: "User", inverse_of: :following_places
 
   # before_save :update_index
   before_destroy :remove_from_index
@@ -43,7 +43,7 @@ class FacebookPlace
     fulltext_search(name, :index => 'mongoid_fulltext.name')
   end
 
-  def latitidude
+  def latitude
   	return self.location["latitude"]
   end
 

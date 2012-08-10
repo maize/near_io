@@ -90,7 +90,8 @@ class PlacesController < ApplicationController
   end
 
   def show
-    @place = FacebookPlace.find_by_id(params[:id])
+    @place = FacebookPlace.find(params[:id])
+    @tweets = TwitterScraper.new.track_keywords_nearby(@place.longitude, @place.latitude)
 
     begin
       respond_to do |format|

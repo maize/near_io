@@ -22,7 +22,7 @@
     <script type="text/javascript">
       function initialize() {
         var myOptions = {
-          center: new google.maps.LatLng(<%= @place.lat %>, <%= @place.lon %>),
+          center: new google.maps.LatLng(<%= @place.latitidude %>, <%= @place.longitude %>),
           zoom: 14,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };

@@ -1,6 +1,10 @@
 NnApi::Application.routes.draw do
   resources :events
 
+  resources :users
+  match "users/:id/likes", :to => "users#likes", :as => 'user_likes'
+  match "users/:id/following_places", :to => "users#following_places", :as => 'user_following_places'
+
   devise_for :users, :path => "user", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :places

@@ -12,7 +12,7 @@
 				  </tr>
 				  <% @places.each do |place| %>
 				  <tr>
-				    <td><%= place.name %></td>
+				    <td><%= link_to place.name, place_path(place) %></td>
 				    <% if place.isFollowedBy(current_user) %>
 				    <td><%= link_to 'Unfollow', unfollow_place_path(place), :class => 'btn btn-mini' %></td>
 				    <% else %>
