@@ -6,4 +6,6 @@ class FacebookLike
   field :facebook_id, :type => Integer
   field :name, :type => String
   field :facebook_created_time, :type => Date
+
+  paginates_per 25
 end

@@ -13,6 +13,8 @@ class FacebookPlace
   field :facebook_id, :type => Integer
   field :location, :type => Hash
 
+  paginates_per 25
+
   fulltext_search_in :name, :index_name => 'mongoid_fulltext.name'
 
   def self.find_by_facebook_id(fb_id) 
