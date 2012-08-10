@@ -122,7 +122,7 @@ class User
           fb_like = FacebookLike.where(:facebook_id => hash["id"]).first
           unless fb_like
             p "Create Facebook like.."
-            l =  self.facebook_places.create!(
+            l =  self.facebook_likes.create!(
                 :facebook_id            =>hash["id"],
                 :name                   =>hash["name"],
                 :facebook_created_time  =>hash["created_time"])

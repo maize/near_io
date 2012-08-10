@@ -3,23 +3,13 @@ NnApi::Application.routes.draw do
 
   devise_for :users, :path => "user", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
-  root :to => 'events#index'
-
-  resources :api
-
-  match "news_items", :to => "news_items#create"
   resources :places
 
-  match "places/search", :to => "places#search"
-  match "places" => "places#index"
-  match ":id" => "places#show"
-  match ":id/edit" => "places#edit"
+  match "places/search", :to => "places#search", :as => 'search_place'
+  match "places/:id/follow", :to => "places#follow", :as => 'follow_place'
+  match "places/:id/unfollow", :to => "places#unfollow", :as => 'unfollow_place'
 
-  resources :news_items
-
-  match "news_items/bid", :to => "news_items#bid"
-  match "news_items/:id/delete", :to => "news_items#destroy"
-  resources :bids
+  root :to => 'events#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

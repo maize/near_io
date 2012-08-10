@@ -48,6 +48,19 @@ class PlacesController < ApplicationController
     render
   end
 
+  def follow
+    @fb_id = params[:id].to_s
+    @place = FacebookPlace.find(@fb_id)
+    @place.followBy(current_user)
+    redirect_to root_url
+  end
+
+  def unfollow
+    @place = FacebookPlace.find(params[:id])
+    @place.unfollowBy(current_user)
+    redirect_to root_url
+  end
+
   def edit
     @place = Place.find_by_slug(params[:id])
   end
@@ -77,62 +90,7 @@ class PlacesController < ApplicationController
   end
 
   def show
-    @place = Place.find_by_slug(params[:id])
-
-    if @place.nil?
-      begin
-        puts "Getting place by Foursquare.."
-        @fsq_venue = Apis::FoursquareApi.new.get_venue_by_id(params[:id])
-        @place = Place.add_by_foursquare(@fsq_venue)
-      rescue
-        puts "Error #{$!}"
-      end
-    end
-
-    # Get Instagram photos
-    begin
-      @photos = []
-      @ext_photos = Apis::InstagramApi.new.get_media_nearby(@place.lat,@place.lon)
-      @ext_photos.data.each do |photo|
-        @p = Photo.add_by_instagram(photo)
-        @place.photos.push(@p)
-      end
-      @place.save
-
-      # p "Start crawling.."
-      # @sites_list = ["www.ucl.ac.uk"]
-      # @crawler = Apis::Crawler.new.spider_sitelist(@sites_list,@place.name)
-    rescue
-      puts "Error #{$!}"
-    end
-
-    # Get Tweets relevant to location
-    unless @place.twitter.nil?
-      p "Searching for tweets by handle.."
-      search_tweets = "to "+@place.twitter
-    else
-      p "Searching for tweets by name.."
-      search_tweets = @place.name+""
-    end
-
-    @tweets = Twitter.search(search_tweets, :lang => "en", :gecode => @place.lat.to_s+","+@place.lon.to_s+",1mi", :result_type => "recent")
-    @news_items = []
-
-    @tweets.each do |tweet|
-      news_item = NewsItem.new
-      news_item.tweet_id = news_item.id
-      news_item.author = tweet.from_user
-      news_item.content = tweet.text
-      news_item.source = tweet.source
-
-      # Check if tweet exists already in db
-      # if NewsItem.where(:twitter_id => news_item.tweet_id).nil?
-        news_item.save
-      # end
-      @news_items.push(news_item)
-    end
-
-    @articles = NewsItem.where(:type => "blog")
+    @place = FacebookPlace.find_by_id(params[:id])
 
     begin
       respond_to do |format|

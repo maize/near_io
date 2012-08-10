@@ -1,11 +1,28 @@
 <% unless @likes.nil? && @places.nil? %>
-	<div class="tabbable" style="margin-bottom: 18px;">
+	<div class="tabbable">
 		<ul class="nav nav-tabs">
-			<li class="active"><a href="#tab1" data-toggle="tab">Likes</a></li>
-			<li class=""><a href="#tab2" data-toggle="tab">Places</a></li>
+			<li class="active"><a href="#tab1" data-toggle="tab">Places</a></li>
+			<li><a href="#tab2" data-toggle="tab">Likes</a></li>
 		</ul>
 		<div class="tab-content">
 			<div class="tab-pane active" id="tab1">
+				<table class="table table-striped">
+				  <tr>
+				    <th colspan="2">Name</th>
+				  </tr>
+				  <% @places.each do |place| %>
+				  <tr>
+				    <td><%= place.name %></td>
+				    <% if place.isFollowedBy(current_user) %>
+				    <td><%= link_to 'Unfollow', unfollow_place_path(place), :class => 'btn btn-mini' %></td>
+				    <% else %>
+				    <td><%= link_to 'Follow', follow_place_path(place), :class => 'btn btn-mini' %></td>
+				    <% end %>
+				  </tr>
+				  <% end %>
+				</table>
+			</div>
+			<div class="tab-pane" id="tab2">
 				<table class="table table-striped">
 				  <tr>
 				    <th>Name</th>
@@ -16,21 +33,9 @@
 				    <td><%= like.name %></td>
 				    <% unless like.facebook_category.nil? %>
 				    	<td><%= like.facebook_category.name %></td>
-				    <% else %>	
+				    <% else %>
 				    	<td><%= like.facebook_category %></td>
 				    <% end %>
-				  </tr>
-				  <% end %>
-				</table>
-			</div>
-			<div class="tab-pane" id="tab2">
-				<table class="table table-striped">
-				  <tr>
-				    <th>Name</th>
-				  </tr>
-				  <% @places.each do |place| %>
-				  <tr>
-				    <td><%= place.name %></td>
 				  </tr>
 				  <% end %>
 				</table>
