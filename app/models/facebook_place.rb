@@ -21,13 +21,12 @@ class FacebookPlace
     where(:facebook_id => fb_id).first
   end
 
-  def self.find_all_by_name(name) 
-    where(:name => name.gsub("-"," "))
-  end
-
   # Mongoid does not have the dynamic finders that active record does
-  def self.find_by_name(name) 
-    where(:name => name.gsub("-"," ")).first
+  def self.find_by_name(current_user, name)
+    @graph = Koala::Facebook::API.new(current_user.token)
+    p "Searching Facebook place: "+name
+    @result = @graph.search(name, {:type => "place"})
+    @result
   end
 
   def update_index
@@ -44,18 +43,14 @@ class FacebookPlace
   end
 
   def latitude
-  	return self.location["latitude"]
+    unless self.location.empty?
+      return self.location["latitude"]
+    end
   end
 
   def longitude
-  	return self.location["longitude"]
-  end
-
-  def self.search(search)
-    if search
-      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
-    else
-      find(:all)
+    unless self.location.empty?
+  	 return self.location["longitude"]
     end
   end
 

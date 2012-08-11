@@ -1,0 +1,25 @@
+twitter_scraper: process with pid 72087 started.
+log writing failed. closed stream
+log writing failed. closed stream
+log writing failed. closed stream
+log writing failed. closed stream
+log writing failed. closed stream
+!! Unexpected error while processing request: closed stream
+Exiting
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/tweetstream-1.1.5/lib/tweetstream/client.rb:434:in `block in connect': Failed to reconnect after 11 tries. (TweetStream::ReconnectError)
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:162:in `call'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:162:in `schedule_reconnect'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:122:in `unbind'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-0.12.10/lib/eventmachine.rb:1417:in `event_callback'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run_machine'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/backends/base.rb:63:in `start'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.4.1/lib/thin/server.rb:159:in `start'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/handler/thin.rb:13:in `run'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/server.rb:265:in `start'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/commands/server.rb:70:in `start'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/commands.rb:55:in `block in <top (required)>'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/commands.rb:50:in `tap'
+	from /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/commands.rb:50:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'

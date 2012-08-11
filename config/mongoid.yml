@@ -1,6 +1,7 @@
 development:
   uri: mongodb://dev:Nearnote12@ds035997.mongolab.com:35997/near_io_dev
   database: near_io_dev
+  logger: false
 
 test:
   host: localhost

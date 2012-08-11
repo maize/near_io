@@ -7,6 +7,7 @@ class EventsController < ApplicationController
     if user_signed_in?
       @places = current_user.facebook_places.page params[:page]
       @likes = current_user.facebook_likes.page params[:page]
+      @place = Place.new
     end
 
     respond_to do |format|

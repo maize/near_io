@@ -14,26 +14,9 @@
 
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= favicon_link_tag %>
-
-    <script type="text/javascript"
-      src="http://maps.googleapis.com/maps/api/js?sensor=false">
-    </script>
-    <% if @place %>
-    <script type="text/javascript">
-      function initialize() {
-        var myOptions = {
-          center: new google.maps.LatLng(<%= @place.latitidude %>, <%= @place.longitude %>),
-          zoom: 14,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map_canvas"),
-            myOptions);
-      }
-    </script>
-    <% end %>
   </head>
   <% if @place %>
-  <body onload="initialize()">
+  <body>
   <% else %>
   <body>
   <% end %>

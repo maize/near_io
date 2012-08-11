@@ -8,44 +8,17 @@ class PlacesController < ApplicationController
     end
   end
 
-  def search    
-    if params.has_key?(:place)
-      search_name = params[:place][:name]
-
-      # Get lat lon by Geocoder
-      if (request.location.latitude == 0 || request.location.longitude == 0)
-        # Take randomg lat lon for development, e.g. London coordinates
-        latlon = "51.5171,0.1062";
-      else
-        latlon = request.location.latitude.to_s+","+request.location.longitude.to_s
-      end
-
-      # Search for places on Foursquare
-      @places = []
-      @foursquare_places = Apis::FoursquareApi.new.get_venue_by_name(search_name, latlon)
-      @foursquare_places["places"].each do |place|
-        @place = Place.add_by_foursquare(place)
-        @places.push(@place)
-      end
-
-      if @foursquare_places.nil? || @foursquare_places.size() == 0
-        @places = Place.new
-        p "Error getting Foursquare Places"  
-      end
-
-    else
-      @places = Place.new
-    end
+  def search
+    @places = FacebookPlace.find_by_name(current_user, params[:place][:name])
 
     if @places.nil?
       flash[:notice] = "Nothing found!"
     end
 
-    @featured_places = Place.where(:featured => true)
-
-    @search_place = Place.new
-
-    render
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render :json => @places }
+    end
   end
 
   def follow

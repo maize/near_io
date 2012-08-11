@@ -6,6 +6,10 @@
 		</ul>
 		<div class="tab-content">
 			<div class="tab-pane active" id="tab1">
+				<%= twitter_bootstrap_form_for @place, :url => { :action => "search", :controller => "places" }, :html => { :class => "well form-search" } do |f| %>
+					<%= search_field(:place, :name) %>
+					<%= f.submit "Search", :class => "btn btn-primary" %>
+				<% end %>
 				<table class="table table-striped">
 				  <tr>
 				    <th colspan="2">Name</th>
