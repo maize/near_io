@@ -96,10 +96,7 @@ class User
           fb_place = FacebookPlace.where(:facebook_id => hash["place"]["id"]).first
           unless fb_place
             p "Create Facebook place.."
-            self.facebook_places.create!(
-                :facebook_id        =>hash["place"]["id"],
-                :name               =>hash["place"]["name"],
-                :location           =>hash["place"]["location"])
+            self.facebook_places.push(FacebookPlace.get_by_hash(hash["place"]))
           end
         end
         fb_checkins = fb_checkins.next_page
@@ -124,9 +121,9 @@ class User
           unless fb_like
             p "Create Facebook like.."
             l =  self.facebook_likes.create!(
-                :facebook_id            =>hash["id"],
-                :name                   =>hash["name"],
-                :facebook_created_time  =>hash["created_time"])
+                :facebook_id            => hash["id"],
+                :name                   => hash["name"],
+                :facebook_created_time  => hash["created_time"])
             fb_category = FacebookCategory.where(:name => hash["category"]).first
             unless fb_category
               p "Create Facebook category.."

@@ -2,17 +2,22 @@
 	<tr>
 		<th>Name</th>
 		<th>Category</th>
-		<th>Location</th>
+		<th colspan="2">Location</th>
 	</tr>
 	<% @places.each do |place| %>
 	<tr>
-		<td><%= place["name"] %></td>
-		<td><%= place["category"] %></td>
+		<td><%= link_to place.name, place_path(place) %></td>
+		<td><%= place.category %></td>
 		<% unless place["location"]["city"].nil? %>
 		<td><%= place["location"]["city"].to_s+", "+place["location"]["country"].to_s %></td>
 		<% else %>
 		<td>N/A</td>
 		<% end %>
+	    <% if place.isFollowedBy(current_user) %>
+	    <td><%= link_to 'Unfollow', unfollow_place_path(place), :class => 'btn btn-mini' %></td>
+	    <% else %>
+	    <td><%= link_to 'Follow', follow_place_path(place), :class => 'btn btn-mini' %></td>
+	    <% end %>
 	</tr>
 	<% end %>
 </table>

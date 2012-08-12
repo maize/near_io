@@ -21,12 +21,38 @@ class FacebookPlace
     where(:facebook_id => fb_id).first
   end
 
+  def self.get_by_hash(hash)
+    @place = FacebookPlace.new(
+      :facebook_id  => hash["id"],
+      :name         => hash["name"],
+      :category     => hash["category"],
+      :location     => hash["location"])
+
+    @find_place = FacebookPlace.where(:facebook_id => @place.facebook_id).first
+    
+    unless @find_place.nil?
+      p "Saving new Facebook place.."
+      @place = @find_place
+    else
+      @place.save
+    end
+
+    @place
+  end
+
   # Mongoid does not have the dynamic finders that active record does
   def self.find_by_name(current_user, name)
     @graph = Koala::Facebook::API.new(current_user.token)
+    
     p "Searching Facebook place: "+name
-    @result = @graph.search(name, {:type => "place"})
-    @result
+    @results = @graph.search(name, {:type => "place"})
+    
+    @places = []
+    @results.each do |hash|
+      @place = FacebookPlace.get_by_hash(hash)
+      @places.push(@place)
+    end
+    @places
   end
 
   def update_index
