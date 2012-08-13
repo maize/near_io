@@ -1,0 +1,339 @@
+twitter_scraper: process with pid 4469 started.
+E, [2012-08-13T12:49:37.598423 #4469] ERROR -- : invalid status code: 401.
+E, [2012-08-13T12:49:37.599436 #4469] ERROR -- : Reconnect: timeout = 10, retries = 1
+E, [2012-08-13T12:49:48.360370 #4469] ERROR -- : Reconnect: timeout = 20, retries = 2
+E, [2012-08-13T12:50:09.314841 #4469] ERROR -- : Reconnect: timeout = 40, retries = 3
+twitter_scraper: process with pid 4502 started.
+E, [2012-08-13T12:54:13.019080 #4502] ERROR -- : invalid status code: 401.
+E, [2012-08-13T12:54:13.019956 #4502] ERROR -- : Reconnect: timeout = 10, retries = 1
+E, [2012-08-13T12:54:23.972200 #4502] ERROR -- : Reconnect: timeout = 20, retries = 2
+E, [2012-08-13T12:54:44.752238 #4502] ERROR -- : Reconnect: timeout = 40, retries = 3
+E, [2012-08-13T12:55:25.552193 #4502] ERROR -- : Reconnect: timeout = 80, retries = 4
+twitter_scraper: process with pid 4514 started.
+E, [2012-08-13T12:56:01.949321 #4514] ERROR -- : NoMethodError: undefined method `parse_tweet' for main:Object
+	twitter.rb:42:in `block in <main>'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/tweetstream-1.1.5/lib/tweetstream/client.rb:415:in `block in connect'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:299:in `call'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:299:in `parse_stream_line'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:230:in `block in receive_stream_data'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:229:in `each'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:229:in `receive_stream_data'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:131:in `call'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:131:in `<<'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:131:in `receive_data'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run_machine'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/tweetstream-1.1.5/lib/tweetstream/client.rb:337:in `start'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/tweetstream-1.1.5/lib/tweetstream/daemon.rb:49:in `block in start'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/application.rb:254:in `call'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/application.rb:254:in `block in start_proc'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/daemonize.rb:79:in `call'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/daemonize.rb:79:in `call_as_daemon'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/application.rb:258:in `start_proc'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/application.rb:295:in `start'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/controller.rb:70:in `run'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons.rb:197:in `block in run_proc'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/cmdline.rb:109:in `call'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons.rb:196:in `run_proc'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/tweetstream-1.1.5/lib/tweetstream/daemon.rb:48:in `start'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/tweetstream-1.1.5/lib/tweetstream/client.rb:122:in `filter'
+	/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/tweetstream-1.1.5/lib/tweetstream/client.rb:113:in `locations'
+	twitter.rb:42:in `<main>'
+E, [2012-08-13T12:56:01.949768 #4514] ERROR -- : Reconnect: timeout = 10, retries = 1
+E, [2012-08-13T12:56:12.690569 #4514] ERROR -- : Reconnect: timeout = 20, retries = 2
+E, [2012-08-13T12:56:12.691083 #4514] ERROR -- : HTTP Parser error encountered - let's sleep for 300s.
+E, [2012-08-13T12:56:12.691229 #4514] ERROR -- : Could not parse data entirely
+E, [2012-08-13T12:56:12.691354 #4514] ERROR -- : /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:131:in `<<'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-stream-0.1.16/lib/twitter/json_stream.rb:131:in `receive_data'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run_machine'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-0.12.10/lib/eventmachine.rb:256:in `run'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/tweetstream-1.1.5/lib/tweetstream/client.rb:337:in `start'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/tweetstream-1.1.5/lib/tweetstream/daemon.rb:49:in `block in start'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/application.rb:254:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/application.rb:254:in `block in start_proc'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/daemonize.rb:79:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/daemonize.rb:79:in `call_as_daemon'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/application.rb:258:in `start_proc'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/application.rb:295:in `start'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/controller.rb:70:in `run'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons.rb:197:in `block in run_proc'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/cmdline.rb:109:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/daemons-1.1.8/lib/daemons.rb:196:in `run_proc'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/tweetstream-1.1.5/lib/tweetstream/daemon.rb:48:in `start'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/tweetstream-1.1.5/lib/tweetstream/client.rb:122:in `filter'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/tweetstream-1.1.5/lib/tweetstream/client.rb:113:in `locations'
+twitter.rb:42:in `<main>'
+twitter_scraper: process with pid 4520 started.
+I, [2012-08-13T12:56:48.524275 #4520]  INFO -- : Tweet not within bounding box:	3.5845266931214392 km away.
+I, [2012-08-13T12:56:51.304686 #4520]  INFO -- : Tweet not within bounding box:	0.9148504943464808 km away.
+I, [2012-08-13T12:56:55.660423 #4520]  INFO -- : Tweet not within bounding box:	7.611839324487577 km away.
+I, [2012-08-13T12:57:01.845347 #4520]  INFO -- : Tweet not within bounding box:	0.8474376715589524 km away.
+I, [2012-08-13T12:57:17.002041 #4520]  INFO -- : Tweet not within bounding box:	0.4955477738624465 km away.
+I, [2012-08-13T12:57:26.425287 #4520]  INFO -- : Tweet not within bounding box:	1.9581500728505623 km away.
+I, [2012-08-13T12:57:34.508825 #4520]  INFO -- : Tweet not within bounding box:	3.65888241316078 km away.
+I, [2012-08-13T12:57:43.827673 #4520]  INFO -- : Tweet not within bounding box:	1.3234581874140525 km away.
+I, [2012-08-13T12:57:46.659125 #4520]  INFO -- : Tweet not within bounding box:	0.5989690691229579 km away.
+I, [2012-08-13T12:57:49.826235 #4520]  INFO -- : Tweet not within bounding box:	3.235764668615637 km away.
+I, [2012-08-13T12:58:38.270112 #4520]  INFO -- : Tweet not within bounding box:	3.5912427278326917 km away.
+I, [2012-08-13T12:58:54.552902 #4520]  INFO -- : Tweet not within bounding box:	0.8379157274924985 km away.
+I, [2012-08-13T12:58:55.085384 #4520]  INFO -- : Tweet not within bounding box:	0.2632024218326831 km away.
+I, [2012-08-13T12:58:58.683383 #4520]  INFO -- : Tweet not within bounding box:	3.67954597797819 km away.
+I, [2012-08-13T12:59:05.303112 #4520]  INFO -- : Tweet not within bounding box:	401.35895111492033 km away.
+I, [2012-08-13T12:59:07.763657 #4520]  INFO -- : Tweet not within bounding box:	3.5875025358022112 km away.
+I, [2012-08-13T12:59:08.686547 #4520]  INFO -- : Tweet not within bounding box:	2.5167160557480766 km away.
+I, [2012-08-13T12:59:10.131467 #4520]  INFO -- : Tweet not within bounding box:	401.35895111492033 km away.
+I, [2012-08-13T12:59:14.671243 #4520]  INFO -- : Tweet not within bounding box:	3.008482970673801 km away.
+I, [2012-08-13T12:59:17.836608 #4520]  INFO -- : Tweet not within bounding box:	0.44594022125775634 km away.
+I, [2012-08-13T12:59:18.719271 #4520]  INFO -- : Tweet not within bounding box:	5.315520360122628 km away.
+I, [2012-08-13T12:59:29.793850 #4520]  INFO -- : Tweet not within bounding box:	3.6838411191649603 km away.
+I, [2012-08-13T12:59:35.632916 #4520]  INFO -- : Tweet not within bounding box:	0.33493199784009675 km away.
+I, [2012-08-13T12:59:38.179689 #4520]  INFO -- : Tweet not within bounding box:	3.32877146958482 km away.
+I, [2012-08-13T12:59:40.194226 #4520]  INFO -- : Tweet not within bounding box:	0.5375645071913513 km away.
+I, [2012-08-13T12:59:47.289062 #4520]  INFO -- : Tweet not within bounding box:	2.1062368915383263 km away.
+I, [2012-08-13T12:59:52.614510 #4520]  INFO -- : Tweet not within bounding box:	3.672864803411902 km away.
+I, [2012-08-13T13:00:01.113965 #4520]  INFO -- : Tweet not within bounding box:	5.404586745888776 km away.
+I, [2012-08-13T13:00:01.694905 #4520]  INFO -- : Tweet not within bounding box:	243.40100069956495 km away.
+I, [2012-08-13T13:00:04.468571 #4520]  INFO -- : Tweet not within bounding box:	146.06240429953266 km away.
+I, [2012-08-13T13:00:12.544571 #4520]  INFO -- : Tweet not within bounding box:	5.953801113232762 km away.
+I, [2012-08-13T13:00:18.635864 #4520]  INFO -- : Tweet not within bounding box:	2.985770496815518 km away.
+E, [2012-08-13T13:00:26.943588 #4520] ERROR -- : Reconnect: timeout = 10, retries = 1
+twitter_scraper: process with pid 4534 started.
+I, [2012-08-13T13:00:32.850732 #4534]  INFO -- : Tweet not within bounding box:	6.265654486183915 km away.
+I, [2012-08-13T13:00:32.851095 #4534]  INFO -- : Tweet from @EfekanCalim:
+I, [2012-08-13T13:00:32.851343 #4534]  INFO -- : 	234982769342676993: "Rita Ora&lt; Nicki Minaj"
+I, [2012-08-13T13:00:41.425078 #4534]  INFO -- : Tweet not within bounding box:	3.6865923139994883 km away.
+I, [2012-08-13T13:00:41.425224 #4534]  INFO -- : Tweet from @Opeyy_:
+I, [2012-08-13T13:00:41.425294 #4534]  INFO -- : 	234982805375942656: "Going to the library."
+I, [2012-08-13T13:00:53.139862 #4534]  INFO -- : Tweet not within bounding box:	0.4073778806706953 km away.
+I, [2012-08-13T13:00:53.140098 #4534]  INFO -- : Tweet from @Thanecooks:
+I, [2012-08-13T13:00:53.140201 #4534]  INFO -- : 	234982852905824258: "lunch @Spuntino but they don't do real coffee thought have a quick affogato at @PolpoSoho Beak St but no, they can't do me a coffee Shame."
+I, [2012-08-13T13:00:55.144418 #4534]  INFO -- : Tweet not within bounding box:	3.9441611815131594 km away.
+I, [2012-08-13T13:00:55.144573 #4534]  INFO -- : Tweet from @Targabella:
+I, [2012-08-13T13:00:55.144677 #4534]  INFO -- : 	234982859214041088: "@SelectaBarracat @boardmasters rocking your @onepiece wham! http://t.co/e3OurXXj"
+I, [2012-08-13T13:00:56.827659 #4534]  INFO -- : Tweet not within bounding box:	2.4291488166924133 km away.
+I, [2012-08-13T13:00:56.827849 #4534]  INFO -- : Tweet from @aansalkandary:
+I, [2012-08-13T13:00:56.827928 #4534]  INFO -- : 	234982869947256834: "احلئ ورقه مسكته اليوم ..
+
+#نسخه من تذاكر الطيـررران مفتـوحه لنا ..
+
+هلاااااااا بالكـووررريت هلاااااا بـ امي ..  http://t.co/WL9DC5uL"
+I, [2012-08-13T13:01:05.720245 #4534]  INFO -- : Tweet not within bounding box:	3.5994328584716713 km away.
+I, [2012-08-13T13:01:05.720409 #4534]  INFO -- : Tweet from @_iAmMissB:
+I, [2012-08-13T13:01:05.720481 #4534]  INFO -- : 	234982907092025344: "@BlameFrazier slyly true"
+I, [2012-08-13T13:01:21.495028 #4534]  INFO -- : Tweet not within bounding box:	1.1246447422455887 km away.
+I, [2012-08-13T13:01:21.495293 #4534]  INFO -- : Tweet from @Butlaa:
+I, [2012-08-13T13:01:21.495481 #4534]  INFO -- : 	234982973068427264: "“@TheRoyCropper: Your microphone looks like a pair of bollocks..” I told you so @AlexGowar !!!!"
+I, [2012-08-13T13:01:22.970977 #4534]  INFO -- : Tweet not within bounding box:	3.6882652818974337 km away.
+I, [2012-08-13T13:01:22.971264 #4534]  INFO -- : Tweet from @Opeyy_:
+I, [2012-08-13T13:01:22.971408 #4534]  INFO -- : 	234982979334729729: "@Hotspice_DNA lol. I'll ttyl, off to the library."
+I, [2012-08-13T13:01:39.035673 #4534]  INFO -- : Tweet not within bounding box:	6.742896053093761 km away.
+I, [2012-08-13T13:01:39.035894 #4534]  INFO -- : Tweet from @Official_LBx:
+I, [2012-08-13T13:01:39.036013 #4534]  INFO -- : 	234983046871392256: "“@xocatterzz: @Official_LBx bed? It's 1pm!” I Havent Been Sleeping Properly :( Im Really Tired But Im Trying To Keep Myself Awake😪"
+I, [2012-08-13T13:01:41.877978 #4534]  INFO -- : Tweet not within bounding box:	3.9011140873182297 km away.
+I, [2012-08-13T13:01:41.878219 #4534]  INFO -- : Tweet from @DreamFlyiing:
+I, [2012-08-13T13:01:41.878337 #4534]  INFO -- : 	234983058732888064: "@Bita23790783 pues las hay hahah y segun si son mas mals o no xd a mi las buenas me costaron 95 libras 100 y pico de eurs... Pero bueno.. Xd"
+I, [2012-08-13T13:01:59.489772 #4534]  INFO -- : Tweet not within bounding box:	3.669513767976541 km away.
+I, [2012-08-13T13:01:59.490059 #4534]  INFO -- : Tweet from @Opeyy_:
+I, [2012-08-13T13:01:59.490295 #4534]  INFO -- : 	234983132326141952: "@Hotspice_DNA :)"
+I, [2012-08-13T13:02:00.589805 #4534]  INFO -- : Tweet not within bounding box:	2.4291488166924133 km away.
+I, [2012-08-13T13:02:00.589959 #4534]  INFO -- : Tweet from @aansalkandary:
+I, [2012-08-13T13:02:00.590074 #4534]  INFO -- : 	234983137401245696: "طبعًا ع طيران الكويتيه ..
+
+راح اكتبي وصيتي قبل لا اركبها ..
+ولاتحاتون ورثي بقسم عليكـم :) 
+
+#التويت_اللي_توا"
+I, [2012-08-13T13:02:18.464947 #4534]  INFO -- : Tweet not within bounding box:	1.7893912126440825 km away.
+I, [2012-08-13T13:02:18.465235 #4534]  INFO -- : Tweet from @jonas1357_:
+I, [2012-08-13T13:02:18.465483 #4534]  INFO -- : 	234983212462505984: "A holiday in TnT?"
+I, [2012-08-13T13:02:26.626007 #4534]  INFO -- : Tweet not within bounding box:	2.7395817548217463 km away.
+I, [2012-08-13T13:02:26.626239 #4534]  INFO -- : Tweet from @S3eedAlmari:
+I, [2012-08-13T13:02:26.626438 #4534]  INFO -- : 	234983245819813889: "التفكير بمنطقيه احيانا يفسد علينا متعه 
+
+•••• المغامره"
+I, [2012-08-13T13:02:42.847704 #4534]  INFO -- : Tweet not within bounding box:	8.839284015411051 km away.
+I, [2012-08-13T13:02:42.848020 #4534]  INFO -- : Tweet from @GemSmiffy:
+I, [2012-08-13T13:02:42.848211 #4534]  INFO -- : 	234983314732228608: "Can someone please come and empty our suitcases?! How did our clothes grow when we were away?"
+I, [2012-08-13T13:02:45.470368 #4534]  INFO -- : Tweet not within bounding box:	1.8385895455061119 km away.
+I, [2012-08-13T13:02:45.470648 #4534]  INFO -- : Tweet from @maryannjohanson:
+I, [2012-08-13T13:02:45.470801 #4534]  INFO -- : 	234983324366548993: "I'm at London Waterloo Railway Station (WAT) (London, Greater London) w/ 4 others http://t.co/t7f2Q6O5"
+I, [2012-08-13T13:03:09.364793 #4534]  INFO -- : Tweet not within bounding box:	6.849794113598886 km away.
+I, [2012-08-13T13:03:09.365023 #4534]  INFO -- : Tweet from @jonnieVeal:
+I, [2012-08-13T13:03:09.365144 #4534]  INFO -- : 	234983424337784832: "@UK_TransferNews @stephenggoodwin @mikeparry8 @DesKellyDM @bigdaddybunce 
+
+
+45 million over four years? Really?"
+I, [2012-08-13T13:03:14.535704 #4534]  INFO -- : Tweet not within bounding box:	0.319408155920454 km away.
+I, [2012-08-13T13:03:14.535938 #4534]  INFO -- : Tweet from @TomBurttt_96:
+I, [2012-08-13T13:03:14.536094 #4534]  INFO -- : 	234983446978637824: "So many London girls..."
+I, [2012-08-13T13:03:28.303514 #4534]  INFO -- : Tweet not within bounding box:	2.0344184060834025 km away.
+I, [2012-08-13T13:03:28.303783 #4534]  INFO -- : Tweet from @henrykirby:
+I, [2012-08-13T13:03:28.303974 #4534]  INFO -- : 	234983505229148160: "Give me yo' puddin', boy.  @ Blur @ Hyde Park http://t.co/3815wZps"
+I, [2012-08-13T13:03:33.578946 #4534]  INFO -- : Tweet not within bounding box:	6.265654486183915 km away.
+I, [2012-08-13T13:03:33.579242 #4534]  INFO -- : Tweet from @EfekanCalim:
+I, [2012-08-13T13:03:33.579369 #4534]  INFO -- : 	234983527249231872: "@EdwardDodds Follow back. You egg."
+I, [2012-08-13T13:03:46.560469 #4534]  INFO -- : Tweet not within bounding box:	2.4991770115373146 km away.
+I, [2012-08-13T13:03:46.560625 #4534]  INFO -- : Tweet from @aansalkandary:
+I, [2012-08-13T13:03:46.560697 #4534]  INFO -- : 	234983581762605056: "@DonKhalaf 
+شخــبـااري ووويع .. لا مو سالفه قمل اللي تخوف .. خوفك يطلع الشعر مدهن ودبق #لوعه :/"
+I, [2012-08-13T13:03:46.761391 #4534]  INFO -- : Tweet not within bounding box:	3.6799123414903256 km away.
+I, [2012-08-13T13:03:46.761540 #4534]  INFO -- : Tweet from @Opeyy_:
+I, [2012-08-13T13:03:46.761610 #4534]  INFO -- : 	234983582790213632: "Lol aww :) http://t.co/U2f2VvA2"
+I, [2012-08-13T13:04:02.556810 #4534]  INFO -- : Tweet not within bounding box:	0.9602824850772855 km away.
+I, [2012-08-13T13:04:02.557032 #4534]  INFO -- : Tweet from @MagL33To:
+I, [2012-08-13T13:04:02.557155 #4534]  INFO -- : 	234983649030848512: "Lunch cheesesteak! ;D (@ Meat Market) http://t.co/nHLDNgRc"
+I, [2012-08-13T13:04:13.790484 #4534]  INFO -- : Tweet not within bounding box:	3.45134003060033 km away.
+I, [2012-08-13T13:04:13.790769 #4534]  INFO -- : Tweet from @EllieRoberts_93:
+I, [2012-08-13T13:04:13.790926 #4534]  INFO -- : 	234983693154934784: "Feeling a bit touristy :) #London2012 http://t.co/WkumWSTF"
+I, [2012-08-13T13:04:28.452469 #4534]  INFO -- : Tweet not within bounding box:	2.0655600091321977 km away.
+I, [2012-08-13T13:04:28.452772 #4534]  INFO -- : Tweet from @seany_G:
+I, [2012-08-13T13:04:28.453007 #4534]  INFO -- : 	234983757579448321: "Last day before two weeks off! (@ Royal Pharmaceutical Society) http://t.co/OHvfUaE6"
+I, [2012-08-13T13:04:31.649214 #4534]  INFO -- : Tweet not within bounding box:	2.4991770115373146 km away.
+I, [2012-08-13T13:04:31.649448 #4534]  INFO -- : Tweet from @aansalkandary:
+I, [2012-08-13T13:04:31.649573 #4534]  INFO -- : 	234983768849530880: "@D2ll23_m6uar 
+
+هذول مال بلوك والله لو مو اخي جان صكيته بلوك .. مززززعج يدز ست تلاف حرف .. بوقت واحد"
+I, [2012-08-13T13:04:56.196444 #4534]  INFO -- : Tweet not within bounding box:	401.35895111492033 km away.
+I, [2012-08-13T13:04:56.196591 #4534]  INFO -- : Tweet from @devseo:
+I, [2012-08-13T13:04:56.196661 #4534]  INFO -- : 	234983873967161344: "Split Menu Buttons - http://t.co/CP9kTOkf"
+I, [2012-08-13T13:04:56.752612 #4534]  INFO -- : Tweet not within bounding box:	1.8935951092007535 km away.
+I, [2012-08-13T13:04:56.752760 #4534]  INFO -- : Tweet from @JoeMoldi:
+I, [2012-08-13T13:04:56.752830 #4534]  INFO -- : 	234983876265644032: "Apparently it's cool if @_h0llie follows you. I'm one of them!"
+I, [2012-08-13T13:05:03.362178 #4534]  INFO -- : Tweet not within bounding box:	8.839284015411051 km away.
+I, [2012-08-13T13:05:03.362330 #4534]  INFO -- : Tweet from @GemSmiffy:
+I, [2012-08-13T13:05:03.362401 #4534]  INFO -- : 	234983903310524416: "@takethegame. Cheers, I'll have a look later. I'm with BT at the moment who are charging me £45 a month!"
+I, [2012-08-13T13:05:05.807428 #4534]  INFO -- : Tweet not within bounding box:	0.7513807894467807 km away.
+I, [2012-08-13T13:05:05.807634 #4534]  INFO -- : Tweet from @J_Parallel:
+I, [2012-08-13T13:05:05.807755 #4534]  INFO -- : 	234983912529620992: "@GeorgiaDiggins hurry back bitch we want lunch #chopchop"
+I, [2012-08-13T13:05:07.172107 #4534]  INFO -- : Tweet not within bounding box:	0.5771286782241213 km away.
+I, [2012-08-13T13:05:07.172270 #4534]  INFO -- : Tweet from @CamCammack:
+I, [2012-08-13T13:05:07.172381 #4534]  INFO -- : 	234983916015067136: "@Mo_Farah + @usainbolt celebrations = The Mo Bolt
+
+#MoBolt!
+
+Already missing the #London2012 @Olympics http://t.co/RnHCOLaU"
+I, [2012-08-13T13:05:14.093725 #4534]  INFO -- : Tweet not within bounding box:	6.265654486183915 km away.
+I, [2012-08-13T13:05:14.093848 #4534]  INFO -- : Tweet from @EfekanCalim:
+I, [2012-08-13T13:05:14.093917 #4534]  INFO -- : 	234983948990685184: "Rita Ora&lt; Nicki Minaj. Musicwise and attractiveness."
+I, [2012-08-13T13:05:30.411036 #4534]  INFO -- : Tweet not within bounding box:	1.7840340392953848 km away.
+I, [2012-08-13T13:05:30.411269 #4534]  INFO -- : Tweet from @Dr_JCollins:
+I, [2012-08-13T13:05:30.411391 #4534]  INFO -- : 	234984017236209664: "@BriggsyCalm Samsung are running a competition for a pro contract with Swindon or leyton - Google it."
+I, [2012-08-13T13:05:39.036268 #4534]  INFO -- : Tweet not within bounding box:	1.3721672696401024 km away.
+I, [2012-08-13T13:05:39.036505 #4534]  INFO -- : Tweet from @jonmhill:
+I, [2012-08-13T13:05:39.036629 #4534]  INFO -- : 	234984053332381696: "@AlexT_ punch him in the face. We'll club together for the bail money"
+I, [2012-08-13T13:05:47.777443 #4534]  INFO -- : Tweet not within bounding box:	0.5347640862213535 km away.
+I, [2012-08-13T13:05:47.777593 #4534]  INFO -- : Tweet from @Black_Scorpio21:
+I, [2012-08-13T13:05:47.777664 #4534]  INFO -- : 	234984090099675136: "@DoraMazzone buenos días espero que tengas un excelente día hermosa dama un abrazo y saludos"
+I, [2012-08-13T13:05:49.236967 #4534]  INFO -- : Tweet not within bounding box:	2.4291488166924133 km away.
+I, [2012-08-13T13:05:49.237201 #4534]  INFO -- : Tweet from @aansalkandary:
+I, [2012-08-13T13:05:49.237366 #4534]  INFO -- : 	234984096311435264: "@abunada12 
+
+دايمًا الامريكان فوق كل هذول .. ماتتقارن باحد .. 
+
+يعني بريطانيا نفس امريكا .."
+I, [2012-08-13T13:05:49.792089 #4534]  INFO -- : Tweet not within bounding box:	2.1234220145914406 km away.
+I, [2012-08-13T13:05:49.792383 #4534]  INFO -- : Tweet from @loaizahran:
+I, [2012-08-13T13:05:49.792743 #4534]  INFO -- : 	234984098337280000: "@Andrea_Ortega9  what is #FF ?? Sharmoutaaaaa???"
+I, [2012-08-13T13:05:50.300707 #4534]  INFO -- : Tweet not within bounding box:	1.5403264731734183 km away.
+I, [2012-08-13T13:05:50.300976 #4534]  INFO -- : Tweet from @thelaughingnome:
+I, [2012-08-13T13:05:50.301072 #4534]  INFO -- : 	234984100245692416: "In London! It's a weird city. I feel like none of the buildings are real. It's just a big movie set. #london"
+I, [2012-08-13T13:05:51.433938 #4534]  INFO -- : Tweet not within bounding box:	1.7313327566931556 km away.
+I, [2012-08-13T13:05:51.434084 #4534]  INFO -- : Tweet from @KrispyKremexxx:
+I, [2012-08-13T13:05:51.434213 #4534]  INFO -- : 	234984105358544896: "@therealcjruss hey, long time!! Just saying hi, hope you're cool, drop me a reply, miss you xxx"
+I, [2012-08-13T13:05:53.782257 #4534]  INFO -- : Tweet not within bounding box:	1.7522404474710684 km away.
+I, [2012-08-13T13:05:53.782437 #4534]  INFO -- : Tweet from @Wilyaqq:
+I, [2012-08-13T13:05:53.782558 #4534]  INFO -- : 	234984115462615040: "available wi-fi here at last  @ International Students House http://t.co/kFjl4Pmj"
+I, [2012-08-13T13:06:08.017029 #4534]  INFO -- : Tweet not within bounding box:	3.6672527392114893 km away.
+I, [2012-08-13T13:06:08.017180 #4534]  INFO -- : Tweet from @Opeyy_:
+I, [2012-08-13T13:06:08.017318 #4534]  INFO -- : 	234984174837170176: "I'll go by 1:30 it opens by 1 anyways."
+I, [2012-08-13T13:06:22.591384 #4534]  INFO -- : Tweet not within bounding box:	0.2970671002297075 km away.
+I, [2012-08-13T13:06:22.591563 #4534]  INFO -- : Tweet from @TobiasAgricola:
+I, [2012-08-13T13:06:22.591634 #4534]  INFO -- : 	234984236187275264: "@falletron and this serves what purpose?"
+I, [2012-08-13T13:06:25.371672 #4534]  INFO -- : Tweet not within bounding box:	5.237389913875858 km away.
+I, [2012-08-13T13:06:25.371893 #4534]  INFO -- : Tweet from @soniapimpamm:
+I, [2012-08-13T13:06:25.372015 #4534]  INFO -- : 	234984247784505345: "@LSikin comen j sai aqel heure j sor sur tf1? Mdrr"
+I, [2012-08-13T13:06:51.153192 #4534]  INFO -- : Tweet not within bounding box:	2.4816514976686075 km away.
+I, [2012-08-13T13:06:51.153360 #4534]  INFO -- : Tweet from @OfficialShai1:
+I, [2012-08-13T13:06:51.153492 #4534]  INFO -- : 	234984356102422528: "GREATNESS is EARNED not GIVEN"
+I, [2012-08-13T13:06:58.600720 #4534]  INFO -- : Tweet not within bounding box:	1.0735491867024232 km away.
+I, [2012-08-13T13:06:58.600872 #4534]  INFO -- : Tweet from @PipCole:
+I, [2012-08-13T13:06:58.600969 #4534]  INFO -- : 	234984386951536640: "Not when you're on holidays! #coffeestop #oxfordcircus  @ Kaffeine http://t.co/F6b1IaJy"
+I, [2012-08-13T13:07:00.041668 #4534]  INFO -- : Tweet not within bounding box:	3.008482970673801 km away.
+I, [2012-08-13T13:07:00.041818 #4534]  INFO -- : Tweet from @sulergin:
+I, [2012-08-13T13:07:00.041888 #4534]  INFO -- : 	234984393133936640: "@DilaraYalcnkaya @ZeynepAlaboyun @dilanyalcinkaya almanca ve italyancasini da yazdirmayi dusunuyoruum :))"
+I, [2012-08-13T13:07:06.969235 #4534]  INFO -- : Tweet not within bounding box:	1.917774284087456 km away.
+I, [2012-08-13T13:07:06.969476 #4534]  INFO -- : Tweet from @Dr_JCollins:
+I, [2012-08-13T13:07:06.969688 #4534]  INFO -- : 	234984422275940352: "@_Cartz lol!! I thought it would been a gender test more than anything!!"
+I, [2012-08-13T13:07:26.576714 #4534]  INFO -- : Tweet not within bounding box:	3.6479558463408983 km away.
+I, [2012-08-13T13:07:26.577011 #4534]  INFO -- : Tweet from @adrianhansel:
+I, [2012-08-13T13:07:26.577204 #4534]  INFO -- : 	234984504723374080: "Recording studio today ! What STAGEY westenders will I see today ?? X #confusedcomadvert x"
+I, [2012-08-13T13:07:50.417922 #4534]  INFO -- : Tweet not within bounding box:	0.698486080678969 km away.
+I, [2012-08-13T13:07:50.418051 #4534]  INFO -- : Tweet from @DJSkelton:
+I, [2012-08-13T13:07:50.418153 #4534]  INFO -- : 	234984604568780800: "Just seen somebody walking a ferret in central London! Not an everyday London scene."
+I, [2012-08-13T13:08:01.873139 #4534]  INFO -- : Tweet not within bounding box:	0.6977979452701547 km away.
+I, [2012-08-13T13:08:01.873302 #4534]  INFO -- : Tweet from @yaxartes_river:
+I, [2012-08-13T13:08:01.873397 #4534]  INFO -- : 	234984651687596032: "Now I guess I know what "and I feel heavy metal" means. #blurhydepark2012 #firstfuckingrow"
+I, [2012-08-13T13:08:02.055265 #4534]  INFO -- : Tweet not within bounding box:	3.683551567717604 km away.
+I, [2012-08-13T13:08:02.055520 #4534]  INFO -- : Tweet from @Opeyy_:
+I, [2012-08-13T13:08:02.055645 #4534]  INFO -- : 	234984652924923904: ":-P"@Kanyin_s_: I don't see any of my real niggas around. Sh*t""
+I, [2012-08-13T13:08:09.731721 #4534]  INFO -- : Tweet not within bounding box:	7.690653927330169 km away.
+I, [2012-08-13T13:08:09.731984 #4534]  INFO -- : Tweet from @StarStace_:
+I, [2012-08-13T13:08:09.732143 #4534]  INFO -- : 	234984685686644736: "I LOVE 'Awkward Black Girl' but why do we have to wait a month for each episode to come out?! That's a long 'ting, fam. *sigh*"
+I, [2012-08-13T13:08:16.190740 #4534]  INFO -- : Tweet not within bounding box:	6.265654486183915 km away.
+I, [2012-08-13T13:08:16.190896 #4534]  INFO -- : Tweet from @EfekanCalim:
+I, [2012-08-13T13:08:16.191096 #4534]  INFO -- : 	234984712744103936: "9.58 seconds- 100m world record. Challenge accepted!"
+I, [2012-08-13T13:08:42.020517 #4534]  INFO -- : Tweet not within bounding box:	1.1701929059852672 km away.
+I, [2012-08-13T13:08:42.020753 #4534]  INFO -- : Tweet from @scribbett:
+I, [2012-08-13T13:08:42.020932 #4534]  INFO -- : 	234984820890013696: "I'm at Confirmit (London, Greater London) http://t.co/BIT5HVI4"
+I, [2012-08-13T13:08:50.617815 #4534]  INFO -- : Tweet not within bounding box:	1.3175831059144107 km away.
+I, [2012-08-13T13:08:50.617970 #4534]  INFO -- : Tweet from @JasonAidoo:
+I, [2012-08-13T13:08:50.618067 #4534]  INFO -- : 	234984854087933953: "About to say action on @VEVO_UK #GoShows! Guess the location anyone? http://t.co/8CLw7maW"
+I, [2012-08-13T13:09:20.724676 #4534]  INFO -- : Tweet not within bounding box:	2.00478298125939 km away.
+I, [2012-08-13T13:09:20.724890 #4534]  INFO -- : Tweet from @kudelin_ru:
+I, [2012-08-13T13:09:20.725033 #4534]  INFO -- : 	234984983406706688: "See you in Sochi! 😉  @ Marble Arch http://t.co/3T87JW8b"
+I, [2012-08-13T13:09:27.188153 #4534]  INFO -- : Tweet not within bounding box:	0.5648233123262568 km away.
+I, [2012-08-13T13:09:27.188337 #4534]  INFO -- : Tweet from @GirlWorldW:
+I, [2012-08-13T13:09:27.188419 #4534]  INFO -- : 	234985010157989888: "Good morning London !   @ London http://t.co/HLUPjVwF"
+I, [2012-08-13T13:09:28.428494 #4534]  INFO -- : Tweet not within bounding box:	2.4835350678528596 km away.
+I, [2012-08-13T13:09:28.428643 #4534]  INFO -- : Tweet from @aansalkandary:
+I, [2012-08-13T13:09:28.428714 #4534]  INFO -- : 	234985015811923969: "يصير مااتفتح الباب حق هالـِ #مزعج :/  http://t.co/HtLcCw3p"
+I, [2012-08-13T13:09:29.236516 #4534]  INFO -- : Tweet not within bounding box:	1.7675872323546866 km away.
+I, [2012-08-13T13:09:29.236667 #4534]  INFO -- : Tweet from @stefan89:
+I, [2012-08-13T13:09:29.236790 #4534]  INFO -- : 	234985015908376576: "In expense heaven. http://t.co/NRhd7Smi"
+I, [2012-08-13T13:09:31.873397 #4534]  INFO -- : Tweet not within bounding box:	2.4291488166924133 km away.
+I, [2012-08-13T13:09:31.873710 #4534]  INFO -- : Tweet from @aansalkandary:
+I, [2012-08-13T13:09:31.873901 #4534]  INFO -- : 	234985030009622528: "@DonKhalaf 
+:)"
+I, [2012-08-13T13:09:45.613505 #4534]  INFO -- : Tweet not within bounding box:	1.6410110308111578 km away.
+I, [2012-08-13T13:09:45.613755 #4534]  INFO -- : Tweet from @maryannjohanson:
+I, [2012-08-13T13:09:45.613879 #4534]  INFO -- : 	234985087723249664: "I'm at Azzurro (Waterloo, Greater London) http://t.co/RNHUUqNO"
+I, [2012-08-13T13:09:55.307866 #4534]  INFO -- : Tweet not within bounding box:	8.29501944017632 km away.
+I, [2012-08-13T13:09:55.308102 #4534]  INFO -- : Tweet from @JonCarlosGuerra:
+I, [2012-08-13T13:09:55.308227 #4534]  INFO -- : 	234985128248614912: "what do you mean the sauna/steam room is separated by sexes?
+this is bullshit.
+#virginactive"
+I, [2012-08-13T13:10:01.221969 #4534]  INFO -- : Tweet not within bounding box:	401.35895111492033 km away.
+I, [2012-08-13T13:10:01.222127 #4534]  INFO -- : Tweet from @devseo:
+I, [2012-08-13T13:10:01.222202 #4534]  INFO -- : 	234985153309573120: "http://t.co/3hrUlmQK - Another Bureaucratic Failure"
+I, [2012-08-13T13:10:04.550432 #4534]  INFO -- : Tweet not within bounding box:	1.5371943942770034 km away.
+I, [2012-08-13T13:10:04.550599 #4534]  INFO -- : Tweet from @dingwam:
+I, [2012-08-13T13:10:04.550669 #4534]  INFO -- : 	234985167175946240: "@ThreeUKSupport Are you able to tell me which bits of my account on My3 are accurate?"
+I, [2012-08-13T13:10:05.584592 #4534]  INFO -- : Tweet not within bounding box:	2.4291488166924133 km away.
+I, [2012-08-13T13:10:05.584766 #4534]  INFO -- : Tweet from @aansalkandary:
+I, [2012-08-13T13:10:05.584846 #4534]  INFO -- : 	234985171122798593: "@wa7shyaa 
+عوووافي مقدمًا :)"
+I, [2012-08-13T13:10:29.757280 #4534]  INFO -- : Tweet not within bounding box:	1.8894436224905025 km away.
+I, [2012-08-13T13:10:29.757620 #4534]  INFO -- : Tweet from @maryannjohanson:
+I, [2012-08-13T13:10:29.757825 #4534]  INFO -- : 	234985272398462976: "I'm at Platform 4 (London, Greater London) http://t.co/R8fCYifh"
+I, [2012-08-13T13:10:48.083056 #4534]  INFO -- : Tweet not within bounding box:	2.2639071385707537 km away.
+I, [2012-08-13T13:10:48.083297 #4534]  INFO -- : Tweet from @silbi_etta:
+I, [2012-08-13T13:10:48.083473 #4534]  INFO -- : 	234985349829513216: "Ogni tanto ci riposiamo....  @ 4-5 Hyde Park Place http://t.co/fzsLokcI"
+I, [2012-08-13T13:11:23.207510 #4534]  INFO -- : Tweet not within bounding box:	1.3353174921218307 km away.
+I, [2012-08-13T13:11:23.207737 #4534]  INFO -- : Tweet from @LizLyons17:
+I, [2012-08-13T13:11:23.207860 #4534]  INFO -- : 	234985496630136832: "@ZachSulley you could call me.."
+I, [2012-08-13T13:11:25.559220 #4534]  INFO -- : Tweet not within bounding box:	5.9973800539247994 km away.
+I, [2012-08-13T13:11:25.559512 #4534]  INFO -- : Tweet from @ReeceShovlin:
+I, [2012-08-13T13:11:25.559699 #4534]  INFO -- : 	234985504343465984: "Me and @xhannahchappell at #SoulSurvivor she's immediately become one of my best friends. I miss it so much there :( http://t.co/yY5PWoEf"
+E, [2012-08-13T13:11:30.809391 #4534] ERROR -- : Reconnect: timeout = 10, retries = 1

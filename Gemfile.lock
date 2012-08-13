@@ -220,6 +220,7 @@ GEM
     whenever (0.7.3)
       activesupport (>= 2.3.4)
       chronic (~> 0.6.3)
+    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -256,3 +257,4 @@ DEPENDENCIES
   typhoeus (= 0.2.4)
   uglifier (>= 1.0.3)
   whenever
+  yajl-ruby

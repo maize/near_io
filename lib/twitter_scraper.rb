@@ -1,96 +1,86 @@
-require "tweetstream"
+require 'rubygems'
+require 'tweetstream'
+require 'logger'
 
-class TwitterScraper
-	def initialize
-		TweetStream.configure do |config|
-		  config.consumer_key       = 'Q3ZYaHBA499Gt7UvGleHA'
-		  config.consumer_secret    = 'j7mlRh7rSMp25fpECVHEcTUzg2ezyomnEIwYqSnE'
-		  config.oauth_token        = '15094851-0rINJgT7ILnOMpIUiqzNkHkx8UHOzm6MUeRGsTbi2'
-		  config.oauth_token_secret = 'aPcC8jHyvVJnulVU2jzlDFUGpLaQ4o8jtBimHqKHag'
-		  config.auth_method        = :oauth
-		end
-	end
+@logger = Logger.new STDERR
 
-	def track_keywords(keywords)
-		TweetStream::Client.new.track(keywords) do |status|
-			p "#{status.text}"
-		end
-	end
+ERROR_TIMEOUT = 300             #in seconds, how long do we wait if Twitter rejects us
 
-	def parse_tweet(status)
-		Rails.logger.info "[TweetStream] Status: #{status.id}"
+# Tweets from (Picadilly Circus)
+@from_lat = 51.510042794076
+@from_lng = -0.13391156241932
+radius = 0.001 # catch area in degrees lat/lng
 
-		# Parse out the (structured) tweet message.
-		# If the message is unstructured, discard it
-		# Grab only tweets from foursquare
-		if status[:source] && status[:source].include?('foursquare')
-		    # Parse out the location name from the tweet
-		    matching = /I'm at (.*?) (\(|w\/|http)/.match(status[:text])
-		    matching ||= /\(@ (([^w]|w[^\/])*)(w\/.*)?\)/.match(status[:text])
-			# matching ||= /the mayor of (.*) on @foursquare/.match(status[:text])
+# Config
+consumer_key        = "Q3ZYaHBA499Gt7UvGleHA"
+consumer_secret     = "j7mlRh7rSMp25fpECVHEcTUzg2ezyomnEIwYqSnE"
+oauth_token         = "15094851-0rINJgT7ILnOMpIUiqzNkHkx8UHOzm6MUeRGsTbi2"
+oauth_token_secret  = "aPcC8jHyvVJnulVU2jzlDFUGpLaQ4o8jtBimHqKHag"
 
-		    if matching
-		      status[:name] = matching[1]
-		    end
+TweetStream.configure do |config|
+  config.consumer_key = consumer_key
+  config.consumer_secret = consumer_secret
+  config.oauth_token = oauth_token
+  config.oauth_token_secret = oauth_token_secret
+  config.auth_method = :oauth
+  config.parser = :yajl
+end
 
-		    status[:url] = /(http:\/\/[^ ]*)$/.match(status[:text])
-		    if status[:url]
-		      status[:url] = status[:url][1]
-		    end
+# Bounding box
+N = @from_lat + radius
+S = @from_lat - radius
+E = @from_lng + radius
+W = @from_lng - radius
 
-		    #ap status
-		    if status[:name] && status[:place] && status[:user] && status[:geo] && status[:geo][:coordinates]
-				# Checkin.create(
-				#   :place_id   => status[:place][:id],
-				#   :place_name => status[:name].strip,
-				#   :post_date  => DateTime.parse(status[:created_at]),
-				#   :url        => status[:url],
-				#   :user_id    => status[:user][:id_str],
-				#   :latitude   => status[:geo][:coordinates][0],
-				#   :longitude  => status[:geo][:coordinates][1]
-				# )
-				Rails.logger.info "[TweetStream] Adding checkin: #{status[:name].strip}"
-				puts status.strip
-		    end
-		end
-	end
+def parse_tweet status
+  if status[:coordinates] and status[:coordinates][:type] == 'Point'
+    lng, lat = status[:coordinates][:coordinates]
 
-	def track_keywords_nearby(longitude, latitude)
-		@from_lng = longitude
-		@from_lat = latitude
-		radius = 0.001 # catch area in degrees lat/lng
+    if    lng < [E, W].max \
+      and lng > [E, W].min \
+      and lat < [N, S].max \
+      and lat > [N, S].min
 
-		# Let's make us a bounding box to give Twitter's streaming API
-		@N = @from_lat + radius
-		@S = @from_lat - radius
-		@E = @from_lng + radius
-		@W = @from_lng - radius
+      @logger.info "Got one from @#{status[:user][:screen_name]}:"
+      @logger.info "\t#{status[:id]}: \"#{status[:text]}\""
 
-		# TweetStream::Daemon.new('tracker', { ARGV: ['start'] })
-		client = TweetStream::Daemon.new('twitter_scraper', { ARGV: ['start'], log_output: true })
-		client.locations(@W,@S,@E,@N) { |status| parse_tweet status }
+      if not status[:in_reply_to_user_id] \
+        and not status[:retweeted] \
+        and status[:entities][:user_mentions].empty?
 
-		# TweetStream::Client.new.locations(locations,
-		#   :delete    => Proc.new { |status_id, user_id|
-		#     Rails.logger.info "[TweetStream] Requesting to delete: #{status_id}"
-		#   },
-		#   :limit     => Proc.new { |skip_count|
-		#     Rails.logger.info "[TweetStream] Limiting: #{skip_count}"
-		#   },
-		#   :error     => Proc.new { |message|
-		#     Rails.logger.info "[TweetStream][#{Time.now}] TweetStream error: #{message}"
-		#   },
-		#   :reconnect => Proc.new { |timeout, retries|
-		#     Rails.logger.info "[TweetStream][#{Time.now}] Reconnect: #{timeout} secs on #{retries} retry"
-		#   }
-		# ) do |status|
-		# 	parse_tweet(status)
-		# end
-	end
+        @logger.info "\t#{tweet[:id]}: \"#{tweet[:text]}\""
+      else
+        @logger.info "Didn't save - tweet was mention, retweet, reply, or spammy."
+        @logger.info "In reply to: " + status[:in_reply_to_user_id].inspect
+        @logger.info "Retweeted? " + status[:retweeted].inspect
+        @logger.info "Mentioned: " + status[:entities][:user_mentions].inspect
+      end
+    else
+      km_away = Math.sqrt(((lat - @from_lat) * 111)**2 + ((lng - @from_lng) * 79)**2)
+      @logger.info "Tweet not within bounding box:\t#{km_away} km away."
+      @logger.info "Tweet from @#{status[:user][:screen_name]}:"
+      @logger.info "\t#{status[:id]}: \"#{status[:text]}\""
+    end
+  end
+rescue Exception => ex
+  @logger.error ex.message
+  @logger.error ex.backtrace.join "\n"
+end
 
-	def start_daemon
-		TweetStream::Daemon.new('tracker', { ARGV: ['start'] }).track('olympics', 'london') do |status|
-			# end.filter({"locations" => "-12.72216796875, 49.76707407366789, 1.977539, 61.068917"}) do |status|
-		end
-	end
+client = TweetStream::Daemon.new('twitter_scraper', { log_output: true })
+client.on_error { |message| @logger.error message }
+client.on_reconnect { |timeout, retries| @logger.error "Reconnect: timeout = #{timeout}, retries = #{retries}" }
+
+# Start filtering based on location
+begin
+  @logger.info "Starting up Twitter Scraper..."
+  client.locations("#{W},#{S},#{E},#{N}") { |status| parse_tweet status }
+rescue HTTP::Parser::Error => ex
+  # Although TweetStream should recover from
+  # disconnections, it fails to do so properly.
+  @logger.error "HTTP Parser error encountered - let's sleep for #{ERROR_TIMEOUT}s."
+  @logger.error ex.message
+  @logger.error ex.backtrace.join "\n"
+  sleep ERROR_TIMEOUT
+  retry
 end

@@ -10,6 +10,7 @@ class PlacesController < ApplicationController
 
   def search
     @places = FacebookPlace.find_by_name(current_user, params[:place][:name])
+    @place = Place.new
 
     if @places.nil?
       flash[:notice] = "Nothing found!"
@@ -64,7 +65,6 @@ class PlacesController < ApplicationController
 
   def show
     @place = FacebookPlace.find(params[:id])
-    @tweets = TwitterScraper.new.track_keywords_nearby(@place.longitude, @place.latitude)
 
     begin
       respond_to do |format|

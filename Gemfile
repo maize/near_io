@@ -52,6 +52,7 @@ gem 'httparty'
 gem 'koala'
 gem 'kaminari'
 gem 'whenever'
+gem 'yajl-ruby'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
