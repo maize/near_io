@@ -1,6 +1,8 @@
 require 'rubygems'
 require 'tweetstream'
 require 'logger'
+require 'mongo'
+require 'time'
 
 @logger = Logger.new STDERR
 
@@ -61,6 +63,17 @@ def parse_tweet status
       @logger.info "Tweet from @#{status[:user][:screen_name]}:"
       @logger.info "\t#{status[:id]}: \"#{status[:text]}\""
     end
+
+    @logger.info "Saving tweet.."
+    data = {
+		"twitter_id" => status[:id],
+		"handle" => status[:user][:screen_name],
+		"handle_id" => status[:user][:id],
+		"text" => status[:text],
+		"location" => status[:coordinates][:coordinates]
+    }
+
+	@collection.insert(data);
   end
 rescue Exception => ex
   @logger.error ex.message
@@ -71,10 +84,26 @@ client = TweetStream::Daemon.new('twitter_scraper', { log_output: true })
 client.on_error { |message| @logger.error message }
 client.on_reconnect { |timeout, retries| @logger.error "Reconnect: timeout = #{timeout}, retries = #{retries}" }
 
+# mongodb://dev:Nearnote12@ds035997.mongolab.com:35997/near_io_dev
+@db = Mongo::Connection.new("ds035997.mongolab.com", "35997").db("near_io_dev")
+@auth = @db.authenticate("dev", "Nearnote12")
+@collection = @db.collection("tweets")
+
 # Start filtering based on location
 begin
-  @logger.info "Starting up Twitter Scraper..."
-  client.locations("#{W},#{S},#{E},#{N}") { |status| parse_tweet status }
+	@logger.info "Starting up Twitter Scraper..."
+	# Get only happy tweets :)
+	# client.filter({:track => [":)"], :locations => ["#{W},#{S},#{E},#{N}"]}) do |status|
+	# 	parse_tweet status
+	# end
+
+	# Filter method
+	client.filter({:locations => ["#{W}","#{S}","#{E}","#{N}"]}) do |status|
+		parse_tweet status
+	end
+
+	# Locations method
+	# client.locations("#{W},#{S},#{E},#{N}") { |status| parse_tweet status }
 rescue HTTP::Parser::Error => ex
   # Although TweetStream should recover from
   # disconnections, it fails to do so properly.
