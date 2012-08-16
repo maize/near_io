@@ -1,6 +1,7 @@
 class Network
   include Mongoid::Document
-  has_and_belongs_to_many :notes
-  
+
+  has_many :groups
+
   field :name, :type => String
 end

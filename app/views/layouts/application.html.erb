@@ -50,10 +50,49 @@
     </div>
     <div class="container">
         <%= yield %>
+        <div id="map_canvas" style="width: 100%; height: 500px"></div>
     </div> <!-- /container -->
-    <!-- Javascripts
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "application" %>
+    <script src="http://js.pusher.com/1.12/pusher.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+      function initMap() {
+        var mapOptions = {
+          center: new google.maps.LatLng(51.510042794076, -0.13391156241932),
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+      }
+
+      function addMarker(title,lon,lat) {
+        var location = new google.maps.LatLng(lon, lat);
+        marker = new google.maps.Marker({
+          position: location,
+          title:title,
+          animation: google.maps.Animation.DROP,
+          map: map
+        });
+      }
+
+      $(document).ready(function(){
+          var map;
+          initMap();
+
+          // Enable pusher logging - don't include this in production
+          Pusher.log = function(message) {
+            if (window.console && window.console.log) window.console.log(message);
+          };
+
+          // Flash fallback logging - don't include this in production
+          WEB_SOCKET_DEBUG = true;
+
+          var pusher = new Pusher('63dd24301f53a7908733');
+          var channel = pusher.subscribe('tweets_channel');
+          channel.bind('got_tweet', function(data) {
+            addMarker(data.text, data.location[1], data.location[0]);
+          });
+      });
+      </script>
   </body>
 </html>

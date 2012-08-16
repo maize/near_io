@@ -3,6 +3,7 @@ require 'tweetstream'
 require 'logger'
 require 'mongo'
 require 'time'
+require 'pusher'
 
 @logger = Logger.new STDERR
 
@@ -28,6 +29,10 @@ TweetStream.configure do |config|
   config.parser = :yajl
 end
 
+Pusher.app_id = '25695'
+Pusher.key = '63dd24301f53a7908733'
+Pusher.secret = 'cf472b0e2c0721cb93e6'
+
 # Bounding box
 N = @from_lat + radius
 S = @from_lat - radius
@@ -38,33 +43,6 @@ def parse_tweet status
   if status[:coordinates] and status[:coordinates][:type] == 'Point'
     lng, lat = status[:coordinates][:coordinates]
 
-    if    lng < [E, W].max \
-      and lng > [E, W].min \
-      and lat < [N, S].max \
-      and lat > [N, S].min
-
-      @logger.info "Got one from @#{status[:user][:screen_name]}:"
-      @logger.info "\t#{status[:id]}: \"#{status[:text]}\""
-
-      if not status[:in_reply_to_user_id] \
-        and not status[:retweeted] \
-        and status[:entities][:user_mentions].empty?
-
-        @logger.info "\t#{tweet[:id]}: \"#{tweet[:text]}\""
-      else
-        @logger.info "Didn't save - tweet was mention, retweet, reply, or spammy."
-        @logger.info "In reply to: " + status[:in_reply_to_user_id].inspect
-        @logger.info "Retweeted? " + status[:retweeted].inspect
-        @logger.info "Mentioned: " + status[:entities][:user_mentions].inspect
-      end
-    else
-      km_away = Math.sqrt(((lat - @from_lat) * 111)**2 + ((lng - @from_lng) * 79)**2)
-      @logger.info "Tweet not within bounding box:\t#{km_away} km away."
-      @logger.info "Tweet from @#{status[:user][:screen_name]}:"
-      @logger.info "\t#{status[:id]}: \"#{status[:text]}\""
-    end
-
-    @logger.info "Saving tweet.."
     data = {
 		"twitter_id" => status[:id],
 		"handle" => status[:user][:screen_name],
@@ -73,7 +51,31 @@ def parse_tweet status
 		"location" => status[:coordinates][:coordinates]
     }
 
-	@collection.insert(data);
+    if    lng < [E, W].max \
+      and lng > [E, W].min \
+      and lat < [N, S].max \
+      and lat > [N, S].min
+
+      @logger.info "Got one from @#{status[:user][:screen_name]}:"
+      @logger.info "\t#{status[:id]}: \"#{status[:text]}\""
+
+      # if not status[:in_reply_to_user_id] \
+      #   and not status[:retweeted] \
+      #   and status[:entities][:user_mentions].empty?
+      @logger.info "Saving tweet.."
+      @collection.insert(data);
+      # else
+      #   @logger.info "Didn't save - tweet was mention, retweet, reply, or spammy."
+      #   @logger.info "In reply to: " + status[:in_reply_to_user_id].inspect
+      #   @logger.info "Retweeted? " + status[:retweeted].inspect
+      #   @logger.info "Mentioned: " + status[:entities][:user_mentions].inspect
+      # end
+    else
+      km_away = Math.sqrt(((lat - @from_lat) * 111)**2 + ((lng - @from_lng) * 79)**2)
+      @logger.info "Tweet not within bounding box:\t#{km_away} km away."
+    end
+
+	Pusher['tweets_channel'].trigger('got_tweet', data)
   end
 rescue Exception => ex
   @logger.error ex.message
@@ -86,6 +88,7 @@ client.on_reconnect { |timeout, retries| @logger.error "Reconnect: timeout = #{t
 
 # mongodb://dev:Nearnote12@ds035997.mongolab.com:35997/near_io_dev
 @db = Mongo::Connection.new("ds035997.mongolab.com", "35997").db("near_io_dev")
+@db.collection("tweets")
 @auth = @db.authenticate("dev", "Nearnote12")
 @collection = @db.collection("tweets")
 
@@ -98,12 +101,12 @@ begin
 	# end
 
 	# Filter method
-	client.filter({:locations => ["#{W}","#{S}","#{E}","#{N}"]}) do |status|
-		parse_tweet status
-	end
+	# client.filter({:locations => ["#{W}","#{S}","#{E}","#{N}"]}) do |status|
+	# 	parse_tweet status
+	# end
 
 	# Locations method
-	# client.locations("#{W},#{S},#{E},#{N}") { |status| parse_tweet status }
+	client.locations("#{W},#{S},#{E},#{N}") { |status| parse_tweet status }
 rescue HTTP::Parser::Error => ex
   # Although TweetStream should recover from
   # disconnections, it fails to do so properly.
