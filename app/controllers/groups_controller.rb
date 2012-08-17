@@ -14,6 +14,14 @@ class GroupsController < ApplicationController
   # GET /groups/1.json
   def show
     @group = Group.find(params[:id])
+    
+    unless @group.facebook_group.nil?
+      p "Get events of Facebook group.."
+      @group.facebook_group.get_facebook_events(current_user.token)
+    else
+      p "Get events of Facebook page.."
+      @group.facebook_page.get_facebook_events(current_user.token)
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -42,6 +50,16 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(params[:group])
 
+    unless params[:group][:facebook_group].empty?
+      @fb_group = FacebookGroup.find_by_facebook_id(params[:group][:facebook_group])
+      @group.facebook_group = @fb_group
+    end
+
+    unless params[:group][:facebook_page].empty?
+      @fb_page = FacebookPage.find_by_facebook_id(params[:group][:facebook_page])
+      @group.facebook_page = @fb_page
+    end
+
     respond_to do |format|
       if @group.save
         format.html { redirect_to @group, notice: 'Group was successfully created.' }
@@ -57,6 +75,16 @@ class GroupsController < ApplicationController
   # PUT /groups/1.json
   def update
     @group = Group.find(params[:id])
+
+    unless params[:group][:facebook_group].empty?
+      @fb_group = FacebookGroup.find_by_facebook_id(params[:group][:facebook_group])
+      @group.facebook_group = @fb_group
+    end
+
+    unless params[:group][:facebook_page].empty?
+      @fb_page = FacebookPage.find_by_facebook_id(params[:group][:facebook_page])
+      @group.facebook_page = @fb_page
+    end
 
     respond_to do |format|
       if @group.update_attributes(params[:group])
