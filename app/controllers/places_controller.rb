@@ -65,6 +65,7 @@ class PlacesController < ApplicationController
 
   def show
     @place = FacebookPlace.find(params[:id])
+    @events = FacebookEvent
 
     begin
       respond_to do |format|

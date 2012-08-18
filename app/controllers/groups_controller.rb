@@ -15,12 +15,14 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     
-    unless @group.facebook_group.nil?
-      p "Get events of Facebook group.."
-      @group.facebook_group.get_facebook_events(current_user.token)
-    else
-      p "Get events of Facebook page.."
-      @group.facebook_page.get_facebook_events(current_user.token)
+    if user_signed_in?
+      unless @group.facebook_group.nil?
+        p "Get events of Facebook group.."
+        @group.facebook_group.get_facebook_events(current_user.token)
+      else
+        p "Get events of Facebook page.."
+        @group.facebook_page.get_facebook_events(current_user.token)
+      end
     end
 
     respond_to do |format|

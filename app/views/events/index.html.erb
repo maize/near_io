@@ -1,32 +1,16 @@
-<% unless @likes.nil? && @places.nil? %>
-	<div class="tabbable">
-		<ul class="nav nav-tabs">
-			<li class="active"><a href="#tab1" data-toggle="tab">Places</a></li>
-			<li><a href="#tab2" data-toggle="tab">Likes</a></li>
-		</ul>
-		<div class="tab-content">
-			<div class="tab-pane active" id="tab1">
-				<%= render "places/results" %>
-			</div>
-			<div class="tab-pane" id="tab2">
-				<table class="table table-striped">
-				  <tr>
-				    <th>Name</th>
-				    <th>Category</th>
-				  </tr>
-				  <% @likes.each do |like| %>
-				  <tr>
-				    <td><%= like.name %></td>
-				    <% unless like.facebook_category.nil? %>
-				    	<td><%= like.facebook_category.name %></td>
-				    <% else %>
-				    	<td><%= like.facebook_category %></td>
-				    <% end %>
-				  </tr>
-				  <% end %>
-				</table>
-				<%= paginate @likes %>
-			</div>
-		</div>
-	</div>
+<% unless @events.nil? && @places.nil? %>
+	<table class="table table-striped">
+	  <tr>
+	    <th>Name</th>
+	    <th>Start</th>
+	    <th>End</th>
+	  </tr>
+	  <% @events.each do |event| %>
+	  <tr>
+	    <td><%= event.name %></td>
+	    <td><%= event.start_time %></td>
+	    <td><%= event.end_time %></td>
+	  </tr>
+	  <% end %>
+	</table>
 <% end %>

@@ -1,4 +1,4 @@
-<%= form_for(@group) do |f| %>
+<%= twitter_bootstrap_form_for @group, :html => { :class => "horizontal-form" } do |f| %>
   <% if @group.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
@@ -11,15 +11,8 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :facebook_group %><br />
-    <%= f.text_field :facebook_group %>
-  </div>
-
-  <div class="field">
-    <%= f.label :facebook_page %><br />
-    <%= f.text_field :facebook_page %>
-  </div>
+  <%= f.text_field :facebook_group %>
+  <%= f.text_field :facebook_page %>
 
   <div class="actions">
     <%= f.submit %>

@@ -20,6 +20,5 @@
 # Learn more: http://github.com/javan/whenever	
 
 every 2.minutes do 
-	command "echo 'Starting Twitter Scraper..'"
-	runner "TwitterScraper.new"
+	runner "Group.update_events", :environment => :development
 end
