@@ -4,7 +4,7 @@
 <p><b>Facebook Events:</b> <%= @group.facebook_events.size %></p>
 <ul>
 <% @group.facebook_events.each do |event| %>
-	<li><%= link_to event.name, event_path %></li>
+	<li><%= link_to event.name, event %></li>
 <% end %>
 </ul>
 

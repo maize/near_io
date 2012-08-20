@@ -2,6 +2,7 @@ NnApi::Application.routes.draw do
   resources :groups
 
   resources :events
+  match "events/:id", :to => "events#show", :as => 'facebook_event'
 
   resources :users
   match "users/:id/likes", :to => "users#likes", :as => 'user_likes'
