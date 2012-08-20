@@ -77,15 +77,20 @@ class GroupsController < ApplicationController
   # PUT /groups/1.json
   def update
     @group = Group.find(params[:id])
+    
+    networks = []
+    network = Network.find(params[:group][:networks])
+    networks.push(network)
+    params[:group][:networks] = networks
 
     unless params[:group][:facebook_group].empty?
-      @fb_group = FacebookGroup.find_by_facebook_id(params[:group][:facebook_group])
-      @group.facebook_group = @fb_group
+      fb_group = FacebookGroup.find_by_facebook_id(params[:group][:facebook_group].to_i)
+      params[:group][:facebook_group] = fb_group
     end
 
     unless params[:group][:facebook_page].empty?
-      @fb_page = FacebookPage.find_by_facebook_id(params[:group][:facebook_page])
-      @group.facebook_page = @fb_page
+      fb_page = FacebookPage.find_by_facebook_id(params[:group][:facebook_page].to_i)
+      params[:group][:facebook_page] = fb_page
     end
 
     respond_to do |format|

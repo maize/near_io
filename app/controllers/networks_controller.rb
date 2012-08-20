@@ -14,6 +14,14 @@ class NetworksController < ApplicationController
   # GET /networks/1.json
   def show
     @network = Network.find_by_slug(params[:id])
+    @events = []
+
+    @network.groups.each do |group|
+      @events = @events + group.facebook_events
+      # @events.merge(group.facebook_events) unless group.facebook_events.empty?
+    end
+
+    @events.sort_by!(&:start_time).reverse!
 
     respond_to do |format|
       format.html # show.html.erb

@@ -1,12 +1,18 @@
 <table class="table table-striped">
   <tr>
     <th>Name</th>
+    <th>Network</th>
     <th colspan="2"></th>
   </tr>
 
 <% @groups.each do |group| %>
   <tr>
     <td><%= link_to group.name, group %></td>
+    <td>
+      <% group.networks.each do |network| %>
+        <%= link_to network.name, network %>
+      <% end %>
+    </td>
     <td><%= link_to 'Edit', edit_group_path(group) %></td>
     <td><%= link_to 'Destroy', group, confirm: 'Are you sure?', method: :delete %></td>
   </tr>

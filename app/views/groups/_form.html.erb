@@ -11,11 +11,8 @@
     </div>
   <% end %>
 
-  <%= f.text_field :facebook_group %>
-  <%= f.text_field :facebook_page %>
+  <%= f.text_field :facebook_group, :value => (@group.facebook_group.facebook_id unless @group.facebook_group.nil?) %>
+  <%= f.text_field :facebook_page, :value => (@group.facebook_page.facebook_id unless @group.facebook_page.nil?) %>
   <%= f.select("networks", "Network", Network.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'}) %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.submit %>
 <% end %>

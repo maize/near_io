@@ -2,9 +2,7 @@
 
 <table class="table">
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th colspan="3">Name</th>
   </tr>
 
 <% @networks.each do |network| %>
@@ -15,7 +13,5 @@
   </tr>
 <% end %>
 </table>
-
-<br />
 
 <%= link_to 'New Network', new_network_path %>
