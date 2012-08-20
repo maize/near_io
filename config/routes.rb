@@ -1,4 +1,6 @@
 NnApi::Application.routes.draw do
+  resources :networks
+
   resources :groups
 
   resources :events

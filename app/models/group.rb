@@ -4,7 +4,7 @@ class Group
   has_one :facebook_group, autosave: true
   has_one :facebook_page, autosave: true
 
-  belongs_to :network
+  belongs_to :networks
 
   def name
   	if not facebook_group.nil?

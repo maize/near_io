@@ -54,6 +54,7 @@ gem 'kaminari'
 gem 'whenever'
 gem 'yajl-ruby'
 gem 'pusher'
+gem 'eventbrite'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

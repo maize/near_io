@@ -10,13 +10,12 @@ GIT
 
 GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
-  revision: ca703a2349e9a0c26dc5a8a5bb8f5d6dee3b0cff
+  revision: 44cfe7f25a0fd305c763f1a299a418a92d027e64
   specs:
     twitter-bootstrap-rails (2.1.1)
       actionpack (>= 3.1)
       less-rails (~> 2.2.3)
       railties (>= 3.1)
-      therubyracer (= 0.10.1)
 
 GEM
   remote: http://rubygems.org/
@@ -66,14 +65,30 @@ GEM
       execjs
     coffee-script-source (1.3.3)
     commonjs (0.2.6)
-    daemons (1.1.8)
+    cookiejar (0.3.0)
+    daemons (1.1.9)
     devise (2.1.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
+    em-http-request (1.0.3)
+      addressable (>= 2.2.3)
+      cookiejar
+      em-socksify
+      eventmachine (>= 1.0.0.beta.4)
+      http_parser.rb (>= 0.5.3)
+    em-socksify (0.2.1)
+      eventmachine (>= 1.0.0.beta.4)
+    em-twitter (0.1.4)
+      eventmachine (>= 1.0.0.beta.4)
+      http_parser.rb (~> 0.5)
+      simple_oauth (~> 0.1)
     erubis (2.7.0)
-    eventmachine (0.12.10)
+    eventbrite (0.4.2)
+      httparty (~> 0.8.0)
+      tzinfo (~> 0.3.22)
+    eventmachine (1.0.0.rc.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faraday (0.7.6)
@@ -92,10 +107,10 @@ GEM
     httpauth (0.1)
     i18n (0.6.0)
     journey (1.0.4)
-    jquery-rails (2.0.2)
-      railties (>= 3.2.0, < 5.0)
+    jquery-rails (2.1.1)
+      railties (>= 3.1.0, < 5.0)
       thor (~> 0.14)
-    json (1.7.4)
+    json (1.7.5)
     kaminari (0.13.0)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -172,19 +187,19 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     robotex (1.0.0)
-    sass (3.1.20)
+    sass (3.2.1)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    signature (0.1.3)
+    signature (0.1.4)
     simple_oauth (0.1.9)
     sprockets (2.1.3)
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     stringex (1.4.0)
-    therubyracer (0.10.1)
+    therubyracer (0.10.2)
       libv8 (~> 3.3.10)
     thin (1.4.1)
       daemons (>= 1.0.9)
@@ -195,19 +210,17 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tweetstream (1.1.5)
+    tweetstream (2.0.0)
       daemons (~> 1.1)
+      em-http-request (~> 1.0.2)
+      em-twitter (~> 0.1)
       multi_json (~> 1.3)
-      twitter-stream (>= 0.1.14, < 1)
+      twitter (~> 2.2)
     twitter (2.2.2)
       activesupport (>= 2.3.9, < 4)
       faraday (~> 0.7)
       multi_json (~> 1.3)
       simple_oauth (~> 0.1)
-    twitter-stream (0.1.16)
-      eventmachine (>= 0.12.8)
-      http_parser.rb (~> 0.5.1)
-      simple_oauth (~> 0.1.4)
     twitter_bootstrap_form_for (1.0.5)
       actionpack (~> 3)
       railties (~> 3)
@@ -235,6 +248,7 @@ DEPENDENCIES
   bson_ext (= 1.3.1)
   coffee-rails (~> 3.2.1)
   devise
+  eventbrite
   execjs
   faraday (= 0.7.6)
   geocoder
