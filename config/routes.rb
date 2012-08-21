@@ -1,4 +1,4 @@
-NnApi::Application.routes.draw do
+Near::Application.routes.draw do
   resources :networks
 
   resources :groups

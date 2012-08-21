@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-NnApi::Application.load_tasks
+Near::Application.load_tasks

@@ -3,6 +3,6 @@ class EventbriteEvent
   field :name, :type => String
   field :eventbrite_id, :type => Integer
 
-  def
+  def get?
   end
 end
