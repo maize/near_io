@@ -16,6 +16,11 @@ class Group
   	end
   end
 
+  def self.update
+    job = Qu.enqueue Group
+    puts "Enqueued job #{job.id}"
+  end
+
   def self.update_events
     # TODO: get first user with valid token which is not expired
     user_with_valid_token = User.all.first
@@ -31,6 +36,11 @@ class Group
         group.facebook_page.get_facebook_events(user_with_valid_token.token)
       end
     end
+  end
+
+  def self.perform
+    presentation = Group.update_events
+    presentation.process!
   end
 
   def facebook_events

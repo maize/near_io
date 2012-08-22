@@ -39,6 +39,9 @@ Near::Application.configure do
   config.reload_plugins = true
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Redis - for background processes
+  ENV["REDISTOGO_URL"] = 'redis://redistogo:0ee23116b741ef686b2f90e63de1a418@clingfish.redistogo.com:9074/'
 end
 
 Devise.setup do |config|

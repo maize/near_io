@@ -30,6 +30,18 @@ class NetworksController < ApplicationController
     end
   end
 
+  def update_groups
+    Group.update
+    render :nothing => true
+  end
+
+  def clear_queue
+    p "Beforing clearing queue: "+Qu.length.to_s
+    Qu.clear
+    p "Cleared queue: "+Qu.length.to_s
+    render :nothing => true
+  end
+
   # GET /networks/new
   # GET /networks/new.json
   def new

@@ -1,5 +1,7 @@
 Near::Application.routes.draw do
   resources :networks
+  match "networks/:id/update_groups", :to => "networks#update_groups"
+  match "networks/:id/clear_queue", :to => "networks#clear_queue"
 
   resources :groups
 

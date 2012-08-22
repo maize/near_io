@@ -1,6 +1,10 @@
 class FacebookEvent
   include Mongoid::Document
 
+  has_and_belongs_to_many :attending_facebook_users, class_name: "FacebookUser"
+  has_many :maybe_facebook_users, class_name: "FacebookUser"
+  has_many :invited_facebook_users, class_name: "FacebookUser"
+
   field :facebook_id, :type => Integer
   field :owner, :type => Hash
   field :name, :type => String
@@ -75,6 +79,14 @@ class FacebookEvent
       	:updated_time => hash["updated_time"],
       	:privacy => hash["privacy"]
 	}
+
+  attending = @graph.get_connections(self.facebook_id, "attending")
+  attending.each do |attending_user|
+    user_hash = @graph.get_object(attending_user["id"])
+    user = FacebookUser.get_by_hash(user_hash)
+    self.attending_facebook_users.push(user)
+  end
+
 	self.update_attributes(hash_details)
   end
 end

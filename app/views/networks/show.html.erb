@@ -3,12 +3,14 @@
 <table class="table">
   <tr>
     <th>Name</th>
+    <th>Attending</th>
     <th>Start</th>
     <th>End</th>
   </tr>
   <% @events.each do |event| %>
     <tr>
       <td><%= link_to event.name, event %></td>
+      <td><%= event.attending_facebook_users.size %></td>
       <td><%= event.start_time.strftime('%d-%m-%Y %H:%M') unless event.start_time.nil? %></td>
       <td><%= event.end_time.strftime('%d-%m-%Y %H:%M') unless event.end_time.nil? %></td>
     </tr>
