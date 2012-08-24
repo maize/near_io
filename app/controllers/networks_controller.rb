@@ -17,9 +17,7 @@ class NetworksController < ApplicationController
     @events = []
 
     @network.groups.each do |group|
-      # @events = @events + group.facebook_events
       @events = @events + group.facebook_events.where(:start_time.gt => Time.now)
-      # @events.merge(group.facebook_events) unless group.facebook_events.empty?
     end
 
     @events.sort_by!(&:start_time).reverse!
@@ -31,7 +29,7 @@ class NetworksController < ApplicationController
   end
 
   def update_groups
-    Group.update
+    Resque.enqueue(UpdateGroups)
     render :nothing => true
   end
 

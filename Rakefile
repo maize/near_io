@@ -4,4 +4,6 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+task "resque:setup" => :environment
+
 Near::Application.load_tasks

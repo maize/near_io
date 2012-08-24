@@ -1,0 +1,2 @@
+development: redis://redistogo:0ee23116b741ef686b2f90e63de1a418@clingfish.redistogo.com:9074/
+production: redis://redistogo:0ee23116b741ef686b2f90e63de1a418@clingfish.redistogo.com:9074/

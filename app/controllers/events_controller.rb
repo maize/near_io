@@ -63,6 +63,12 @@ class EventsController < ApplicationController
     end
   end
 
+  def update_details
+    @fb_event = FacebookEvent.find(params[:id])
+    @fb_event.update_details(current_user.token)
+    render :nothing => true
+  end
+
   # PUT /events/1
   # PUT /events/1.json
   def update

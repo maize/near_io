@@ -1,3 +1,5 @@
+require 'resque/server'
+
 Near::Application.routes.draw do
   resources :networks
   match "networks/:id/update_groups", :to => "networks#update_groups"
@@ -7,6 +9,7 @@ Near::Application.routes.draw do
 
   resources :events
   match "events/:id", :to => "events#show", :as => 'facebook_event'
+  match "events/:id/update_details", :to => "events#update_details"
 
   resources :users
   match "users/:id/likes", :to => "users#likes", :as => 'user_likes'
@@ -21,6 +24,8 @@ Near::Application.routes.draw do
   match "places/:id/unfollow", :to => "places#unfollow", :as => 'unfollow_place'
 
   root :to => 'events#index'
+
+  mount Resque::Server.new, :at => "/resque"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

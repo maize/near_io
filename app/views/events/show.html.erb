@@ -10,6 +10,30 @@
   <%= @event.description %>
 </p>
 
+<p>
+  <b>Male:</b>
+  <%= @event.attending_male %>
+</p>
+
+<p>
+  <b>Female:</b>
+  <%= @event.attending_female %>
+</p>
+
+<p>
+  <b>Unknown:</b>
+  <%= @event.attending_unknown %>
+</p>
+
+<p>
+  <b>Female Percentage:</b>
+  <%= @event.percentage_female %>
+</p>
+
+<p>
+  <b>Male Percentage:</b>
+  <%= @event.percentage_male %>
+</p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

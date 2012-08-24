@@ -17,4 +17,9 @@
 #   runner "AnotherModel.prune_old_records"
 # end
 
-# Learn more: http://github.com/javan/whenever	
+# Learn more: http://github.com/javan/whenever
+
+every 1.minutes do
+	runner "Resque.enqueue(UpdateGroups)"
+	rake "resque:work"
+end

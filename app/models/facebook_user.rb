@@ -11,26 +11,35 @@ class FacebookUser
   field :updated_time, :type => DateTime
 
   def self.get_by_hash(hash)
-    user = FacebookUser.new(
-      :facebook_id  => hash["id"],
-      :name         => hash["name"],
-      :first_name   => hash["first_name"],
-      :last_name    => hash["last_name"],
-      :link         => hash["link"],
-      :username     => hash["username"],
-      :gender       => hash["gender"],
-      :locale       => hash["locale"],
-      :updated_time => hash["updated_time"])
+    fb_user = FacebookUser.where(facebook_id: hash["id"].to_i).first
 
-    find_user = FacebookUser.where(:facebook_id => user.facebook_id).first
-    
-    unless find_user.nil?
-      user = find_user
+    if fb_user.nil? || fb_user.gender.nil?
+      p "Getting details of Facebook user.."
+      hash = @graph.get_object(hash["id"])
+
+      user_details = FacebookUser.new(
+        :facebook_id  => hash["id"],
+        :name         => hash["name"],
+        :first_name   => hash["first_name"],
+        :last_name    => hash["last_name"],
+        :link         => hash["link"],
+        :username     => hash["username"],
+        :gender       => hash["gender"],
+        :locale       => hash["locale"],
+        :updated_time => hash["updated_time"])
+      
+      
+      if fb_user.nil?
+        p "Saving new Facebook user.."
+        fb_user = user_details
+        fb_user.save
+      else
+        p "Update details of Facebook user.."
+        fb_user.update_attributes(user_details)
+      end
     else
-      p "Saving new Facebook user.."
-      user.save
+      p "Found Facebook user with details.."
     end
-
-    user
+    fb_user
   end
 end

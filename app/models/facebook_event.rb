@@ -17,6 +17,15 @@ class FacebookEvent
   field :timezone, :type => String
   field :privacy, :type => String
 
+  field :attending, :type => Integer
+  field :attending_male, :type => Integer
+  field :attending_female, :type => Integer
+  field :attending_unknown, :type => Integer
+
+  field :maybe, :type => Integer
+  field :maybe_male, :type => Integer
+  field :maybe_female, :type => Integer
+
   def self.get_all_by_facebook_id(facebook_id, access_token)
 	@graph = Koala::Facebook::API.new(access_token)
 
@@ -63,30 +72,60 @@ class FacebookEvent
     @event
   end
 
-  def update_details(access_token)
-	@graph = Koala::Facebook::API.new(access_token)
-
-	hash = @graph.get_object(self.facebook_id)
-	hash_details = {
-		:name => hash["name"].to_s,
-		:description => hash["description"],
-		:owner => hash["owner"],
-		:location => hash["location"],
-		:venue => hash["venue"],
-		:timezone => hash["timezone"],
-      	:start_time => hash["start_time"],
-      	:end_time => hash["end_time"],
-      	:updated_time => hash["updated_time"],
-      	:privacy => hash["privacy"]
-	}
-
-  attending = @graph.get_connections(self.facebook_id, "attending")
-  attending.each do |attending_user|
-    user_hash = @graph.get_object(attending_user["id"])
-    user = FacebookUser.get_by_hash(user_hash)
-    self.attending_facebook_users.push(user)
+  def percentage_male
+    total = self.attending_male+self.attending_female
+    percentage = self.attending_male.to_f/total.to_f * 100.0
+    percentage.round
   end
 
-	self.update_attributes(hash_details)
+  def percentage_female
+    total = self.attending_male+self.attending_female
+    percentage = self.attending_female.to_f/total.to_f * 100.0
+    percentage.round
+  end  
+
+  def update_details(access_token)
+  	@graph = Koala::Facebook::API.new(access_token)
+
+  	hash = @graph.get_object(self.facebook_id)
+  	hash_details = {
+  		:name => hash["name"].to_s,
+  		:description => hash["description"],
+  		:owner => hash["owner"],
+  		:location => hash["location"],
+  		:venue => hash["venue"],
+  		:timezone => hash["timezone"],
+        	:start_time => hash["start_time"],
+        	:end_time => hash["end_time"],
+        	:updated_time => hash["updated_time"],
+        	:privacy => hash["privacy"]
+  	}
+
+    attending = @graph.get_connections(self.facebook_id, "attending")
+    attending_male = []
+    attending_female = []
+    attending_unknown = []
+
+    p "Getting attending users"
+    attending.each do |attending_user|
+      user = FacebookUser.get_by_hash(attending_user)
+      
+      if user.gender == "male"
+        attending_male.push(user)
+      elsif user.gender == "female"
+        attending_female.push(user)
+      elsif user.gender.nil? || user.gender.empty?
+        attending_unknown.push(user)
+      end
+
+      self.attending_facebook_users.push(user)
+    end
+
+    self.attending = attending.size
+    self.attending_male = attending_male.size
+    self.attending_female = attending_female.size
+    self.attending_unknown = attending_unknown.size
+
+  	self.update_attributes(hash_details)
   end
 end
