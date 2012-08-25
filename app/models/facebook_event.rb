@@ -36,14 +36,16 @@ class FacebookEvent
 	loop do
 		results.each do |hash|
 			fb_event = FacebookEvent.where(:facebook_id => hash["id"]).first
-			unless fb_event
+			unless fb_event.nil?
 				p "Create Facebook event.."
 				fb_event = FacebookEvent.get_by_hash(hash)
 			else
-				p "Found Facebook event in database and update details.."
-				fb_event.update_details(access_token)
+				p "Found Facebook event in database.."
 			end
-			fb_events.push(FacebookEvent.get_by_hash(hash))
+      fb_event.update_details(access_token)
+      fb_event.save
+
+			fb_events.push(fb_event)
 		end
 
 		results = results.next_page
@@ -73,15 +75,23 @@ class FacebookEvent
   end
 
   def percentage_male
-    total = self.attending_male+self.attending_female
-    percentage = self.attending_male.to_f/total.to_f * 100.0
-    percentage.round
+    unless self.attending_male.nil? && self.attending_female.nil?
+      total = self.attending_male+self.attending_female
+      percentage = self.attending_male.to_f/total.to_f * 100.0
+      percentage
+    else
+      0
+    end
   end
 
   def percentage_female
-    total = self.attending_male+self.attending_female
-    percentage = self.attending_female.to_f/total.to_f * 100.0
-    percentage.round
+    unless self.attending_male.nil? && self.attending_female.nil?
+      total = self.attending_male+self.attending_female
+      percentage = self.attending_female.to_f/total.to_f * 100.0
+      percentage
+    else
+      0
+    end
   end  
 
   def update_details(access_token)
@@ -101,31 +111,39 @@ class FacebookEvent
         	:privacy => hash["privacy"]
   	}
 
-    attending = @graph.get_connections(self.facebook_id, "attending")
-    attending_male = []
-    attending_female = []
-    attending_unknown = []
+    p "Update details of Facebook event: "+hash["id"].to_s
 
-    p "Getting attending users"
-    attending.each do |attending_user|
-      user = FacebookUser.get_by_hash(attending_user)
-      
-      if user.gender == "male"
-        attending_male.push(user)
-      elsif user.gender == "female"
-        attending_female.push(user)
-      elsif user.gender.nil? || user.gender.empty?
-        attending_unknown.push(user)
+    self.get_attending
+
+  	self.update(hash_details)
+  end
+
+  def get_attending
+    attending = @graph.get_connections(self.facebook_id, "attending")
+    unless attending.empty? || attending.nil?
+      attending_male = []
+      attending_female = []
+      attending_unknown = []
+
+      p "Getting attending users"
+      attending.each do |attending_user|
+        user = FacebookUser.get_by_hash(attending_user)
+        
+        if user.gender == "male"
+          attending_male.push(user)
+        elsif user.gender == "female"
+          attending_female.push(user)
+        elsif user.gender.nil? || user.gender.empty?
+          attending_unknown.push(user)
+        end
+
+        self.attending_facebook_users.push(user)
       end
 
-      self.attending_facebook_users.push(user)
+      self.attending = attending.size
+      self.attending_male = attending_male.size
+      self.attending_female = attending_female.size
+      self.attending_unknown = attending_unknown.size
     end
-
-    self.attending = attending.size
-    self.attending_male = attending_male.size
-    self.attending_female = attending_female.size
-    self.attending_unknown = attending_unknown.size
-
-  	self.update_attributes(hash_details)
   end
 end

@@ -12,27 +12,27 @@
 
 <p>
   <b>Male:</b>
-  <%= @event.attending_male %>
+  <%= @event.attending_male unless @event.attending_male.nil? %>
 </p>
 
 <p>
   <b>Female:</b>
-  <%= @event.attending_female %>
+  <%= @event.attending_female unless @event.attending_female.nil? %>
 </p>
 
 <p>
   <b>Unknown:</b>
-  <%= @event.attending_unknown %>
+  <%= @event.attending_unknown unless @event.attending_unknown.nil? %>
 </p>
 
 <p>
   <b>Female Percentage:</b>
-  <%= @event.percentage_female %>
+  <%= @event.percentage_female unless @event.percentage_female.nil? %>
 </p>
 
 <p>
   <b>Male Percentage:</b>
-  <%= @event.percentage_male %>
+  <%= @event.percentage_male unless @event.percentage_male.nil? %>
 </p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |

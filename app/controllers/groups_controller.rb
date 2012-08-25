@@ -14,16 +14,6 @@ class GroupsController < ApplicationController
   # GET /groups/1.json
   def show
     @group = Group.find(params[:id])
-    
-    if user_signed_in?
-      unless @group.facebook_group.nil?
-        p "Get events of Facebook group.."
-        @group.facebook_group.get_facebook_events(current_user.token)
-      else
-        p "Get events of Facebook page.."
-        @group.facebook_page.get_facebook_events(current_user.token)
-      end
-    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -71,6 +61,12 @@ class GroupsController < ApplicationController
         format.json { render json: @group.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def update_details
+    @group = Group.find(params[:id])
+    @group.update_details(current_user.token)
+    render :nothing => true
   end
 
   # PUT /groups/1

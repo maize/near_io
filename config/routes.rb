@@ -6,6 +6,7 @@ Near::Application.routes.draw do
   match "networks/:id/clear_queue", :to => "networks#clear_queue"
 
   resources :groups
+  match "groups/:id/update_details", :to => "groups#update_details"
 
   resources :events
   match "events/:id", :to => "events#show", :as => 'facebook_event'

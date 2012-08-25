@@ -11,10 +11,12 @@ class FacebookUser
   field :updated_time, :type => DateTime
 
   def self.get_by_hash(hash)
+    @graph = Koala::Facebook::API.new
+
     fb_user = FacebookUser.where(facebook_id: hash["id"].to_i).first
 
-    if fb_user.nil? || fb_user.gender.nil?
-      p "Getting details of Facebook user.."
+    if fb_user.nil? || (fb_user.nil? == false && fb_user.gender.nil? == true)
+      p "Getting details of Facebook user: "+hash["id"].to_s
       hash = @graph.get_object(hash["id"])
 
       user_details = FacebookUser.new(
@@ -35,7 +37,7 @@ class FacebookUser
         fb_user.save
       else
         p "Update details of Facebook user.."
-        fb_user.update_attributes(user_details)
+        fb_user.update(user_details)
       end
     else
       p "Found Facebook user with details.."

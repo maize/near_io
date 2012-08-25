@@ -24,6 +24,7 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @event = FacebookEvent.find(params[:id])
+    @group = FacebookGroup.where()
 
     respond_to do |format|
       format.html # show.html.erb
