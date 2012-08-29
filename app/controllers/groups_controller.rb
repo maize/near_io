@@ -42,14 +42,16 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new(params[:group])
 
+    # Facebook Group
     unless params[:group][:facebook_group].empty?
-      @fb_group = FacebookGroup.find_by_facebook_id(params[:group][:facebook_group])
-      @group.facebook_group = @fb_group
+      fb_group = FacebookGroup.find_by_facebook_id(params[:group][:facebook_group])
+      @group.facebook_group = fb_group
     end
 
+    # Facebook Page
     unless params[:group][:facebook_page].empty?
-      @fb_page = FacebookPage.find_by_facebook_id(params[:group][:facebook_page])
-      @group.facebook_page = @fb_page
+      fb_page = FacebookPage.find_by_facebook_id(params[:group][:facebook_page])
+      @group.facebook_page = fb_page
     end
 
     respond_to do |format|

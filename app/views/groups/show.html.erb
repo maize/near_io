@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <p><b>Name:</b> <%= @group.name %></p>
-<p><b>Facebook Events:</b> <%= @group.facebook_events.size %></p>
+<p><b>Events:</b> <%= @group.events.size %></p>
 <ul>
-<% @group.facebook_events.each do |event| %>
+<% @group.events.each do |event| %>
 	<li><%= link_to event.name, event %></li>
 <% end %>
 </ul>
