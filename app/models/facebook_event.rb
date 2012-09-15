@@ -5,6 +5,8 @@ class FacebookEvent
   has_many :maybe_facebook_users, class_name: "FacebookUser"
   has_many :invited_facebook_users, class_name: "FacebookUser"
 
+  belongs_to :event
+
   field :facebook_id, :type => Integer
   field :owner, :type => Hash
   field :name, :type => String
@@ -36,7 +38,7 @@ class FacebookEvent
 	loop do
 		results.each do |hash|
 			fb_event = FacebookEvent.where(:facebook_id => hash["id"]).first
-			unless fb_event.nil?
+			if fb_event.nil?
 				p "Create Facebook event.."
 				fb_event = FacebookEvent.get_by_hash(hash)
 			else

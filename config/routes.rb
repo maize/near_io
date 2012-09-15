@@ -12,10 +12,11 @@ Near::Application.routes.draw do
   match "events/:id", :to => "events#show", :as => 'facebook_event'
   match "events/:id/update_details", :to => "events#update_details"
 
-  resources :users
+  match "users/facebook", :to => "users#facebook", :as => 'facebook_users'
   match "users/:id/likes", :to => "users#likes", :as => 'user_likes'
   match "users/:id/following_places", :to => "users#following_places", :as => 'user_following_places'
 
+  resources :users
   devise_for :users, :path => "user", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :places
@@ -24,7 +25,7 @@ Near::Application.routes.draw do
   match "places/:id/follow", :to => "places#follow", :as => 'follow_place'
   match "places/:id/unfollow", :to => "places#unfollow", :as => 'unfollow_place'
 
-  root :to => 'events#index'
+  root :to => 'networks#index'
 
   mount Resque::Server.new, :at => "/resque"
 

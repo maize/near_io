@@ -42,6 +42,7 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem "twitter_bootstrap_form_for", "~> 1"
 gem "mongoid_fulltext"
 gem 'mongoid_slug'
+gem 'mongoid_spacial'
 gem 'geocoder'
 gem 'twitter'
 gem 'tweetstream'

@@ -17,7 +17,7 @@ class NetworksController < ApplicationController
     @events = []
 
     @network.groups.each do |group|
-      @events = @events + group.facebook_events.where(:start_time.gt => Time.now)
+      @events = @events + group.events.where(:start_time.gt => Time.now)
     end
 
     @events.sort_by!(&:start_time).reverse!

@@ -1,0 +1,10 @@
+<table class="table table-striped">
+  <% @fb_users.each do |user| %>
+  <tr>
+    <td><img src="https://graph.facebook.com/<%= user.facebook_id %>/picture"/></td>
+    <td><%= user.name %></td>
+  </tr>
+  <% end %>
+</table>
+
+<%= paginate @fb_users %>

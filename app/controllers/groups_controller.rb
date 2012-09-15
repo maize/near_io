@@ -40,7 +40,7 @@ class GroupsController < ApplicationController
   # POST /groups
   # POST /groups.json
   def create
-    @group = Group.new(params[:group])
+    @group = Group.new
 
     # Facebook Group
     unless params[:group][:facebook_group].empty?

@@ -10,6 +10,8 @@ class FacebookUser
   field :locale, :type => String
   field :updated_time, :type => DateTime
 
+  paginates_per 50
+
   def self.get_by_hash(hash)
     @graph = Koala::Facebook::API.new
 
