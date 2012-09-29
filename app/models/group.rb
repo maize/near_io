@@ -42,14 +42,17 @@ class Group
 
     unless fb_events.empty?
       fb_events.each do |fb_event|
-        event = Event.new
-        event.external_id = fb_event.facebook_id
-        event.facebook_event = fb_event
-        event.provider = "facebook"
-        event.start_time = fb_event.start_time
-        event.end_time = fb_event.end_time
-        unless self.events.include?(event)
-          self.events.push(event)
+        event = Event.where(:external_id => fb_event.facebook_id, :provider => "facebook").first
+        if event.nil?
+          event = Event.new
+          event.external_id = fb_event.facebook_id
+          event.facebook_event = fb_event
+          event.provider = "facebook"
+          event.start_time = fb_event.start_time
+          event.end_time = fb_event.end_time
+          unless self.events.include?(event)
+            self.events.push(event)
+          end
         end
       end
       self.save

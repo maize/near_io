@@ -28,10 +28,11 @@ class FacebookPage
 
   def get_facebook_events(access_token)
     fb_events = FacebookEvent.get_all_by_facebook_id(self.facebook_id, access_token)
+
     fb_events.each do |event|
-      #unless self.facebook_events.include?(event)
+      unless self.facebook_events.include?(event)
         self.facebook_events.push(event)
-      #end
+      end
     end
     self.save
 

@@ -3,11 +3,18 @@
 <p><b>Name:</b> <%= @group.name %></p>
 <p><b>Provider:</b> <%= @group.provider %></p>
 <p><b>Events:</b> <%= @group.events.size %></p>
-<ul>
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+    </tr>
 <% @group.events.each do |event| %>
-	<li><%= link_to event.name, event %></li>
+    <tr>
+        <td>
+            <%= link_to event.name, event %>
+        </td>
+    </tr>
 <% end %>
-</ul>
+</table>
 
 <%= link_to 'Edit', edit_group_path(@group), :class => "btn" %>
 <%= link_to 'Back', groups_path, :class => "btn" %>

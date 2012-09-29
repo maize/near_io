@@ -129,17 +129,21 @@ class FacebookEvent
 
       p "Getting attending users"
       attending.each do |attending_user|
-        user = FacebookUser.get_by_hash(attending_user)
-        
-        if user.gender == "male"
-          attending_male.push(user)
-        elsif user.gender == "female"
-          attending_female.push(user)
-        elsif user.gender.nil? || user.gender.empty?
-          attending_unknown.push(user)
-        end
+        begin      
+          user = FacebookUser.get_by_hash(attending_user)
+          
+          if user.gender == "male"
+            attending_male.push(user)
+          elsif user.gender == "female"
+            attending_female.push(user)
+          elsif user.gender.nil? || user.gender.empty?
+            attending_unknown.push(user)
+          end
 
-        self.attending_facebook_users.push(user)
+          self.attending_facebook_users.push(user)
+        rescue
+          p "Error #{$!}"
+        end
       end
 
       self.attending = attending.size

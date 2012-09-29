@@ -58,6 +58,9 @@ gem 'pusher'
 gem 'eventbrite'
 gem 'resque'
 gem 'newrelic_rpm'
+gem 'paperclip'
+gem 'haml'
+gem 'hirefire'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

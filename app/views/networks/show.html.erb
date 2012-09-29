@@ -4,10 +4,12 @@
 <table class="table">
   <tr>
     <th>Name</th>
+    <th>Events</th>
   </tr>
 <% @network.groups.each do |group| %>
   <tr>
     <td><%= link_to group.name, group %></td>
+    <td><%= group.events.size %></td>
   </tr>
 <% end %>
 </table>
@@ -17,11 +19,13 @@
   <tr>
     <th>Name</th>
     <th>Start</th>
+    <th>End</th>
   </tr>
   <% @events.each do |event| %>
     <tr>
       <td><%= link_to event.name, event %></td>
       <td><%= event.start_time.strftime('%d-%m-%Y %H:%M') unless event.start_time.nil? %></td>
+      <td><%= event.end_time %></td>
     </tr>
   <% end %>
 </table>

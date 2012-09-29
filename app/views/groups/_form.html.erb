@@ -1,4 +1,4 @@
-<%= twitter_bootstrap_form_for @group, :html => { :class => "form-horizontal" } do |f| %>
+<%= twitter_bootstrap_form_for @group, :html => { :class => "form form-horizontal" } do |f| %>
   <% if @group.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
@@ -13,6 +13,6 @@
 
   <%= f.text_field :facebook_group, :value => (@group.facebook_group.facebook_id unless @group.facebook_group.nil?) %>
   <%= f.text_field :facebook_page, :value => (@group.facebook_page.facebook_id unless @group.facebook_page.nil?) %>
-  <%= f.select("networks", "Network", Network.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'}) %>
+  <%= f.select("networks", "Network", Network.all.collect {|p| [ p.name, p.id ] }) %>
   <%= f.submit %>
 <% end %>
