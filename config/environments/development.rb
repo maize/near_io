@@ -42,6 +42,9 @@ Near::Application.configure do
 
   # Redis - for background processes
   ENV["REDISTOGO_URL"] = 'redis://redistogo:0ee23116b741ef686b2f90e63de1a418@clingfish.redistogo.com:9074/'
+
+  # Paperclip - for image upload
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end
 
 Devise.setup do |config|

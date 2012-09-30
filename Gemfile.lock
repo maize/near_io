@@ -101,22 +101,12 @@ GEM
       rack (~> 1.1)
     faraday_middleware (0.8.8)
       faraday (>= 0.7.4, < 0.9)
-    fattr (2.2.1)
     geocoder (1.1.3)
     haml (3.1.7)
     hashie (1.2.0)
-    heroku (2.32.6)
-      heroku-api (~> 0.3.5)
-      launchy (>= 0.3.2)
-      netrc (~> 0.7.7)
-      rest-client (~> 1.6.1)
-      rubyzip
     heroku-api (0.3.5)
       excon (~> 0.16.1)
     hike (1.2.1)
-    hirefire (0.1.4)
-      heroku (>= 1.4)
-      rush (~> 0.6.7)
     http_parser.rb (0.5.3)
     httparty (0.8.3)
       multi_json (~> 1.0)
@@ -134,8 +124,6 @@ GEM
     koala (1.5.0)
       faraday (~> 0.7)
       multi_json (~> 1.3)
-    launchy (2.1.2)
-      addressable (~> 2.3)
     less (2.2.2)
       commonjs (~> 0.2.6)
     less-rails (2.2.3)
@@ -153,6 +141,8 @@ GEM
       activemodel (~> 3.1)
       mongo (<= 1.6.2)
       tzinfo (~> 0.3.22)
+    mongoid-paperclip (0.0.8)
+      paperclip (>= 2.3.6)
     mongoid_fulltext (0.5.8)
       unicode_utils (~> 1.0.0)
     mongoid_slug (0.10.0)
@@ -164,7 +154,6 @@ GEM
     multi_json (1.3.6)
     multi_xml (0.5.1)
     multipart-post (1.1.5)
-    netrc (0.7.7)
     newrelic_rpm (3.4.2.1)
     nokogiri (1.5.5)
     oauth2 (0.6.1)
@@ -225,19 +214,12 @@ GEM
       redis-namespace (~> 1.0)
       sinatra (>= 0.9.2)
       vegas (~> 0.1.2)
-    rest-client (1.6.7)
-      mime-types (>= 1.16)
     robotex (1.0.0)
-    rubyzip (0.9.9)
-    rush (0.6.8)
-      session
     sass (3.2.1)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    session (3.1.0)
-      fattr
     signature (0.1.4)
     simple_oauth (0.1.9)
     sinatra (1.3.3)
@@ -306,7 +288,7 @@ DEPENDENCIES
   faraday (= 0.7.6)
   geocoder
   haml
-  hirefire
+  heroku-api
   httparty
   instagram!
   jquery-rails
@@ -316,12 +298,12 @@ DEPENDENCIES
   libv8 (= 3.3.10.4)
   mongo
   mongoid
+  mongoid-paperclip
   mongoid_fulltext
   mongoid_slug
   mongoid_spacial
   newrelic_rpm
   omniauth-facebook
-  paperclip
   pusher
   rails (= 3.2.3)
   resque
