@@ -14,12 +14,23 @@ class NetworksController < ApplicationController
   # GET /networks/1.json
   def show
     @network = Network.find_by_slug(params[:id])
-    @events = []
 
-    @network.groups.each do |group|
-      # @events = @events + group.events
-      @events = @events + group.events.where(:start_time.gt => Time.now)
+    unless params[:year].nil? and params[:month].nil? and params[:day].nil?
+      date = Time.parse(params[:year]+"-"+params[:month]+"-"+params[:day])
+      p "Found date in URL: "+date.to_s
+    else
+      date = Time.now
+      p "Take current time: "+date.to_s
     end
+
+    @events = Event.where(:start_time.gt => date, :start_time.lt => (date+1.day)).asc(:start_time).page params[:page]
+
+    #
+
+    # @network.groups.each do |group|
+    #   # @events = @events + group.events
+    #   @events = @events + group.events.where(:start_time.gt => Time.now)
+    # end
 
     # @events.sort_by!(&:start_time).reverse!
 

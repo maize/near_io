@@ -2,6 +2,10 @@ require 'resque/server'
 
 Near::Application.routes.draw do
   resources :networks
+  match "networks/:id/:year/:month/:day",
+      :to => "networks#show",
+      :constraints => { :year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{1,2}/ },
+      :as => :network_date
   match "networks/:id/update_groups", :to => "networks#update_groups"
   match "networks/:id/clear_queue", :to => "networks#clear_queue"
 

@@ -1,31 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="dateSelector clearfix">
+    <p class="pull-left timestamp"><%= Time.now.strftime('%A, %d. %B') %></p>
+    <div class="pull-left btn-group">
+        <a class="btn" href="<%= network_date_path(@network, (Time.now-1.day).strftime('%Y'),(Time.now-1.day).strftime('%m'),(Time.now-1.day).strftime('%d')) %>"><i class="icon-chevron-left"></i></a>
+        <a class="btn" href="<%= network_date_path(@network, (Time.now+1.day).strftime('%Y'),(Time.now+1.day).strftime('%m'),(Time.now+1.day).strftime('%d')) %>"><i class="icon-chevron-right"></i></a>
+    </div>
+</div>
 
-<h2>Groups</h2>
-<table class="table">
-  <tr>
-    <th>Name</th>
-    <th>Events</th>
-  </tr>
-<% @network.groups.each do |group| %>
-  <tr>
-    <td><%= link_to group.name, group %></td>
-    <td><%= group.events.size %></td>
-  </tr>
+<div class="accordion" id="accordion">
+<% @events.each do |event| %>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+        <a class="accordion-toggle clearfix" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            <span class="pull-left"><%= event.name %></span><span class="pull-right">In <%= distance_of_time_in_words_to_now(event.start_time) %></span>
+        </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <%= event.facebook_event.description unless event.facebook_event.nil? %>
+      </div>
+    </div>
+  </div>
 <% end %>
-</table>
+</div>
 
-<h2>Events</h2>
-<table class="table">
-  <tr>
-    <th>Name</th>
-    <th>Start</th>
-    <th>End</th>
-  </tr>
-  <% @events.each do |event| %>
-    <tr>
-      <td><%= link_to event.name, event %></td>
-      <td><%= event.start_time.strftime('%d-%m-%Y %H:%M') unless event.start_time.nil? %></td>
-      <td><%= event.end_time %></td>
-    </tr>
-  <% end %>
-</table>
+<%= paginate @events %>

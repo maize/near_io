@@ -38,8 +38,8 @@ gem 'typhoeus', '0.2.4'
 gem 'execjs'
 gem 'therubyracer'
 gem 'faraday', '0.7.6' # http://merics.blogspot.co.uk/2012/05/instagram-ruby-gem.html
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-gem "twitter_bootstrap_form_for", "~> 1"
+gem 'twitter-bootstrap-rails'
+gem "twitter_bootstrap_form_for"
 gem "mongoid_fulltext"
 gem 'mongoid_slug'
 gem 'mongoid_spacial'

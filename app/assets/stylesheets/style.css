@@ -1,7 +1,22 @@
 body {
-	padding-top:50px;
+	padding-top:60px;
 }
 
-#map_canvas {
-	display: none;
+a:hover {
+    background:transparent;
+}
+
+.navbar .brand {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.dateSelector {
+    margin-bottom:20px;
+}
+
+.dateSelector .timestamp {
+    margin-right: 15px;
+    margin-top:4px;
+    margin-bottom: 0;
 }

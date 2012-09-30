@@ -6,7 +6,6 @@ class Event
   has_one :eventbrite_event
   has_one :meetup_event
 
-  field :name, :type => String
   field :external_id, :type => String
   field :provider, :type => String
   field :start_time, :type => DateTime
@@ -14,4 +13,14 @@ class Event
   field :location, :type => Array, :spacial => true
 
   spacial_index :source
+
+  paginates_per 25
+
+  def name
+    unless facebook_event.nil? and facebook_event.name.nil?
+      facebook_event.name
+    else
+      "N/A"
+    end
+  end
 end
