@@ -16,14 +16,14 @@ class NetworksController < ApplicationController
     @network = Network.find_by_slug(params[:id])
 
     unless params[:year].nil? and params[:month].nil? and params[:day].nil?
-      date = Time.parse(params[:year]+"-"+params[:month]+"-"+params[:day])
-      p "Found date in URL: "+date.to_s
+      @date = Time.parse(params[:year]+"-"+params[:month]+"-"+params[:day])
+      p "Found date in URL: "+@date.to_s
     else
-      date = Time.now
-      p "Take current time: "+date.to_s
+      @date = Time.now
+      p "Take current time: "+@date.to_s
     end
 
-    @events = Event.where(:start_time.gt => date, :start_time.lt => (date+1.day)).asc(:start_time).page params[:page]
+    @events = Event.where(:start_time.gt => @date, :start_time.lt => (@date+1.day)).asc(:start_time).page params[:page]
 
     #
 
