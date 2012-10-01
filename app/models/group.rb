@@ -45,7 +45,6 @@ class Group
         event = Event.where(:external_id => fb_event.facebook_id, :provider => "facebook").first
         if event.nil?
           event = Event.new
-          event.name = fb_event.name
           event.external_id = fb_event.facebook_id
           event.facebook_event = fb_event
           event.provider = "facebook"
