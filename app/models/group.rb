@@ -48,7 +48,6 @@ class Group
           event.external_id = fb_event.facebook_id
           event.facebook_event = fb_event
           event.provider = "facebook"
-          event.location = fb_event.location
           event.start_time = fb_event.start_time
           event.end_time = fb_event.end_time
           unless self.events.include?(event)
