@@ -20,3 +20,10 @@ a:hover {
     margin-top:4px;
     margin-bottom: 0;
 }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 979px) {
+    body {
+        padding-top:0;
+    }
+}

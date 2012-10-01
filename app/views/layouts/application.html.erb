@@ -26,9 +26,9 @@
             <% end %>
           </div>
           <div class="navbar-text pull-left hide">
-            <%= request.ip %>
-            <%= request.location.city %>
-            <%= request.location.country %>
+            <%= request.ip unless request.ip.nil? %>
+            <%= request.location.city unless request.location.nil? %>
+            <%= request.location.country unless request.location.nil? %>
           </div>
           <ul class="nav pull-right">
             <% unless user_signed_in? %>
