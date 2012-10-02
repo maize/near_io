@@ -38,6 +38,13 @@ a:hover {
    Navbar
    ========================================================================== */
 
+.navbar .navbar-inner {
+    background-image: url('top_stripes.png');
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    padding-top:3px;
+}
+
 .navbar .brand {
     text-transform: uppercase;
     font-family: "proxima_nova_ltbold";
