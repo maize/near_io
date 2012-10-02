@@ -16,11 +16,11 @@
     <%= favicon_link_tag %>
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
           <a class="brand pull-left" href="<%= root_url %>">near</a>
-          <div class="navbar-text pull-left">
+          <div class="network navbar-text pull-left">
             <% if @network %>
               <%= link_to @network.name, @network %>
             <% end %>
@@ -42,6 +42,7 @@
               </a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+                <li><a href="#">Saved Events</a></li>
               </ul>
             </li>
             <% end %>

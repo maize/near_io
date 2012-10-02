@@ -1,15 +1,88 @@
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
 body {
 	padding-top:60px;
+    font-family: "Helvetica Neue";
+}
+
+@font-face {
+    font-family: 'proxima_nova_ltregular';
+    src: url('proximanova-light-webfont.eot');
+    src: url('proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proximanova-light-webfont.woff') format('woff'),
+         url('proximanova-light-webfont.ttf') format('truetype'),
+         url('proximanova-light-webfont.svg#proxima_nova_ltregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_nova_ltbold';
+    src: url('proximanova-semibold-webfont.eot');
+    src: url('proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proximanova-semibold-webfont.woff') format('woff'),
+         url('proximanova-semibold-webfont.ttf') format('truetype'),
+         url('proximanova-semibold-webfont.svg#proxima_nova_ltbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 a:hover {
     background:transparent;
 }
 
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+
 .navbar .brand {
     text-transform: uppercase;
-    font-weight: bold;
+    font-family: "proxima_nova_ltbold";
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #f9f9f9;
+    text-shadow: 1px 2px rgba(0,0,0,.25);
 }
+
+.navbar .network a {
+    font-family: "proxima_nova_ltregular";
+    font-size: 16px;
+    color: #f9f9f9;
+    text-shadow: 1px 2px rgba(0,0,0,.25);
+}
+
+.navbar .navbar-text a:hover {
+    text-decoration: none;
+}
+
+.navbar .nav {
+    margin-right:0;
+}
+
+.navbar .nav li a.dropdown-toggle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0,0,0,.45);
+}
+
+.navbar .nav li a.dropdown-toggle img {
+    margin-right: 5px;
+    -webkit-border-radius: 3px/3px 3px 2px 2px;
+    -moz-border-radius: 3px/3px 3px 2px 2px;
+    border-radius: 3px/3px 3px 2px 2px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px rgba(0,0,0,.45);
+    -moz-box-shadow: 1px 1px rgba(0,0,0,.45);
+    box-shadow: 1px 1px rgba(0,0,0,.45);
+}
+
+/* ==========================================================================
+   Date Selector
+   ========================================================================== */
 
 .dateSelector {
     margin-bottom:20px;
@@ -20,6 +93,10 @@ a:hover {
     margin-top:4px;
     margin-bottom: 0;
 }
+
+/* ==========================================================================
+   Responsive design
+   ========================================================================== */
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 979px) {

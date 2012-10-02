@@ -71,6 +71,12 @@ class GroupsController < ApplicationController
     render :nothing => true
   end
 
+  def events
+    @group = Group.find(params[:id])
+    @events = FacebookEvent.get_all_by_facebook_id(@group.facebook_id, current_user.token)
+    render :nothing => true
+  end
+
   # PUT /groups/1
   # PUT /groups/1.json
   def update

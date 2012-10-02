@@ -1,9 +1,9 @@
 class FacebookEvent
   include Mongoid::Document
 
-  has_and_belongs_to_many :attending_facebook_users, class_name: "FacebookUser"
-  has_many :maybe_facebook_users, class_name: "FacebookUser"
-  has_many :invited_facebook_users, class_name: "FacebookUser"
+  has_and_belongs_to_many :attending_facebook_users, class_name: "FacebookUser", inverse_of: nil
+  has_many :maybe_facebook_users, class_name: "FacebookUser", inverse_of: nil
+  has_many :invited_facebook_users, class_name: "FacebookUser", inverse_of: nil
 
   belongs_to :event
 
@@ -32,20 +32,28 @@ class FacebookEvent
 	@graph = Koala::Facebook::API.new(access_token)
 
 	p "Get Facebook Events.."
-	results = @graph.get_connections(facebook_id, "events")
+	results = @graph.get_connections(facebook_id, "events", :fields => "name, description, owner, venue, location, timezone, start_time, end_time, updated_time, privacy, attending.fields(gender, name, first_name, last_name, link, username, updated_time)")
 	fb_events = []
 
 	loop do
 		results.each do |hash|
 			fb_event = FacebookEvent.where(:facebook_id => hash["id"]).first
+
 			if fb_event.nil?
-				p "Create Facebook event.."
-				fb_event = FacebookEvent.get_by_hash(hash)
+				p "Create new Facebook event"
+        fb_event = FacebookEvent.create(FacebookEvent.parse_details(hash))
 			else
-				p "Found Facebook event in database.."
+				p "Update Facebook event"
+        fb_event.update(FacebookEvent.parse_details(hash))
 			end
-      fb_event.update_details(access_token)
-      fb_event.save
+
+      # Attending
+      unless hash["attending"].nil?
+        attending = FacebookEvent.parse_event_users(hash["attending"]["data"])
+        fb_event.attending = attending.size
+        fb_event.attending_facebook_users = attending
+        fb_event.save
+      end
 
 			fb_events.push(fb_event)
 		end
@@ -57,23 +65,35 @@ class FacebookEvent
 	fb_events
   end
 
-  def self.get_by_hash(hash)
-    @event = FacebookEvent.new(
-      :facebook_id  => hash["id"],
-      :name         => hash["name"],
-      :location     => hash["location"],
-      :timezone     => hash["timezone"],
-      :start_time   => hash["start_time"],
-      :end_time     => hash["end_time"])
+  def self.parse_details(hash)
+    parsed_hash = {
+      :name => hash["name"],
+      :description => hash["description"],
+      :owner => hash["owner"],
+      :location => hash["location"],
+      :venue => hash["venue"],
+      :timezone => hash["timezone"],
+      :start_time => hash["start_time"],
+      :end_time => hash["end_time"],
+      :updated_time => hash["updated_time"],
+      :privacy => hash["privacy"]
+    }
+    parsed_hash
+  end
 
-    @find_event = FacebookEvent.where(:facebook_id => @event.facebook_id).first
-    
-    unless @find_event.nil?
-      p "Found Facebook event in database.."
-      @event = @find_event
+  def self.parse_event_users(hash)
+    users = []
+    unless hash.nil?
+      hash.each do |user|
+        begin
+          user = FacebookUser.get_by_hash(user)
+          users.push(user)
+        rescue
+          p "Error #{$!}"
+        end
+      end
     end
-
-    @event
+    users
   end
 
   def percentage_male
@@ -93,63 +113,6 @@ class FacebookEvent
       percentage
     else
       0
-    end
-  end  
-
-  def update_details(access_token)
-  	@graph = Koala::Facebook::API.new(access_token)
-
-  	hash = @graph.get_object(self.facebook_id)
-  	hash_details = {
-  		:name => hash["name"].to_s,
-  		:description => hash["description"],
-  		:owner => hash["owner"],
-  		:location => hash["location"],
-  		:venue => hash["venue"],
-  		:timezone => hash["timezone"],
-        	:start_time => hash["start_time"],
-        	:end_time => hash["end_time"],
-        	:updated_time => hash["updated_time"],
-        	:privacy => hash["privacy"]
-  	}
-
-    p "Update details of Facebook event: "+hash["id"].to_s
-
-    self.get_attending
-
-  	self.update(hash_details)
-  end
-
-  def get_attending
-    attending = @graph.get_connections(self.facebook_id, "attending")
-    unless attending.empty? || attending.nil?
-      attending_male = []
-      attending_female = []
-      attending_unknown = []
-
-      p "Getting attending users"
-      attending.each do |attending_user|
-        begin      
-          user = FacebookUser.get_by_hash(attending_user)
-          
-          if user.gender == "male"
-            attending_male.push(user)
-          elsif user.gender == "female"
-            attending_female.push(user)
-          elsif user.gender.nil? || user.gender.empty?
-            attending_unknown.push(user)
-          end
-
-          self.attending_facebook_users.push(user)
-        rescue
-          p "Error #{$!}"
-        end
-      end
-
-      self.attending = attending.size
-      self.attending_male = attending_male.size
-      self.attending_female = attending_female.size
-      self.attending_unknown = attending_unknown.size
     end
   end
 end

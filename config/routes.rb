@@ -11,6 +11,7 @@ Near::Application.routes.draw do
 
   resources :groups
   match "groups/:id/update_details", :to => "groups#update_details"
+  match "groups/:id/events", :to => "groups#events"
 
   resources :events
   match "events/:id", :to => "events#show", :as => 'facebook_event'

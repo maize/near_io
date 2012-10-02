@@ -6,17 +6,17 @@
     </div>
 </div>
 
-<div class="accordion" id="accordion">
+<div class="accordion">
 <% @events.each do |event| %>
   <div class="accordion-group">
     <div class="accordion-heading">
-        <a class="accordion-toggle clearfix" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+        <a class="accordion-toggle clearfix" data-toggle="collapse" href="#<%= event.id %>">
             <span class="pull-left"><%= event.name %></span><span class="pull-right">In <%= distance_of_time_in_words_to_now(event.start_time) %></span>
         </a>
     </div>
-    <div id="collapseOne" class="accordion-body collapse">
+    <div id="<%= event.id %>" class="accordion-body collapse">
       <div class="accordion-inner">
-        <%= event.facebook_event.description unless event.facebook_event.nil? %>
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
       </div>
     </div>
   </div>

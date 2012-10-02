@@ -176,19 +176,19 @@
 // -------------------------
 @navbarCollapseWidth:             979px;
 
-@navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #ffffff;
-@navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
-@navbarBorder:                    darken(@navbarBackground, 12%);
+@navbarHeight:                    50px;
+@navbarBackgroundHighlight:       #74456a;
+@navbarBackground:                #74456a;
+@navbarBorder:                    #3c2037;
 
 @navbarText:                      #777;
-@navbarLinkColor:                 #777;
+@navbarLinkColor:                 @white;
 @navbarLinkColorHover:            @grayDark;
-@navbarLinkColorActive:           @gray;
+@navbarLinkColorActive:           @white;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
 
-@navbarBrandColor:                @navbarLinkColor;
+@navbarBrandColor:                @white;
 
 // Inverted navbar
 @navbarInverseBackground:                #111111;
@@ -273,9 +273,9 @@
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 // 1200px min
-@gridColumnWidth1200:     70px;
-@gridGutterWidth1200:     30px;
-@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+@gridColumnWidth1200:     @gridColumnWidth;
+@gridGutterWidth1200:     @gridGutterWidth;
+@gridRowWidth1200:        @gridRowWidth;
 
 // 768px-979px
 @gridColumnWidth768:      42px;

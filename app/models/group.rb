@@ -17,12 +17,20 @@ class Group
   	end
   end
 
+  def facebook_id
+    if not facebook_group.nil?
+      facebook_group.facebook_id
+    elsif not facebook_page.nil?
+      facebook_page.facebook_id
+    end
+  end
+
   def provider
     sources = ""
     if not facebook_group.nil?
       sources += "Facebook Group"
     elsif not facebook_page.nil?
-      sources += ", Facebook Page"
+      sources += "Facebook Page"
     end
     sources
   end
