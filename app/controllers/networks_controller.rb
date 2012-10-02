@@ -87,7 +87,9 @@ class NetworksController < ApplicationController
   # PUT /networks/1
   # PUT /networks/1.json
   def update
-    @network = Network.find(params[:id])
+    @network = Network.find_by_slug(params[:id])
+    @network.location = {:lat => params[:network][:latitude], :lng => params[:network][:longitude]}
+    @network.save
 
     respond_to do |format|
       if @network.update_attributes(params[:network])

@@ -12,4 +12,16 @@ class Network
     def to_name
         name.downcase.gsub('-', ' ')
     end
+
+    def lat
+        unless location.nil?
+           location[:lat]
+        end
+    end
+
+    def lng
+        unless location.nil?
+           location[:lng]
+        end
+    end
 end

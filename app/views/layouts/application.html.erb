@@ -15,7 +15,7 @@
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= favicon_link_tag %>
   </head>
-  <body>
+  <body onload="initialize()">
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -50,9 +50,25 @@
         </div>
       </div>
     </div>
-    <div class="container">
+    <% if @network %>
+      <div id="map_canvas"></div>
+    <% end %>
+    <div id="main" class="container">
         <%= yield %>
     </div> <!-- /container -->
     <%= javascript_include_tag "application" %>
+    <% if @network %>
+      <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+      <script type="text/javascript">
+        function initialize() {
+          var mapOptions = {
+            center: new google.maps.LatLng(<%= @network.lat %>, <%= @network.lng %>),
+            zoom: 17,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+        }
+      </script>
+    <% end %>
   </body>
 </html>
