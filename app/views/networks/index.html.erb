@@ -1,3 +1,12 @@
+<div class="hero-unit">
+  <h1>Discover local events near favourite places</h1>
+  <p>
+    <% unless user_signed_in? %>
+        <%= link_to "Sign Up", user_omniauth_authorize_path(:facebook), :class => "btn btn-primary btn-large" %>
+    <% end %>
+  </p>
+</div>
+
 <ul class="thumbnails">
 <% @networks.each do |network| %>
     <li class="span3">

@@ -21,9 +21,6 @@ Near::Application.routes.draw do
   match "users/:id/likes", :to => "users#likes", :as => 'user_likes'
   match "users/:id/following_places", :to => "users#following_places", :as => 'user_following_places'
 
-  resources :users
-  devise_for :users, :path => "user", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-
   resources :places
 
   match "places/search", :to => "places#search", :as => 'search_place'
@@ -33,6 +30,9 @@ Near::Application.routes.draw do
   root :to => 'networks#index'
 
   mount Resque::Server.new, :at => "/resque"
+
+  devise_for :users, :path => "user", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
