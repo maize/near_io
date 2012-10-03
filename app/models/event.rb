@@ -17,7 +17,7 @@ class Event
   paginates_per 25
 
   def name
-    unless facebook_event.nil? and facebook_event.name.nil?
+    unless facebook_event.nil?
       facebook_event.name
     else
       "N/A"

@@ -1,3 +1,6 @@
+require 'resque_scheduler'
+require 'resque_scheduler/server'
+
 p "Loading Resque config.."
 
 rails_root = ENV['RAILS_ROOT'] || File.dirname(__FILE__) + '/../..'
