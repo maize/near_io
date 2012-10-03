@@ -9,7 +9,7 @@ class Network
     field :location, :type => Array, :spacial => true
     slug :name, reserve: ['admin', 'root']
 
-    spacial_index :location
+    # spacial_index :location
 
     def to_name
         name.downcase.gsub('-', ' ')
