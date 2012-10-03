@@ -56,7 +56,6 @@
     <div id="main" class="container">
         <%= yield %>
     </div> <!-- /container -->
-    <%= javascript_include_tag :defaults %>
     <%= javascript_include_tag "application" %>
     <% if @network %>
       <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
