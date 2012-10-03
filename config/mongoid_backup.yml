@@ -1,0 +1,18 @@
+development:
+  uri: mongodb://dev:Nearnote12@ds035997.mongolab.com:35997/near_io_dev
+  database: near_io_dev
+  logger: true
+
+test:
+  host: localhost
+  database: nn_api_test
+
+# set these environment variables on your prod server
+production:
+  uri: <%= ENV['MONGOLAB_URI'] %>
+  database: app4487356
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019

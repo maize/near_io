@@ -62,6 +62,8 @@ gem 'newrelic_rpm'
 gem 'mongoid-paperclip'
 gem 'haml'
 gem 'heroku-api'
+gem 'rufus-scheduler'
+gem 'resque-scheduler', :require => 'resque_scheduler'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
