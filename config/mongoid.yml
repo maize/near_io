@@ -75,13 +75,13 @@ production:
     default:
       # Defines the name of the default database that Mongoid can connect to.
       # (required).
-      database: app4487356
+      database: near_io_dev
       # Provides the hosts the default session can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        - mnhfktsdbleafivdjlar3e2jj@dbh30.mongolab.com:27307
-      username: heroku_app4487356
-      password: mnhfktsdbleafivdjlar3e2jj
+        - ds035997.mongolab.com:35997
+      username: dev
+      password: Nearnote12
       options:
         # Change whether the session persists in safe mode by default.
         # (default: false)
