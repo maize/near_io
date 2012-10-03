@@ -8,12 +8,12 @@
 </div>
 
 <ul class="thumbnails">
-<% @networks.each do |network| %>
-    <li class="span3">
-        <div class="thumbnail">
-        <%= link_to image_tag("university_college_london.png", :class => "img-rounded"), network %>
-        <h2><%= link_to network.name, network %></h2>
-        </div>
-    </li>
-<% end %>
+  <% @networks.each do |network| %>
+      <li class="span3">
+          <div class="thumbnail">
+          <%= link_to image_tag("university_college_london.png", :class => "img-rounded"), network %>
+          <h2><%= link_to network.name, network %></h2>
+          </div>
+      </li>
+  <% end %>
 </ul>

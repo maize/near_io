@@ -63,7 +63,7 @@
       <script type="text/javascript">
         function initialize() {
           var mapOptions = {
-            center: new google.maps.LatLng(<%= @network.lat %>, <%= @network.lng %>),
+            center: new google.maps.LatLng(<%= @network.latitude %>, <%= @network.longitude %>),
             zoom: 17,
             mapTypeId: google.maps.MapTypeId.ROADMAP
           };
