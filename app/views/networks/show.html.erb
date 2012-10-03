@@ -11,7 +11,7 @@
   <div class="accordion-group">
     <div class="accordion-heading">
         <a class="accordion-toggle clearfix" data-toggle="collapse" href="#<%= event.id %>">
-            <span class="pull-left"><%= event.name %></span><span class="pull-right">In <%= distance_of_time_in_words_to_now(event.start_time) %></span>
+            <span class="pull-left"><%= event.name unless event.nil? %></span><span class="pull-right">In <%= distance_of_time_in_words_to_now(event.start_time) %></span>
         </a>
     </div>
     <div id="<%= event.id %>" class="accordion-body collapse">

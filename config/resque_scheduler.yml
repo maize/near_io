@@ -1,5 +1,5 @@
 update_groups:
-    every: ["30s", :first_in => '120s']
+    cron: "30 * * * *"
     class: UpdateGroups
     queue: groups
-    description: "This job will update groups 30 seconds after 120 seconds after start"
+    description: "This job will update groups every 30 minutes"

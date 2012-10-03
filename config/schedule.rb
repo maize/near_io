@@ -18,8 +18,3 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
-
-every 10.minutes do
-	runner "Resque.enqueue(UpdateGroups)"
-	rake "resque:work", :output => {:error => 'error.log', :standard => 'cron.log'}
-end

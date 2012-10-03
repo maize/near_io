@@ -11,6 +11,7 @@ class Event
   field :start_time, :type => DateTime
   field :end_time, :type => DateTime
   field :location, :type => Array, :spacial => true
+  
   spacial_index :location
 
   paginates_per 25
