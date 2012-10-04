@@ -2,17 +2,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    # now_date = DateTime.now
-    # @events = FacebookEvent.where(:start_date => {'$lt' => now_date}, :end_date => {'$gte' => now_date})
-    # @events = FacebookEvent.all(:start_time.gt => (DateTime.now - 3.months).strftime("%Y-%m-%d %X %z"))
-    # @events = FacebookEvent.all(:start_time.gt => (DateTime.now - 3.months).strftime("%Y-%m-%d %X %z"))
-    # @events = FacebookEvent.all(:start_time.gt => (DateTime.now - 3.months).strftime("%Y-%m-%dT%X+01:00"))
-    # @events = FacebookEvent.all
-
-    if user_signed_in?
-      @events = FacebookEvent.where(:start_time.lt => Time.now)
-      @place = Place.new
-    end
+    @events = FacebookEvent.where(:start_time.lt => Time.now)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +14,6 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @event = FacebookEvent.find(params[:id])
-    @group = FacebookGroup.where()
 
     respond_to do |format|
       format.html # show.html.erb
