@@ -12,4 +12,4 @@ p "Loading Resque config.."
 ENV["REDISTOGO_URL"] ||= "redis://redistogo:0ee23116b741ef686b2f90e63de1a418@clingfish.redistogo.com:9074/"
 
 uri = URI.parse(ENV["REDISTOGO_URL"])
-Resque.redis = Redis.new(:host =&gt; uri.host, :port =&gt; uri.port, :password =&gt; uri.password)
+Resque.redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
