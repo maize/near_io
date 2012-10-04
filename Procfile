@@ -1,3 +1,3 @@
-web:    bundle exec rails server -p $PORT
-worker: bundle exec rake resque:work QUEUE=*
-clock:  bundle exec rake resque:scheduler
+web:        bundle exec rails server -p $PORT
+scheduler:  bundle exec rake resque:scheduler
+worker:     bundle exec rake jobs:work
