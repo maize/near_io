@@ -26,13 +26,13 @@ class Group
   end
 
   def provider
-    sources = ""
+    source = ""
     if not facebook_group.nil?
-      sources += "Facebook Group"
+      source = "Facebook Group"
     elsif not facebook_page.nil?
-      sources += "Facebook Page"
+      source = "Facebook Page"
     end
-    sources
+    source
   end
 
   def update_details(access_token)
@@ -47,23 +47,7 @@ class Group
     else
       p "Group does not have any links"
     end
-
-    unless fb_events.empty?
-      fb_events.each do |fb_event|
-        event = Event.where(:external_id => fb_event.facebook_id, :provider => "facebook").first
-        if event.nil?
-          event = Event.new
-          event.external_id = fb_event.facebook_id
-          event.facebook_event = fb_event
-          event.provider = "facebook"
-          event.start_time = fb_event.start_time
-          event.end_time = fb_event.end_time
-          unless self.events.include?(event)
-            self.events.push(event)
-          end
-        end
-      end
-      self.save
-    end
+    
+    self.save
   end
 end

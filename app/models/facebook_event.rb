@@ -5,11 +5,11 @@ class FacebookEvent
   has_many :maybe_facebook_users, class_name: "FacebookUser", inverse_of: nil
   has_many :invited_facebook_users, class_name: "FacebookUser", inverse_of: nil
 
-  belongs_to :event
+  embedded_in :event
 
   field :facebook_id, :type => Integer
-  field :owner, :type => Hash
   field :name, :type => String
+  field :owner, :type => Hash
   field :description, :type => String
   field :start_time, :type => DateTime
   field :end_time, :type => DateTime
@@ -40,10 +40,10 @@ class FacebookEvent
 			fb_event = FacebookEvent.where(:facebook_id => hash["id"]).first
 
 			if fb_event.nil?
-				p "Create new Facebook event"
+				p "Create new Facebook event: "+hash["name"].to_s
         fb_event = FacebookEvent.create(FacebookEvent.parse_details(hash))
 			else
-				p "Update Facebook event"
+				p "Update Facebook event: "+hash["name"].to_s
         fb_event.update(FacebookEvent.parse_details(hash))
 			end
 

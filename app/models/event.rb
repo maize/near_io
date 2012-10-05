@@ -1,26 +1,33 @@
 class Event
   include Mongoid::Document
-  include Mongoid::Spacial::Document
 
-  has_one :facebook_event
-  has_one :eventbrite_event
-  has_one :meetup_event
-
-  field :external_id, :type => String
-  field :provider, :type => String
-  field :start_time, :type => DateTime
-  field :end_time, :type => DateTime
-  field :location, :type => Array, :spacial => true
-  
-  spacial_index :location
+  embeds_one :facebook_event
 
   paginates_per 25
 
   def name
-    unless facebook_event.nil?
+    if facebook_event?
       facebook_event.name
     else
       "N/A"
+    end
+  end
+
+  def provider
+    if facebook_event?
+      "facebook"
+    end
+  end
+
+  def start_time
+    if facebook_event?
+      facebook_event.start_time
+    end
+  end
+
+  def end_time
+    if facebook_event?
+      facebook_event.end_time
     end
   end
 end

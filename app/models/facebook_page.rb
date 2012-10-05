@@ -1,4 +1,4 @@
-class FacebookPage
+class FacebookPage < FacebookModel
   include Mongoid::Document
 
   has_and_belongs_to_many :facebook_events, inverse_of: nil, autosave: true
@@ -24,19 +24,6 @@ class FacebookPage
     @result = @graph.get_object(facebook_id.to_s)
     @page = FacebookPage.get_by_hash(@result)
     @page
-  end
-
-  def get_facebook_events(access_token)
-    fb_events = FacebookEvent.get_all_by_facebook_id(self.facebook_id, access_token)
-
-    fb_events.each do |event|
-      unless self.facebook_events.include?(event)
-        self.facebook_events.push(event)
-      end
-    end
-    self.save
-
-    self.facebook_events
   end
 
   def self.get_by_hash(hash)
