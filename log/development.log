@@ -2795,3 +2795,20 @@ MONGODB near_io_dev['events'].find({:_id=>{"$in"=>[BSON::ObjectId('50709f50b9825
   Rendered groups/show.html.erb within layouts/application (1171.9ms)
 MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
 Completed 200 OK in 2076ms (Views: 1733.8ms)
+
+
+Started GET "/groups/502e39a6b982541c5000000e" for 127.0.0.1 at 2012-10-06 14:48:05 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"502e39a6b982541c5000000e"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('502e39a6b982541c5000000e')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_groups'].find({"group_id"=>BSON::ObjectId('502e39a6b982541c5000000e')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{:_id=>{"$in"=>[BSON::ObjectId('50709f50b982540200000057'), BSON::ObjectId('5070a1c3b982540200000073'), BSON::ObjectId('5070a1c4b982540200000074'), BSON::ObjectId('5070a1c4b982540200000075'), BSON::ObjectId('5070a1c4b982540200000076'), BSON::ObjectId('5070a1c5b982540200000077'), BSON::ObjectId('5070a1c5b982540200000078'), BSON::ObjectId('5070a1c5b982540200000079'), BSON::ObjectId('5070a1c5b98254020000007a'), BSON::ObjectId('5070a1c5b98254020000007b'), BSON::ObjectId('5070a1c6b98254020000007c'), BSON::ObjectId('5070a1c6b98254020000007d'), BSON::ObjectId('5070a1c6b98254020000007e'), BSON::ObjectId('5070a1c6b98254020000007f'), BSON::ObjectId('5070a1c7b982540200000080'), BSON::ObjectId('5070a1c7b982540200000081'), BSON::ObjectId('5070a1c7b982540200000082'), BSON::ObjectId('5070a1c7b982540200000083'), BSON::ObjectId('5070a1c8b982540200000084'), BSON::ObjectId('5070a1c8b982540200000085'), BSON::ObjectId('5070a1c8b982540200000086'), BSON::ObjectId('5070a1c8b982540200000087'), BSON::ObjectId('5070a1c9b982540200000088'), BSON::ObjectId('5070a1c9b982540200000089'), BSON::ObjectId('5070a1c9b98254020000008a'), BSON::ObjectId('5070a1cab98254020000008b'), BSON::ObjectId('5070a1cab98254020000008c')]}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({:_id=>{"$in"=>[BSON::ObjectId('50709f50b982540200000057'), BSON::ObjectId('5070a1c3b982540200000073'), BSON::ObjectId('5070a1c4b982540200000074'), BSON::ObjectId('5070a1c4b982540200000075'), BSON::ObjectId('5070a1c4b982540200000076'), BSON::ObjectId('5070a1c5b982540200000077'), BSON::ObjectId('5070a1c5b982540200000078'), BSON::ObjectId('5070a1c5b982540200000079'), BSON::ObjectId('5070a1c5b98254020000007a'), BSON::ObjectId('5070a1c5b98254020000007b'), BSON::ObjectId('5070a1c6b98254020000007c'), BSON::ObjectId('5070a1c6b98254020000007d'), BSON::ObjectId('5070a1c6b98254020000007e'), BSON::ObjectId('5070a1c6b98254020000007f'), BSON::ObjectId('5070a1c7b982540200000080'), BSON::ObjectId('5070a1c7b982540200000081'), BSON::ObjectId('5070a1c7b982540200000082'), BSON::ObjectId('5070a1c7b982540200000083'), BSON::ObjectId('5070a1c8b982540200000084'), BSON::ObjectId('5070a1c8b982540200000085'), BSON::ObjectId('5070a1c8b982540200000086'), BSON::ObjectId('5070a1c8b982540200000087'), BSON::ObjectId('5070a1c9b982540200000088'), BSON::ObjectId('5070a1c9b982540200000089'), BSON::ObjectId('5070a1c9b98254020000008a'), BSON::ObjectId('5070a1cab98254020000008b'), BSON::ObjectId('5070a1cab98254020000008c')]}})
+  Rendered groups/show.html.erb within layouts/application (3163.8ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 4191ms (Views: 3992.6ms)
+
+
+Started GET "/groups/502e39a6b982541c5000000e" for 127.0.0.1 at 2012-10-06 15:53:55 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"502e39a6b982541c5000000e"}
