@@ -37,22 +37,13 @@ class FacebookEvent
 
 	loop do
 		results.each do |hash|
-			fb_event = FacebookEvent.where(:facebook_id => hash["id"]).first
-
-			if fb_event.nil?
-				p "Create new Facebook event: "+hash["name"].to_s
-        fb_event = FacebookEvent.create(FacebookEvent.parse_details(hash))
-			else
-				p "Update Facebook event: "+hash["name"].to_s
-        fb_event.update(FacebookEvent.parse_details(hash))
-			end
+      fb_event = FacebookEvent.new(FacebookEvent.parse_details(hash))
 
       # Attending
       unless hash["attending"].nil?
         attending = FacebookEvent.parse_event_users(hash["attending"]["data"])
         fb_event.attending = attending.size
         fb_event.attending_facebook_users = attending
-        fb_event.save
       end
 
 			fb_events.push(fb_event)
@@ -67,6 +58,7 @@ class FacebookEvent
 
   def self.parse_details(hash)
     parsed_hash = {
+      :facebook_id => hash["id"],
       :name => hash["name"],
       :description => hash["description"],
       :owner => hash["owner"],

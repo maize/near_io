@@ -47,7 +47,17 @@ class Group
     else
       p "Group does not have any links"
     end
-    
-    self.save
+
+    p fb_events
+
+    # fb_events.each do |event|
+    #   unless self.events.include?(event)
+    #     self.events.push(event)
+    #   else
+    #     p "Group includes event already"
+    #   end
+    # end
+
+    self.events = fb_events
   end
 end

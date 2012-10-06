@@ -1,8 +1,8 @@
 class FacebookModel
   def get_facebook_events(access_token)
+    events = []
     fb_events = FacebookEvent.get_all_by_facebook_id(self.facebook_id, access_token)
-
-    fb_events.each do |event|
+    fb_events.each do |fb_event|
       event = Event.where("facebook_event.facebook_id" => fb_event.facebook_id).first
       if event.nil?
         p "Create new event: "+fb_event.name
@@ -12,12 +12,8 @@ class FacebookModel
       else
         p "Found event: "+event.name
       end
-
-      unless self.events.include?(event)
-        self.events.push(event)
-      else
-        p "Group includes event already"
-      end
+      events.push(event)
     end
+    events
   end
 end
