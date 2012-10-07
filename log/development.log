@@ -3757,3 +3757,96 @@ MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.s
   Rendered networks/show.html.erb within layouts/application (384.4ms)
 MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
 Completed 200 OK in 1161ms (Views: 972.1ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-07 16:32:57 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-08 16:32:57 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$lt"=>2012-10-08 16:32:57 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (1345.5ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2904ms (Views: 2322.9ms)
+
+
+Started GET "/networks/ucl/2012/10/08" for 127.0.0.1 at 2012-10-07 16:34:02 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl", "year"=>"2012", "month"=>"10", "day"=>"08"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (1022.8ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1797ms (Views: 1606.1ms)
+
+
+Started GET "/networks/ucl/2012/10/08" for 127.0.0.1 at 2012-10-07 16:34:26 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl", "year"=>"2012", "month"=>"10", "day"=>"08"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"lt"=>2012-10-09 00:00:00 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"lt"=>2012-10-09 00:00:00 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (579.6ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 3262ms (Views: 2861.3ms)
+
+
+Started GET "/networks/ucl/2012/10/08" for 127.0.0.1 at 2012-10-07 16:34:35 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl", "year"=>"2012", "month"=>"10", "day"=>"08"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (1451.1ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2655ms (Views: 2250.9ms)
+
+
+Started GET "/networks/ucl/2012/10/08?page=2" for 127.0.0.1 at 2012-10-07 16:34:46 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"page"=>"2", "id"=>"ucl", "year"=>"2012", "month"=>"10", "day"=>"08"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}).skip(25).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (402.5ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1248ms (Views: 997.0ms)
+
+
+Started GET "/networks/ucl/2012/10/08?page=2" for 127.0.0.1 at 2012-10-07 16:34:55 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"page"=>"2", "id"=>"ucl", "year"=>"2012", "month"=>"10", "day"=>"08"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}).skip(25).limit(25).sort([["facebook_event.start_time", :desc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (640.4ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1834ms (Views: 1439.6ms)
+
+
+Started GET "/networks/ucl/2012/10/08" for 127.0.0.1 at 2012-10-07 16:34:58 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl", "year"=>"2012", "month"=>"10", "day"=>"08"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}).limit(25).sort([["facebook_event.start_time", :desc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (1018.5ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1716ms (Views: 1501.5ms)

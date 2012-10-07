@@ -23,7 +23,8 @@ class NetworksController < ApplicationController
       p "Take current time: "+@date.to_s
     end
 
-    @events = Event.where('facebook_event.start_time.gt' => @date, 'facebook_event.start_time.lt' => (@date+1.day)).asc('facebook_event.start_time').page params[:page]
+    #@events = Event.where('facebook_event.start_time.gt' => @date, 'facebook_event.start_time.lt' => (@date+1.day)).asc('facebook_event.start_time').page params[:page]
+    @events = Event.where('facebook_event.start_time' => {'$gt' => @date}, 'facebook_event.start_time' => {'$lt' => (@date+1.day)}).desc('facebook_event.start_time').page params[:page]
 
     #
 
