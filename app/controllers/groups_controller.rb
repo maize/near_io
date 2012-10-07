@@ -41,11 +41,13 @@ class GroupsController < ApplicationController
   # POST /groups.json
   def create
     @group = Group.new
-
+    
     networks = []
     network = Network.find(params[:group][:networks])
     networks.push(network)
-    params[:group][:networks] = networks
+    unless @group.networks.include?(network)
+      @group.networks = networks
+    end
 
     # Facebook Group
     unless params[:group][:facebook_group].empty?
