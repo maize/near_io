@@ -3850,3 +3850,245 @@ MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.s
   Rendered networks/show.html.erb within layouts/application (1018.5ms)
 MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
 Completed 200 OK in 1716ms (Views: 1501.5ms)
+
+
+Started GET "/networks/ucl/2012/10/08" for 127.0.0.1 at 2012-10-07 16:41:46 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl", "year"=>"2012", "month"=>"10", "day"=>"08"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}).limit(25).sort([["facebook_event.start_time", :desc]])
+  Rendered networks/show.html.erb within layouts/application (779.8ms)
+Completed 500 Internal Server Error in 976ms
+
+ActionView::Template::Error (undefined method `facebook_event?' for #<Event _id: 50709f50b982540200000057, _type: nil>):
+    16:     </div>
+    17:     <div id="<%= event.id %>" class="accordion-body collapse">
+    18:       <div class="accordion-inner">
+    19:         <p><%= event.facebook_event?.description unless event.facebook_event?.description.nil? %></p>
+    20:       </div>
+    21:     </div>
+    22:   </div>
+  app/views/networks/show.html.erb:19:in `block in _app_views_networks_show_html_erb__4384877225760385608_70234235359260'
+  app/views/networks/show.html.erb:10:in `_app_views_networks_show_html_erb__4384877225760385608_70234235359260'
+  app/controllers/networks_controller.rb:38:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.8ms)
+
+
+Started GET "/networks/ucl/2012/10/08" for 127.0.0.1 at 2012-10-07 16:41:51 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl", "year"=>"2012", "month"=>"10", "day"=>"08"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}).limit(25).sort([["facebook_event.start_time", :desc]])
+  Rendered networks/show.html.erb within layouts/application (762.2ms)
+Completed 500 Internal Server Error in 1031ms
+
+ActionView::Template::Error (undefined method `facebook_event?' for #<Event _id: 50709f50b982540200000057, _type: nil>):
+    16:     </div>
+    17:     <div id="<%= event.id %>" class="accordion-body collapse">
+    18:       <div class="accordion-inner">
+    19:         <p><%= event.facebook_event.description unless event.facebook_event?.description.nil? %></p>
+    20:       </div>
+    21:     </div>
+    22:   </div>
+  app/views/networks/show.html.erb:19:in `block in _app_views_networks_show_html_erb__4384877225760385608_70234272721140'
+  app/views/networks/show.html.erb:10:in `_app_views_networks_show_html_erb__4384877225760385608_70234272721140'
+  app/controllers/networks_controller.rb:38:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.1ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.7ms)
+
+
+Started GET "/networks/ucl/2012/10/08" for 127.0.0.1 at 2012-10-07 16:42:56 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl", "year"=>"2012", "month"=>"10", "day"=>"08"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}).limit(25).sort([["facebook_event.start_time", :desc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (1041.2ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2254ms (Views: 1853.9ms)
+
+
+Started GET "/networks/ucl/2012/10/08" for 127.0.0.1 at 2012-10-07 16:44:08 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl", "year"=>"2012", "month"=>"10", "day"=>"08"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}).limit(25).sort([["facebook_event.start_time", :desc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$lt"=>2012-10-09 00:00:00 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (1197.4ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2258ms (Views: 1862.8ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-07 16:44:26 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-08 16:44:26 -0700}}).limit(25).sort([["facebook_event.start_time", :desc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$lt"=>2012-10-08 16:44:26 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (981.1ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1565ms (Views: 1370.8ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-07 16:45:08 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>2012-10-07 16:45:08 -0700}).limit(25).sort([["facebook_event.start_time", :desc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>2012-10-07 16:45:08 -0700}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (574.7ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1787ms (Views: 1403.9ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-07 16:46:19 -0700
+
+SyntaxError (/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected ':', expecting ')'
+...e('facebook_event.start_time' : {'$gt' => @date}, 'facebook_...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected ',', expecting keyword_end
+...start_time' : {'$gt' => @date}, 'facebook_event.start_time' ...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected ':', expecting keyword_end
+..., 'facebook_event.start_time' : {'$lt' => (@date+1.day)}).de...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected ')', expecting keyword_end
+...me' : {'$lt' => (@date+1.day)}).desc('facebook_event.start_t...
+...                               ^):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-07 16:46:31 -0700
+
+SyntaxError (/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected ':', expecting ')'
+...e('facebook_event.start_time' : {'$gt' : @date}, 'facebook_e...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected ':', expecting tASSOC
+...ok_event.start_time' : {'$gt' : @date}, 'facebook_event.star...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected tASSOC, expecting keyword_end
+... 'facebook_event.start_time' => {'$lt' : (@date+1.day)}).des...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected ':', expecting tASSOC
+...k_event.start_time' => {'$lt' : (@date+1.day)}).desc('facebo...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected '}', expecting keyword_end
+...ime' => {'$lt' : (@date+1.day)}).desc('facebook_event.start_...
+...                               ^):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-07 16:46:36 -0700
+
+SyntaxError (/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected ':', expecting ')'
+...e('facebook_event.start_time' : {'$gt' : @date}, 'facebook_e...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected ':', expecting tASSOC
+...ok_event.start_time' : {'$gt' : @date}, 'facebook_event.star...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected ':', expecting keyword_end
+..., 'facebook_event.start_time' : {'$lt' : (@date+1.day)}).des...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected ':', expecting tASSOC
+...ok_event.start_time' : {'$lt' : (@date+1.day)}).desc('facebo...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:27: syntax error, unexpected '}', expecting keyword_end
+...time' : {'$lt' : (@date+1.day)}).desc('facebook_event.start_...
+...                               ^):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.8ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-07 16:46:43 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-08 16:46:44 -0700}}).limit(25).sort([["facebook_event.start_time", :desc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$lt"=>2012-10-08 16:46:44 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (1164.9ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2157ms (Views: 1764.0ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-07 16:47:04 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-07 16:47:04 -0700}}).limit(25).sort([["facebook_event.start_time", :desc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-07 16:47:04 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (578.7ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1943ms (Views: 1548.9ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-07 16:47:50 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$lt"=>2012-10-08 16:47:51 -0700}}).limit(25).sort([["facebook_event.start_time", :desc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$lt"=>2012-10-08 16:47:51 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (1444.9ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 3195ms (Views: 2532.3ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-07 16:48:12 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-07 16:48:13 -0700}}).limit(25).sort([["facebook_event.start_time", :desc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-07 16:48:13 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (584.5ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2631ms (Views: 1816.8ms)

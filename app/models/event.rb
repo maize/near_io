@@ -13,6 +13,14 @@ class Event
     end
   end
 
+  def description
+    unless facebook_event.nil?
+      self.facebook_event.description
+    else
+      "..."
+    end
+  end
+
   def provider
     unless facebook_event.nil?
       "facebook"
