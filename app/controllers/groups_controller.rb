@@ -45,7 +45,7 @@ class GroupsController < ApplicationController
     # Facebook Group
     unless params[:group][:facebook_group].empty?
       fb_group = FacebookGroup.find_by_facebook_id(params[:group][:facebook_group])
-      @group = Group.facebook_group.where(:facebook_id => fb_group.id).first
+      @group = Group.where('facebook_group.facebook_id' => fb_group.id).first
       if @group.nil?
         @group = Group.new
       end
@@ -55,7 +55,7 @@ class GroupsController < ApplicationController
     # Facebook Page
     unless params[:group][:facebook_page].empty?
       fb_page = FacebookPage.find_by_facebook_id(params[:group][:facebook_page])
-      @group = Group.facebook_page.where(:facebook_id => fb_page.id).first
+      @group = Group.where('facebook_page.facebook_id' => fb_page.id).first
       if @group.nil?
         @group = Group.new
       end
