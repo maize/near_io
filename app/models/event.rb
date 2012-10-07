@@ -1,7 +1,7 @@
 class Event
   include Mongoid::Document
 
-  embeds_one :facebook_event, cascade_callbacks: true
+  embeds_one :facebook_event
 
   paginates_per 25
 

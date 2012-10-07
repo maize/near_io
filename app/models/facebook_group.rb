@@ -1,8 +1,7 @@
 class FacebookGroup < FacebookModel
   include Mongoid::Document
 
-  has_and_belongs_to_many :facebook_events, inverse_of: nil, autosave: true
-  belongs_to :group
+  embedded_in :group
 
   field :facebook_id, :type => Integer
   field :name, :type => String
@@ -30,14 +29,6 @@ class FacebookGroup < FacebookModel
       :icon     => hash["icon"],
       :email => hash["email"],
       :updated_time => hash["updated_time"])
-
-    @find_group = FacebookGroup.where(:facebook_id => @group.facebook_id).first
-    
-    unless @find_group.nil?
-      p "Found Facebook group in database.."
-      @group = @find_group
-    end
-
     @group
   end
 end

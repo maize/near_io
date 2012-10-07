@@ -1,8 +1,7 @@
 class FacebookPage < FacebookModel
   include Mongoid::Document
 
-  has_and_belongs_to_many :facebook_events, inverse_of: nil, autosave: true
-  belongs_to :group
+  embedded_in :group
 
   field :facebook_id, :type => Integer
   field :name, :type => String
@@ -27,7 +26,7 @@ class FacebookPage < FacebookModel
   end
 
   def self.get_by_hash(hash)
-    @event = FacebookPage.new(
+    @page = FacebookPage.new(
       :facebook_id  => hash["id"],
       :name         => hash["name"],
       :is_published => hash["is_published"],
@@ -41,13 +40,6 @@ class FacebookPage < FacebookModel
       :link => hash["link"],
       :likes => hash["likes"])
 
-    @find_page = FacebookPage.where(:facebook_id => @event.facebook_id).first
-    
-    unless @find_page.nil?
-      p "Found Facebook page in database.."
-      @event = @find_page
-    end
-
-    @event
+    @page
   end
 end

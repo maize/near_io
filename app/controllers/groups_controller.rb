@@ -42,6 +42,11 @@ class GroupsController < ApplicationController
   def create
     @group = Group.new
 
+    networks = []
+    network = Network.find(params[:group][:networks])
+    networks.push(network)
+    params[:group][:networks] = networks
+
     # Facebook Group
     unless params[:group][:facebook_group].empty?
       fb_group = FacebookGroup.find_by_facebook_id(params[:group][:facebook_group])
@@ -85,20 +90,22 @@ class GroupsController < ApplicationController
     networks = []
     network = Network.find(params[:group][:networks])
     networks.push(network)
-    params[:group][:networks] = networks
+    unless @group.networks.include?(network)
+      @group.networks = networks
+    end
 
     unless params[:group][:facebook_group].empty?
       fb_group = FacebookGroup.find_by_facebook_id(params[:group][:facebook_group].to_i)
-      params[:group][:facebook_group] = fb_group
+      @group.facebook_group = fb_group
     end
 
     unless params[:group][:facebook_page].empty?
       fb_page = FacebookPage.find_by_facebook_id(params[:group][:facebook_page].to_i)
-      params[:group][:facebook_page] = fb_page
+      @group.facebook_page = fb_page
     end
 
     respond_to do |format|
-      if @group.update_attributes(params[:group])
+      if @group.save
         format.html { redirect_to @group, notice: 'Group was successfully updated.' }
         format.json { head :no_content }
       else

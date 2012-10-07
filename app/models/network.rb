@@ -3,7 +3,7 @@ class Network
     include Mongoid::Slug
     include Mongoid::Spacial::Document
 
-    has_and_belongs_to_many :groups
+    has_and_belongs_to_many :groups, inverse_of: nil, autosave: true
 
     field :name, :type => String
     field :location, :type => Array, :spacial => true

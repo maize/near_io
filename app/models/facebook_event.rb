@@ -28,34 +28,6 @@ class FacebookEvent
   field :maybe_male, :type => Integer
   field :maybe_female, :type => Integer
 
-  def self.get_all_by_facebook_id(facebook_id, access_token)
-	@graph = Koala::Facebook::API.new(access_token)
-
-	p "Get Facebook Events.."
-	results = @graph.get_connections(facebook_id, "events", :fields => "name, description, owner, venue, location, timezone, start_time, end_time, updated_time, privacy, attending.fields(gender, name, first_name, last_name, link, username, updated_time)")
-	fb_events = []
-
-	loop do
-		results.each do |hash|
-      fb_event = FacebookEvent.new(FacebookEvent.parse_details(hash))
-
-      # Attending
-      unless hash["attending"].nil?
-        attending = FacebookEvent.parse_event_users(hash["attending"]["data"])
-        fb_event.attending = attending.size
-        fb_event.attending_facebook_users = attending
-      end
-
-			fb_events.push(fb_event)
-		end
-
-		results = results.next_page
-		break if results.nil?
-	end
-
-	fb_events
-  end
-
   def self.parse_details(hash)
     parsed_hash = {
       :facebook_id => hash["id"],
@@ -86,6 +58,34 @@ class FacebookEvent
       end
     end
     users
+  end
+
+  def self.get_all_by_facebook_id(facebook_id, access_token)
+  	@graph = Koala::Facebook::API.new(access_token)
+
+  	p "Get Facebook Events.."
+  	results = @graph.get_connections(facebook_id, "events", :fields => "name, description, owner, venue, location, timezone, start_time, end_time, updated_time, privacy, attending.fields(gender, name, first_name, last_name, link, username, updated_time)")
+  	fb_events = []
+
+  	loop do
+  		results.each do |hash|
+        fb_event = FacebookEvent.new(FacebookEvent.parse_details(hash))
+
+        # Attending
+        unless hash["attending"].nil?
+          attending = FacebookEvent.parse_event_users(hash["attending"]["data"])
+          fb_event.attending = attending.size
+          fb_event.attending_facebook_users = attending
+        end
+
+  			fb_events.push(fb_event)
+  		end
+
+  		results = results.next_page
+  		break if results.nil?
+  	end
+
+  	fb_events
   end
 
   def percentage_male

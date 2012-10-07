@@ -1,8 +1,8 @@
 class Group
   include Mongoid::Document
 
-  has_one :facebook_group, autosave: true
-  has_one :facebook_page, autosave: true
+  embeds_one :facebook_group
+  embeds_one :facebook_page
 
   has_and_belongs_to_many :events, inverse_of: nil, autosave: true
   has_and_belongs_to_many :networks
