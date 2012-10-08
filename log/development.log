@@ -4474,3 +4474,13 @@ MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b98
   Rendered groups/index.html.erb within layouts/application (581.0ms)
 MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
 Completed 200 OK in 1181ms (Views: 1180.7ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-07 17:16:30 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['groups'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+  Rendered groups/index.html.erb within layouts/application (581.3ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1181ms (Views: 1181.2ms)

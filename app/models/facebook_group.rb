@@ -8,7 +8,7 @@ class FacebookGroup < FacebookModel
   field :facebook_id, :type => Integer
   field :name, :type => String
   field :description, :type => String
-  field :privacy, :type => Boolean
+  field :privacy, :type => String
   field :icon, :type => String
   field :updated_time, :type => Date
   field :email, :type => String
