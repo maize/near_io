@@ -3,6 +3,8 @@ class FacebookGroup < FacebookModel
 
   embedded_in :group
 
+  validates_presence_of :privacy
+
   field :facebook_id, :type => Integer
   field :name, :type => String
   field :description, :type => String

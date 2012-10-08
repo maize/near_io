@@ -3,6 +3,8 @@ class FacebookPage < FacebookModel
 
   embedded_in :group
 
+  validates_presence_of :likes
+
   field :facebook_id, :type => Integer
   field :name, :type => String
   field :is_published, :type => Boolean

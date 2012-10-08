@@ -4202,3 +4202,275 @@ MONGODB near_io_dev['events'].find({:_id=>{"$in"=>[]}})
 MONGODB near_io_dev['system.namespaces'].find({})
 MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
 Completed 200 OK in 2210ms (Views: 2016.9ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-07 17:02:28 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({})
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+  Rendered groups/index.html.erb within layouts/application (1336.0ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2187ms (Views: 2186.5ms)
+
+
+Started DELETE "/groups/5072177eb982541549000014" for 127.0.0.1 at 2012-10-07 17:02:36 -0700
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qmBdz++2sroxEnyxErlAxgItqyVlUZLv6FJylHVicUM=", "id"=>"5072177eb982541549000014"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5072177eb982541549000014')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].remove({:_id=>BSON::ObjectId('5072177eb982541549000014')})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('5072177eb982541549000014')}})
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 197ms
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-07 17:02:36 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['groups'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+  Rendered groups/index.html.erb within layouts/application (639.6ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1235ms (Views: 1235.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-07 17:02:51 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"networks", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+  Rendered groups/_form.html.erb (610.1ms)
+  Rendered groups/new.html.erb within layouts/application (612.5ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1214ms (Views: 1203.2ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-07 17:02:55 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qmBdz++2sroxEnyxErlAxgItqyVlUZLv6FJylHVicUM=", "group"=>{"facebook_group"=>"2368509106", "facebook_page"=>"", "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['groups'].find({"facebook_group.facebook_id"=>2368509106}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f8bbb982541549000007')}, {"$set"=>{"facebook_group"=>{"_id"=>BSON::ObjectId('5072182fb982541549000017'), "facebook_id"=>2368509106, "name"=>"UCL Enterprise Society", "description"=>"THE ENTERPRISE: \n\nOur mission is to inspire and feed all entrepreneurial activity within the UCL community. \n\nFIND OUT MORE... http://groupspaces.com/uclenterprise/external/subscribe\n\nWe are non-profit student-run group of crazed life enthusiasts. This 2011-12 we are creating events that will:\n\n- open your eyes to the start-up scene in London\n- give you the opportunity to meet like-minded individuals you could potentially form companies with\n- provide you with free mentoring, training, guidance. A wealth of resources to hep you on your journey.\n- look great on your CV and impress any future potential employers (and lovers)\n- give you FREE PIZZA AND BEER!\n\n\nBE THE BOSS. BE THE FUTURE'S PROBLEM-SOLVER.", "privacy"=>nil, "icon"=>"http://static.ak.fbcdn.net/rsrc.php/v2/yI/r/0pjqWL1NfkE.png", "email"=>"2368509106@groups.facebook.com", "updated_time"=>2012-10-06 00:00:00 UTC}}})
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+Redirected to http://localhost:3000/groups/5071f8bbb982541549000007
+Completed 302 Found in 780ms
+
+
+Started GET "/groups/5071f8bbb982541549000007" for 127.0.0.1 at 2012-10-07 17:02:56 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5071f8bbb982541549000007"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5071f8bbb982541549000007')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({:_id=>{"$in"=>[]}})
+  Rendered groups/show.html.erb within layouts/application (575.8ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1409ms (Views: 1218.7ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-07 17:03:02 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['groups'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+  Rendered groups/index.html.erb within layouts/application (586.2ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1177ms (Views: 1176.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-07 17:03:14 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"networks", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+  Rendered groups/_form.html.erb (582.3ms)
+  Rendered groups/new.html.erb within layouts/application (583.6ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1422ms (Views: 1422.1ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-07 17:03:22 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qmBdz++2sroxEnyxErlAxgItqyVlUZLv6FJylHVicUM=", "group"=>{"facebook_group"=>"", "facebook_page"=>"UCLUnion", "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['groups'].find({"facebook_page.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"facebook_page"=>{"_id"=>BSON::ObjectId('5072184ab98254154900001a'), "facebook_id"=>34994060032, "name"=>"UCL Union", "is_published"=>true, "website"=>"http://uclu.org", "username"=>"UCLUnion", "description"=>"Representing the needs and views of UCL students is the primary function of UCLU, with six Full-Time Officers elected annually to perform various roles and carry out the wishes of our members, the students.\n\nThe six officers for 2012-13 are:\nDemocracy & Communications Officer: Sam Gaus\ndco@uclu.org\n\nStudent Activities Officer: Abdul Akbari\nsao@uclu.org\n\nEducation & Campaigns Officer: Edwin Clifford-Coupe\neco@uclu.org\n\nEthics, Environment and Operations Officer: Natasha Gorodnitski\neeoo@uclu.org\n\nWelfare Officer: Candy Ashmore-Harris\nwio@uclu.org\n\nMedical & Postgraduates Officer: Dante Micheaux\nmpso@uclu.org", "about"=>"UCLU is the representative organisation for the students of University College London.", "can_post"=>nil, "talking_about_count"=>259, "category"=>"Non-profit organization", "link"=>"http://www.facebook.com/UCLUnion", "likes"=>6693}}})
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+Redirected to http://localhost:3000/groups/5071f754b982541549000004
+Completed 302 Found in 705ms
+
+
+Started GET "/groups/5071f754b982541549000004" for 127.0.0.1 at 2012-10-07 17:03:23 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5071f754b982541549000004"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5071f754b982541549000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({:_id=>{"$in"=>[]}})
+  Rendered groups/show.html.erb within layouts/application (386.9ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1169ms (Views: 977.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-07 17:03:25 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['groups'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+  Rendered groups/index.html.erb within layouts/application (570.5ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1163ms (Views: 1163.0ms)
+
+
+Started GET "/groups/5071f754b982541549000004" for 127.0.0.1 at 2012-10-07 17:03:29 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5071f754b982541549000004"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5071f754b982541549000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({:_id=>{"$in"=>[]}})
+  Rendered groups/show.html.erb within layouts/application (423.0ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1260ms (Views: 1007.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-07 17:03:32 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['groups'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+  Rendered groups/index.html.erb within layouts/application (578.3ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1165ms (Views: 1165.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-07 17:03:34 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"networks", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+  Rendered groups/_form.html.erb (564.9ms)
+  Rendered groups/new.html.erb within layouts/application (566.7ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1209ms (Views: 1208.5ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-07 17:03:39 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qmBdz++2sroxEnyxErlAxgItqyVlUZLv6FJylHVicUM=", "group"=>{"facebook_group"=>"UCLUnion", "facebook_page"=>"", "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['groups'].find({"facebook_group.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('5072185bb98254154900001e')}})
+MONGODB near_io_dev['groups'].insert([{"event_ids"=>[], "network_ids"=>[BSON::ObjectId('506c8c45b982540a65000005')], "_id"=>BSON::ObjectId('5072185bb98254154900001e'), "facebook_group"=>{"_id"=>BSON::ObjectId('5072185bb98254154900001d'), "facebook_id"=>34994060032, "name"=>"UCL Union", "description"=>"Representing the needs and views of UCL students is the primary function of UCLU, with six Full-Time Officers elected annually to perform various roles and carry out the wishes of our members, the students.\n\nThe six officers for 2012-13 are:\nDemocracy & Communications Officer: Sam Gaus\ndco@uclu.org\n\nStudent Activities Officer: Abdul Akbari\nsao@uclu.org\n\nEducation & Campaigns Officer: Edwin Clifford-Coupe\neco@uclu.org\n\nEthics, Environment and Operations Officer: Natasha Gorodnitski\neeoo@uclu.org\n\nWelfare Officer: Candy Ashmore-Harris\nwio@uclu.org\n\nMedical & Postgraduates Officer: Dante Micheaux\nmpso@uclu.org", "privacy"=>nil, "icon"=>nil, "email"=>nil, "updated_time"=>nil}}])
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$addToSet"=>{"group_ids"=>BSON::ObjectId('5072185bb98254154900001e')}})
+Redirected to http://localhost:3000/groups/5072185bb98254154900001e
+Completed 302 Found in 704ms
+
+
+Started GET "/groups/5072185bb98254154900001e" for 127.0.0.1 at 2012-10-07 17:03:40 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5072185bb98254154900001e"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5072185bb98254154900001e')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({:_id=>{"$in"=>[]}})
+  Rendered groups/show.html.erb within layouts/application (469.4ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1261ms (Views: 1067.9ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-07 17:03:48 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['groups'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+  Rendered groups/index.html.erb within layouts/application (787.9ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1380ms (Views: 1380.1ms)
+
+
+Started DELETE "/groups/5072185bb98254154900001e" for 127.0.0.1 at 2012-10-07 17:04:21 -0700
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qmBdz++2sroxEnyxErlAxgItqyVlUZLv6FJylHVicUM=", "id"=>"5072185bb98254154900001e"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5072185bb98254154900001e')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].remove({:_id=>BSON::ObjectId('5072185bb98254154900001e')})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('5072185bb98254154900001e')}})
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 606ms
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-07 17:04:22 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['groups'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+  Rendered groups/index.html.erb within layouts/application (578.5ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1736ms (Views: 1736.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-07 17:13:15 -0700
+Processing by GroupsController#new as HTML
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"networks", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+  Rendered groups/_form.html.erb (778.1ms)
+  Rendered groups/new.html.erb within layouts/application (779.9ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1664ms (Views: 1642.6ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-07 17:13:23 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qmBdz++2sroxEnyxErlAxgItqyVlUZLv6FJylHVicUM=", "group"=>{"facebook_group"=>"UCLUnion", "facebook_page"=>"", "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({"facebook_group.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('50721aa3b982541549000022')}})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"networks", "query"=>{:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, "fields"=>nil})
+  Rendered groups/_form.html.erb (397.9ms)
+  Rendered groups/new.html.erb within layouts/application (399.4ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2351ms (Views: 1034.6ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-07 17:13:39 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qmBdz++2sroxEnyxErlAxgItqyVlUZLv6FJylHVicUM=", "group"=>{"facebook_group"=>"", "facebook_page"=>"34994060032", "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['groups'].find({"facebook_page.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"facebook_page"=>{"_id"=>BSON::ObjectId('50721ab3b982541549000024'), "facebook_id"=>34994060032, "name"=>"UCL Union", "is_published"=>true, "website"=>"http://uclu.org", "username"=>"UCLUnion", "description"=>"Representing the needs and views of UCL students is the primary function of UCLU, with six Full-Time Officers elected annually to perform various roles and carry out the wishes of our members, the students.\n\nThe six officers for 2012-13 are:\nDemocracy & Communications Officer: Sam Gaus\ndco@uclu.org\n\nStudent Activities Officer: Abdul Akbari\nsao@uclu.org\n\nEducation & Campaigns Officer: Edwin Clifford-Coupe\neco@uclu.org\n\nEthics, Environment and Operations Officer: Natasha Gorodnitski\neeoo@uclu.org\n\nWelfare Officer: Candy Ashmore-Harris\nwio@uclu.org\n\nMedical & Postgraduates Officer: Dante Micheaux\nmpso@uclu.org", "about"=>"UCLU is the representative organisation for the students of University College London.", "can_post"=>nil, "talking_about_count"=>259, "category"=>"Non-profit organization", "link"=>"http://www.facebook.com/UCLUnion", "likes"=>6695}}})
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+Redirected to http://localhost:3000/groups/5071f754b982541549000004
+Completed 302 Found in 720ms
+
+
+Started GET "/groups/5071f754b982541549000004" for 127.0.0.1 at 2012-10-07 17:13:40 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5071f754b982541549000004"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5071f754b982541549000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({:_id=>{"$in"=>[]}})
+  Rendered groups/show.html.erb within layouts/application (584.7ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1373ms (Views: 1183.4ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-07 17:13:43 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['groups'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+  Rendered groups/index.html.erb within layouts/application (581.0ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1181ms (Views: 1180.7ms)
