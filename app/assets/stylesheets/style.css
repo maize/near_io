@@ -7,6 +7,13 @@ body {
     background-color: transparent;
 }
 
+#main {
+    margin-top:20px;
+}
+
+/* ==========================================================================
+   Home
+   ========================================================================== */
 html#home { 
     background: url(bg_1920x1275.png) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -21,6 +28,37 @@ html#home {
     filter: url(blur.svg#blur);*/
 }
 
+html#home, #home body {
+    height: 100%;
+    padding:0;
+}
+
+#home #main {
+    margin-top:0;
+    width: 100%;
+    height: 100%;
+}
+
+#home .hero-unit {
+    margin-bottom: 0;
+}
+
+.cn1 {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.cn2 {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    width: 100%;
+}
+
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
 @font-face {
     font-family: 'proxima_nova_ltregular';
     src: url('proximanova-light-webfont.eot');
@@ -44,14 +82,6 @@ html#home {
     font-style: normal;
 }
 
-a:hover {
-    background:transparent;
-}
-
-#main {
-    margin-top:20px;
-}
-
 /* ==========================================================================
    Hero
    ========================================================================== */
@@ -63,9 +93,14 @@ a:hover {
 }
 
 .hero-unit h1 {
-    margin-bottom: 30px;
+    margin-top: 0;
+    margin-bottom: 40px;
     text-shadow: 1px 2px rgba(0,0,0,.25);
     line-height: 1.2;
+}
+
+.hero-unit p {
+    margin-bottom: 0;
 }
 
 /* ==========================================================================
