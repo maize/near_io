@@ -19,6 +19,7 @@ Near::Application.routes.draw do
   match "events/:id/update_details", :to => "events#update_details"
 
   match "users/facebook", :to => "users#facebook", :as => 'facebook_users'
+  match "users/:id/make_admin", :to => "users#make_admin", :as => 'user_make_admin'
   match "users/:id/likes", :to => "users#likes", :as => 'user_likes'
   match "users/:id/following_places", :to => "users#following_places", :as => 'user_following_places'
 

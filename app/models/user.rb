@@ -32,6 +32,7 @@ class User
   field :image,               :type => String
   field :token,               :type => String
   field :expires_at,          :type => Time
+  field :admin,               :type => Boolean, :default => false
 
   validates_presence_of :email
   validates_presence_of :encrypted_password

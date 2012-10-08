@@ -4,10 +4,12 @@
 <table class="table table-striped">
   <tr>
     <th>Name</th>
+    <th>Admin</th>
   </tr>
   <% @users.each do |user| %>
   <tr>
     <td><%= link_to user.name, user %></td>
+    <td><%= user.admin %></td>
   </tr>
   <% end %>
 </table>

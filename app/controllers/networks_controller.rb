@@ -39,11 +39,15 @@ class NetworksController < ApplicationController
   end
 
   def update_groups
+    authorize! :manage, :all
+    
     Resque.enqueue(UpdateGroups)
     render :nothing => true
   end
 
   def clear_queue
+    authorize! :manage, :all
+
     p "Beforing clearing queue: "+Qu.length.to_s
     Qu.clear
     p "Cleared queue: "+Qu.length.to_s
@@ -53,6 +57,8 @@ class NetworksController < ApplicationController
   # GET /networks/new
   # GET /networks/new.json
   def new
+    authorize! :manage, :all
+
     @network = Network.new
 
     respond_to do |format|
@@ -63,12 +69,16 @@ class NetworksController < ApplicationController
 
   # GET /networks/1/edit
   def edit
+    authorize! :manage, :all
+
     @network = Network.find_by_slug(params[:id])
   end
 
   # POST /networks
   # POST /networks.json
   def create
+    authorize! :manage, :all
+
     @network = Network.new(params[:network])
 
     respond_to do |format|
@@ -85,6 +95,8 @@ class NetworksController < ApplicationController
   # PUT /networks/1
   # PUT /networks/1.json
   def update
+    authorize! :manage, :all
+
     @network = Network.find_by_slug(params[:id])
     @network.location = {:lat => params[:network][:latitude], :lng => params[:network][:longitude]}
     @network.save
@@ -103,6 +115,8 @@ class NetworksController < ApplicationController
   # DELETE /networks/1
   # DELETE /networks/1.json
   def destroy
+    authorize! :manage, :all
+
     @network = Network.find(params[:id])
     @network.destroy
 
