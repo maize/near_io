@@ -21925,3 +21925,27 @@ MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.s
   Rendered networks/show.html.erb within layouts/application (548.5ms)
 MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
 Completed 200 OK in 1332ms (Views: 930.5ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-08 02:14:45 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-08 02:14:45 -0700, "$lt"=>2012-10-09 02:14:45 -0700}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-08 02:14:45 -0700, "$lt"=>2012-10-09 02:14:45 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-08 02:14:45 -0700, "$lt"=>2012-10-09 02:14:45 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (757.5ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2573ms (Views: 2197.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:14:48 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (555.9ms)
+Completed 200 OK in 569ms (Views: 568.6ms)
