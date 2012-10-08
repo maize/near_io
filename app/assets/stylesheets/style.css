@@ -15,7 +15,7 @@ body {
    Home
    ========================================================================== */
 html#home { 
-    background: url(bg_1920x1275.png) no-repeat center center fixed;
+    background: url(bg_1280x850.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
