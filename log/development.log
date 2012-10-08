@@ -23014,3 +23014,59 @@ MONGODB near_io_dev['networks'].find({})
 MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
   Rendered networks/index.html.erb within layouts/application (871.1ms)
 Completed 200 OK in 923ms (Views: 923.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 03:20:26 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (900.0ms)
+Completed 200 OK in 912ms (Views: 911.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 03:20:30 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (728.7ms)
+Completed 200 OK in 779ms (Views: 779.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 03:22:00 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (807.6ms)
+Completed 200 OK in 818ms (Views: 817.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 03:22:24 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (979.5ms)
+Completed 200 OK in 992ms (Views: 991.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 03:22:39 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (734.4ms)
+Completed 200 OK in 790ms (Views: 789.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 03:22:46 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (757.7ms)
+Completed 200 OK in 768ms (Views: 767.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 03:22:57 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (733.2ms)
+Completed 200 OK in 744ms (Views: 743.9ms)
