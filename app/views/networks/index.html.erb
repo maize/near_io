@@ -4,7 +4,11 @@
       <h1>Discover local events near<br />your favourite places</h1>
       <p>
         <% @networks.each do |network| %>
-          <%= link_to "Check out the preview", network, :class => "btn btn-primary btn-large" %>
+          <% unless user_signed_in? %>
+            <%= link_to "Check out the preview", user_omniauth_authorize_path(:facebook), :class => "btn btn-primary btn-large" %>
+          <% else %>
+            <%= link_to "Sign up", network, :class => "btn btn-primary btn-large" %>
+          <% end %>
         <% end %>
       </p>
     </div>
