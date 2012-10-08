@@ -20894,3 +20894,168 @@ MONGODB near_io_dev['networks'].find({})
   Rendered networks/index.html.erb within layouts/application (186.9ms)
 MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
 Completed 200 OK in 817ms (Views: 816.3ms)
+
+
+Started GET "/user/logout" for 127.0.0.1 at 2012-10-08 01:37:40 -0700
+Processing by Devise::SessionsController#destroy as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].update({"_id"=>BSON::ObjectId('5023b1f7b98254fd53000001')}, {"$set"=>{"remember_created_at"=>nil}})
+Redirected to http://localhost:3000/
+Completed 302 Found in 876ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 01:37:41 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+  Rendered networks/index.html.erb within layouts/application (398.1ms)
+Completed 200 OK in 410ms (Views: 409.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 01:38:09 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+  Rendered networks/index.html.erb within layouts/application (202.6ms)
+Completed 200 OK in 213ms (Views: 212.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 01:38:21 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+  Rendered networks/index.html.erb within layouts/application (194.6ms)
+Completed 200 OK in 204ms (Views: 203.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 01:38:33 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+  Rendered networks/index.html.erb within layouts/application (210.4ms)
+Completed 200 OK in 219ms (Views: 219.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 01:39:38 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+  Rendered networks/index.html.erb within layouts/application (181.1ms)
+Completed 200 OK in 868ms (Views: 868.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 01:39:54 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+  Rendered networks/index.html.erb within layouts/application (242.6ms)
+Completed 200 OK in 265ms (Views: 265.0ms)
+
+
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2012-10-08 01:40:17 -0700
+
+
+Started GET "/user/auth/facebook/callback?state=99c697f93f39838cc98050e0a0da42a1b549fba979e1fabe&code=AQDSbjF4m08bRqw8GtBmTTdU6tWD3tpXfEyv_St8qj4YPcMl1M0ZVVXlADNIDKLrVzlxPfYlKBktb2XoQ_sKauej1z1y2gehvQyH6nap4sIPuEj9qHo3IDCeLeeBqjwjUZmJWuXNPEoZfckuIMDEJJzPWyBhBLH_dd8gGCgUNtwNZZWU2YRFU0OzpJnBthAJ3Qepxv_z4xZNjn9tRRjPg5D0" for 127.0.0.1 at 2012-10-08 01:40:17 -0700
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"state"=>"99c697f93f39838cc98050e0a0da42a1b549fba979e1fabe", "code"=>"AQDSbjF4m08bRqw8GtBmTTdU6tWD3tpXfEyv_St8qj4YPcMl1M0ZVVXlADNIDKLrVzlxPfYlKBktb2XoQ_sKauej1z1y2gehvQyH6nap4sIPuEj9qHo3IDCeLeeBqjwjUZmJWuXNPEoZfckuIMDEJJzPWyBhBLH_dd8gGCgUNtwNZZWU2YRFU0OzpJnBthAJ3Qepxv_z4xZNjn9tRRjPg5D0"}
+MONGODB near_io_dev['users'].find({:provider=>"facebook", :uid=>"687223675"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].update({"_id"=>BSON::ObjectId('5023b1f7b98254fd53000001')}, {"$set"=>{"expires_at"=>2012-12-07 05:10:07 UTC}})
+MONGODB near_io_dev['users'].update({"_id"=>BSON::ObjectId('5023b1f7b98254fd53000001')}, {"$set"=>{"remember_created_at"=>2012-10-08 08:40:19 UTC}})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"facebook_places", "query"=>{:_id=>{"$in"=>[BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('5023bbc6b98254fe0f000001'), BSON::ObjectId('5023bc4fb98254fe0f000002'), BSON::ObjectId('5023bc4fb98254fe0f000003'), BSON::ObjectId('5023bc4fb98254fe0f000004'), BSON::ObjectId('5023bc4fb98254fe0f000005'), BSON::ObjectId('5023bc4fb98254fe0f000006'), BSON::ObjectId('5023bc4fb98254fe0f000007'), BSON::ObjectId('5023bc50b98254fe0f000008'), BSON::ObjectId('5023bc51b98254fe0f000009'), BSON::ObjectId('5023bc52b98254fe0f00000a'), BSON::ObjectId('5023bc53b98254fe0f00000b'), BSON::ObjectId('5023bc54b98254fe0f00000c'), BSON::ObjectId('5023bc55b98254fe0f00000d'), BSON::ObjectId('5023bc57b98254fe0f00000e'), BSON::ObjectId('5023bc58b98254fe0f00000f'), BSON::ObjectId('5023bc58b98254fe0f000010'), BSON::ObjectId('5023bc58b98254fe0f000011'), BSON::ObjectId('5023bc59b98254fe0f000012'), BSON::ObjectId('5023bc59b98254fe0f000013'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5ab98254fe0f000014'), BSON::ObjectId('5023bc5cb98254fe0f000015'), BSON::ObjectId('5023bc5db98254fe0f000016'), BSON::ObjectId('5023bc5db98254fe0f000017'), BSON::ObjectId('5023bc5eb98254fe0f000018'), BSON::ObjectId('50240c92b98254053b00000c'), BSON::ObjectId('50240c92b98254053b00000d'), BSON::ObjectId('50240c92b98254053b00000e'), BSON::ObjectId('50240c92b98254053b00000f'), BSON::ObjectId('50240c92b98254053b000010'), BSON::ObjectId('50240c92b98254053b000011'), BSON::ObjectId('50240c92b98254053b000012'), BSON::ObjectId('50240c92b98254053b000013'), BSON::ObjectId('50240c92b98254053b000014'), BSON::ObjectId('50240c92b98254053b000015'), BSON::ObjectId('50240c92b98254053b000016'), BSON::ObjectId('502437f8b9825407a8000001'), BSON::ObjectId('502437f8b9825407a8000012'), BSON::ObjectId('502437f9b9825407a800001e'), BSON::ObjectId('502437f9b9825407a800002a'), BSON::ObjectId('502437f9b9825407a8000052'), BSON::ObjectId('502437f9b9825407a8000063'), BSON::ObjectId('502437f9b9825407a8000075'), BSON::ObjectId('502437f9b9825407a800007d'), BSON::ObjectId('502437f9b9825407a8000084'), BSON::ObjectId('502437f9b9825407a800009d'), BSON::ObjectId('502437f9b9825407a80000bb'), BSON::ObjectId('502437f9b9825407a80000d4'), BSON::ObjectId('502437f9b9825407a80000e6'), BSON::ObjectId('502437f9b9825407a8000101'), BSON::ObjectId('502437f9b9825407a8000108'), BSON::ObjectId('502437f9b9825407a8000118'), BSON::ObjectId('502437f9b9825407a8000120'), BSON::ObjectId('502437fab9825407a8000123'), BSON::ObjectId('502437fab9825407a8000131'), BSON::ObjectId('502437fab9825407a800013b'), BSON::ObjectId('502437fab9825407a8000141'), BSON::ObjectId('502437fab9825407a800014c'), BSON::ObjectId('502437fab9825407a8000163'), BSON::ObjectId('502437fab9825407a8000178'), BSON::ObjectId('502437fcb9825407a8000185'), BSON::ObjectId('502437fcb9825407a8000194'), BSON::ObjectId('502437fcb9825407a80001ba'), BSON::ObjectId('502437fcb9825407a80001da'), BSON::ObjectId('502437fcb9825407a80001e7'), BSON::ObjectId('502437fcb9825407a80001ff'), BSON::ObjectId('502437fcb9825407a800020b'), BSON::ObjectId('502437fcb9825407a8000218'), BSON::ObjectId('502437fcb9825407a8000222'), BSON::ObjectId('502437fcb9825407a800022b'), BSON::ObjectId('502437fcb9825407a8000237')]}}, "fields"=>nil})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>250298381714612}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Non-profit organization"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>250879564925682}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>8062627951}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Company"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>271980246180279}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Product/service"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>127758250697317}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>22454953030}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Concert tour"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>200394249984402}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>225651384162171}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Internet/software"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>347794205242578}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"App page"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>298343600202037}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Tv show"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>132989837219}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"University"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>457230227642474}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Artist"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>187751707984066}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Website"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>137277736344628}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Internet/software"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>387718821281259}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"App page"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>370298573030780}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Society/culture"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>187048148005386}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Community"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>144134622356223}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Media/news/publishing"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>276105629116383}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Product/service"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>190825564271509}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Media/news/publishing"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>80749331970}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>159155527484623}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Cause"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>222304434557271}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"App page"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>299557340060524}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Community"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>157083194326498}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Bank/financial institution"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>301273499944136}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Sports/recreation/activities"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>218878148136874}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Community"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>287166241374277}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Website"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>92304305160}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Actor/director"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>297031150144}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Entertainment"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>140623412731740}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Food/beverages"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>121102874568855}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>118284881519112}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Local business"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>124627717615753}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Website"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>179651025474927}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Product/service"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>121158391292198}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Local business"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>179050858774245}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>128603890541167}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Arts/humanities"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>130248273763874}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Computers/technology"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>104583736290015}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Product/service"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>211262382280122}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Product/service"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>239885712699257}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Media/news/publishing"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>150868873370}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Business/economy"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>215937385326}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Internet/software"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>286041364797461}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"University"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>40221898427}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>350013925018324}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Internet/software"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>76566731864}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Non-profit organization"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>149422618463548}).sort([[:_id, :asc]])

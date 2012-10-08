@@ -43,6 +43,11 @@ html#home, #home body {
     margin-bottom: 0;
 }
 
+.btn-signup {
+    padding-left:50px;
+    padding-right:50px;
+}
+
 .cn1 {
     display: table;
     height: 100%;
