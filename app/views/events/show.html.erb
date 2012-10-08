@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p><b>Name:</b><%= @event.name %></p>
-<p><b>Attending Male:</b><%= @event.facebook_event.attending_male %></p>
-<p><b>Attending Female:</b><%= @event.facebook_event.attending_female %></p>
+<p><b>Name: </b><%= @event.name %></p>
+<p><b>Attending Male: </b><%= @event.facebook_event.attending_male %></p>
+<p><b>Attending Female: </b><%= @event.facebook_event.attending_female %></p>
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
