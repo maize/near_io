@@ -1,10 +1,24 @@
 /* ==========================================================================
    Base
    ========================================================================== */
-
 body {
 	padding-top:50px;
     font-family: "Helvetica Neue";
+    background-color: transparent;
+}
+
+html#home { 
+    background: url(bg.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+/*    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: url(blur.svg#blur);*/
 }
 
 @font-face {
@@ -36,6 +50,33 @@ a:hover {
 
 #main {
     margin-top:20px;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero-unit {
+    padding:0;
+    background:none;
+    color: #FFF;
+}
+
+.hero-unit h1 {
+    margin-bottom: 30px;
+    text-shadow: 1px 2px rgba(0,0,0,.25);
+    line-height: 1.2;
+}
+
+/* ==========================================================================
+   Thumbnails
+   ========================================================================== */
+.thumbnails .thumbnail a {
+    display: block;
+}
+
+.thumbnails .thumbnail h2 {
+    font-size: 18px;
+    line-height: 20px;
 }
 
 /* ==========================================================================
