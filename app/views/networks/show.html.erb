@@ -21,7 +21,7 @@
         <p><%= event.start_time.strftime('%I:%M %p') %><%= " - "+event.end_time.strftime('%I:%M %p') unless event.end_time.nil? %><%= ", "+event.facebook_event.location unless event.facebook_event.location.nil? %></p>
         <p></p>
         <% unless event.facebook_event.attending_female.nil? and event.facebook_event.attending_male.nil? %>
-          <p><%= event.facebook_event.attending_female %>girls and <%= event.facebook_event.attending_male %> are coming</p>
+          <p><%= event.facebook_event.attending_female %> girls and <%= event.facebook_event.attending_male %> guys are coming</p>
         <% end %>
       </div>
     </div>
