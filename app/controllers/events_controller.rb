@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = FacebookEvent.where(:start_time.lt => Time.now)
+    @events = Event.all.page params[:page] 
 
     respond_to do |format|
       format.html # index.html.erb

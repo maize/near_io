@@ -45,7 +45,6 @@ class GroupsController < ApplicationController
     # Facebook Group
     unless params[:group][:facebook_group].empty?
       fb_group = FacebookGroup.find_by_facebook_id(params[:group][:facebook_group])
-      p fb_group
       @group = Group.where('facebook_group.facebook_id' => fb_group.facebook_id).first
       if @group.nil?
         @group = Group.new
