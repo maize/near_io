@@ -2,9 +2,9 @@ class FacebookEvent
   include Mongoid::Document
 
   has_and_belongs_to_many :attending_facebook_users, class_name: "FacebookUser", inverse_of: nil
-  has_many :maybe_facebook_users, class_name: "FacebookUser", inverse_of: nil
-  has_many :declined_facebook_users, class_name: "FacebookUser", inverse_of: nil
-  has_many :invited_facebook_users, class_name: "FacebookUser", inverse_of: nil
+  has_and_belongs_to_many :maybe_facebook_users, class_name: "FacebookUser", inverse_of: nil
+  has_and_belongs_to_many :declined_facebook_users, class_name: "FacebookUser", inverse_of: nil
+  has_and_belongs_to_many :invited_facebook_users, class_name: "FacebookUser", inverse_of: nil
 
   embedded_in :event
 
@@ -100,9 +100,48 @@ class FacebookEvent
         # Attending
         unless hash["attending"].nil?
           attending = FacebookEvent.parse_event_users(hash["attending"]["data"])
+          num_hash = FacebookEvent.num_gender(attending)
           fb_event.attending = attending.size
+          fb_event.attending_male = num_hash[:male]
+          fb_event.attending_female = num_hash[:female]
+          fb_event.attending_unknown = num_hash[:unknown]
           fb_event.attending_facebook_users = attending
         end
+
+        # Maybe
+        unless hash["maybe"].nil?
+          maybe = FacebookEvent.parse_event_users(hash["maybe"]["data"])
+          num_hash = FacebookEvent.num_gender(maybe)
+          fb_event.maybe = maybe.size
+          fb_event.maybe_male = num_hash[:male]
+          fb_event.maybe_female = num_hash[:female]
+          fb_event.maybe_unknown = num_hash[:unknown]
+          fb_event.maybe_facebook_users = maybe
+        end
+
+        # Declined
+        unless hash["declined"].nil?
+          declined = FacebookEvent.parse_event_users(hash["declined"]["data"])
+          num_hash = FacebookEvent.num_gender(declined)
+          fb_event.declined = declined.size
+          fb_event.declined_male = num_hash[:male]
+          fb_event.declined_female = num_hash[:female]
+          fb_event.declined_unknown = num_hash[:unknown]
+          fb_event.declined_facebook_users = declined
+        end
+
+        # Invited
+        unless hash["invited"].nil?
+          invited = FacebookEvent.parse_event_users(hash["invited"]["data"])
+          num_hash = FacebookEvent.num_gender(invited)
+          fb_event.invited = invited.size
+          fb_event.invited_male = num_hash[:male]
+          fb_event.invited_female = num_hash[:female]
+          fb_event.invited_unknown = num_hash[:unknown]
+          fb_event.invited_facebook_users = invited
+        end
+
+        p fb_event
 
   			fb_events.push(fb_event)
   		end
@@ -112,6 +151,34 @@ class FacebookEvent
   	end
 
   	fb_events
+  end
+
+  def self.num_gender(attendees)
+    m = 0
+    f = 0
+    u = 0
+
+    attendees.each do |user|
+      unless user.gender.nil? or user.gender.empty?
+        if user.gender == "male"
+          m += 1
+        end
+
+        if user.gender == "female"
+          f += 1
+        end
+      else
+        u += 1
+      end
+    end
+
+    hash = {
+      :male => m,
+      :female => f,
+      :unknown => u
+    }
+
+    hash
   end
 
   def percentage_male

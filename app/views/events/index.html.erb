@@ -1,3 +1,6 @@
+<div class="toolbar clearfix">
+	<p class="pull-right"><%= @events.count %> events</p>
+</div>
 <% unless @events.nil? && @places.nil? %>
 	<table class="table table-striped">
 	  <tr>
@@ -7,7 +10,7 @@
 	  </tr>
 	  <% @events.each do |event| %>
 	  <tr>
-	    <td><%= event.name %></td>
+	    <td><%= link_to event.name, event %></td>
 	    <td><%= event.start_time %></td>
 	    <td><%= event.end_time %></td>
 	  </tr>

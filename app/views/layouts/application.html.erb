@@ -27,8 +27,9 @@
       })();
 
     </script>
+    <%= javascript_include_tag "application" %>
   </head>
-  <body onload="initialize()">
+  <body>
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -55,7 +56,6 @@
               </a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
-                <li><a href="#">Saved Events</a></li>
               </ul>
             </li>
             <% end %>
@@ -69,19 +69,5 @@
     <div id="main" class="container">
         <%= yield %>
     </div> <!-- /container -->
-    <%= javascript_include_tag "application" %>
-    <% if @network %>
-      <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
-      <script type="text/javascript">
-        function initialize() {
-          var mapOptions = {
-            center: new google.maps.LatLng(<%= @network.latitude %>, <%= @network.longitude %>),
-            zoom: 17,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-          };
-          var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-        }
-      </script>
-    <% end %>
   </body>
 </html>

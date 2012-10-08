@@ -4,6 +4,7 @@
         <a class="btn" href="<%= network_date_path(@network, (@date+1.day).strftime('%Y'),(@date+1.day).strftime('%m'),(@date+1.day).strftime('%d')) %>"><i class="icon-chevron-right"></i></a>
     </div>
     <p class="pull-left timestamp"><%= @date.strftime('%A, %d. %B') %></p>
+    <p class="pull-right"><%= @events.count %> Events</p>
 </div>
 
 <div class="accordion">
@@ -11,12 +12,17 @@
   <div class="accordion-group">
     <div class="accordion-heading">
         <a class="accordion-toggle clearfix" data-toggle="collapse" href="#<%= event.id %>">
-            <span class="pull-left"><%= event.name unless event.nil? %></span><span class="pull-right">In <%= distance_of_time_in_words_to_now(event.start_time) unless event.start_time.nil? %></span>
+            <span class="pull-left"><b><%= event.start_time.strftime('%I:%M %p') unless event.start_time.nil? %></b> <%= event.name unless event.nil? %></span><span class="pull-right time-difference">In <%= distance_of_time_in_words_to_now(event.start_time) unless event.start_time.nil? %></span>
         </a>
     </div>
     <div id="<%= event.id %>" class="accordion-body collapse">
       <div class="accordion-inner">
         <p><%= event.description unless event.description.nil? %></p>
+        <p><%= event.start_time.strftime('%I:%M %p') %><%= " - "+event.end_time.strftime('%I:%M %p') unless event.end_time.nil? %><%= ", "+event.facebook_event.location unless event.facebook_event.location.nil? %></p>
+        <p></p>
+        <% unless event.facebook_event.attending_female.nil? and event.facebook_event.attending_male.nil? %>
+          <p><%= event.facebook_event.attending_female %>girls and <%= event.facebook_event.attending_male %> are coming</p>
+        <% end %>
       </div>
     </div>
   </div>
@@ -24,3 +30,15 @@
 </div>
 
 <%= paginate @events %>
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    var mapOptions = {
+      center: new google.maps.LatLng(<%= @network.latitude %>, <%= @network.longitude %>),
+      zoom: 17,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+  });
+</script>

@@ -1,6 +1,8 @@
 development:
   uri: mongodb://dev:Nearnote12@ds035997.mongolab.com:35997/near_io_dev
+  # uri: mongodb://staging:Nearnote12@ds039007.mongolab.com:39007/heroku_app8128986
   database: near_io_dev
+  # database: app4487356
   logger: true
 
 test:
@@ -9,7 +11,7 @@ test:
 
 # set these environment variables on your prod server
 production:
-  uri: <%= ENV['MONGOLAB_URI'] %>
+  uri: mongodb://staging:Nearnote12@ds039007.mongolab.com:39007/heroku_app8128986
   database: app4487356
   # slaves:
   #   - host: slave1.local

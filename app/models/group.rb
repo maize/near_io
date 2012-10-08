@@ -7,6 +7,8 @@ class Group
   has_and_belongs_to_many :events, inverse_of: nil, autosave: true
   has_and_belongs_to_many :networks
 
+  paginates_per 25
+
   def name
   	if not facebook_group.nil?
   		facebook_group.name

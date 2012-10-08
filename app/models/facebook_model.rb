@@ -7,11 +7,12 @@ class FacebookModel
       if event.nil?
         p "Create new event: "+fb_event.name
         event = Event.new
-        event.facebook_event = fb_event
-        event.save
       else
-        p "Found event: "+event.name
+        p "Update event: "+event.name
       end
+      event.facebook_event = fb_event
+      event.save
+      
       events.push(event)
     end
     events
