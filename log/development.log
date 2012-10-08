@@ -21949,3 +21949,1068 @@ MONGODB near_io_dev['networks'].find({})
 MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
   Rendered networks/index.html.erb within layouts/application (555.9ms)
 Completed 200 OK in 569ms (Views: 568.6ms)
+
+
+Started GET "/networks/" for 127.0.0.1 at 2012-10-08 02:28:03 -0700
+
+ArgumentError (controller name should not start with a slash):
+  config/routes.rb:5:in `block in <top (required)>'
+  config/routes.rb:3:in `<top (required)>'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.4ms)
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:28:06 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1107.4ms)
+Completed 200 OK in 1827ms (Views: 1826.3ms)
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:29:06 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1090.4ms)
+Completed 200 OK in 1101ms (Views: 1100.6ms)
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:30:06 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (740.8ms)
+Completed 200 OK in 753ms (Views: 752.5ms)
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:31:26 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1085.7ms)
+Completed 200 OK in 1098ms (Views: 1097.2ms)
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:31:33 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1097.2ms)
+Completed 200 OK in 1107ms (Views: 1106.5ms)
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:31:45 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1094.0ms)
+Completed 200 OK in 1106ms (Views: 1105.2ms)
+
+
+Started GET "/networks/" for 127.0.0.1 at 2012-10-08 02:31:48 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (732.4ms)
+Completed 200 OK in 742ms (Views: 741.4ms)
+
+
+Started GET "/networks/" for 127.0.0.1 at 2012-10-08 02:33:16 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1125.5ms)
+Completed 200 OK in 1135ms (Views: 1134.9ms)
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:33:20 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (734.4ms)
+Completed 200 OK in 745ms (Views: 744.3ms)
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:33:26 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1504.7ms)
+Completed 200 OK in 1699ms (Views: 1698.6ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB near_io_dev['$cmd'].find({:getnonce=>1})
+MONGODB near_io_dev['$cmd'].find({"authenticate"=>1, "user"=>"dev", "nonce"=>"8ccdcd5496c781a9", "key"=>"eda4fda81b5cc96e606c1458b7ed1fec"})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB near_io_dev['$cmd'].find({:getnonce=>1})
+MONGODB near_io_dev['$cmd'].find({"authenticate"=>1, "user"=>"dev", "nonce"=>"60a66c9ef1febb10", "key"=>"a7a853f00d5e1347214ba0c474b919eb"})
+Starting the New Relic Agent.
+NewRelic Agent Developer Mode enabled.
+To view performance information, go to http://localhost:3000/newrelic
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:34:29 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1162.2ms)
+Completed 200 OK in 1454ms (Views: 1453.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:34:34 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (759.3ms)
+Completed 200 OK in 769ms (Views: 769.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:35:37 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1091.2ms)
+Completed 200 OK in 1137ms (Views: 1136.7ms)
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:35:44 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (728.0ms)
+Completed 200 OK in 737ms (Views: 736.6ms)
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:36:55 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1441.9ms)
+Completed 200 OK in 1492ms (Views: 1491.2ms)
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:37:24 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1093.5ms)
+Completed 200 OK in 1103ms (Views: 1102.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:37:28 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (732.7ms)
+Completed 200 OK in 742ms (Views: 741.7ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-08 02:43:08 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-08 02:43:08 -0700, "$lt"=>2012-10-09 02:43:08 -0700}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-08 02:43:08 -0700, "$lt"=>2012-10-09 02:43:08 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-08 02:43:08 -0700, "$lt"=>2012-10-09 02:43:08 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (801.8ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1547ms (Views: 1358.3ms)
+
+
+Started GET "/networks" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:44:55 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:03 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:04 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:04 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:04 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:04 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:04 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:04 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:04 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 46ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:05 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:11 -0700
+Processing by NetworksController#index as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:45:53 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1129.9ms)
+Completed 200 OK in 1140ms (Views: 1139.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:46:07 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (879.8ms)
+Completed 200 OK in 890ms (Views: 889.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:47:19 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (733.6ms)
+Completed 200 OK in 744ms (Views: 743.4ms)
+
+
+Started GET "/networks/" for 127.0.0.1 at 2012-10-08 02:47:30 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (725.8ms)
+Completed 200 OK in 736ms (Views: 736.1ms)
+
+
+Started GET "/networks/" for 127.0.0.1 at 2012-10-08 02:48:18 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (735.5ms)
+ERROR: compiling _app_views_layouts_application_html_erb___2521038523934676743_70192319749680 RAISED /Users/maize/Projects/nearnote-api/app/views/layouts/application.html.erb:2: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...rks" or params[:action] == "" );@output_buffer.safe_concat('...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/views/layouts/application.html.erb:75: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/maize/Projects/nearnote-api/app/views/layouts/application.html.erb:77: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_layouts_application_html_erb___2521038523934676743_70192319749680(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html');@output_buffer.append= ( ' id=home ' if if params[:action] == "networks" or params[:action] == "" );@output_buffer.safe_concat('lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>');@output_buffer.append= ( content_for?(:title) ? yield(:title) : "near" );@output_buffer.safe_concat('</title>
+    ');@output_buffer.append= ( csrf_meta_tags );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    ');@output_buffer.append= ( stylesheet_link_tag "application", :media => "all" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( favicon_link_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push([\'_setAccount\', \'UA-29645841-2\']);
+      _gaq.push([\'_trackPageview\']);
+
+      (function() {
+        var ga = document.createElement(\'script\'); ga.type = \'text/javascript\'; ga.async = true;
+        ga.src = (\'https:\' == document.location.protocol ? \'https://ssl\' : \'http://www\') + \'.google-analytics.com/ga.js\';
+        var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    ');@output_buffer.append= ( javascript_include_tag "application" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand pull-left" href="');@output_buffer.append= ( root_url );@output_buffer.safe_concat('"></a>
+          <div class="network navbar-text pull-left">
+');             if @network 
+@output_buffer.safe_concat('              ');@output_buffer.append= ( link_to @network.name, @network );@output_buffer.safe_concat('
+');             end 
+@output_buffer.safe_concat('          </div>
+          <div class="navbar-text pull-left hide">
+            ');@output_buffer.append= ( request.ip unless request.ip.nil? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('            ');@output_buffer.append= ( request.location.city unless request.location.nil? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('            ');@output_buffer.append= ( request.location.country unless request.location.nil? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('          </div>
+          <ul class="nav pull-right">
+');             unless user_signed_in? 
+@output_buffer.safe_concat('            <li>');@output_buffer.append= ( link_to "Login with Facebook", user_omniauth_authorize_path(:facebook) );@output_buffer.safe_concat('</li>
+');             else 
+@output_buffer.safe_concat('            <li class="dropdown" id="userMenu">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#userMenu">
+                ');@output_buffer.append= ( image_tag("https://graph.facebook.com/"+current_user.uid+"/picture", :size => "20x20", :alt => current_user.name) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('                ');@output_buffer.append= ( current_user.name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>');@output_buffer.append= ( link_to "Logout", destroy_user_session_path, :method => :delete );@output_buffer.safe_concat('</li>
+              </ul>
+            </li>
+');             end 
+@output_buffer.safe_concat('          </ul>
+        </div>
+      </div>
+    </div>
+');     if @network 
+@output_buffer.safe_concat('      <div id="map_canvas"></div>
+');     end 
+@output_buffer.safe_concat('    <div id="main" class="container">
+        ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </div> <!-- /container -->
+  </body>
+</html>
+');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_view/template.rb:285:in `module_eval'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_view/template.rb:285:in `compile'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_view/template.rb:233:in `compile!'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_view/template.rb:142:in `block in render'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/notifications.rb:125:in `instrument'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_view/template.rb:141:in `render'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_view/renderer/template_renderer.rb:59:in `render_with_layout'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/newrelic_rpm-3.4.2.1/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:156:in `block in render_with_newrelic'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/newrelic_rpm-3.4.2.1/lib/new_relic/agent/method_tracer.rb:242:in `trace_execution_scoped'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/newrelic_rpm-3.4.2.1/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:155:in `render_with_newrelic'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:88:in `render'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/maize/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/Users/maize/Projects/nearnote-api/app/controllers/networks_controller.rb:7:in `index'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:414:in `_run__1311438282656860011__process_action__1397169604110399022__callbacks'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/notifications.rb:123:in `block in instrument'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/notifications.rb:123:in `instrument'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/params_wrapper.rb:205:in `process_action'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/newrelic_rpm-3.4.2.1/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:34:in `block in process_action'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/newrelic_rpm-3.4.2.1/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:268:in `block in perform_action_with_newrelic_trace'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/newrelic_rpm-3.4.2.1/lib/new_relic/agent/method_tracer.rb:242:in `trace_execution_scoped'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/newrelic_rpm-3.4.2.1/lib/new_relic/agent/instrumentation/controller_instrumentation.rb:263:in `perform_action_with_newrelic_trace'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/newrelic_rpm-3.4.2.1/lib/new_relic/agent/instrumentation/rails3/action_controller.rb:33:in `process_action'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/abstract_controller/base.rb:121:in `process'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal.rb:203:in `dispatch'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_controller/metal.rb:246:in `block in action'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/routing/route_set.rb:600:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/omniauth-1.1.1/lib/omniauth/strategy.rb:177:in `call!'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/omniauth-1.1.1/lib/omniauth/strategy.rb:157:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/newrelic_rpm-3.4.2.1/lib/new_relic/rack/developer_mode.rb:24:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/mongoid-2.4.12/lib/rack/mongoid/middleware/identity_map.rb:33:in `block in call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/mongoid-2.4.12/lib/mongoid.rb:133:in `unit_of_work'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/mongoid-2.4.12/lib/rack/mongoid/middleware/identity_map.rb:33:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/etag.rb:23:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/conditionalget.rb:25:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/cookies.rb:338:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `_run__1857077800814859925__call__3777652714979727507__callbacks'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:405:in `__run_callback'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/rack/logger.rb:26:in `call_app'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/rack/logger.rb:16:in `call'
+/Users/maize/Projects/nearnote-api/config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/runtime.rb:17:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lock.rb:15:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/static.rb:62:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/engine.rb:479:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/application.rb:220:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.5.0/lib/thin/connection.rb:81:in `block in pre_process'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.5.0/lib/thin/connection.rb:79:in `catch'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.5.0/lib/thin/connection.rb:79:in `pre_process'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.5.0/lib/thin/connection.rb:54:in `process'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.5.0/lib/thin/connection.rb:39:in `receive_data'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-1.0.0/lib/eventmachine.rb:187:in `run_machine'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/eventmachine-1.0.0/lib/eventmachine.rb:187:in `run'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.5.0/lib/thin/backends/base.rb:63:in `start'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/thin-1.5.0/lib/thin/server.rb:159:in `start'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/handler/thin.rb:13:in `run'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/server.rb:265:in `start'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/commands/server.rb:70:in `start'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/commands.rb:55:in `block in <top (required)>'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/commands.rb:50:in `tap'
+/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.3/lib/rails/commands.rb:50:in `<top (required)>'
+script/rails:6:in `require'
+script/rails:6:in `<main>'
+Completed 500 Internal Server Error in 740ms
+
+ActionView::Template::Error (/Users/maize/Projects/nearnote-api/app/views/layouts/application.html.erb:2: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...rks" or params[:action] == "" );@output_buffer.safe_concat('...
+...                               ^
+/Users/maize/Projects/nearnote-api/app/views/layouts/application.html.erb:75: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/maize/Projects/nearnote-api/app/views/layouts/application.html.erb:77: syntax error, unexpected keyword_end, expecting ')'):
+    1: <!DOCTYPE html>
+    2: <html<%= ' id=home ' if if params[:action] == "networks" or params[:action] == "" %>lang="en">
+    3:   <head>
+    4:     <meta charset="utf-8">
+    5:     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  app/controllers/networks_controller.rb:7:in `index'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.7ms)
+
+
+Started GET "/networks/" for 127.0.0.1 at 2012-10-08 02:48:28 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (733.2ms)
+Completed 200 OK in 744ms (Views: 743.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:48:33 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (731.0ms)
+Completed 200 OK in 743ms (Views: 743.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:48:53 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (741.7ms)
+Completed 200 OK in 753ms (Views: 752.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:49:01 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (732.4ms)
+Completed 200 OK in 743ms (Views: 742.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:49:21 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (725.2ms)
+Completed 200 OK in 740ms (Views: 739.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:49:28 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (731.8ms)
+Completed 200 OK in 743ms (Views: 743.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:49:31 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (731.7ms)
+Completed 200 OK in 741ms (Views: 740.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:49:46 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (736.8ms)
+Completed 200 OK in 794ms (Views: 793.9ms)
+
+
+Started GET "/networks/" for 127.0.0.1 at 2012-10-08 02:49:55 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (735.7ms)
+Completed 200 OK in 745ms (Views: 745.0ms)
+
+
+Started GET "/networks/" for 127.0.0.1 at 2012-10-08 02:50:11 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (736.4ms)
+Completed 200 OK in 747ms (Views: 746.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 02:50:16 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (871.1ms)
+Completed 200 OK in 923ms (Views: 923.1ms)
