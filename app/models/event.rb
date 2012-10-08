@@ -1,6 +1,8 @@
 class Event
   include Mongoid::Document
 
+  has_one :group, autosave: true
+
   embeds_one :facebook_event
 
   paginates_per 25

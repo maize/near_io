@@ -21795,3 +21795,133 @@ MONGODB near_io_dev['facebook_categories'].find({:name=>"Fictional character"}).
 MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>336231780970}).sort([[:_id, :asc]])
 MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
 MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>327758349743}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Education"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>103512251417}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>11955325695}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>20396365540}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>8651510029}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>5660597307}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>6092929747}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Tv show"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>6798562721}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Tv show"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>22934684677}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Tv show"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>8028052326}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>36926621435}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Artist"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>7085518563}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>82151588544}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>9670237682}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>39633062089}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>33719154791}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>102219611945}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>6780627097}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>7530846195}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>14210012172}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>60144069162}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>15456537827}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Public figure"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>78789848792}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Travel/leisure"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>149568353630}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Travel/leisure"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>103039080948}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Computers/internet"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>234407620388}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Clothing"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>23698278048}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Club"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>25747171884}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Travel/leisure"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>41068942022}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Local business"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>29112278285}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Tv show"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>51021743771}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Food/beverages"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>91132889777}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Musician/band"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>13274077007}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Tv show"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>18409425969}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Food/beverages"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>34979636189}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Company"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>56718692455}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Artist"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_likes'].find({:facebook_id=>21376831257}).sort([[:_id, :asc]])
+MONGODB near_io_dev['facebook_categories'].find({:name=>"Radio station"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].update({"_id"=>BSON::ObjectId('5023b1f7b98254fd53000001')}, {"$set"=>{"last_sign_in_at"=>2012-10-08 08:41:32 UTC, "current_sign_in_at"=>2012-10-08 08:56:06 UTC, "sign_in_count"=>64}})
+Redirected to http://localhost:3000/networks/ucl
+Completed 302 Found in 85086ms
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-08 01:56:06 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-08 01:56:06 -0700, "$lt"=>2012-10-09 01:56:06 -0700}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-08 01:56:06 -0700, "$lt"=>2012-10-09 01:56:06 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-08 01:56:06 -0700, "$lt"=>2012-10-09 01:56:06 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (784.8ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1396ms (Views: 1190.8ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-08 02:06:44 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-08 02:06:44 -0700, "$lt"=>2012-10-09 02:06:44 -0700}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-08 02:06:44 -0700, "$lt"=>2012-10-09 02:06:44 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+  Rendered networks/show.html.erb within layouts/application (365.3ms)
+Completed 500 Internal Server Error in 552ms
+
+ActionView::Template::Error (can't convert Fixnum into String):
+    20:         <p><b><%= event.start_time.strftime('%I:%M %p') %><%= " - "+event.end_time.strftime('%I:%M %p') unless event.end_time.nil? %><%= ", "+event.facebook_event.location unless event.facebook_event.location.nil? %></b></p>
+    21:         <p><%= event.description unless event.description.nil? %></p>
+    22:         <div class="clearfix">
+    23:           <%= link_to "more", "http://facebook.com/"+event.facebook_event.facebook_id, :class => "btn btn-primary pull-left" %>
+    24:           <% unless event.facebook_event.attending_female.nil? and event.facebook_event.attending_male.nil? %>
+    25:             <p><%= event.facebook_event.attending_female %> girls and <%= event.facebook_event.attending_male %> guys are coming</p>
+    26:           <% end %>
+  app/views/networks/show.html.erb:23:in `+'
+  app/views/networks/show.html.erb:23:in `block in _app_views_networks_show_html_erb___2008175507840081343_70186494193580'
+  app/views/networks/show.html.erb:11:in `_app_views_networks_show_html_erb___2008175507840081343_70186494193580'
+  app/controllers/networks_controller.rb:35:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.2ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.0ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-08 02:07:02 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-08 02:07:02 -0700, "$lt"=>2012-10-09 02:07:02 -0700}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-08 02:07:02 -0700, "$lt"=>2012-10-09 02:07:02 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-08 02:07:02 -0700, "$lt"=>2012-10-09 02:07:02 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (548.5ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1332ms (Views: 930.5ms)
