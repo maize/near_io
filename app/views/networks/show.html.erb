@@ -1,9 +1,9 @@
 <div class="dateSelector clearfix">
-    <p class="pull-left timestamp"><%= @date.strftime('%A, %d. %B') %></p>
     <div class="pull-left btn-group">
         <a class="btn" href="<%= network_date_path(@network, (@date-1.day).strftime('%Y'),(@date-1.day).strftime('%m'),(@date-1.day).strftime('%d')) %>"><i class="icon-chevron-left"></i></a>
         <a class="btn" href="<%= network_date_path(@network, (@date+1.day).strftime('%Y'),(@date+1.day).strftime('%m'),(@date+1.day).strftime('%d')) %>"><i class="icon-chevron-right"></i></a>
     </div>
+    <p class="pull-left timestamp"><%= @date.strftime('%A, %d. %B') %></p>
 </div>
 
 <div class="accordion">

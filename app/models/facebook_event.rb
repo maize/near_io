@@ -3,6 +3,7 @@ class FacebookEvent
 
   has_and_belongs_to_many :attending_facebook_users, class_name: "FacebookUser", inverse_of: nil
   has_many :maybe_facebook_users, class_name: "FacebookUser", inverse_of: nil
+  has_many :declined_facebook_users, class_name: "FacebookUser", inverse_of: nil
   has_many :invited_facebook_users, class_name: "FacebookUser", inverse_of: nil
 
   embedded_in :event
@@ -27,6 +28,17 @@ class FacebookEvent
   field :maybe, :type => Integer
   field :maybe_male, :type => Integer
   field :maybe_female, :type => Integer
+  field :maybe_unknown, :type => Integer
+
+  field :declined, :type => Integer
+  field :declined_male, :type => Integer
+  field :declined_female, :type => Integer
+  field :declined_unknown, :type => Integer
+
+  field :invited, :type => Integer
+  field :invited_male, :type => Integer
+  field :invited_female, :type => Integer
+  field :invited_unknown, :type => Integer
 
   def self.parse_details(hash)
     parsed_hash = {
@@ -64,7 +76,21 @@ class FacebookEvent
   	@graph = Koala::Facebook::API.new(access_token)
 
   	p "Get Facebook Events.."
-  	results = @graph.get_connections(facebook_id, "events", :fields => "name, description, owner, venue, location, timezone, start_time, end_time, updated_time, privacy, attending.fields(gender, name, first_name, last_name, link, username, updated_time)")
+  	results = @graph.get_connections(facebook_id, "events", 
+      :fields => "name, 
+                  description, 
+                  owner, 
+                  venue, 
+                  location, 
+                  timezone, 
+                  start_time, 
+                  end_time, 
+                  updated_time, 
+                  privacy, 
+                  attending.fields(gender, name, first_name, last_name, link, username, updated_time), 
+                  maybe.fields(gender, name, first_name, last_name, link, username, updated_time), 
+                  declined.fields(gender, name, first_name, last_name, link, username, updated_time), 
+                  invited.fields(gender, name, first_name, last_name, link, username, updated_time)")
   	fb_events = []
 
   	loop do
