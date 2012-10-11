@@ -4,7 +4,8 @@ class Group
   embeds_one :facebook_group
   embeds_one :facebook_page
 
-  has_many :events, autosave: true
+  has_many :events, inverse_of: nil, autosave: true
+
   has_and_belongs_to_many :networks
 
   paginates_per 25
