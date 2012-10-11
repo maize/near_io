@@ -26361,3 +26361,57 @@ MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.s
   Rendered networks/show.html.erb within layouts/application (1083.2ms)
 MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
 Completed 200 OK in 2066ms (Views: 1833.9ms)
+
+
+Started GET "/albums/12/photos" for 127.0.0.1 at 2012-10-08 12:32:27 -0700
+
+ActionController::RoutingError (No route matches [GET] "/albums/12/photos"):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/albums/12/photos" for 127.0.0.1 at 2012-10-08 12:32:43 -0700
+
+ActionController::RoutingError (No route matches [GET] "/albums/12/photos"):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/albums/12/photos" for 127.0.0.1 at 2012-10-08 12:32:44 -0700
+
+ActionController::RoutingError (No route matches [GET] "/albums/12/photos"):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/albums/12/photos" for 127.0.0.1 at 2012-10-08 12:32:44 -0700
+
+ActionController::RoutingError (No route matches [GET] "/albums/12/photos"):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/albums/12/photos" for 127.0.0.1 at 2012-10-08 12:32:44 -0700
+
+ActionController::RoutingError (No route matches [GET] "/albums/12/photos"):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/albums/12/photos" for 127.0.0.1 at 2012-10-08 12:32:44 -0700
+
+ActionController::RoutingError (No route matches [GET] "/albums/12/photos"):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)

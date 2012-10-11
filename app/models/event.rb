@@ -1,7 +1,7 @@
 class Event
   include Mongoid::Document
 
-  has_one :group, autosave: true
+  belongs_to :group, autosave: true
 
   embeds_one :facebook_event
 
