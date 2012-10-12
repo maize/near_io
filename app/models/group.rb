@@ -4,7 +4,7 @@ class Group
   embeds_one :facebook_group
   embeds_one :facebook_page
 
-  has_many :events, inverse_of: nil, autosave: true
+  has_many :events
 
   has_and_belongs_to_many :networks
 
@@ -62,5 +62,6 @@ class Group
     # end
 
     self.events = fb_events
+    self.save
   end
 end
