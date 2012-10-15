@@ -41,6 +41,7 @@ class FacebookEvent
   field :invited_unknown, :type => Integer
 
   def self.parse_details(hash)
+    # Time.at(@auth[:credentials][:expires_at]).to_datetime 
     parsed_hash = {
       :facebook_id => hash["id"],
       :name => hash["name"],
@@ -49,9 +50,9 @@ class FacebookEvent
       :location => hash["location"],
       :venue => hash["venue"],
       :timezone => hash["timezone"],
-      :start_time => hash["start_time"],
-      :end_time => hash["end_time"],
-      :updated_time => hash["updated_time"],
+      :start_time => (DateTime.parse(hash["start_time"]) unless hash["start_time"].nil?),
+      :end_time => (DateTime.parse(hash["end_time"]) unless hash["end_time"].nil?),
+      :updated_time => (DateTime.parse(hash["updated_time"]) unless hash["updated_time"].nil?),
       :privacy => hash["privacy"]
     }
     parsed_hash

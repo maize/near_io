@@ -23,7 +23,13 @@
     </div>
     <div id="<%= event.id %>" class="accordion-body collapse">
       <div class="accordion-inner">
-        <p><b><%= event.start_time.strftime('%I:%M %p') %><%= " - "+event.end_time.strftime('%I:%M %p') unless event.end_time.nil? %><%= ", "+event.facebook_event.location unless event.facebook_event.location.nil? %></b></p>
+        <p>
+          <b>
+            <%= event.start_time.in_time_zone(event.facebook_event.timezone).strftime('%I:%M %p') unless event.end_time.nil? %>
+            <%= " - "+event.end_time.in_time_zone(event.facebook_event.timezone).strftime('%I:%M %p') unless event.end_time.nil? %>
+            <%= ", "+event.facebook_event.location unless event.facebook_event.location.nil? %>
+          </b>
+        </p>
         <p><%= event.description unless event.description.nil? %></p>
         <div class="clearfix">
           <%= link_to "more", "http://facebook.com/"+event.facebook_event.facebook_id.to_s, :target => "_blank", :class => "btn btn-more btn-primary btn-small pull-left" %>
