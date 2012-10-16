@@ -75,6 +75,7 @@ class FacebookEvent
     parsed
 
     p "Parsed time: "+parsed.to_s
+    p "Parsed time in Europe/London: "+parsed.in_time_zone("Europe/London").to_s
   end
 
   def self.parse_event_users(hash)
