@@ -34113,3 +34113,58 @@ MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10
   Rendered networks/show.html.erb within layouts/application (741.5ms)
 MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
 Completed 200 OK in 1354ms (Views: 1137.1ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-16 15:06:39 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-16 15:06:39 -0700, "$lt"=>2012-10-17 15:06:39 -0700}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-16 15:06:39 -0700, "$lt"=>2012-10-17 15:06:39 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-16 15:06:39 -0700, "$lt"=>2012-10-17 15:06:39 -0700}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-16 15:06:39 -0700, "$lt"=>2012-10-17 15:06:39 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+  Rendered networks/show.html.erb within layouts/application (758.7ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1578ms (Views: 1396.2ms)
+
+
+Started GET "/user/logout" for 127.0.0.1 at 2012-10-16 15:06:44 -0700
+Processing by Devise::SessionsController#destroy as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].update({"_id"=>BSON::ObjectId('5023b1f7b98254fd53000001')}, {"$set"=>{"remember_created_at"=>nil}})
+Redirected to http://localhost:3000/
+Completed 302 Found in 505ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-16 15:06:44 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+  Rendered networks/index.html.erb within layouts/application (216.3ms)
+Completed 200 OK in 228ms (Views: 227.8ms)
+
+
+Started GET "/user/auth/facebook" for 127.0.0.1 at 2012-10-16 15:06:50 -0700
+
+
+Started GET "/user/auth/facebook/callback?state=1bc63fe448c9bc881d5d05baeb713b60c1663672a3a300d7&code=AQChZojzmAc37qYo4aO4oqwcliNp21maErVPLx-wytzNYIXNt7w08qzsFDs--nY-XO_GgSSaygnj1EBIOrnumIyzPAPI7T3doiABGgyQWSqkXAxwInMLyiNgOg9Bc3wBZVRDVY5GUa9tfkNsOqBPabWjpJJ-WKeuBrPS2O19OYN7o3mLa73dUqIlew9zlCtcjcKiraOeYUFX6OhGRCE-8Kkq" for 127.0.0.1 at 2012-10-16 15:06:57 -0700
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"state"=>"1bc63fe448c9bc881d5d05baeb713b60c1663672a3a300d7", "code"=>"AQChZojzmAc37qYo4aO4oqwcliNp21maErVPLx-wytzNYIXNt7w08qzsFDs--nY-XO_GgSSaygnj1EBIOrnumIyzPAPI7T3doiABGgyQWSqkXAxwInMLyiNgOg9Bc3wBZVRDVY5GUa9tfkNsOqBPabWjpJJ-WKeuBrPS2O19OYN7o3mLa73dUqIlew9zlCtcjcKiraOeYUFX6OhGRCE-8Kkq"}
+MONGODB near_io_dev['users'].find({:provider=>"facebook", :uid=>"687223675"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].update({"_id"=>BSON::ObjectId('5023b1f7b98254fd53000001')}, {"$set"=>{"expires_at"=>2012-12-15 22:06:56 UTC, "token"=>"AAACu5uuZCZACYBANuTg2ztPor9MKKpFjZBEtzZAhYcE6y8iN5IrQ0PoV8CZANJqU6bqu0mftEvOZBWedNH8khXfxKXUxbtWlgsVZCt2ixJwqAZDZD"}})
+MONGODB near_io_dev['users'].update({"_id"=>BSON::ObjectId('5023b1f7b98254fd53000001')}, {"$set"=>{"remember_created_at"=>2012-10-16 22:06:58 UTC}})
+MONGODB near_io_dev['users'].update({"_id"=>BSON::ObjectId('5023b1f7b98254fd53000001')}, {"$set"=>{"last_sign_in_at"=>2012-10-16 21:22:52 UTC, "current_sign_in_at"=>2012-10-16 22:06:58 UTC, "sign_in_count"=>78}})
+Redirected to http://localhost:3000/networks/ucl
+Completed 302 Found in 489ms
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-16 15:06:58 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-16 15:06:58 -0700, "$lt"=>2012-10-17 15:06:58 -0700}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-16 15:06:58 -0700, "$lt"=>2012-10-17 15:06:58 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-16 15:06:58 -0700, "$lt"=>2012-10-17 15:06:58 -0700}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-16 15:06:58 -0700, "$lt"=>2012-10-17 15:06:58 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+  Rendered networks/show.html.erb within layouts/application (778.7ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1400ms (Views: 1216.9ms)
