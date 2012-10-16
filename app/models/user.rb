@@ -80,6 +80,7 @@ class User
     user.token = auth.credentials.token
     user.save
     user.remember_me!
+    p "Logging user: "+user.to_s
     # user.get_facebook_places
     user.get_facebook_likes
     user
