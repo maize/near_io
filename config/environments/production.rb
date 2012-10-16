@@ -68,5 +68,5 @@ Near::Application.configure do
 end
 
 Devise.setup do |config|
-  config.omniauth :facebook, "187798787990772", "5f932520a31f3d0be11b30d44cc10d04", {:scope => ""}
+  config.omniauth :facebook, "187798787990772", "5f932520a31f3d0be11b30d44cc10d04", {:scope => "email friends_likes publish_actions user_about_me user_actions.music user_actions.news user_actions.video user_activities user_birthday user_checkins user_education_history user_events user_games_activity user_groups user_hometown user_interests user_likes user_location user_notes user_photo_video_tags user_photos user_questions user_relationship_details user_relationships user_religion_politics user_status user_subscriptions user_videos user_website user_work_history"}
 end
