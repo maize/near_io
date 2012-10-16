@@ -74,6 +74,8 @@ class FacebookEvent
     
     parsed
 
+    p Time.zone.to_s
+    p Time.zone.now.to_s
     p "Parsed time: "+parsed.to_s
     p "Parsed time in Europe/London: "+parsed.in_time_zone("Europe/London").to_s
   end
