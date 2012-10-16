@@ -80,7 +80,7 @@ class User
     user.token = auth.credentials.token
     user.save
     user.remember_me!
-    user.get_facebook_places
+    # user.get_facebook_places
     user.get_facebook_likes
     user
   end
@@ -110,7 +110,7 @@ class User
   end
 
   def get_facebook_likes
-    #unless self.facebook_likes.exists?
+    unless self.facebook_likes.exists?
       @graph = Koala::Facebook::API.new(self.token)
 
       p "Get Facebook likes.."
@@ -152,7 +152,7 @@ class User
 
       self.save
 
-    #end
+    end
     self.facebook_likes
   end
 

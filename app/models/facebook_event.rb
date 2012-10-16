@@ -66,18 +66,15 @@ class FacebookEvent
     
     # TODO: this could be improved
     # Simple check for timezone in timestring, e.g. 2012-10-09T18:30:00+0100
-    # if str.include?("+")
-    #   parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S %z")
-    # else
-    #   parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S")
-    # end
-    parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S")
+    if str.include?("+")
+      parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S %z")
+    else
+      parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S")
+    end
+
+    p "Parsed time: "+parsed.to_s
 
     parsed
-
-    p Time.zone.to_s
-    p Time.zone.now.to_s
-    p "Parsed time: "+Time.zone.parse(parsed).to_s
   end
 
   def self.parse_event_users(hash)
@@ -98,7 +95,7 @@ class FacebookEvent
   def self.get_all_by_facebook_id(facebook_id, access_token)
   	@graph = Koala::Facebook::API.new(access_token)
 
-  	p "Get Facebook Events.."
+  	p "Get Facebook Events of "+facebook_id.to_s
   	results = @graph.get_connections(facebook_id, "events", 
       :fields => "name, 
                   description, 
