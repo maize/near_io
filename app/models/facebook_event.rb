@@ -77,7 +77,7 @@ class FacebookEvent
 
     p Time.zone.to_s
     p Time.zone.now.to_s
-    p "Parsed to UTC: "+Time.zone.parse(parsed).utc.to_s
+    p "Parsed time: "+Time.zone.parse(parsed).to_s
   end
 
   def self.parse_event_users(hash)
