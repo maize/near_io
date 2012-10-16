@@ -41,7 +41,7 @@ class FacebookEvent
   field :invited_unknown, :type => Integer
 
   def self.parse_details(hash)
-    # Time.at(@auth[:credentials][:expires_at]).to_datetime 
+    p "Parsing: "+hash
     parsed_hash = {
       :facebook_id => hash["id"],
       :name => hash["name"],
@@ -142,7 +142,7 @@ class FacebookEvent
           fb_event.invited_facebook_users = invited
         end
 
-        p fb_event
+        p fb_event.get_venue_details
 
   			fb_events.push(fb_event)
   		end
@@ -152,6 +152,14 @@ class FacebookEvent
   	end
 
   	fb_events
+  end
+
+  def get_venue_details(access_token)
+    @graph = Koala::Facebook::API.new(access_token)
+
+    venue = @graph.get_object(self.venue["id"].to_s)
+
+    venue
   end
 
   def self.num_gender(attendees)
