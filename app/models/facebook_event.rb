@@ -41,7 +41,7 @@ class FacebookEvent
   field :invited_unknown, :type => Integer
 
   def self.parse_details(hash)
-    p "Parsing: "+hash
+    p "Parsing: "+hash.to_s
     parsed_hash = {
       :facebook_id => hash["id"],
       :name => hash["name"],
