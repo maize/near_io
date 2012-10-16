@@ -66,18 +66,18 @@ class FacebookEvent
     
     # TODO: this could be improved
     # Simple check for timezone in timestring, e.g. 2012-10-09T18:30:00+0100
-    if str.include?("+")
-      parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S %z")
-    else
-      parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S")
-    end
-    
+    # if str.include?("+")
+    #   parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S %z")
+    # else
+    #   parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S")
+    # end
+    parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S")
+
     parsed
 
     p Time.zone.to_s
     p Time.zone.now.to_s
-    p "Parsed time: "+parsed.to_s
-    p "Parsed time in Europe/London: "+parsed.in_time_zone("Europe/London").to_s
+    p "Parsed to UTC: "+Time.zone.parse(parsed).utc
   end
 
   def self.parse_event_users(hash)
