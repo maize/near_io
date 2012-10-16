@@ -41,7 +41,6 @@ class FacebookEvent
   field :invited_unknown, :type => Integer
 
   def self.parse_details(hash)
-    p "Parsing: "+hash.to_s
     parsed_hash = {
       :facebook_id => hash["id"],
       :name => hash["name"],
@@ -50,9 +49,9 @@ class FacebookEvent
       :location => hash["location"],
       :venue => hash["venue"],
       :timezone => hash["timezone"],
-      :start_time => (DateTime.strptime(hash["start_time"], "%Y-%m-%dT%H:%M:%S%z") unless hash["start_time"].nil?), # 2012-10-09T18:30:00+0100
-      :end_time => (DateTime.strptime(hash["end_time"], "%Y-%m-%dT%H:%M:%S%z") unless hash["end_time"].nil?),
-      :updated_time => (DateTime.strptime(hash["updated_time"], "%Y-%m-%dT%H:%M:%S%z") unless hash["updated_time"].nil?),
+      :start_time => (DateTime.strptime(hash["start_time"], "%Y-%m-%dT%H:%M:%S") unless hash["start_time"].nil?), # 2012-10-09T18:30:00+0100
+      :end_time => (DateTime.strptime(hash["end_time"], "%Y-%m-%dT%H:%M:%S") unless hash["end_time"].nil?),
+      :updated_time => (DateTime.strptime(hash["updated_time"], "%Y-%m-%dT%H:%M:%S") unless hash["updated_time"].nil?),
       :privacy => hash["privacy"]
     }
     parsed_hash
