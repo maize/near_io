@@ -41,6 +41,8 @@ class FacebookEvent
   field :invited_unknown, :type => Integer
 
   def self.parse_details(hash)
+    p "Processing Facebook event: "+hash["id"].to_s
+    p hash.to_s
     parsed_hash = {
       :facebook_id => hash["id"],
       :name => hash["name"],
@@ -54,7 +56,6 @@ class FacebookEvent
       :updated_time => (FacebookEvent.parseFbTime(hash["updated_time"]) unless hash["updated_time"].nil?),
       :privacy => hash["privacy"]
     }
-    p "Processing Facebook event: "+hash["id"].to_s
     parsed_hash
   end
 
@@ -73,7 +74,7 @@ class FacebookEvent
     
     parsed
 
-    p parsed
+    p "Parsed time: "+parsed.to_s
   end
 
   def self.parse_event_users(hash)
