@@ -4,8 +4,6 @@ development:
   database: near_io_dev
   # database: app4487356
   logger: true
-  use_utc: false
-  use_activesupport_time_zone: true
 
 test:
   host: localhost
@@ -15,8 +13,6 @@ test:
 production:
   uri: mongodb://staging:Nearnote12@ds039007.mongolab.com:39007/heroku_app8128986
   database: app4487356
-  use_utc: false
-  use_activesupport_time_zone: true
   # slaves:
   #   - host: slave1.local
   #     port: 27018
