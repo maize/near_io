@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p><b>Name: </b><%= @event.name %></p>
+<p><b>Facebook ID: </b><%= @event.facebook_event.facebook_id %></p>
 <p><b>Attending Male: </b><%= @event.facebook_event.attending_male %></p>
 <p><b>Attending Female: </b><%= @event.facebook_event.attending_female %></p>
+<p><b>Start time: </b><%= @event.facebook_event.start_time unless @event.facebook_event.start_time.nil? %></p>
+<p><b>Start time: </b><%= @event.facebook_event.start_time.in_time_zone(@event.facebook_event.timezone) unless @event.facebook_event.start_time.nil? %></p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Edit', edit_event_path(@event), :class => "btn" %>
+<%= link_to 'Back', events_path, :class => "btn" %>

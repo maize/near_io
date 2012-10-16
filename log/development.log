@@ -29330,3 +29330,196 @@ MONGODB near_io_dev['events'].find({}).limit(25)
 MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
   Rendered events/index.html.erb within layouts/application (783.3ms)
 Completed 200 OK in 1335ms (Views: 795.7ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB near_io_dev['$cmd'].find({:getnonce=>1})
+MONGODB near_io_dev['$cmd'].find({"authenticate"=>1, "user"=>"dev", "nonce"=>"85e25a2003382025", "key"=>"af1d1d5b0eef218fa890fe7c3f70f199"})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB near_io_dev['$cmd'].find({:getnonce=>1})
+MONGODB near_io_dev['$cmd'].find({"authenticate"=>1, "user"=>"dev", "nonce"=>"58102cd82f048171", "key"=>"a7cea51a80eb7e53b2be9bb88c12594f"})
+Starting the New Relic Agent.
+NewRelic Agent Developer Mode enabled.
+To view performance information, go to http://localhost:3000/newrelic
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-15 20:50:51 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (1296.5ms)
+Completed 200 OK in 1412ms (Views: 1410.8ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 20:50:56 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-15 20:50:56 -0700, "$lt"=>2012-10-16 20:50:56 -0700}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-15 20:50:56 -0700, "$lt"=>2012-10-16 20:50:56 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-15 20:50:56 -0700, "$lt"=>2012-10-16 20:50:56 -0700}}, "fields"=>nil})
+  Rendered networks/show.html.erb within layouts/application (973.0ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 1855ms (Views: 1605.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-15 20:54:16 -0700
+Processing by NetworksController#index as HTML
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/index.html.erb within layouts/application (781.8ms)
+Completed 200 OK in 796ms (Views: 796.1ms)
+
+
+Started GET "/networks/new" for 127.0.0.1 at 2012-10-15 21:21:44 -0700
+Processing by NetworksController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/_form.html.erb (20.0ms)
+  Rendered networks/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 711ms (Views: 34.4ms)
+
+
+Started GET "/groups/50726e03b9825430a4000004" for 127.0.0.1 at 2012-10-15 21:21:55 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"50726e03b9825430a4000004"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"group_id"=>BSON::ObjectId('50726e03b9825430a4000004')}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"group_id"=>BSON::ObjectId('50726e03b9825430a4000004')})
+  Rendered groups/show.html.erb within layouts/application (529.4ms)
+Completed 200 OK in 2466ms (Views: 541.9ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:22:06 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1258ms (Views: 12.5ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:23:26 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1447ms (Views: 12.3ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:24:00 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1206ms (Views: 12.5ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:24:41 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 3446ms (Views: 19.3ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:25:01 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1363ms (Views: 10.9ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:25:08 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1213ms (Views: 11.3ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:25:38 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1278ms (Views: 53.6ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:26:26 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1246ms (Views: 12.4ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:27:11 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1210ms (Views: 12.7ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:27:17 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1294ms (Views: 12.7ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:28:13 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1197ms (Views: 10.7ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:28:24 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1307ms (Views: 54.5ms)
+
+
+Started GET "/events/50727828b9825430a40000cb" for 127.0.0.1 at 2012-10-15 21:30:50 -0700
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"50727828b9825430a40000cb"}
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({:_id=>BSON::ObjectId('50727828b9825430a40000cb')}).sort([[:_id, :asc]])
+  Rendered events/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 1656ms (Views: 12.0ms)
