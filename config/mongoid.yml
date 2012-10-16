@@ -4,6 +4,8 @@ development:
   database: near_io_dev
   # database: app4487356
   logger: true
+  use_utc: false
+  use_activesupport_time_zone: true
 
 test:
   host: localhost

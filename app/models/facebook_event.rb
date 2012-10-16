@@ -12,9 +12,9 @@ class FacebookEvent
   field :name, :type => String
   field :owner, :type => Hash
   field :description, :type => String
-  field :start_time, :type => DateTime
-  field :end_time, :type => DateTime
-  field :updated_time, :type => DateTime
+  field :start_time, :type => Time
+  field :end_time, :type => Time
+  field :updated_time, :type => Time
   field :location, :type => String
   field :venue, :type => Hash
   field :timezone, :type => String
@@ -50,9 +50,9 @@ class FacebookEvent
       :location => hash["location"],
       :venue => hash["venue"],
       :timezone => hash["timezone"],
-      :start_time => (DateTime.parse(hash["start_time"]) unless hash["start_time"].nil?),
-      :end_time => (DateTime.parse(hash["end_time"]) unless hash["end_time"].nil?),
-      :updated_time => (DateTime.parse(hash["updated_time"]) unless hash["updated_time"].nil?),
+      :start_time => (DateTime.strptime(hash["start_time"], "%Y-%m-%dT%H:%M:%S%z") unless hash["start_time"].nil?), # 2012-10-09T18:30:00+0100
+      :end_time => (DateTime.strptime(hash["end_time"], "%Y-%m-%dT%H:%M:%S%z") unless hash["end_time"].nil?),
+      :updated_time => (DateTime.strptime(hash["updated_time"], "%Y-%m-%dT%H:%M:%S%z") unless hash["updated_time"].nil?),
       :privacy => hash["privacy"]
     }
     parsed_hash
