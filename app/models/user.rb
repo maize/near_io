@@ -75,14 +75,15 @@ class User
                         password:Devise.friendly_token[0,20],
                         expires_at: auth.credentials.expires_at,
                         token: auth.credentials.token)
+    else
+      user.expires_at = auth.credentials.expires_at
+      user.token = auth.credentials.token
+      user.save
     end
-    user.expires_at = auth.credentials.expires_at
-    user.token = auth.credentials.token
-    user.save
     user.remember_me!
-    p "Logging user: "+user.to_s
+    p auth.credentials
     # user.get_facebook_places
-    user.get_facebook_likes
+    # user.get_facebook_likes
     user
   end
 
