@@ -61,7 +61,7 @@ class FacebookEvent
     parsed = DateTime.new
     
     # TODO: this could be improved
-    p str.include?("+")
+    # Simple check for timezone in timestring
     if str.include?("+")
       parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S %z")
     else

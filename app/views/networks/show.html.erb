@@ -13,8 +13,8 @@
     <div class="accordion-heading">
         <a class="accordion-toggle clearfix" data-toggle="collapse" href="#<%= event.id %>">
             <span class="pull-left">
-              <b><%= event.start_time.strftime('%I:%M %p') unless event.start_time.nil? %></b> <%= event.name unless event.nil? %>
-              <i><%= "by "+event.group.name %></i>
+              <b><%= event.start_time.strftime('%I:%M %p') unless event.start_time.nil? %></b> <%= event.name unless event.name.nil? %>
+              <i><%= "by "+event.group.name unless event.group.nil? %></i>
             </span>
             <span class="pull-right time-difference">
               in <%= distance_of_time_in_words_to_now(event.start_time) unless event.start_time.nil? %>
@@ -25,7 +25,7 @@
       <div class="accordion-inner">
         <p>
           <b>
-            <%= event.start_time.strftime('%I:%M %p') unless event.end_time.nil? %>
+            <%= event.start_time.strftime('%I:%M %p') unless event.start_time.nil? %>
             <%= " - "+event.end_time.strftime('%I:%M %p') unless event.end_time.nil? %>
             <%= ", "+event.facebook_event.location unless event.facebook_event.location.nil? %>
           </b>
@@ -54,5 +54,14 @@
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+    <% @events.each do |event| %>
+      <% if not event.facebook_event.venue.nil? and event.facebook_event.venue.has_key?("location") %>
+        var latLon = new google.maps.LatLng(<%= event.facebook_event.venue["location"]["latitude"] %>,<%= event.facebook_event.venue["location"]["longitude"] %>);
+        var marker = new google.maps.Marker({
+          position: latLon
+        });
+        marker.setMap(map);
+      <% end %>
+    <% end %>
   });
 </script>

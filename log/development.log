@@ -32531,3 +32531,370 @@ MONGODB near_io_dev['events'].update({"group_id"=>BSON::ObjectId('50726e03b98254
 DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
   Rendered text template (0.0ms)
 Completed 200 OK in 110547ms (Views: 7.6ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB near_io_dev['$cmd'].find({:getnonce=>1})
+MONGODB near_io_dev['$cmd'].find({"authenticate"=>1, "user"=>"dev", "nonce"=>"65e16555511018ce", "key"=>"3401b588cd6c8fb7b95af36f885c55c8"})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB near_io_dev['$cmd'].find({:getnonce=>1})
+MONGODB near_io_dev['$cmd'].find({"authenticate"=>1, "user"=>"dev", "nonce"=>"fee9524c59e46cba", "key"=>"971fd177e8ef6a2d2cbe2fd260bbe4b5"})
+Starting the New Relic Agent.
+NewRelic Agent Developer Mode enabled.
+To view performance information, go to http://localhost:3000/newrelic
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:30:28 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-15 23:30:28 -0700, "$lt"=>2012-10-16 23:30:28 -0700}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-15 23:30:28 -0700, "$lt"=>2012-10-16 23:30:28 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"facebook_event.start_time"=>{"$gt"=>2012-10-15 23:30:28 -0700, "$lt"=>2012-10-16 23:30:28 -0700}}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"facebook_event.start_time"=>{"$gt"=>2012-10-15 23:30:28 -0700, "$lt"=>2012-10-16 23:30:28 -0700}}).limit(25).sort([["facebook_event.start_time", :asc]])
+  Rendered networks/show.html.erb within layouts/application (1004.8ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2387ms (Views: 1929.5ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:31:04 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({})
+  Rendered networks/show.html.erb within layouts/application (861.1ms)
+Completed 500 Internal Server Error in 1274ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    14:         <a class="accordion-toggle clearfix" data-toggle="collapse" href="#<%= event.id %>">
+    15:             <span class="pull-left">
+    16:               <b><%= event.start_time.strftime('%I:%M %p') unless event.start_time.nil? %></b> <%= event.name unless event.nil? %>
+    17:               <i><%= "by "+event.group.name %></i>
+    18:             </span>
+    19:             <span class="pull-right time-difference">
+    20:               in <%= distance_of_time_in_words_to_now(event.start_time) unless event.start_time.nil? %>
+  app/views/networks/show.html.erb:17:in `block in _app_views_networks_show_html_erb___3423783378767106327_70100801820860'
+  app/views/networks/show.html.erb:11:in `_app_views_networks_show_html_erb___3423783378767106327_70100801820860'
+  app/controllers/networks_controller.rb:36:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.9ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:31:42 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({})
+  Rendered networks/show.html.erb within layouts/application (804.0ms)
+Completed 500 Internal Server Error in 996ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    14:         <a class="accordion-toggle clearfix" data-toggle="collapse" href="#<%= event.id %>">
+    15:             <span class="pull-left">
+    16:               <b><%= event.start_time.strftime('%I:%M %p') unless event.start_time.nil? %></b> <%= event.start_time unless event.nil? %>
+    17:               <i><%= "by "+event.group.name %></i>
+    18:             </span>
+    19:             <span class="pull-right time-difference">
+    20:               in <%= distance_of_time_in_words_to_now(event.start_time) unless event.start_time.nil? %>
+  app/views/networks/show.html.erb:17:in `block in _app_views_networks_show_html_erb___3423783378767106327_70100842167920'
+  app/views/networks/show.html.erb:11:in `_app_views_networks_show_html_erb___3423783378767106327_70100842167920'
+  app/controllers/networks_controller.rb:36:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.6ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:32:05 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['events'].find({})
+  Rendered networks/show.html.erb within layouts/application (2073.0ms)
+Completed 500 Internal Server Error in 2268ms
+
+ActionView::Template::Error (undefined method `current_page' for #<Array:0x007f83409e78a0>):
+    43: <% end %>
+    44: </div>
+    45: 
+    46: <%= paginate @events %>
+    47: 
+    48: <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+    49: <script type="text/javascript">
+  app/views/networks/show.html.erb:46:in `_app_views_networks_show_html_erb___3423783378767106327_70100840906340'
+  app/controllers/networks_controller.rb:36:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.9ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:32:23 -0700
+DEPRECATION WARNING: The InstanceMethods module inside ActiveSupport::Concern will be no longer included automatically. Please define instance methods directly in Mongoid::Spacial::Document instead. (called from include at /Users/maize/Projects/nearnote-api/app/models/network.rb:4)
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+  Rendered networks/show.html.erb within layouts/application (2326.1ms)
+Completed 500 Internal Server Error in 2749ms
+
+ActionView::Template::Error (undefined method `venue' for #<Event _id: 5078664fb9825411c9000022, _type: nil, group_id: nil>):
+    55:     };
+    56:     var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+    57:     <% @events.each do |event| %>
+    58:       <% if not event.venue.nil? and event.venue.has_key?("location") %>
+    59:         var latLon = new google.maps.LatLng(event.venue["location"]["longitude"],event.venue["location"]["latitude"]);
+    60:         var marker = new google.maps.Marker({
+    61:           position: latLon
+  app/views/networks/show.html.erb:58:in `block in _app_views_networks_show_html_erb___3423783378767106327_70100840906340'
+  app/views/networks/show.html.erb:57:in `_app_views_networks_show_html_erb___3423783378767106327_70100840906340'
+  app/controllers/networks_controller.rb:36:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.1ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.6ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:34:10 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+  Rendered networks/show.html.erb within layouts/application (1972.0ms)
+Completed 500 Internal Server Error in 2204ms
+
+ActionView::Template::Error (undefined method `venue' for #<Event _id: 5078664fb9825411c9000022, _type: nil, group_id: nil>):
+    56:     var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+    57:     <% @events.each do |event| %>
+    58:       <% p event %>
+    59:       <% if not event.venue.nil? and event.venue.has_key?("location") %>
+    60:         var latLon = new google.maps.LatLng(event.venue["location"]["longitude"],event.venue["location"]["latitude"]);
+    61:         var marker = new google.maps.Marker({
+    62:           position: latLon
+  app/views/networks/show.html.erb:59:in `block in _app_views_networks_show_html_erb___3423783378767106327_70100850720180'
+  app/views/networks/show.html.erb:57:in `_app_views_networks_show_html_erb___3423783378767106327_70100850720180'
+  app/controllers/networks_controller.rb:36:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.1ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (71.0ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:34:57 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+  Rendered networks/show.html.erb within layouts/application (2093.4ms)
+Completed 500 Internal Server Error in 2290ms
+
+ActionView::Template::Error (undefined method `has_key?' for #<Event _id: 5078664fb9825411c9000022, _type: nil, group_id: nil>):
+    56:     var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+    57:     <% @events.each do |event| %>
+    58:       <% p event %>
+    59:       <% if event.has_key?("venue") and not event.venue.nil? and event.venue.has_key?("location") %>
+    60:         var latLon = new google.maps.LatLng(event.venue["location"]["longitude"],event.venue["location"]["latitude"]);
+    61:         var marker = new google.maps.Marker({
+    62:           position: latLon
+  app/views/networks/show.html.erb:59:in `block in _app_views_networks_show_html_erb___3423783378767106327_70100810081940'
+  app/views/networks/show.html.erb:57:in `_app_views_networks_show_html_erb___3423783378767106327_70100810081940'
+  app/controllers/networks_controller.rb:36:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.7ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:35:31 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+  Rendered networks/show.html.erb within layouts/application (2066.2ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2967ms (Views: 2756.4ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:36:31 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+  Rendered networks/show.html.erb within layouts/application (1921.5ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2589ms (Views: 2366.1ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:36:47 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+  Rendered networks/show.html.erb within layouts/application (1872.3ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2572ms (Views: 2367.3ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:38:09 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+  Rendered networks/show.html.erb within layouts/application (1847.7ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2517ms (Views: 2315.2ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:39:06 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+  Rendered networks/show.html.erb within layouts/application (2145.6ms)
+Completed 500 Internal Server Error in 2361ms
+
+ActionView::Template::Error (undefined method `venue' for #<Event:0x007f833f9179d0>):
+    57:     <% @events.each do |event| %>
+    58:       <% p event.facebook_event %>
+    59:       <% if not event.facebook_event.venue.nil? and event.facebook_event.venue.has_key?("location") %>
+    60:         var latLon = new google.maps.LatLng(<%= event.venue["location"]["latitude"] %>,<%= event.venue["location"]["longitude"] %>);
+    61:         var marker = new google.maps.Marker({
+    62:           position: latLon
+    63:         });
+  app/views/networks/show.html.erb:60:in `block in _app_views_networks_show_html_erb___3423783378767106327_70100840966280'
+  app/views/networks/show.html.erb:57:in `_app_views_networks_show_html_erb___3423783378767106327_70100840966280'
+  app/controllers/networks_controller.rb:36:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.2ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:39:26 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+  Rendered networks/show.html.erb within layouts/application (1950.0ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2626ms (Views: 2410.0ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:41:49 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+  Rendered networks/show.html.erb within layouts/application (1935.7ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2562ms (Views: 2363.7ms)
+
+
+Started GET "/networks/ucl" for 127.0.0.1 at 2012-10-15 23:42:16 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"ucl"}
+MONGODB near_io_dev['networks'].find({:slug=>"ucl"}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('50726e03b9825430a4000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({}).limit(25)
+  Rendered networks/show.html.erb within layouts/application (1889.6ms)
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 200 OK in 2589ms (Views: 2375.7ms)
