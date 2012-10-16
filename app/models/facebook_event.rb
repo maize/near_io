@@ -49,19 +49,22 @@ class FacebookEvent
       :location => hash["location"],
       :venue => hash["venue"],
       :timezone => hash["timezone"],
-      :start_time => (FacebookEvent.parseFbTime(hash["start_time"]) unless hash["start_time"].nil?), # 2012-10-09T18:30:00+0100
+      :start_time => (FacebookEvent.parseFbTime(hash["start_time"]) unless hash["start_time"].nil?),
       :end_time => (FacebookEvent.parseFbTime(hash["end_time"]) unless hash["end_time"].nil?),
       :updated_time => (FacebookEvent.parseFbTime(hash["updated_time"]) unless hash["updated_time"].nil?),
       :privacy => hash["privacy"]
     }
+    p "Processing Facebook event: "+hash["id"].to_s
     parsed_hash
   end
 
   def self.parseFbTime(str)
     parsed = DateTime.new
+
+    p "Parsing time: "+str.to_s
     
     # TODO: this could be improved
-    # Simple check for timezone in timestring
+    # Simple check for timezone in timestring, e.g. 2012-10-09T18:30:00+0100
     if str.include?("+")
       parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S %z")
     else
@@ -69,6 +72,8 @@ class FacebookEvent
     end
     
     parsed
+
+    p parsed
   end
 
   def self.parse_event_users(hash)
