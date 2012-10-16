@@ -49,12 +49,26 @@ class FacebookEvent
       :location => hash["location"],
       :venue => hash["venue"],
       :timezone => hash["timezone"],
-      :start_time => (DateTime.strptime(hash["start_time"], "%Y-%m-%dT%H:%M:%S") unless hash["start_time"].nil?), # 2012-10-09T18:30:00+0100
-      :end_time => (DateTime.strptime(hash["end_time"], "%Y-%m-%dT%H:%M:%S") unless hash["end_time"].nil?),
-      :updated_time => (DateTime.strptime(hash["updated_time"], "%Y-%m-%dT%H:%M:%S") unless hash["updated_time"].nil?),
+      :start_time => (FacebookEvent.parseFbTime(hash["start_time"]) unless hash["start_time"].nil?), # 2012-10-09T18:30:00+0100
+      :end_time => (FacebookEvent.parseFbTime(hash["end_time"]) unless hash["end_time"].nil?),
+      :updated_time => (FacebookEvent.parseFbTime(hash["updated_time"]) unless hash["updated_time"].nil?),
       :privacy => hash["privacy"]
     }
     parsed_hash
+  end
+
+  def self.parseFbTime(str)
+    parsed = DateTime.new
+    
+    # TODO: this could be improved
+    p str.include?("+")
+    if str.include?("+")
+      parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S %z")
+    else
+      parsed = DateTime.strptime(str, "%Y-%m-%dT%H:%M:%S")
+    end
+    
+    parsed
   end
 
   def self.parse_event_users(hash)
@@ -141,7 +155,8 @@ class FacebookEvent
           fb_event.invited_facebook_users = invited
         end
 
-        p fb_event.get_venue_details(access_token)
+        # Venue
+        fb_event.venue = fb_event.get_venue_details(access_token)
 
   			fb_events.push(fb_event)
   		end
@@ -156,9 +171,11 @@ class FacebookEvent
   def get_venue_details(access_token)
     @graph = Koala::Facebook::API.new(access_token)
 
-    venue = @graph.get_object(self.venue["id"].to_s)
-
-    venue
+    if not self.venue.nil? and self.venue.has_key?("id")
+      venue = @graph.get_object(self.venue["id"].to_s)
+    else
+      venue = self.venue
+    end
   end
 
   def self.num_gender(attendees)
