@@ -141,7 +141,7 @@ class FacebookEvent
           fb_event.invited_facebook_users = invited
         end
 
-        p fb_event.get_venue_details
+        p fb_event.get_venue_details(access_token)
 
   			fb_events.push(fb_event)
   		end
