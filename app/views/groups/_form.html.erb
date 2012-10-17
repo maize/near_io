@@ -1,11 +1,25 @@
 <%= form_for @group, :html => { :class => "form form-horizontal" } do |f| %>
-  <div class="control-group">
-    <%= f.fields_for :facebook_page do |p| %>        
-      <%= p.label :facebook_id, "Facebook ID" %>
-      <%= p.text_field :facebook_id %>
-    <% end %>
-  </div>
-  <div class="form-actions">
-    <%= f.submit :class => "btn btn-primary" %>
-  </div>
+    <legend>New Group</legend>
+    <div class="control-group">
+        <%= f.fields_for :facebook_page do |p| %>        
+            <label class="control-label" for="inputPassword">
+                <%= p.label :facebook_id, "Facebook URL" %>
+            </label>
+            <div class="controls">
+                <%= p.text_field :link %>
+            </div>
+        <% end %>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="inputPassword">
+            <%= f.label :network_ids, "Network" %>
+        </label>
+        <div class="controls">
+            <%= f.collection_select :network_ids, Network.all, :id, :name %>
+        </div>
+    </div>
+    <div class="form-actions">
+        <%= link_to 'Cancel', groups_path, :class => "btn" %>
+        <%= f.submit :class => "btn btn-primary" %>
+    </div>
 <% end %>

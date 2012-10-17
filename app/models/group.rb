@@ -6,7 +6,7 @@ class Group
 
   has_many :events
 
-  has_and_belongs_to_many :networks
+  has_and_belongs_to_many :networks, :class_name => 'Network'
 
   paginates_per 25
 

@@ -1,7 +1,7 @@
 class FacebookPage < FacebookModel
   include Mongoid::Document
 
-  embedded_in :group, :polymorphic => true
+  embedded_in :group
 
   validates_presence_of :likes
 
@@ -22,8 +22,12 @@ class FacebookPage < FacebookModel
     @graph = Koala::Facebook::API.new
     
     p "Get Facebook page by: "+facebook_id.to_s
-    @result = @graph.get_object(facebook_id.to_s)
-    @page = FacebookPage.get_by_hash(@result)
+    begin
+      @result = @graph.get_object(facebook_id.to_s)
+      @page = FacebookPage.get_by_hash(@result)
+    rescue Exception => exc
+      p "Error:"+exc.message.to_s
+    end
     @page
   end
 

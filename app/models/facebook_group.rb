@@ -1,7 +1,7 @@
 class FacebookGroup < FacebookModel
   include Mongoid::Document
 
-  embedded_in :group, :polymorphic => true
+  embedded_in :group
 
   validates_presence_of :privacy
 
@@ -17,8 +17,13 @@ class FacebookGroup < FacebookModel
     @graph = Koala::Facebook::API.new
     
     p "Get Facebook group by: "+facebook_id.to_s
-    @result = @graph.get_object(facebook_id.to_s)
-    @group = FacebookGroup.get_by_hash(@result)
+    begin
+      @result = @graph.get_object(facebook_id.to_s)
+      @group = FacebookGroup.get_by_hash(@result)
+    rescue Exception => exc
+      p "Error:"+exc.message.to_s
+    end
+    
     @group
   end
 

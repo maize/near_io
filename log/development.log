@@ -37268,3 +37268,1947 @@ Processing by GroupsController#create as HTML
 MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
   Rendered text template (0.0ms)
 Completed 200 OK in 430ms (Views: 5.8ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 19:51:24 -0700
+Processing by GroupsController#new as HTML
+Completed 500 Internal Server Error in 53725ms
+
+Mongo::ConnectionFailure (Operation failed with the following exception: Operation timed out):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.2ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 19:52:30 -0700
+Processing by GroupsController#new as HTML
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB near_io_dev['$cmd'].find({:getnonce=>1})
+MONGODB near_io_dev['$cmd'].find({"authenticate"=>1, "user"=>"dev", "nonce"=>"f066546967e5d736", "key"=>"ec9b7f33ca38759f6c6410be9226cdc5"})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (3.3ms)
+  Rendered groups/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 2427ms (Views: 14.3ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 19:55:05 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (2.7ms)
+  Rendered groups/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 575ms (Views: 13.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 19:56:13 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (4.0ms)
+  Rendered groups/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 636ms (Views: 15.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 19:56:52 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (2.7ms)
+  Rendered groups/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 398ms (Views: 12.6ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 19:56:59 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (4.4ms)
+  Rendered groups/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 445ms (Views: 15.5ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 19:57:25 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (3.2ms)
+  Rendered groups/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 1142ms (Views: 14.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 20:03:13 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (3.6ms)
+  Rendered groups/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 1734ms (Views: 16.3ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:23:16 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}}, "commit"=>"Create Group"}
+Completed 500 Internal Server Error in 247232ms
+
+Mongo::ConnectionFailure (Operation failed with the following exception: Operation timed out):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.7ms)
+MongoDB logging. Please note that logging negatively impacts performance and should be disabled for high-performance production apps.
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB near_io_dev['$cmd'].find({:getnonce=>1})
+MONGODB near_io_dev['$cmd'].find({"authenticate"=>1, "user"=>"dev", "nonce"=>"1b97023f06564d4", "key"=>"813af398e0988502d458491c18947acd"})
+MONGODB admin['$cmd'].find({:ismaster=>1})
+MONGODB near_io_dev['$cmd'].find({:getnonce=>1})
+MONGODB near_io_dev['$cmd'].find({"authenticate"=>1, "user"=>"dev", "nonce"=>"2e47bb21d0d14ab7", "key"=>"d08a331a2b3467cc9cc2d01905d9b100"})
+Starting the New Relic Agent.
+NewRelic Agent Developer Mode enabled.
+To view performance information, go to http://localhost:3000/newrelic
+Installed New Relic Browser Monitoring middleware
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:29:31 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (12.6ms)
+  Rendered groups/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 918ms (Views: 106.3ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:29:39 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 406ms
+
+NoMethodError (undefined method `split' for {"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}:ActiveSupport::HashWithIndifferentAccess):
+  app/controllers/groups_controller.rb:47:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.9ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:29:56 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered text template (0.0ms)
+Completed 200 OK in 853ms (Views: 5.5ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:30:04 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 900ms
+
+ArgumentError ('"https:"' is not an ActiveModel-compatible object that returns a valid partial path.):
+  app/controllers/groups_controller.rb:47:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.4ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.3ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:30:13 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 854ms
+
+ActionView::MissingTemplate (Missing template groups/["https:", "", "www.facebook.com", "UCLUnion?fref=ts"], application/["https:", "", "www.facebook.com", "UCLUnion?fref=ts"] with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/maize/Projects/nearnote-api/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/kaminari-0.14.1/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-bootstrap-rails-2.1.4/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/devise-2.1.2/app/views"
+):
+  app/controllers/groups_controller.rb:47:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:30:58 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 861ms
+
+ActionView::MissingTemplate (Missing template groups/UCLUnion?fref=ts, application/UCLUnion?fref=ts with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/maize/Projects/nearnote-api/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/kaminari-0.14.1/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-bootstrap-rails-2.1.4/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/devise-2.1.2/app/views"
+):
+  app/controllers/groups_controller.rb:49:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:31:48 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 969ms
+
+ActionView::MissingTemplate (Missing template groups/UCLUnion, application/UCLUnion with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/maize/Projects/nearnote-api/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/kaminari-0.14.1/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-bootstrap-rails-2.1.4/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/devise-2.1.2/app/views"
+):
+  app/controllers/groups_controller.rb:50:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:32:16 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 857ms
+
+ActionView::MissingTemplate (Missing template groups/UCLUnion, application/UCLUnion with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/maize/Projects/nearnote-api/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/kaminari-0.14.1/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-bootstrap-rails-2.1.4/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/devise-2.1.2/app/views"
+):
+  app/controllers/groups_controller.rb:51:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:33:03 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (4.7ms)
+  Rendered groups/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 1407ms (Views: 17.6ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:33:07 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"UCLUnion"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 457ms
+
+ActionView::MissingTemplate (Missing template groups/UCLUnion, application/UCLUnion with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/maize/Projects/nearnote-api/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/kaminari-0.14.1/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-bootstrap-rails-2.1.4/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/devise-2.1.2/app/views"
+):
+  app/controllers/groups_controller.rb:52:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:33:16 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"UCLUnion/"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 400ms
+
+ActionView::MissingTemplate (Missing template groups/UCLUnion, application/UCLUnion with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/maize/Projects/nearnote-api/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/kaminari-0.14.1/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-bootstrap-rails-2.1.4/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/devise-2.1.2/app/views"
+):
+  app/controllers/groups_controller.rb:52:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:39:28 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"UCLUnion/"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 1261ms
+
+ActionView::MissingTemplate (Missing template groups/create, application/create with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee, :haml]}. Searched in:
+  * "/Users/maize/Projects/nearnote-api/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/kaminari-0.14.1/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/twitter-bootstrap-rails-2.1.4/app/views"
+  * "/Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/devise-2.1.2/app/views"
+):
+  app/controllers/groups_controller.rb:68:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.4ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:39:49 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"UCLUnion/"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered text template (0.0ms)
+Completed 200 OK in 1136ms (Views: 1.1ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:40:15 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"UCLUnion/"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered text template (0.0ms)
+Completed 200 OK in 1318ms (Views: 1.1ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:42:49 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"UCLUnion/"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 1729ms
+
+NameError (undefined local variable or method `fb_page' for #<GroupsController:0x007ff46dd03c48>):
+  app/controllers/groups_controller.rb:63:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.3ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:43:09 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"UCLUnion/"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({"facebook_page.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"facebook_page"=>{"_id"=>BSON::ObjectId('507e456fb982545ad700003d'), "facebook_id"=>34994060032, "name"=>"UCL Union", "is_published"=>true, "website"=>"http://uclu.org", "username"=>"UCLUnion", "description"=>"Representing the needs and views of UCL students is the primary function of UCLU, with six Full-Time Officers elected annually to perform various roles and carry out the wishes of our members, the students.\n\nThe six officers for 2012-13 are:\nDemocracy & Communications Officer: Sam Gaus\ndco@uclu.org\n\nStudent Activities Officer: Abdul Akbari\nsao@uclu.org\n\nEducation & Campaigns Officer: Edwin Clifford-Coupe\neco@uclu.org\n\nEthics, Environment and Operations Officer: Natasha Gorodnitski\neeoo@uclu.org\n\nWelfare Officer: Candy Ashmore-Harris\nwio@uclu.org\n\nMedical & Postgraduates Officer: Dante Micheaux\nmpso@uclu.org", "about"=>"UCLU is the representative organisation for the students of University College London.", "can_post"=>nil, "talking_about_count"=>137, "category"=>"Non-profit organization", "link"=>"http://www.facebook.com/UCLUnion", "likes"=>6756}}})
+  Rendered text template (0.0ms)
+Completed 200 OK in 1731ms (Views: 1.2ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:45:21 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"UCLUnion/"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({"facebook_page.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"facebook_page"=>{"_id"=>BSON::ObjectId('507e45f3b982545ad7000042'), "facebook_id"=>34994060032, "name"=>"UCL Union", "is_published"=>true, "website"=>"http://uclu.org", "username"=>"UCLUnion", "description"=>"Representing the needs and views of UCL students is the primary function of UCLU, with six Full-Time Officers elected annually to perform various roles and carry out the wishes of our members, the students.\n\nThe six officers for 2012-13 are:\nDemocracy & Communications Officer: Sam Gaus\ndco@uclu.org\n\nStudent Activities Officer: Abdul Akbari\nsao@uclu.org\n\nEducation & Campaigns Officer: Edwin Clifford-Coupe\neco@uclu.org\n\nEthics, Environment and Operations Officer: Natasha Gorodnitski\neeoo@uclu.org\n\nWelfare Officer: Candy Ashmore-Harris\nwio@uclu.org\n\nMedical & Postgraduates Officer: Dante Micheaux\nmpso@uclu.org", "about"=>"UCLU is the representative organisation for the students of University College London.", "can_post"=>nil, "talking_about_count"=>137, "category"=>"Non-profit organization", "link"=>"http://www.facebook.com/UCLUnion", "likes"=>6756}}})
+  Rendered text template (0.0ms)
+Completed 200 OK in 1635ms (Views: 1.1ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:46:18 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"UCLUnion/"}}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({"facebook_page.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"facebook_page"=>{"_id"=>BSON::ObjectId('507e462cb982545ad7000047'), "facebook_id"=>34994060032, "name"=>"UCL Union", "is_published"=>true, "website"=>"http://uclu.org", "username"=>"UCLUnion", "description"=>"Representing the needs and views of UCL students is the primary function of UCLU, with six Full-Time Officers elected annually to perform various roles and carry out the wishes of our members, the students.\n\nThe six officers for 2012-13 are:\nDemocracy & Communications Officer: Sam Gaus\ndco@uclu.org\n\nStudent Activities Officer: Abdul Akbari\nsao@uclu.org\n\nEducation & Campaigns Officer: Edwin Clifford-Coupe\neco@uclu.org\n\nEthics, Environment and Operations Officer: Natasha Gorodnitski\neeoo@uclu.org\n\nWelfare Officer: Candy Ashmore-Harris\nwio@uclu.org\n\nMedical & Postgraduates Officer: Dante Micheaux\nmpso@uclu.org", "about"=>"UCLU is the representative organisation for the students of University College London.", "can_post"=>nil, "talking_about_count"=>137, "category"=>"Non-profit organization", "link"=>"http://www.facebook.com/UCLUnion", "likes"=>6756}}})
+  Rendered text template (0.0ms)
+Completed 200 OK in 1453ms (Views: 1.5ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:46:23 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (4.1ms)
+  Rendered groups/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 405ms
+
+ActionView::Template::Error (undefined method `label' for nil:NilClass):
+    11:         <% end %>
+    12:     </div>
+    13:     <div class="control-group">
+    14:         <%= p.label :networks, "Facebook URL" %>
+    15:     </div>
+    16:     <div class="form-actions">
+    17:         <%= link_to 'Cancel', groups_path, :class => "btn" %>
+  app/views/groups/_form.html.erb:14:in `block in _app_views_groups__form_html_erb__2864732661781946754_70343893985200'
+  app/views/groups/_form.html.erb:1:in `_app_views_groups__form_html_erb__2864732661781946754_70343893985200'
+  app/views/groups/new.html.erb:1:in `_app_views_groups_new_html_erb__1961964316587798721_70343895488620'
+  app/controllers/groups_controller.rb:31:in `new'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:46:28 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (2.9ms)
+  Rendered groups/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 485ms (Views: 12.8ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:46:35 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (3.3ms)
+  Rendered groups/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 408ms (Views: 13.8ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:46:49 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (46.6ms)
+  Rendered groups/new.html.erb within layouts/application (47.9ms)
+Completed 200 OK in 455ms (Views: 59.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:46:57 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (2.9ms)
+  Rendered groups/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 404ms (Views: 15.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:47:20 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (2.6ms)
+  Rendered groups/new.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 398ms
+
+ActionView::Template::Error (wrong number of arguments (1 for 2)):
+    15:             <%= f.label :networks, "Network" %>
+    16:         </label>
+    17:         <div class="controls">
+    18:             <%= f.select :networks %>
+    19:         </div>
+    20:     </div>
+    21:     <div class="form-actions">
+  app/views/groups/_form.html.erb:18:in `block in _app_views_groups__form_html_erb__2864732661781946754_70343920597080'
+  app/views/groups/_form.html.erb:1:in `_app_views_groups__form_html_erb__2864732661781946754_70343920597080'
+  app/views/groups/new.html.erb:1:in `_app_views_groups_new_html_erb__1961964316587798721_70343895488620'
+  app/controllers/groups_controller.rb:31:in `new'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.6ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (70.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:47:25 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({}, {:_id=>1})
+MONGODB near_io_dev['networks'].find({}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"networks", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+  Rendered groups/_form.html.erb (1206.2ms)
+  Rendered groups/new.html.erb within layouts/application (1207.6ms)
+Completed 200 OK in 1607ms (Views: 1218.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:48:18 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (2.6ms)
+  Rendered groups/new.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 401ms
+
+ActionView::Template::Error (undefined method `merge' for :id:Symbol):
+    15:             <%= f.label :networks, "Network" %>
+    16:         </label>
+    17:         <div class="controls">
+    18:             <%= f.select :networks, Network.all, :id, :name %>
+    19:         </div>
+    20:     </div>
+    21:     <div class="form-actions">
+  app/views/groups/_form.html.erb:18:in `block in _app_views_groups__form_html_erb__2864732661781946754_70343893437920'
+  app/views/groups/_form.html.erb:1:in `_app_views_groups__form_html_erb__2864732661781946754_70343893437920'
+  app/views/groups/new.html.erb:1:in `_app_views_groups_new_html_erb__1961964316587798721_70343895488620'
+  app/controllers/groups_controller.rb:31:in `new'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.7ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:48:24 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered groups/_form.html.erb (3.7ms)
+  Rendered groups/new.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 639ms
+
+ActionView::Template::Error (undefined method `merge' for :id:Symbol):
+    15:             <%= f.label :networks, "Network" %>
+    16:         </label>
+    17:         <div class="controls">
+    18:             <%= f.select :networks, Network.all, :id %>
+    19:         </div>
+    20:     </div>
+    21:     <div class="form-actions">
+  app/views/groups/_form.html.erb:18:in `block in _app_views_groups__form_html_erb__2864732661781946754_70343920678740'
+  app/views/groups/_form.html.erb:1:in `_app_views_groups__form_html_erb__2864732661781946754_70343920678740'
+  app/views/groups/new.html.erb:1:in `_app_views_groups_new_html_erb__1961964316587798721_70343895488620'
+  app/controllers/groups_controller.rb:31:in `new'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.3ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:48:44 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"networks", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+  Rendered groups/_form.html.erb (562.1ms)
+  Rendered groups/new.html.erb within layouts/application (563.6ms)
+Completed 200 OK in 1160ms (Views: 573.7ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:48:52 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e46c4b982545ad700005c')}})
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `compact' for "506c8c45b982540a65000005":String):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.8ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.9ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:49:57 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e4705b982545ad700005e')}})
+Completed 500 Internal Server Error in 262ms
+
+NoMethodError (undefined method `compact' for "506c8c45b982540a65000005":String):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.8ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:50:06 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e470eb982545ad7000060')}})
+Completed 500 Internal Server Error in 279ms
+
+NoMethodError (undefined method `compact' for "506c8c45b982540a65000005":String):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.6ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:50:34 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e472ab982545ad7000062')}})
+Completed 500 Internal Server Error in 259ms
+
+NoMethodError (undefined method `compact' for "506c8c45b982540a65000005":String):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.2ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:51:13 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"networks", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+  Rendered groups/_form.html.erb (559.7ms)
+  Rendered groups/new.html.erb within layouts/application (561.3ms)
+Completed 200 OK in 1456ms (Views: 571.0ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:51:30 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e4762b982545ad7000066')}})
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `compact' for "506c8c45b982540a65000005":String):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.0ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:53:58 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e47f6b982545ad7000068')}})
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError (undefined method `compact' for "506c8c45b982540a65000005":String):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.8ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:56:14 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e487eb982545ad700006a')}})
+Completed 500 Internal Server Error in 7ms
+
+NoMethodError (undefined method `compact' for "506c8c45b982540a65000005":String):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.5ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:56:17 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (186.1ms)
+  Rendered groups/new.html.erb within layouts/application (187.4ms)
+Completed 500 Internal Server Error in 598ms
+
+ActionView::Template::Error (undefined method `merge' for #<Array:0x007ff46b4bce38>):
+    15:             <%= f.label :networks, "Network" %>
+    16:         </label>
+    17:         <div class="controls">
+    18:             <%= f.select("networks", "Network", Network.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'}) %>
+    19:         </div>
+    20:     </div>
+    21:     <div class="form-actions">
+  app/views/groups/_form.html.erb:18:in `block in _app_views_groups__form_html_erb__2864732661781946754_70343885479020'
+  app/views/groups/_form.html.erb:1:in `_app_views_groups__form_html_erb__2864732661781946754_70343885479020'
+  app/views/groups/new.html.erb:1:in `_app_views_groups_new_html_erb__1961964316587798721_70343895488620'
+  app/controllers/groups_controller.rb:31:in `new'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.8ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:56:22 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (181.2ms)
+  Rendered groups/new.html.erb within layouts/application (182.5ms)
+Completed 500 Internal Server Error in 571ms
+
+ActionView::Template::Error (undefined method `merge' for #<Array:0x007ff46dc89ee8>):
+    15:             <%= f.label :networks, "Network" %>
+    16:         </label>
+    17:         <div class="controls">
+    18:             <%= f.select("networks", "Network", Network.all.collect {|p| [ p.name, p.id ] }, {:include_blank => 'None'}) %>
+    19:         </div>
+    20:     </div>
+    21:     <div class="form-actions">
+  app/views/groups/_form.html.erb:18:in `block in _app_views_groups__form_html_erb__2864732661781946754_70343885479020'
+  app/views/groups/_form.html.erb:1:in `_app_views_groups__form_html_erb__2864732661781946754_70343885479020'
+  app/views/groups/new.html.erb:1:in `_app_views_groups_new_html_erb__1961964316587798721_70343895488620'
+  app/controllers/groups_controller.rb:31:in `new'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:56:35 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (183.5ms)
+  Rendered groups/new.html.erb within layouts/application (184.9ms)
+Completed 500 Internal Server Error in 571ms
+
+ActionView::Template::Error (undefined method `merge' for #<Array:0x007ff46b55b538>):
+    15:             <%= f.label :networks, "Network" %>
+    16:         </label>
+    17:         <div class="controls">
+    18:             <%= f.select("networks", "Network", Network.all.collect {|p| [ p.name, p.id ] }) %>
+    19:         </div>
+    20:     </div>
+    21:     <div class="form-actions">
+  app/views/groups/_form.html.erb:18:in `block in _app_views_groups__form_html_erb__2864732661781946754_70343908107140'
+  app/views/groups/_form.html.erb:1:in `_app_views_groups__form_html_erb__2864732661781946754_70343908107140'
+  app/views/groups/new.html.erb:1:in `_app_views_groups_new_html_erb__1961964316587798721_70343895488620'
+  app/controllers/groups_controller.rb:31:in `new'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (61.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:56:50 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (183.4ms)
+  Rendered groups/new.html.erb within layouts/application (184.8ms)
+Completed 500 Internal Server Error in 572ms
+
+ActionView::Template::Error (undefined method `merge' for #<Array:0x007ff46b4b40a8>):
+    14:         <label class="control-label" for="inputPassword">
+    15:         </label>
+    16:         <div class="controls">
+    17:             <%= f.select("networks", "Network", Network.all.collect {|p| [ p.name, p.id ] }) %>
+    18:         </div>
+    19:     </div>
+    20:     <div class="form-actions">
+  app/views/groups/_form.html.erb:17:in `block in _app_views_groups__form_html_erb__2864732661781946754_70343862024100'
+  app/views/groups/_form.html.erb:1:in `_app_views_groups__form_html_erb__2864732661781946754_70343862024100'
+  app/views/groups/new.html.erb:1:in `_app_views_groups_new_html_erb__1961964316587798721_70343895488620'
+  app/controllers/groups_controller.rb:31:in `new'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:57:04 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"networks", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+  Rendered groups/_form.html.erb (548.7ms)
+  Rendered groups/new.html.erb within layouts/application (550.6ms)
+Completed 200 OK in 953ms (Views: 560.9ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:57:14 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"networks", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+  Rendered groups/_form.html.erb (634.7ms)
+  Rendered groups/new.html.erb within layouts/application (678.5ms)
+Completed 200 OK in 1084ms (Views: 688.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 22:57:35 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"networks", "query"=>{:_id=>{"$in"=>[]}}, "fields"=>nil})
+  Rendered groups/_form.html.erb (740.9ms)
+  Rendered groups/new.html.erb within layouts/application (742.1ms)
+Completed 200 OK in 1593ms (Views: 751.5ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 22:57:45 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "networks"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e48d9b982545ad700007a')}})
+Completed 500 Internal Server Error in 24ms
+
+NoMethodError (undefined method `compact' for "506c8c45b982540a65000005":String):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.8ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:00:04 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (469.2ms)
+  Rendered groups/new.html.erb within layouts/application (471.5ms)
+Completed 200 OK in 1356ms (Views: 543.2ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:00:13 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({"facebook_page.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"facebook_page"=>{"_id"=>BSON::ObjectId('507e496eb982545ad7000082'), "facebook_id"=>34994060032, "name"=>"UCL Union", "is_published"=>true, "website"=>"http://uclu.org", "username"=>"UCLUnion", "description"=>"Representing the needs and views of UCL students is the primary function of UCLU, with six Full-Time Officers elected annually to perform various roles and carry out the wishes of our members, the students.\n\nThe six officers for 2012-13 are:\nDemocracy & Communications Officer: Sam Gaus\ndco@uclu.org\n\nStudent Activities Officer: Abdul Akbari\nsao@uclu.org\n\nEducation & Campaigns Officer: Edwin Clifford-Coupe\neco@uclu.org\n\nEthics, Environment and Operations Officer: Natasha Gorodnitski\neeoo@uclu.org\n\nWelfare Officer: Candy Ashmore-Harris\nwio@uclu.org\n\nMedical & Postgraduates Officer: Dante Micheaux\nmpso@uclu.org", "about"=>"UCLU is the representative organisation for the students of University College London.", "can_post"=>nil, "talking_about_count"=>137, "category"=>"Non-profit organization", "link"=>"http://www.facebook.com/UCLUnion", "likes"=>6756}}})
+  Rendered text template (0.0ms)
+Completed 200 OK in 1067ms (Views: 1.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:00:32 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (185.8ms)
+  Rendered groups/new.html.erb within layouts/application (187.1ms)
+Completed 200 OK in 767ms (Views: 195.9ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:05:16 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (375.1ms)
+  Rendered groups/new.html.erb within layouts/application (376.5ms)
+Completed 200 OK in 1227ms (Views: 430.1ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:05:22 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({"facebook_page.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"facebook_page"=>{"_id"=>BSON::ObjectId('507e4aa4b982545ad700008b'), "facebook_id"=>34994060032, "name"=>"UCL Union", "is_published"=>true, "website"=>"http://uclu.org", "username"=>"UCLUnion", "description"=>"Representing the needs and views of UCL students is the primary function of UCLU, with six Full-Time Officers elected annually to perform various roles and carry out the wishes of our members, the students.\n\nThe six officers for 2012-13 are:\nDemocracy & Communications Officer: Sam Gaus\ndco@uclu.org\n\nStudent Activities Officer: Abdul Akbari\nsao@uclu.org\n\nEducation & Campaigns Officer: Edwin Clifford-Coupe\neco@uclu.org\n\nEthics, Environment and Operations Officer: Natasha Gorodnitski\neeoo@uclu.org\n\nWelfare Officer: Candy Ashmore-Harris\nwio@uclu.org\n\nMedical & Postgraduates Officer: Dante Micheaux\nmpso@uclu.org", "about"=>"UCLU is the representative organisation for the students of University College London.", "can_post"=>nil, "talking_about_count"=>137, "category"=>"Non-profit organization", "link"=>"http://www.facebook.com/UCLUnion", "likes"=>6756}}})
+  Rendered text template (0.0ms)
+Completed 500 Internal Server Error in 1452ms
+
+NoMethodError (undefined method `each' for "506c8c45b982540a65000005":String):
+  app/controllers/groups_controller.rb:77:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.9ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:06:47 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({"facebook_page.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"facebook_page"=>{"_id"=>BSON::ObjectId('507e4af9b982545ad7000090'), "facebook_id"=>34994060032, "name"=>"UCL Union", "is_published"=>true, "website"=>"http://uclu.org", "username"=>"UCLUnion", "description"=>"Representing the needs and views of UCL students is the primary function of UCLU, with six Full-Time Officers elected annually to perform various roles and carry out the wishes of our members, the students.\n\nThe six officers for 2012-13 are:\nDemocracy & Communications Officer: Sam Gaus\ndco@uclu.org\n\nStudent Activities Officer: Abdul Akbari\nsao@uclu.org\n\nEducation & Campaigns Officer: Edwin Clifford-Coupe\neco@uclu.org\n\nEthics, Environment and Operations Officer: Natasha Gorodnitski\neeoo@uclu.org\n\nWelfare Officer: Candy Ashmore-Harris\nwio@uclu.org\n\nMedical & Postgraduates Officer: Dante Micheaux\nmpso@uclu.org", "about"=>"UCLU is the representative organisation for the students of University College London.", "can_post"=>nil, "talking_about_count"=>137, "category"=>"Non-profit organization", "link"=>"http://www.facebook.com/UCLUnion", "likes"=>6756}}})
+  Rendered text template (0.0ms)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('5071f754b982541549000004')}})
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"network_ids"=>[]}})
+Redirected to 
+Completed 500 Internal Server Error in 2098ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/groups_controller.rb:86:in `block (2 levels) in create'
+  app/controllers/groups_controller.rb:84:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.2ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:06:55 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (186.1ms)
+  Rendered groups/new.html.erb within layouts/application (187.5ms)
+Completed 200 OK in 768ms (Views: 197.5ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:07:06 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({"facebook_page.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"facebook_page"=>{"_id"=>BSON::ObjectId('507e4b0ab982545ad7000097'), "facebook_id"=>34994060032, "name"=>"UCL Union", "is_published"=>true, "website"=>"http://uclu.org", "username"=>"UCLUnion", "description"=>"Representing the needs and views of UCL students is the primary function of UCLU, with six Full-Time Officers elected annually to perform various roles and carry out the wishes of our members, the students.\n\nThe six officers for 2012-13 are:\nDemocracy & Communications Officer: Sam Gaus\ndco@uclu.org\n\nStudent Activities Officer: Abdul Akbari\nsao@uclu.org\n\nEducation & Campaigns Officer: Edwin Clifford-Coupe\neco@uclu.org\n\nEthics, Environment and Operations Officer: Natasha Gorodnitski\neeoo@uclu.org\n\nWelfare Officer: Candy Ashmore-Harris\nwio@uclu.org\n\nMedical & Postgraduates Officer: Dante Micheaux\nmpso@uclu.org", "about"=>"UCLU is the representative organisation for the students of University College London.", "can_post"=>nil, "talking_about_count"=>137, "category"=>"Non-profit organization", "link"=>"http://www.facebook.com/UCLUnion", "likes"=>6756}}})
+  Rendered text template (0.0ms)
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('5071f754b982541549000004')}})
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"network_ids"=>[]}})
+MONGODB near_io_dev['networks'].update({"_id"=>BSON::ObjectId('506c8c45b982540a65000005')}, {"$addToSet"=>{"group_ids"=>{"$each"=>[BSON::ObjectId('5071f754b982541549000004')]}}})
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$pushAll"=>{"network_ids"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+Redirected to 
+Completed 500 Internal Server Error in 1264ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/groups_controller.rb:86:in `block (2 levels) in create'
+  app/controllers/groups_controller.rb:84:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.8ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:07:24 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({"facebook_page.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"facebook_page"=>{"_id"=>BSON::ObjectId('507e4b1db982545ad700009c'), "facebook_id"=>34994060032, "name"=>"UCL Union", "is_published"=>true, "website"=>"http://uclu.org", "username"=>"UCLUnion", "description"=>"Representing the needs and views of UCL students is the primary function of UCLU, with six Full-Time Officers elected annually to perform various roles and carry out the wishes of our members, the students.\n\nThe six officers for 2012-13 are:\nDemocracy & Communications Officer: Sam Gaus\ndco@uclu.org\n\nStudent Activities Officer: Abdul Akbari\nsao@uclu.org\n\nEducation & Campaigns Officer: Edwin Clifford-Coupe\neco@uclu.org\n\nEthics, Environment and Operations Officer: Natasha Gorodnitski\neeoo@uclu.org\n\nWelfare Officer: Candy Ashmore-Harris\nwio@uclu.org\n\nMedical & Postgraduates Officer: Dante Micheaux\nmpso@uclu.org", "about"=>"UCLU is the representative organisation for the students of University College London.", "can_post"=>nil, "talking_about_count"=>137, "category"=>"Non-profit organization", "link"=>"http://www.facebook.com/UCLUnion", "likes"=>6756}}})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('5071f754b982541549000004')}})
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f754b982541549000004')}, {"$set"=>{"network_ids"=>[]}})
+Redirected to http://localhost:3000/groups/5071f754b982541549000004
+Completed 302 Found in 2139ms
+
+
+Started GET "/groups/5071f754b982541549000004" for 127.0.0.1 at 2012-10-16 23:07:26 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5071f754b982541549000004"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5071f754b982541549000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5071f754b982541549000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"group_id"=>BSON::ObjectId('5071f754b982541549000004')}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"group_id"=>BSON::ObjectId('5071f754b982541549000004')})
+  Rendered groups/show.html.erb within layouts/application (613.8ms)
+Completed 200 OK in 1562ms (Views: 628.8ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:07:35 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1346.0ms)
+Completed 200 OK in 1743ms (Views: 1356.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:09:02 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (374.5ms)
+  Rendered groups/new.html.erb within layouts/application (375.9ms)
+Completed 200 OK in 1228ms (Views: 432.8ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:09:31 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLGreens?fref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({"facebook_page.facebook_id"=>290767471036434}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e4b9cb982545ad70000a4')}})
+MONGODB near_io_dev['groups'].insert([{"network_ids"=>[BSON::ObjectId('506c8c45b982540a65000005')], "_id"=>BSON::ObjectId('507e4b9cb982545ad70000a4'), "facebook_page"=>{"_id"=>BSON::ObjectId('507e4b9bb982545ad70000a3'), "facebook_id"=>290767471036434, "name"=>"UCL Green Party Society", "is_published"=>true, "website"=>"http://greenparty.org.uk/", "username"=>"UCLGreens", "description"=>"Fair is worth fighting for:\n\nThe Green Party is the party of hope and radical change.\n\nYears and years of politics as usual have given us broken communities and remote services, financial chaos and environmental breakdown.\n\nBut there is an alternative: a transforming green alternative.", "about"=>"The UCL Green Party Society is an upcoming society for green party advocates at UCL", "can_post"=>nil, "talking_about_count"=>nil, "category"=>"Political party", "link"=>"http://www.facebook.com/UCLGreens", "likes"=>3}}])
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$addToSet"=>{"group_ids"=>BSON::ObjectId('507e4b9cb982545ad70000a4')}})
+Redirected to http://localhost:3000/groups/507e4b9cb982545ad70000a4
+Completed 302 Found in 1560ms
+
+
+Started GET "/groups/507e4b9cb982545ad70000a4" for 127.0.0.1 at 2012-10-16 23:09:32 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"507e4b9cb982545ad70000a4"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e4b9cb982545ad70000a4')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e4b9cb982545ad70000a4')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"group_id"=>BSON::ObjectId('507e4b9cb982545ad70000a4')}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"group_id"=>BSON::ObjectId('507e4b9cb982545ad70000a4')})
+  Rendered groups/show.html.erb within layouts/application (544.2ms)
+Completed 200 OK in 1481ms (Views: 554.4ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:10:00 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1470.9ms)
+Completed 200 OK in 2124ms (Views: 1546.6ms)
+
+
+Started DELETE "/groups/5071f754b982541549000004" for 127.0.0.1 at 2012-10-16 23:10:23 -0700
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "id"=>"5071f754b982541549000004"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5071f754b982541549000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5071f754b982541549000004')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].remove({:_id=>BSON::ObjectId('5071f754b982541549000004')})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('5071f754b982541549000004')}})
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 1770ms
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:10:25 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1345.1ms)
+Completed 200 OK in 1742ms (Views: 1356.4ms)
+
+
+Started GET "/groups/507e4b9cb982545ad70000a4/edit" for 127.0.0.1 at 2012-10-16 23:10:45 -0700
+Processing by GroupsController#edit as HTML
+  Parameters: {"id"=>"507e4b9cb982545ad70000a4"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e4b9cb982545ad70000a4')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e4b9cb982545ad70000a4')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (184.4ms)
+  Rendered groups/edit.html.erb within layouts/application (187.3ms)
+Completed 200 OK in 1129ms (Views: 199.2ms)
+
+
+Started PUT "/groups/507e4b9cb982545ad70000a4" for 127.0.0.1 at 2012-10-16 23:13:05 -0700
+Processing by GroupsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLConservatives?fref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Update Group", "id"=>"507e4b9cb982545ad70000a4"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e4b9cb982545ad70000a4')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e4b9cb982545ad70000a4')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 950ms
+
+Mongoid::Errors::InvalidFind (Calling Document#find with nil is invalid):
+  app/controllers/groups_controller.rb:110:in `update'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.9ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:13:10 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (188.3ms)
+  Rendered groups/new.html.erb within layouts/application (189.5ms)
+Completed 200 OK in 782ms (Views: 200.8ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:13:14 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLConservatives?fref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 1273ms
+
+Koala::Facebook::APIError (GraphMethodException: Unsupported get request.):
+  app/models/facebook_group.rb:20:in `find_by_facebook_id'
+  app/controllers/groups_controller.rb:53:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (47.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (65.7ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:15:04 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (187.1ms)
+  Rendered groups/new.html.erb within layouts/application (188.3ms)
+Completed 200 OK in 776ms (Views: 197.2ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:15:08 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/groups/buzsoc/"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 697ms
+
+Koala::Facebook::APIError (OAuthException: (#803) Some of the aliases you requested do not exist: buzsoc):
+  app/models/facebook_group.rb:20:in `find_by_facebook_id'
+  app/controllers/groups_controller.rb:53:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:18:52 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (187.1ms)
+  Rendered groups/new.html.erb within layouts/application (188.4ms)
+Completed 200 OK in 849ms (Views: 260.1ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:18:59 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/groups/2368509106/"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({"facebook_group.facebook_id"=>2368509106}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].update({"_id"=>BSON::ObjectId('5071f8bbb982541549000007')}, {"$set"=>{"facebook_group"=>{"_id"=>BSON::ObjectId('507e4dd4b982545ad70000b4'), "facebook_id"=>2368509106, "name"=>"UCL Enterprise Society", "description"=>"THE ENTERPRISE: \n\nOur mission is to inspire and feed all entrepreneurial activity within the UCL community. \n\nFIND OUT MORE... http://groupspaces.com/uclenterprise/external/subscribe\n\nWe are non-profit student-run group of crazed life enthusiasts. This 2011-12 we are creating events that will:\n\n- open your eyes to the start-up scene in London\n- give you the opportunity to meet like-minded individuals you could potentially form companies with\n- provide you with free mentoring, training, guidance. A wealth of resources to hep you on your journey.\n- look great on your CV and impress any future potential employers (and lovers)\n- give you FREE PIZZA AND BEER!\n\n\nBE THE BOSS. BE THE FUTURE'S PROBLEM-SOLVER.", "privacy"=>"OPEN", "icon"=>"http://static.ak.fbcdn.net/rsrc.php/v2/yI/r/0pjqWL1NfkE.png", "email"=>"2368509106@groups.facebook.com", "updated_time"=>2012-10-11 00:00:00 UTC}}})
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+Redirected to http://localhost:3000/groups/5071f8bbb982541549000007
+Completed 302 Found in 1565ms
+
+
+Started GET "/groups/5071f8bbb982541549000007" for 127.0.0.1 at 2012-10-16 23:19:00 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"5071f8bbb982541549000007"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5071f8bbb982541549000007')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('5071f8bbb982541549000007')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"group_id"=>BSON::ObjectId('5071f8bbb982541549000007')}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"group_id"=>BSON::ObjectId('5071f8bbb982541549000007')})
+  Rendered groups/show.html.erb within layouts/application (558.1ms)
+Completed 200 OK in 1506ms (Views: 570.0ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:21:06 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1320.8ms)
+Completed 200 OK in 1736ms (Views: 1338.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:21:12 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (188.6ms)
+  Rendered groups/new.html.erb within layouts/application (190.2ms)
+Completed 200 OK in 598ms (Views: 200.8ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:21:16 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/pages/Oregon-Association-of-Synchronized-Swimming/274371937343?ref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 884ms
+
+Koala::Facebook::APIError (GraphMethodException: Unsupported get request.):
+  app/models/facebook_group.rb:20:in `find_by_facebook_id'
+  app/controllers/groups_controller.rb:53:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:29:22 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/pages/Oregon-Association-of-Synchronized-Swimming/274371937343?ref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 1451ms
+
+NoMethodError (undefined method `errors' for nil:NilClass):
+  app/models/facebook_group.rb:24:in `rescue in find_by_facebook_id'
+  app/models/facebook_group.rb:20:in `find_by_facebook_id'
+  app/controllers/groups_controller.rb:53:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.4ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.3ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:29:39 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/pages/Oregon-Association-of-Synchronized-Swimming/274371937343?ref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 1081ms
+
+Koala::Facebook::APIError (GraphMethodException: Unsupported get request.):
+  app/models/facebook_page.rb:25:in `find_by_facebook_id'
+  app/controllers/groups_controller.rb:54:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.3ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:30:07 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/pages/Oregon-Association-of-Synchronized-Swimming/274371937343?ref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 1529ms
+
+NoMethodError (undefined method `valid?' for nil:NilClass):
+  app/controllers/groups_controller.rb:64:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.4ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:30:13 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (374.3ms)
+  Rendered groups/new.html.erb within layouts/application (375.7ms)
+Completed 200 OK in 782ms (Views: 385.5ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:30:27 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/pages/Oregon-Association-of-Synchronized-Swimming/274371937343?ref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 812ms
+
+NoMethodError (undefined method `valid?' for nil:NilClass):
+  app/controllers/groups_controller.rb:64:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (65.7ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (81.0ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:31:10 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/pages/Oregon-Association-of-Synchronized-Swimming/274371937343?ref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e50afb982545ad70000d0')}})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].insert([{"network_ids"=>[BSON::ObjectId('506c8c45b982540a65000005')], "_id"=>BSON::ObjectId('507e50afb982545ad70000d0')}])
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$addToSet"=>{"group_ids"=>BSON::ObjectId('507e50afb982545ad70000d0')}})
+Redirected to http://localhost:3000/groups/507e50afb982545ad70000d0
+Completed 302 Found in 1892ms
+
+
+Started GET "/groups/507e50afb982545ad70000d0" for 127.0.0.1 at 2012-10-16 23:31:12 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"507e50afb982545ad70000d0"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e50afb982545ad70000d0')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e50afb982545ad70000d0')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"group_id"=>BSON::ObjectId('507e50afb982545ad70000d0')}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"group_id"=>BSON::ObjectId('507e50afb982545ad70000d0')})
+  Rendered groups/show.html.erb within layouts/application (557.1ms)
+Completed 200 OK in 1354ms (Views: 570.7ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:32:15 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (376.4ms)
+  Rendered groups/new.html.erb within layouts/application (424.5ms)
+Completed 200 OK in 1240ms (Views: 435.9ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:32:24 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLConservatives?fref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e50f9b982545ad70000d7')}})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].insert([{"network_ids"=>[BSON::ObjectId('506c8c45b982540a65000005')], "_id"=>BSON::ObjectId('507e50f9b982545ad70000d7')}])
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$addToSet"=>{"group_ids"=>BSON::ObjectId('507e50f9b982545ad70000d7')}})
+Redirected to http://localhost:3000/groups/507e50f9b982545ad70000d7
+Completed 302 Found in 1283ms
+
+
+Started GET "/groups/507e50f9b982545ad70000d7" for 127.0.0.1 at 2012-10-16 23:32:26 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"507e50f9b982545ad70000d7"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e50f9b982545ad70000d7')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e50f9b982545ad70000d7')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"group_id"=>BSON::ObjectId('507e50f9b982545ad70000d7')}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"group_id"=>BSON::ObjectId('507e50f9b982545ad70000d7')})
+  Rendered groups/show.html.erb within layouts/application (559.7ms)
+Completed 200 OK in 1510ms (Views: 573.2ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:32:35 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1752.0ms)
+Completed 200 OK in 2161ms (Views: 1765.0ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:33:46 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (378.8ms)
+  Rendered groups/new.html.erb within layouts/application (380.1ms)
+Completed 200 OK in 1262ms (Views: 390.6ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:33:53 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/pages/Oregon-Association-of-Synchronized-Swimming/274371937343?ref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e5152b982545ad70000de')}})
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['groups'].insert([{"network_ids"=>[BSON::ObjectId('506c8c45b982540a65000005')], "_id"=>BSON::ObjectId('507e5152b982545ad70000de')}])
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$addToSet"=>{"group_ids"=>BSON::ObjectId('507e5152b982545ad70000de')}})
+Redirected to http://localhost:3000/groups/507e5152b982545ad70000de
+Completed 302 Found in 1221ms
+
+
+Started GET "/groups/507e5152b982545ad70000de" for 127.0.0.1 at 2012-10-16 23:33:55 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"507e5152b982545ad70000de"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e5152b982545ad70000de')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e5152b982545ad70000de')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"group_id"=>BSON::ObjectId('507e5152b982545ad70000de')}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"group_id"=>BSON::ObjectId('507e5152b982545ad70000de')})
+  Rendered groups/show.html.erb within layouts/application (562.6ms)
+Completed 200 OK in 1508ms (Views: 572.7ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:35:21 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (2559.5ms)
+Completed 200 OK in 3420ms (Views: 2569.4ms)
+
+
+Started DELETE "/groups/507e50afb982545ad70000d0" for 127.0.0.1 at 2012-10-16 23:35:29 -0700
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "id"=>"507e50afb982545ad70000d0"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e50afb982545ad70000d0')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e50afb982545ad70000d0')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].remove({:_id=>BSON::ObjectId('507e50afb982545ad70000d0')})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e50afb982545ad70000d0')}})
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 958ms
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:35:30 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1751.3ms)
+Completed 200 OK in 2161ms (Views: 1764.3ms)
+
+
+Started DELETE "/groups/507e50f9b982545ad70000d7" for 127.0.0.1 at 2012-10-16 23:35:35 -0700
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "id"=>"507e50f9b982545ad70000d7"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e50f9b982545ad70000d7')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e50f9b982545ad70000d7')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].remove({:_id=>BSON::ObjectId('507e50f9b982545ad70000d7')})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e50f9b982545ad70000d7')}})
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 1058ms
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:35:37 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1512.5ms)
+Completed 200 OK in 1919ms (Views: 1524.4ms)
+
+
+Started DELETE "/groups/507e5152b982545ad70000de" for 127.0.0.1 at 2012-10-16 23:35:46 -0700
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "id"=>"507e5152b982545ad70000de"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e5152b982545ad70000de')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e5152b982545ad70000de')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].remove({:_id=>BSON::ObjectId('507e5152b982545ad70000de')})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e5152b982545ad70000de')}})
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 1053ms
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:35:47 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1317.6ms)
+Completed 200 OK in 1724ms (Views: 1329.5ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:35:51 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (188.0ms)
+  Rendered groups/new.html.erb within layouts/application (189.3ms)
+Completed 200 OK in 720ms (Views: 199.5ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:35:56 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/pages/Oregon-Association-of-Synchronized-Swimming/274371937343?ref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e51ccb982545ad70000e5')}})
+MONGODB near_io_dev['groups'].insert([{"network_ids"=>[BSON::ObjectId('506c8c45b982540a65000005')], "_id"=>BSON::ObjectId('507e51ccb982545ad70000e5')}])
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$addToSet"=>{"group_ids"=>BSON::ObjectId('507e51ccb982545ad70000e5')}})
+Redirected to http://localhost:3000/groups/507e51ccb982545ad70000e5
+Completed 302 Found in 1261ms
+
+
+Started GET "/groups/507e51ccb982545ad70000e5" for 127.0.0.1 at 2012-10-16 23:35:57 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"507e51ccb982545ad70000e5"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e51ccb982545ad70000e5')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e51ccb982545ad70000e5')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"group_id"=>BSON::ObjectId('507e51ccb982545ad70000e5')}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"group_id"=>BSON::ObjectId('507e51ccb982545ad70000e5')})
+  Rendered groups/show.html.erb within layouts/application (568.2ms)
+Completed 200 OK in 1525ms (Views: 580.5ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:37:26 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (2144.8ms)
+Completed 200 OK in 3163ms (Views: 2209.9ms)
+
+
+Started DELETE "/groups/507e51ccb982545ad70000e5" for 127.0.0.1 at 2012-10-16 23:37:36 -0700
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "id"=>"507e51ccb982545ad70000e5"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e51ccb982545ad70000e5')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e51ccb982545ad70000e5')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].remove({:_id=>BSON::ObjectId('507e51ccb982545ad70000e5')})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e51ccb982545ad70000e5')}})
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 937ms
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:37:37 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1292.6ms)
+Completed 200 OK in 1689ms (Views: 1304.4ms)
+
+
+Started DELETE "/groups/507e51ccb982545ad70000e5" for 127.0.0.1 at 2012-10-16 23:37:38 -0700
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "id"=>"507e51ccb982545ad70000e5"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e51ccb982545ad70000e5')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 190ms
+
+Mongoid::Errors::DocumentNotFound (Document not found for class Group with id(s) 507e51ccb982545ad70000e5.):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.3ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:37:43 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (244.1ms)
+  Rendered groups/new.html.erb within layouts/application (245.3ms)
+Completed 200 OK in 651ms (Views: 254.8ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:37:48 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/pages/Oregon-Association-of-Synchronized-Swimming/274371937343?ref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e523db982545ad70000ec')}})
+MONGODB near_io_dev['groups'].insert([{"network_ids"=>[BSON::ObjectId('506c8c45b982540a65000005')], "_id"=>BSON::ObjectId('507e523db982545ad70000ec')}])
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$addToSet"=>{"group_ids"=>BSON::ObjectId('507e523db982545ad70000ec')}})
+Redirected to http://localhost:3000/groups/507e523db982545ad70000ec
+Completed 302 Found in 1566ms
+
+
+Started GET "/groups/507e523db982545ad70000ec" for 127.0.0.1 at 2012-10-16 23:37:50 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"507e523db982545ad70000ec"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e523db982545ad70000ec')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e523db982545ad70000ec')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"group_id"=>BSON::ObjectId('507e523db982545ad70000ec')}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"group_id"=>BSON::ObjectId('507e523db982545ad70000ec')})
+  Rendered groups/show.html.erb within layouts/application (543.7ms)
+Completed 200 OK in 1544ms (Views: 610.6ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:38:33 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (2649.7ms)
+Completed 200 OK in 3840ms (Views: 2660.6ms)
+
+
+Started DELETE "/groups/507e523db982545ad70000ec" for 127.0.0.1 at 2012-10-16 23:38:41 -0700
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "id"=>"507e523db982545ad70000ec"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e523db982545ad70000ec')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e523db982545ad70000ec')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].remove({:_id=>BSON::ObjectId('507e523db982545ad70000ec')})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e523db982545ad70000ec')}})
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 1115ms
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:38:42 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1317.6ms)
+Completed 200 OK in 1714ms (Views: 1328.6ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:38:47 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (183.0ms)
+  Rendered groups/new.html.erb within layouts/application (184.3ms)
+Completed 200 OK in 585ms (Views: 194.1ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:38:52 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/pages/Oregon-Association-of-Synchronized-Swimming/274371937343?ref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e527db982545ad70000f3')}})
+MONGODB near_io_dev['groups'].insert([{"network_ids"=>[BSON::ObjectId('506c8c45b982540a65000005')], "_id"=>BSON::ObjectId('507e527db982545ad70000f3')}])
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$addToSet"=>{"group_ids"=>BSON::ObjectId('507e527db982545ad70000f3')}})
+Redirected to http://localhost:3000/groups/507e527db982545ad70000f3
+Completed 302 Found in 1506ms
+
+
+Started GET "/groups/507e527db982545ad70000f3" for 127.0.0.1 at 2012-10-16 23:38:54 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"507e527db982545ad70000f3"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e527db982545ad70000f3')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e527db982545ad70000f3')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"group_id"=>BSON::ObjectId('507e527db982545ad70000f3')}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"group_id"=>BSON::ObjectId('507e527db982545ad70000f3')})
+  Rendered groups/show.html.erb within layouts/application (551.6ms)
+Completed 200 OK in 1506ms (Views: 566.4ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:39:03 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1465.3ms)
+Completed 200 OK in 1863ms (Views: 1474.9ms)
+
+
+Started DELETE "/groups/507e527db982545ad70000f3" for 127.0.0.1 at 2012-10-16 23:39:10 -0700
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "id"=>"507e527db982545ad70000f3"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e527db982545ad70000f3')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e527db982545ad70000f3')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].remove({:_id=>BSON::ObjectId('507e527db982545ad70000f3')})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e527db982545ad70000f3')}})
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 1005ms
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:39:11 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1284.3ms)
+Completed 200 OK in 1675ms (Views: 1294.7ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:41:16 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1755.2ms)
+Completed 200 OK in 2553ms (Views: 1765.5ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:41:19 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (183.9ms)
+  Rendered groups/new.html.erb within layouts/application (185.3ms)
+Completed 200 OK in 639ms (Views: 251.9ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:41:24 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/pages/Oregon-Association-of-Synchronized-Swimming/274371937343?ref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e5314b982545ad70000fa')}})
+MONGODB near_io_dev['groups'].insert([{"network_ids"=>[BSON::ObjectId('506c8c45b982540a65000005')], "_id"=>BSON::ObjectId('507e5314b982545ad70000fa')}])
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$addToSet"=>{"group_ids"=>BSON::ObjectId('507e5314b982545ad70000fa')}})
+Redirected to http://localhost:3000/groups/507e5314b982545ad70000fa
+Completed 302 Found in 1189ms
+
+
+Started GET "/groups/507e5314b982545ad70000fa" for 127.0.0.1 at 2012-10-16 23:41:25 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"507e5314b982545ad70000fa"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e5314b982545ad70000fa')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e5314b982545ad70000fa')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"group_id"=>BSON::ObjectId('507e5314b982545ad70000fa')}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"group_id"=>BSON::ObjectId('507e5314b982545ad70000fa')})
+  Rendered groups/show.html.erb within layouts/application (545.3ms)
+Completed 200 OK in 1305ms (Views: 557.1ms)
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:43:00 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1978.8ms)
+Completed 200 OK in 2826ms (Views: 1989.1ms)
+
+
+Started DELETE "/groups/507e5314b982545ad70000fa" for 127.0.0.1 at 2012-10-16 23:43:07 -0700
+Processing by GroupsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "id"=>"507e5314b982545ad70000fa"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e5314b982545ad70000fa')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e5314b982545ad70000fa')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].remove({:_id=>BSON::ObjectId('507e5314b982545ad70000fa')})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e5314b982545ad70000fa')}})
+Redirected to http://localhost:3000/groups
+Completed 302 Found in 938ms
+
+
+Started GET "/groups" for 127.0.0.1 at 2012-10-16 23:43:08 -0700
+Processing by GroupsController#index as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+MONGODB near_io_dev['groups'].find({}).limit(25)
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}})
+MONGODB near_io_dev['$cmd'].find({"count"=>"groups", "query"=>{}, "fields"=>nil})
+  Rendered groups/index.html.erb within layouts/application (1286.8ms)
+Completed 200 OK in 1687ms (Views: 1297.7ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:43:12 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (182.5ms)
+  Rendered groups/new.html.erb within layouts/application (183.9ms)
+Completed 200 OK in 641ms (Views: 193.0ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:43:17 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/UCLUnion?fref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({"facebook_page.facebook_id"=>34994060032}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>BSON::ObjectId('506c8c45b982540a65000005')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:_id=>{"$in"=>[]}})
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[]}}, {"$pull"=>{"group_ids"=>BSON::ObjectId('507e5386b982545ad7000104')}})
+MONGODB near_io_dev['groups'].insert([{"network_ids"=>[BSON::ObjectId('506c8c45b982540a65000005')], "_id"=>BSON::ObjectId('507e5386b982545ad7000104'), "facebook_page"=>{"_id"=>BSON::ObjectId('507e5386b982545ad7000103'), "facebook_id"=>34994060032, "name"=>"UCL Union", "is_published"=>true, "website"=>"http://uclu.org", "username"=>"UCLUnion", "description"=>"Representing the needs and views of UCL students is the primary function of UCLU, with six Full-Time Officers elected annually to perform various roles and carry out the wishes of our members, the students.\n\nThe six officers for 2012-13 are:\nDemocracy & Communications Officer: Sam Gaus\ndco@uclu.org\n\nStudent Activities Officer: Abdul Akbari\nsao@uclu.org\n\nEducation & Campaigns Officer: Edwin Clifford-Coupe\neco@uclu.org\n\nEthics, Environment and Operations Officer: Natasha Gorodnitski\neeoo@uclu.org\n\nWelfare Officer: Candy Ashmore-Harris\nwio@uclu.org\n\nMedical & Postgraduates Officer: Dante Micheaux\nmpso@uclu.org", "about"=>"UCLU is the representative organisation for the students of University College London.", "can_post"=>nil, "talking_about_count"=>137, "category"=>"Non-profit organization", "link"=>"http://www.facebook.com/UCLUnion", "likes"=>6756}}])
+MONGODB near_io_dev['networks'].update({:_id=>{"$in"=>[BSON::ObjectId('506c8c45b982540a65000005')]}}, {"$addToSet"=>{"group_ids"=>BSON::ObjectId('507e5386b982545ad7000104')}})
+Redirected to http://localhost:3000/groups/507e5386b982545ad7000104
+Completed 302 Found in 1295ms
+
+
+Started GET "/groups/507e5386b982545ad7000104" for 127.0.0.1 at 2012-10-16 23:43:19 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"507e5386b982545ad7000104"}
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e5386b982545ad7000104')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['groups'].find({:_id=>BSON::ObjectId('507e5386b982545ad7000104')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['$cmd'].find({"count"=>"events", "query"=>{"group_id"=>BSON::ObjectId('507e5386b982545ad7000104')}, "fields"=>nil})
+MONGODB near_io_dev['events'].find({"group_id"=>BSON::ObjectId('507e5386b982545ad7000104')})
+  Rendered groups/show.html.erb within layouts/application (569.6ms)
+Completed 200 OK in 1568ms (Views: 582.6ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:43:25 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (183.8ms)
+  Rendered groups/new.html.erb within layouts/application (185.1ms)
+Completed 200 OK in 580ms (Views: 195.5ms)
+
+
+Started POST "/groups" for 127.0.0.1 at 2012-10-16 23:43:31 -0700
+Processing by GroupsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "group"=>{"facebook_page"=>{"link"=>"https://www.facebook.com/pages/Oregon-Association-of-Synchronized-Swimming/274371937343?ref=ts"}, "network_ids"=>"506c8c45b982540a65000005"}, "commit"=>"Create Group"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+Completed 500 Internal Server Error in 590ms
+
+NoMethodError (undefined method `errors=' for nil:NilClass):
+  app/controllers/groups_controller.rb:74:in `create'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.1ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:44:42 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (375.9ms)
+  Rendered groups/new.html.erb within layouts/application (377.1ms)
+Completed 200 OK in 1250ms (Views: 386.9ms)
