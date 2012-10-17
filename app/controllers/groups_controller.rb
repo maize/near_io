@@ -42,45 +42,51 @@ class GroupsController < ApplicationController
   # POST /groups
   # POST /groups.json
   def create
-    @group = Group.new
+    p "Creating new group.."
+    p params
 
-    # Facebook Group
-    unless params[:group][:facebook_group].empty?
-      fb_group = FacebookGroup.find_by_facebook_id(params[:group][:facebook_group])
-      @group = Group.where('facebook_group.facebook_id' => fb_group.facebook_id).first
-      if @group.nil?
-        @group = Group.new
-      end
-      @group.facebook_group = fb_group
-    end
+    render :nothing => true
 
-    # Facebook Page
-    unless params[:group][:facebook_page].empty?
-      fb_page = FacebookPage.find_by_facebook_id(params[:group][:facebook_page])
-      @group = Group.where('facebook_page.facebook_id' => fb_page.facebook_id).first
-      if @group.nil?
-        @group = Group.new
-      end
-      @group.facebook_page = fb_page
-    end
+    # @group = Group.new
 
-    # Networks
-    networks = []
-    network = Network.find(params[:group][:networks])
-    networks.push(network)
-    unless @group.networks.include?(network)
-      @group.networks = networks
-    end
+    # # Facebook Group
+    # unless params[:group][:facebook_group].empty?
+    #   fb_group = FacebookGroup.find_by_facebook_id(params[:group][:facebook_group])
+    #   @group = Group.where('facebook_group.facebook_id' => fb_group.facebook_id).first
+    #   if @group.nil?
+    #     @group = Group.new
+    #   end
+    #   @group.facebook_group = fb_group
+    # end
 
-    respond_to do |format|
-      if @group.save
-        format.html { redirect_to @group, notice: 'Group was successfully created.' }
-        format.json { render json: @group, status: :created, location: @group }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
-      end
-    end
+    # # Facebook Page
+    # unless params[:group][:facebook_page].empty?
+    #   fb_page = FacebookPage.find_by_facebook_id(params[:group][:facebook_page])
+    #   @group = Group.where('facebook_page.facebook_id' => fb_page.facebook_id).first
+    #   if @group.nil?
+    #     @group = Group.new
+    #   end
+    #   @group.facebook_page = fb_page
+    # end
+
+    # # Networks
+    # networks = []
+    # network = Network.find(params[:group][:networks])
+    # networks.push(network)
+
+    # unless @group.networks.include?(network)
+    #   @group.networks = networks
+    # end
+
+    # respond_to do |format|
+    #   if @group.save
+    #     format.html { redirect_to @group, notice: 'Group was successfully created.' }
+    #     format.json { render json: @group, status: :created, location: @group }
+    #   else
+    #     format.html { render action: "new" }
+    #     format.json { render json: @group.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   def update_details

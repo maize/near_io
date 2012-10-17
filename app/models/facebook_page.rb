@@ -1,7 +1,7 @@
 class FacebookPage < FacebookModel
   include Mongoid::Document
 
-  embedded_in :group
+  embedded_in :group, :polymorphic => true
 
   validates_presence_of :likes
 

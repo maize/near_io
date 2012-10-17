@@ -13,6 +13,7 @@ class NetworksController < ApplicationController
   # GET /networks/1
   # GET /networks/1.json
   def show
+    p params
     @network = Network.find_by_slug(params[:id])
 
     unless params[:year].nil? and params[:month].nil? and params[:day].nil?

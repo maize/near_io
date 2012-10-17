@@ -4,7 +4,7 @@ if Rails.env.development?
     def call_with_quiet_assets(env)
       previous_level = Rails.logger.level
       Rails.logger.level = Logger::ERROR if env['PATH_INFO'] =~ %r{^/assets/}
-      call_without_quiet_assets(env)
+      call_without_quiet_assets(env) unless env.nil?
     ensure
       Rails.logger.level = previous_level
     end

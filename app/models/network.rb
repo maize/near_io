@@ -1,12 +1,11 @@
 class Network
     include Mongoid::Document
     include Mongoid::Slug
-    include Mongoid::Spacial::Document
 
-    has_and_belongs_to_many :groups, inverse_of: nil, autosave: true
+    has_and_belongs_to_many :groups
 
     field :name, :type => String
-    field :location, :type => Array, :spacial => true
+    field :location, :type => Array
     slug :name, reserve: ['admin', 'root']
 
     def to_name

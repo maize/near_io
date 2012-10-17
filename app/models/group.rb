@@ -1,8 +1,8 @@
 class Group
   include Mongoid::Document
 
-  embeds_one :facebook_group
-  embeds_one :facebook_page
+  embeds_one :facebook_group, :class_name => "FacebookGroup"
+  embeds_one :facebook_page, :class_name => "FacebookPage"
 
   has_many :events
 
