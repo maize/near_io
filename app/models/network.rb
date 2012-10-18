@@ -6,6 +6,9 @@ class Network
 
     field :name, :type => String
     field :location, :type => Array
+    field :latitude, :type => String
+    field :longitude, :type => String
+    
     slug :name, reserve: ['admin', 'root']
 
     def to_name

@@ -39212,3 +39212,113 @@ MONGODB near_io_dev['networks'].find({})
   Rendered groups/_form.html.erb (375.9ms)
   Rendered groups/new.html.erb within layouts/application (377.1ms)
 Completed 200 OK in 1250ms (Views: 386.9ms)
+
+
+Started GET "/networks/new" for 127.0.0.1 at 2012-10-16 23:45:25 -0700
+Processing by NetworksController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/_form.html.erb (77.6ms)
+  Rendered networks/new.html.erb within layouts/application (79.5ms)
+Completed 200 OK in 474ms (Views: 89.4ms)
+
+
+Started POST "/networks" for 127.0.0.1 at 2012-10-16 23:45:40 -0700
+Processing by NetworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "network"=>{"name"=>"Stanford", "latitude"=>"", "longitude"=>"", "slug"=>"stanford"}, "commit"=>"Create Network"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({:slug=>/^stanford(?:-(\d+))?$/, :_id=>{"$ne"=>BSON::ObjectId('507e5414b982545ad700010f')}}, {:_type=>1, :slug=>1})
+MONGODB near_io_dev['networks'].insert([{"group_ids"=>[], "_id"=>BSON::ObjectId('507e5414b982545ad700010f'), "name"=>"Stanford", "latitude"=>"", "longitude"=>"", "slug"=>"stanford"}])
+Redirected to http://localhost:3000/networks/stanford
+Completed 302 Found in 738ms
+
+
+Started GET "/networks/stanford" for 127.0.0.1 at 2012-10-16 23:45:41 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"stanford"}
+MONGODB near_io_dev['networks'].find({:slug=>"stanford"}).sort([[:_id, :asc]])
+  Rendered networks/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 204ms
+
+ActionController::RoutingError (No route matches {:controller=>"networks", :action=>"show", :id=>nil, :year=>"2012", :month=>"10", :day=>"15"}):
+  app/views/networks/show.html.erb:3:in `_app_views_networks_show_html_erb__4531361187001163821_70343918446000'
+  app/controllers/networks_controller.rb:37:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/groups/mew" for 127.0.0.1 at 2012-10-16 23:46:14 -0700
+Processing by GroupsController#show as HTML
+  Parameters: {"id"=>"mew"}
+Completed 500 Internal Server Error in 8ms
+
+BSON::InvalidObjectId (illegal ObjectId format):
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (82.5ms)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2012-10-16 23:46:16 -0700
+Processing by GroupsController#new as HTML
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['networks'].find({})
+  Rendered groups/_form.html.erb (182.6ms)
+  Rendered groups/new.html.erb within layouts/application (183.9ms)
+Completed 200 OK in 734ms (Views: 194.3ms)
+
+
+Started GET "/networks/new" for 127.0.0.1 at 2012-10-16 23:47:39 -0700
+Processing by NetworksController#new as HTML
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+  Rendered networks/_form.html.erb (6.9ms)
+  Rendered networks/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 875ms (Views: 20.0ms)
+
+
+Started POST "/networks" for 127.0.0.1 at 2012-10-16 23:47:46 -0700
+Processing by NetworksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iddalEMRdZZWu4N60t5JOQzqo80j7Uodj7Fco57zz6Q=", "network"=>{"name"=>"Stanford", "latitude"=>"", "longitude"=>"", "slug"=>"stanford"}, "commit"=>"Create Network"}
+MONGODB near_io_dev['users'].find({:_id=>BSON::ObjectId('5023b1f7b98254fd53000001')}).sort([[:_id, :asc]])
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>/^stanford(?:-(\d+))?$/, :_id=>{"$ne"=>BSON::ObjectId('507e5493b982545ad7000113')}}, {:_type=>1, :slug=>1})
+MONGODB near_io_dev['networks'].insert([{"group_ids"=>[], "_id"=>BSON::ObjectId('507e5493b982545ad7000113'), "name"=>"Stanford", "latitude"=>"", "longitude"=>"", "slug"=>"stanford"}])
+Redirected to http://localhost:3000/networks/stanford
+Completed 302 Found in 920ms
+
+
+Started GET "/networks/stanford" for 127.0.0.1 at 2012-10-16 23:47:47 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"stanford"}
+MONGODB near_io_dev['networks'].find({:slug=>"stanford"}).sort([[:_id, :asc]])
+  Rendered networks/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 262ms
+
+ActionController::RoutingError (No route matches {:controller=>"networks", :action=>"show", :id=>nil, :year=>"2012", :month=>"10", :day=>"15"}):
+  app/views/networks/show.html.erb:3:in `_app_views_networks_show_html_erb__4531361187001163821_70343918446000'
+  app/controllers/networks_controller.rb:37:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/networks/stanford" for 127.0.0.1 at 2012-10-16 23:50:56 -0700
+Processing by NetworksController#show as HTML
+  Parameters: {"id"=>"stanford"}
+MONGODB near_io_dev['system.namespaces'].find({})
+MONGODB near_io_dev['networks'].find({:slug=>"stanford"}).sort([[:_id, :asc]])
+  Rendered networks/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 389ms
+
+ActionController::RoutingError (No route matches {:controller=>"networks", :action=>"show", :id=>nil, :year=>"2012", :month=>"10", :day=>"15"}):
+  app/views/networks/show.html.erb:3:in `_app_views_networks_show_html_erb__4531361187001163821_70343918446000'
+  app/controllers/networks_controller.rb:37:in `show'
+  config/initializers/quiet_assets.rb:7:in `call_with_quiet_assets'
+
+
+  Rendered /Users/maize/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)

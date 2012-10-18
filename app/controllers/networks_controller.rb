@@ -13,7 +13,6 @@ class NetworksController < ApplicationController
   # GET /networks/1
   # GET /networks/1.json
   def show
-    p params
     @network = Network.find_by_slug(params[:id])
 
     unless params[:year].nil? and params[:month].nil? and params[:day].nil?
@@ -25,14 +24,6 @@ class NetworksController < ApplicationController
     end
 
     @events = Event.where('facebook_event.start_time' => {'$gt' => @date, '$lt' => (@date+1.day)}).asc('facebook_event.start_time').page params[:page]
-    # @events = Event.all.page params[:page]
-
-    # @network.groups.each do |group|
-    #   # @events = @events + group.events
-    #   @events = @events + group.events.where(:start_time.gt => Time.now)
-    # end
-
-    # @events.sort_by!(&:start_time).reverse!
 
     respond_to do |format|
       format.html # show.html.erb
