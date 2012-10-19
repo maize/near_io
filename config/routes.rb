@@ -3,7 +3,8 @@ require 'resque/server'
 Near::Application.routes.draw do
   resources :networks
 
-  match "networks/:id/:year/:month/:day",
+  match ":id", :to => "networks#show"
+  match ":id/:year/:month/:day",
       :to => "networks#show",
       :constraints => { :year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{1,2}/ },
       :as => :network_date
@@ -22,12 +23,6 @@ Near::Application.routes.draw do
   match "users/:id/make_admin", :to => "users#make_admin", :as => 'user_make_admin'
   match "users/:id/likes", :to => "users#likes", :as => 'user_likes'
   match "users/:id/following_places", :to => "users#following_places", :as => 'user_following_places'
-
-  resources :places
-
-  match "places/search", :to => "places#search", :as => 'search_place'
-  match "places/:id/follow", :to => "places#follow", :as => 'follow_place'
-  match "places/:id/unfollow", :to => "places#unfollow", :as => 'unfollow_place'
 
   root :to => 'networks#index'
 

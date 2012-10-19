@@ -33,6 +33,7 @@ gem 'mongoid', "<= 2.4.12"
 gem "mongoid_fulltext"
 gem 'mongoid_slug'
 gem 'mongoid_spacial'
+gem 'mongoid_rails_migrations'
 gem 'anemone', '0.7.1'
 gem 'jquery-rails'
 gem 'libv8', '3.3.10.4'

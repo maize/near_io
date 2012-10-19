@@ -9,8 +9,4 @@ class Network
     field :longitude, :type => String
 
     slug :name, reserve: ['admin', 'root']
-
-    def to_name
-        name.downcase.gsub('-', ' ')
-    end
 end

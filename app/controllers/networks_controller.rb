@@ -91,8 +91,6 @@ class NetworksController < ApplicationController
     authorize! :manage, :all
 
     @network = Network.find_by_slug(params[:id])
-    @network.location = {:lat => params[:network][:latitude], :lng => params[:network][:longitude]}
-    @network.save
 
     respond_to do |format|
       if @network.update_attributes(params[:network])
