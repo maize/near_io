@@ -42,6 +42,14 @@
           <%= f.text_field :slug %>
       </div>
   </div>
+  <div class="control-group">
+      <label class="control-label">
+          <%= f.label :image %>
+      </label>
+      <div class="controls">
+          <%= f.file_field :image %>
+      </div>
+  </div>
   <div class="form-actions">
       <%= link_to 'Cancel', networks_path, :class => "btn" %>
       <%= f.submit :class => "btn btn-primary" %>

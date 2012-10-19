@@ -30,10 +30,12 @@ gem 'bson', '1.3.1'
 gem 'bson_ext', '1.3.1'
 gem 'mongo'
 gem 'mongoid', "<= 2.4.12"
-gem "mongoid_fulltext"
+gem 'mongoid_fulltext'
 gem 'mongoid_slug'
 gem 'mongoid_spacial'
 gem 'mongoid_rails_migrations'
+gem 'mongoid-paperclip', :require => "mongoid_paperclip" 
+gem 'aws-s3'
 gem 'anemone', '0.7.1'
 gem 'jquery-rails'
 gem 'libv8', '3.3.10.4'

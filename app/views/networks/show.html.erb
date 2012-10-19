@@ -44,28 +44,3 @@
 </div>
 
 <%= paginate @events %>
-
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    var markersArray = [];
-    var mapOptions = {
-      center: new google.maps.LatLng(<%= @network.latitude %>, <%= @network.longitude %>),
-      zoom: 17,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-    <% @events.each do |event| %>
-      <% if not event.facebook_event.venue.nil? and event.facebook_event.venue.has_key?("location") %>
-        var latLon = new google.maps.LatLng(<%= event.facebook_event.venue["location"]["latitude"] %>,<%= event.facebook_event.venue["location"]["longitude"] %>);
-        var marker = new google.maps.Marker({
-          position: latLon,
-          animation: google.maps.Animation.DROP,
-          map: map
-        });
-        markersArray.push(marker);
-      <% end %>
-    <% end %>
-    console.log(markersArray);
-  });
-</script>

@@ -1,14 +1,11 @@
 class ApplicationController < ActionController::Base
 	protect_from_forgery
     def after_sign_in_path_for(resource)
-        if resource.is_a?(User)
-          "/ucl"
-        else
-          super
-        end
+      request.env['omniauth.origin'] || stored_location_for(resource) || root_path
     end
 
     def home
-        
+      @networks = Network.all
+      render 'website/home'
     end
 end

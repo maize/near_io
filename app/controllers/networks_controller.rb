@@ -31,6 +31,17 @@ class NetworksController < ApplicationController
     end
   end
 
+  def deals
+    authorize! :manage, :all
+
+    @network = Network.find_by_slug(params[:id])
+    
+    respond_to do |format|
+      format.html # show.html.erb
+      format.json { render json: @network }
+    end
+  end
+
   def update_groups
     authorize! :manage, :all
     

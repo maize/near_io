@@ -1,0 +1,16 @@
+<div class="cn1">
+  <div class="cn2">
+    <div class="hero-unit">
+      <h1>Discover local events near<br />your favourite places</h1>
+      <p>
+        <% @networks.each do |network| %>
+          <% unless user_signed_in? %>
+            <%= link_to "Sign up", user_omniauth_authorize_path(:facebook), :class => "btn btn-signup btn-primary btn-large" %>
+          <% else %>
+            <%= link_to network.name, network, :class => "btn btn-primary btn-large" %>
+          <% end %>
+        <% end %>
+      </p>
+    </div>
+  </div>
+</div>

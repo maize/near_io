@@ -42,7 +42,7 @@ Near::Application.routes.draw do
     end
   end
 
-  match ":id", :to => "networks#show"
+  match ":id", :to => "networks#show", :as => :network
   match ":id/:year/:month/:day",
       :to => "networks#show",
       :constraints => { :year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{1,2}/ },
