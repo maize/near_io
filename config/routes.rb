@@ -1,35 +1,52 @@
 require 'resque/server'
 
 Near::Application.routes.draw do
-  resources :networks
+  mount Resque::Server.new, :at => "/resque"
+
+  root :to => 'application#home'
+
+  # Events
+  resources :events do
+    member do
+      get "update_details"
+    end
+  end
+  
+  match "events/:id", :to => "events#show", :as => "facebook_event"
+
+  # Users
+  devise_for :users, :path => "user", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  resources :users do
+    member do
+      get "make_admin"
+      get "likes"
+      get "following_places"
+    end
+  end
+
+  match "users/facebook", :to => "users#facebook", :as => 'facebook_users'
+
+  # Groups
+  resources :groups do
+    member do
+      get "update_details"
+      get "clear_queue"
+    end
+  end
+
+  # Networks
+  resources :networks do
+    member do
+      get "update_groups"
+      get "clear_queue"
+    end
+  end
 
   match ":id", :to => "networks#show"
   match ":id/:year/:month/:day",
       :to => "networks#show",
       :constraints => { :year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{1,2}/ },
       :as => :network_date
-  match "networks/:id/update_groups", :to => "networks#update_groups"
-  match "networks/:id/clear_queue", :to => "networks#clear_queue"
-
-  resources :groups
-  match "groups/:id/update_details", :to => "groups#update_details"
-  match "groups/:id/events", :to => "groups#events"
-
-  resources :events
-  match "events/:id", :to => "events#show", :as => 'facebook_event'
-  match "events/:id/update_details", :to => "events#update_details"
-
-  match "users/facebook", :to => "users#facebook", :as => 'facebook_users'
-  match "users/:id/make_admin", :to => "users#make_admin", :as => 'user_make_admin'
-  match "users/:id/likes", :to => "users#likes", :as => 'user_likes'
-  match "users/:id/following_places", :to => "users#following_places", :as => 'user_following_places'
-
-  root :to => 'networks#index'
-
-  mount Resque::Server.new, :at => "/resque"
-
-  devise_for :users, :path => "user", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
