@@ -11,8 +11,6 @@ Near::Application.routes.draw do
       get "update_details"
     end
   end
-  
-  match "events/:id", :to => "events#show", :as => "facebook_event"
 
   # Users
   devise_for :users, :path => "user", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
@@ -22,9 +20,10 @@ Near::Application.routes.draw do
       get "likes"
       get "following_places"
     end
+    collection do
+      get "facebook"
+    end
   end
-
-  match "users/facebook", :to => "users#facebook", :as => 'facebook_users'
 
   # Groups
   resources :groups do
