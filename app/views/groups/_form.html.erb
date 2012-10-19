@@ -2,7 +2,7 @@
     <legend>New Group</legend>
     <div class="control-group">
         <%= f.fields_for :facebook_page do |p| %>        
-            <label class="control-label" for="inputPassword">
+            <label class="control-label">
                 <%= p.label :facebook_id, "Facebook URL" %>
             </label>
             <div class="controls">
@@ -11,7 +11,7 @@
         <% end %>
     </div>
     <div class="control-group">
-        <label class="control-label" for="inputPassword">
+        <label class="control-label">
             <%= f.label :network_ids, "Network" %>
         </label>
         <div class="controls">

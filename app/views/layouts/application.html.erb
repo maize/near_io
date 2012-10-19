@@ -45,7 +45,7 @@
         <div class="container">
           <a class="brand pull-left" href="<%= root_url %>"></a>
           <div class="network navbar-text pull-left">
-            <% if @network %>
+            <% if @network and not @network.name.nil? %>
               <%= link_to @network.name, @network %>
             <% end %>
           </div>
@@ -73,7 +73,7 @@
         </div>
       </div>
     </div>
-    <% if @network %>
+    <% if @network and not @network.name.nil? %>
       <div id="map_canvas"></div>
     <% end %>
     <div id="main" class="container">
