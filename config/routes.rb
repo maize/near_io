@@ -34,14 +34,13 @@ Near::Application.routes.draw do
   end
 
   # Networks
-  resources :networks do
+  resources :networks, :path => "/" do
     member do
       get "update_groups"
       get "clear_queue"
     end
   end
 
-  match ":id", :to => "networks#show", :as => :network
   match ":id/:year/:month/:day",
       :to => "networks#show",
       :constraints => { :year => /\d{4}/, :month => /\d{1,2}/, :day => /\d{1,2}/ },
